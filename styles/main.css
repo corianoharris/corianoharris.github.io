@@ -1,0 +1,407 @@
+/*---------------------*\
+      #IMPORTS
+\*---------------------*/
+
+@import url("https://fonts.googleapis.com/css2?family=Satisfy&family=Raleway:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
+/*---------------------*\
+      #END of IMPORTS
+\*---------------------*/
+
+
+
+
+/* Following the BEM ITCSS method */
+
+/*---------------------*\
+      #SETTINGS
+\*---------------------*/
+
+:root {
+  /* ##Calculations --
+  ###This allows the browser to make a smoother transition between min and max values font, letter spacing, and line height for responsiveness */
+
+    /* Font Cal */
+  --font-size-cal: calc(12px + 48px * ((100vw - 320px) / (1600 - 320)));
+
+  /* Letter Spacing Cal */
+  --letter-spacing-cal: calc(2px + 16px * ((100vw - 320px) (1600 - 320)));
+
+  /* Line Height Cal */
+  --line-height-cal: calc(18px + 60px * ((100vw - 320px) (1600 - 320)));
+
+  /* =========================================================== */
+
+   /* ##Typography */
+
+  /** Font Family Satisfy **/
+  --f-Satisfy: "Satisfy",
+    cursive;
+  ;
+
+  /** Font Family Raleway **/
+  --f-Raleway: "Raleway",
+    sans-serif;
+
+
+  /* ===========================================================*/
+
+  /* ##Brand Colors */
+
+  /* Dark Theme */
+  --t-dark-background-color: #222;
+  --t-dark-text-color: #33CCFF;
+
+  /* Light Theme */
+  --t-light-background-color: #fff;
+  --t-light-text-color: #663399;
+
+  /* Dark Gray  */
+  --dark-gray:#838383;
+
+  /* Light Gray */
+  --light-gray:#cccccc;
+}
+
+/*---------------------*\
+      #END of SETTINGS
+\*---------------------*/
+
+
+
+
+/*---------------------*\
+      #GENERIC
+\*---------------------*/
+
+/* ##CSS resets */
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+font,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-weight: inherit;
+  font-style: inherit;
+  font-size: 100%;
+  font-family: inherit;
+  vertical-align: baseline;
+}
+
+/* remember to define focus styles! */
+:focus {
+  outline: 0;
+  border: 1px dashed #A18DB3;
+}
+
+/* tables still need cellspacing=0 in the markup */
+table {
+  border-collapse: separate;
+  border-spacing: 0;
+}
+
+caption,
+th,
+td {
+  text-align: left;
+  font-weight: normal;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: ;
+}
+
+blockquote,
+q {
+  quotes: ;
+}
+
+/* border box override*/
+html {
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+
+/*---------------------*\
+      #END of GENERIC
+\*---------------------*/
+
+
+
+
+/*---------------------*\
+      #ELEMENTS
+\*---------------------*/
+
+body {
+  background: var(--t-dark-background-color);
+  color: var(--t-dark-text-color);
+  letter-spacing: 2px;
+  line-height: 1.2em;
+  font-family: var(--f-Raleway);
+  font-weight: 600;
+}
+
+main {
+  width: 90%;
+  margin: 20px auto;
+}
+
+/* ##Blockquote */
+
+blockquote {
+  background: inherit;
+  font-size: 20px;
+  line-height: 1.2em;
+
+  quotes: "\201C""\201D""\2018""\2019";
+}
+
+blockquote:before {
+  content: open-quote;
+  font-size: 7em;
+  vertical-align: -0.5em;
+}
+
+blockquote section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+blockquote img {
+  width: 42px;
+  height: 42px;
+  border-radius: 100%;
+  object-fit: cover;
+  border: thin solid var(--dark-gray);
+  padding: 4px;
+}
+
+blockquote div {
+  display: block;
+  justify-content: left;
+  margin: 20px;
+  font-size: 1rem;
+}
+
+.e-blockquote__body-text {
+  font-weight: 300;
+  padding: 10px;
+}
+
+blockquote h3 {
+  font-weight: bolder;
+}
+
+blockquote h5 {
+  font-weight: 800;
+  font-style: italic;
+}
+
+.e-slug__author {
+  font-size: 24px;
+  font-family: var(--f-Satisfy);
+  color: #787878;
+  font-weight: 900;
+}
+
+blockquote h3,
+blockquote h5 {
+  padding: 0;
+  margin: 5px;
+}
+
+/* a */
+a {
+  text-decoration:none;
+  text-transform: uppercase;
+}
+
+/* ### Media Queries */
+
+@media only screen and (min-width: 481px) {
+}
+@media only screen and (min-width: 641px) {}
+@media only screen and (min-width: 981px) {
+  blockquote img {
+   width: 50px;
+   height: 50px;
+  }
+}
+
+@media only screen and (min-width: 1024px) {}
+
+/*---------------------*\
+      #END of ELEMENTS
+\*---------------------*/
+
+
+
+
+
+/*---------------------*\
+      #COMPONENTS
+\*---------------------*/
+
+.c-btn {
+  padding: 10px 20px;
+  color: inherit;
+  letter-spacing: 2px;
+}
+
+.c-btn:hover, .c-btn:active, .c-btn:focus {
+  border-bottom: medium solid var(--light-gray);
+}
+
+
+/*---------------------*\
+      #END of COMPONENTS
+\*---------------------*/
+
+
+
+
+
+/*---------------------*\
+      #OBJECTS
+\*---------------------*/
+
+/* Theme */
+.t-light {
+  background: #fff;
+  color: var(--t-light-text-color);
+}
+
+/* Kicker */
+
+.o-kicker-screen {
+  margin: 50% auto;
+}
+
+.kicker-btn {
+  position: absolute;
+  top: 10px;
+  right: 20px;
+}
+
+
+/* ### Media Queries */
+
+@media only screen and (min-width: 481px) {
+  .o-kicker-screen {
+      margin: 30% auto;
+   }
+}
+@media only screen and (min-width: 641px) {
+  .o-kicker-screen {
+      width: 80%;
+      margin: 20% auto;
+   }
+}
+@media only screen and (min-width: 981px) {
+   .o-kicker-screen {
+      width: 60%;
+      margin: 20% auto;
+   }
+}
+
+@media only screen and (min-width: 1024px) {}
+
+
+
+/*---------------------*\
+      #END of OBJECTS
+\*---------------------*/
+
+
+
+
+/*---------------------*\
+      ##UTILITIES
+\*---------------------*/
+
+
+/*---------------------*\
+      #END of UTILITIES
+\*---------------------*/
+
+
+
+
+/*---------------------*\
+      #LOGIC
+\*---------------------*/
+
+
+/*---------------------*\
+      #END of LOGIC
+\*---------------------*/
+
