@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta
+			name="viewport"
+			content="width=device-width, initial-scale=1.0"
+		/>
+		<title>| Creations</title>
+		<link rel="stylesheet" href="styles/main.css" />
+		<link
+			rel="shortcut icon"
+			href="public/assets/logo.png"
+			type="image/x-icon"
+		/>
+	</head>
+
+	<body>
+		<main role="presentation">
+			<div class="nav__btn u-gradient-background">
+				<p
+					class="menuOpenBtn"
+					id="js-displayNavBtn"
+					onclick="displayNav()"
+					tabindex="0"
+					role="button"
+					aria-label="open the navigation panel"
+				>
+					&#8801;
+				</p>
+			</div>
+			<div
+				class="scroll__btn u-gradient-background"
+				id="scrollToTopBtn"
+			>
+				<p
+					class="scrollBtn"
+					onclick="topFunction()"
+					tabindex="0"
+					role="button"
+					aria-label="scroll back to the top of page"
+				>
+					&#8657;
+				</p>
+			</div>
+
+			<!-- <nav></nav> -->
+
+			<div class="nav__overlay" id="js-nav">
+				<p
+					class="c-card__button--close"
+					id="js-displayNavBtn"
+					onclick="collapseNav()"
+					tabindex="0"
+					role="button"
+					aira-label="close the navigation panel"
+				>
+					&#8855;
+				</p>
+				<nav class="menu">
+					<input type="checkbox" class="nav_items" id="toggle" />
+					<label id="show-menu" for="toggle">
+						<div
+							class="btn"
+							tabindex="0"
+							role="button"
+							aria-pressed="false"
+						>
+							<p class="closeBtn" onclick="collapseNav()">&#10005;</p>
+						</div>
+						<div class="btn">
+							<a href="creations.html" class="nav_links"
+								><img
+									src="public/assets/create.svg"
+									class="nav_link_icon"
+								/>
+								<p class="nav_link_text">creations</p></a
+							>
+						</div>
+						<div class="btn">
+							<a href="services.html" class="nav_links"
+								><img
+									src="public/assets/services.svg"
+									class="nav_link_icon"
+								/>
+								<p class="nav_link_text">services</p></a
+							>
+						</div>
+						<div class="btn">
+							<a href="skills.html" class="nav_links"
+								><img
+									src="public/assets/tools.svg"
+									class="nav_link_icon"
+								/>
+								<p class="nav_link_text">tools</p></a
+							>
+						</div>
+						<div class="btn">
+							<a href="about.html" class="nav_links"
+								><img
+									src="public/assets/profile.svg"
+									class="nav_link_icon"
+								/>
+								<p class="nav_link_text">about</p></a
+							>
+						</div>
+						<div class="btn">
+							<a href="contact.html" class="nav_links"
+								><img
+									src="public/assets/contact.svg"
+									class="nav_link_icon"
+								/>
+								<p class="nav_link_text">contact</p></a
+							>
+						</div>
+						<div class="btn">
+							<a
+								href="https://github.com/corianoharris"
+								class="nav_links"
+								><img
+									src="public/assets/git.svg"
+									class="nav_link_icon"
+								/>
+								<p class="nav_link_text">github</p></a
+							>
+						</div>
+						<div class="btn">
+							<a
+								href="https://www.linkedin.com/in/corianoharris/"
+								class="nav_links"
+								><img
+									src="public/assets/linkedin.svg"
+									class="nav_link_icon"
+								/>
+								<p class="nav_link_text">linkedin</p></a
+							>
+						</div>
+						<div class="btn">
+							<a href="#" class="nav_links" id="js-themeChanger"
+								><img
+									src="public/assets/toggle-hand.svg"
+									class="nav_link_icon"
+								/>
+								<p class="nav_link_text">theme</p></a
+							>
+						</div>
+					</label>
+				</nav>
+			</div>
+			<section class="c-screen__titles">
+				<h1 class="c-screen__title c-screen__header u-gradient-color">
+					Creations
+				</h1>
+				<h1 class="c-screen__title c-screen__subheader">
+					Building useful things
+				</h1>
+			</section>
+
+			<section class="o-filter" id="filter">
+				<h3 class="o-filter__header">options</h3>
+				<section class="o-filter__pills" id="filter">
+					<h4
+						class="o-filter__pill o-filter__pill-all js-btn active"
+						onclick="filterSelection('c-pills-all')"
+						tabindex="0"
+						role="button"
+						aria-pressed="true"
+					>
+						all
+					</h4>
+					<h4
+						class="o-filter__pill o-filter__pill-ux js-btn"
+						onclick="filterSelection('card-ux')"
+						tabindex="0"
+						role="button"
+						aria-pressed="false"
+					>
+						ux
+					</h4>
+					<h4
+						class="o-filter__pill o-filter__pill-ui js-btn"
+						onclick="filterSelection('card-ui')"
+						tabindex="0"
+						role="button"
+						aria-pressed="false"
+					>
+						ui
+					</h4>
+					<h4
+						class="o-filter__pill o-filter__pill-apps js-btn"
+						onclick="filterSelection('card-app')"
+						tabindex="0"
+						role="button"
+						aria-pressed="false"
+					>
+						apps
+					</h4>
+					<h4
+						class="o-filter__pill o-filter__pill-designs js-btn"
+						onclick="filterSelection('card-designs')"
+						tabindex="0"
+						role="button"
+						aria-pressed="false"
+					>
+						designs
+					</h4>
+					<h4
+						class="o-filter__pill o-filter__pill-talks js-btn"
+						onclick="filterSelection('card-talks')"
+						tabindex="0"
+						role="button"
+						aria-pressed="false"
+					>
+						talks
+					</h4>
+				</section>
+			</section>
+
+			<div class="projects-table">
+				<div class="c-card filterItem card-app">
+					<div
+						class="c-card__thumbnail c-thumbnail-apps"
+						onclick="displayCard()"
+						tabindex="0"
+						role="button"
+						aria-expanded="false"
+					>
+						<div class="c-card__thumbnail__titles">
+							<h3
+								class="c-card__thumbnail-title c-card__thumbnail__header"
+							>
+								Lorem, ipsum dolor.
+							</h3>
+							<h5
+								class="c-card__thumbnail-title c__card__thumbnail__subheader"
+							>
+								Lorem, ipsum dolor.
+							</h5>
+						</div>
+					</div>
+
+					<!-- main card -->
+
+					<section class="c-card__overlay" id="js-displayMainCard">
+						<p
+							class="c-card__button--close"
+							onclick="collapseCard()"
+							tabindex="0"
+							role="button"
+							aria-label="closes the expanded project c-card__section"
+						>
+							&#8855;
+						</p>
+
+						<!-- card -->
+
+						<section class="c-card">
+							<img
+								src="https://via.placeholder.com/150"
+								class="c-card-img"
+								alt="project image"
+							/>
+							<div class="c-card__content">
+								<div class="c-card__section">
+									<input
+										type="checkbox"
+										class="c-card__section-items"
+										id="Summary"
+										checked="checked"
+									/>
+									<label class="c-card__section-label" for="Summary"
+										>Summary</label
+									>
+									<div class="c-card__section-body-text">
+										<div class="card_section-body-text-sections">
+											<h3 class="c-card__section_subheader">Project</h3>
+											<p>
+												Lorem ipsum, dolor sit amet consectetur
+												adipisicing elit. Aliquam, explicabo quidem.
+												Minima sit quia libero sunt aliquam neque quae
+												rem!
+											</p>
+										</div>
+										<div class="card_section-body-text-sections">
+											<h3 class="c-card__section_subheader">Role</h3>
+											<p>
+												Lorem ipsum, dolor sit amet consectetur
+												adipisicing elit. Aliquam, explicabo quidem.
+												Minima sit quia libero sunt aliquam neque quae
+												rem!
+											</p>
+										</div>
+										<div class="card_section-body-text-sections">
+											<h3 class="c-card__section_subheader">
+												technologies
+											</h3>
+											<ul aria="list">
+												<li>Lorem</li>
+												<li>Lorem</li>
+												<li>Lorem</li>
+												<li>Lorem</li>
+												<li>Lorem</li>
+												<li>Lorem</li>
+											</ul>
+										</div>
+									</div>
+								</div>
+
+								<!-- links -->
+								<div class="c-card__section c-card_link">
+									<a href="#" class="c-btn">Github</a>
+									<a href="#" class="c-btn">Site</a>
+								</div>
+							</div>
+						</section>
+					</section>
+				</div>
+			</div>
+			<footer class="c-copyright" id="footer">
+				©Coriano Harris 2020
+			</footer>
+		</main>
+		<script src="main.js"></script>
+	</body>
+</html>
