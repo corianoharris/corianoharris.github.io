@@ -309,6 +309,7 @@ a {
 /* ul */
 ul {
   margin: 0 20px;
+  list-style: circle outside none;
 }
 
 li {
