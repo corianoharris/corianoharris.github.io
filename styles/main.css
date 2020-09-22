@@ -930,6 +930,39 @@ li {
   font-size: 13px;
 }
 
+/* Page Sections */
+
+.c-page__section {
+  margin: 50px auto;
+}
+
+.c-page__subheader {
+  font-size: 28px;
+  padding-bottom: 10px;
+  border-bottom: thin dotted var(--dark-gray);
+}
+
+.c-section__list {
+  margin: 0 40px;
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+
+}
+
+.c-section__content {
+  height: auto;
+}
+
+/* Testimonials */
+
+.c-testimonials {
+  display: block;
+}
+
+.c-testimonial__quote {
+  margin: 30px;
+}
 
 /* ### Media Queries */
 
