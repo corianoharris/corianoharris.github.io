@@ -214,6 +214,19 @@ main {
   margin: 20px auto;
 }
 
+h1 {
+  margin: 150px 0 30px 0;
+  font-size: 36px;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+h2 {
+  font-size: 20px;
+  font-weight: 800;
+}
+
 /* ##Blockquote */
 
 blockquote {
