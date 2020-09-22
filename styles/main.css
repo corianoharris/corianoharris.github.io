@@ -846,10 +846,121 @@ li {
   .c-card {
     width: 60%;
   }
+
+  .c-card-img {
+    height: 300px;
+  }
+
+  /* Nav */
+
+  .btn {
+    width: 90px;
+    height: 90px;
+  }
+
+  .menu {
+    left: 45%;
+    top: 50%;
+  }
+
+  .nav_links {
+    font-size: 12px;
+  }
+
+  .closeBtn {
+    padding: 0;
+  }
+
+  .btn:nth-child(2) {
+    top: -150px;
+    opacity: 1;
+  }
+
+  .btn:nth-child(3) {
+    top: -100px;
+    left: 100px;
+    opacity: 1;
+  }
+
+  .btn:nth-child(4) {
+    left: 150px;
+    top: 0px;
+    opacity: 1;
+  }
+
+  .btn:nth-child(5) {
+    top: 100px;
+    left: 100px;
+    opacity: 1;
+  }
+
+  .btn:nth-child(6) {
+    top: 150px;
+    opacity: 1;
+  }
+
+  .btn:nth-child(7) {
+    top: 100px;
+    left: -100px;
+    opacity: 1;
+  }
+
+  .btn:nth-child(8) {
+    left: -150px;
+    opacity: 1;
+  }
+
+  .btn:nth-child(9) {
+    top: -100px;
+    left: -100px;
+    opacity: 1;
+  }
+
+  .projects-table {
+    margin: 0 auto;
+    width: 80%;
+  }
+
+  .c-card__button--close {
+    font-size: 42px;
+  }
+
+  .c-card {
+    max-width: 450px;
+  }
+
+  .c-tools-page {
+    width: 80%;
+    margin: 0 auto;
+  }
+
+  .scroll__btn {
+    bottom: 40px;
+    right: 30px;
+    width: 40px;
+    height: 40px;
+  }
+
+  .scrollBtn {
+    font-size: 24px;
+  }
+
 }
+
 @media only screen and (min-width: 981px) {
   .c-card {
     width: 400px;
+  }
+
+    .scroll__btn {
+    bottom: 50px;
+    right: 50px;
+    width: 50px;
+    height: 50px;
+  }
+
+  .scrollBtn {
+    font-size: 32px;
   }
 }
 
