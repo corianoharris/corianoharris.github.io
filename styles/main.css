@@ -887,6 +887,104 @@ li {
 }
 
 
+/* Project Filter */
+
+.projects-table {
+  margin: 20px auto;
+}
+
+/* ##Filter */
+
+.o-filter {
+  margin: 20px auto 0 auto;
+  height: auto;
+}
+
+.o-filter__header {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+/* ###Pills */
+
+.o-filter__pills {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.o-filter__pill {
+  margin: 10px;
+  padding: 10px;
+  border: thin solid #787878;
+  border-radius: 20px;
+}
+
+.o-filter__pill:active,
+.o-filter__pill:focus,
+.o-filter__pill:hover {
+  background: #E9E9E9;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2),
+    0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.o-filter__pill-all:active,
+.o-filter__pill-all:focus,
+.o-filter__pill-all:hover {
+  border: thin solid #787878;
+}
+
+.o-filter__pill-ux:active,
+.o-filter__pill-ux:focus,
+.o-filter__pill-ux:hover {
+  border: thin solid #BDDFEB;
+  background: #BDDFEB;
+}
+
+.o-filter__pill-ui:active,
+.o-filter__pill-ui:focus,
+.o-filter__pill-ui:hover {
+  border: thin solid #FFF2F4;
+  background: #FFF2F4;
+}
+
+.o-filter__pill-apps:active,
+.o-filter__pill-apps:focus,
+.o-filter__pill-apps:hover {
+  border: thin solid #FFDB99;
+  background: #FFDB99;
+}
+
+.o-filter__pill-designs:active,
+.o-filter__pill-designs:focus,
+.o-filter__pill-designs:hover {
+  border: thin solid #FFFFB2;
+  background: #FFFFB2;
+}
+
+.o-filter__pill-talks:active,
+.o-filter__pill-talks:focus,
+.o-filter__pill-talks:hover {
+  border: thin solid #D5C3B4;
+  background: #D5C3B4;
+}
+
+.filterItem {
+  display: none;
+}
+
+.active {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2),
+    0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.show {
+  display: block;
+}
+
+
+
 /* ### Media Queries */
 
 @media only screen and (min-width: 481px) {
