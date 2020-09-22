@@ -1707,6 +1707,18 @@ li {
 }
 
 
+/* UL List Bullets */
+
+.o-job-list {
+  list-style: none;
+}
+
+.o-job-list li {
+  padding: 10px;
+  border: thin solid var(--dark-gray);
+}
+
+
 
 /* ### Media Queries */
 
