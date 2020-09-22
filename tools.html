@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta
+			name="viewport"
+			content="width=device-width, initial-scale=1.0"
+		/>
+		<title>| Tools</title>
+		<link rel="stylesheet" href="styles/main.css" />
+		<link
+			rel="shortcut icon"
+			href="public/assets/logo.png"
+			type="image/x-icon"
+		/>
+	</head>
+
+	<body>
+		<main role="presentation">
+			<nav class="navbar">
+				<div class="nav__btn u-gradient-background">
+					<p
+						class="menuOpenBtn"
+						id="js-displayNavBtn"
+						onclick="displayNav()"
+						tabindex="0"
+						role="button"
+						aria-label="open the navigation panel"
+					>
+						&#8801;
+					</p>
+				</div>
+			</nav>
+			<div
+				class="scroll__btn u-gradient-background"
+				id="scrollToTopBtn"
+			>
+				<p
+					class="scrollBtn"
+					onclick="topFunction()"
+					tabindex="0"
+					role="button"
+					aria-label="scroll back to the top of page"
+				>
+					&#8657;
+				</p>
+			</div>
+
+			<!-- <nav></nav> -->
+
+			<div class="nav__overlay" id="js-nav">
+				<p
+					class="c-card__button--close"
+					id="js-displayNavBtn"
+					onclick="collapseNav()"
+					tabindex="0"
+					role="button"
+					aira-label="close the navigation panel"
+				>
+					&#8855;
+				</p>
+				<nav class="menu">
+					<input type="checkbox" class="nav_items" id="toggle" />
+					<label id="show-menu" for="toggle">
+						<div
+							class="btn"
+							tabindex="0"
+							role="button"
+							aria-pressed="false"
+						>
+							<p class="closeBtn" onclick="collapseNav()">&#10005;</p>
+						</div>
+						<div class="btn">
+							<a href="creations.html" class="nav_links"
+								><img
+									src="public/assets/create.svg"
+									class="nav_link_icon"
+								/>
+								<p class="nav_link_text">creations</p></a
+							>
+						</div>
+						<div class="btn">
+							<a href="services.html" class="nav_links"
+								><img
+									src="public/assets/services.svg"
+									class="nav_link_icon"
+								/>
+								<p class="nav_link_text">services</p></a
+							>
+						</div>
+						<div class="btn">
+							<a href="tools.html" class="nav_links"
+								><img
+									src="public/assets/tools.svg"
+									class="nav_link_icon"
+								/>
+								<p class="nav_link_text">tools</p></a
+							>
+						</div>
+						<div class="btn">
+							<a href="about.html" class="nav_links"
+								><img
+									src="public/assets/profile.svg"
+									class="nav_link_icon"
+								/>
+								<p class="nav_link_text">about</p></a
+							>
+						</div>
+						<div class="btn">
+							<a href="contact.html" class="nav_links"
+								><img
+									src="public/assets/contact.svg"
+									class="nav_link_icon"
+								/>
+								<p class="nav_link_text">contact</p></a
+							>
+						</div>
+						<div class="btn">
+							<a
+								href="https://github.com/corianoharris"
+								class="nav_links"
+								><img
+									src="public/assets/git.svg"
+									class="nav_link_icon"
+								/>
+								<p class="nav_link_text">github</p></a
+							>
+						</div>
+						<div class="btn">
+							<a
+								href="https://www.linkedin.com/in/corianoharris/"
+								class="nav_links"
+								><img
+									src="public/assets/linkedin.svg"
+									class="nav_link_icon"
+								/>
+								<p class="nav_link_text">linkedin</p></a
+							>
+						</div>
+						<div class="btn">
+							<a href="#" class="nav_links" id="js-themeChanger"
+								><img
+									src="public/assets/toggle-hand.svg"
+									class="nav_link_icon"
+								/>
+								<p class="nav_link_text">theme</p></a
+							>
+						</div>
+					</label>
+				</nav>
+			</div>
+
+				<h1 class="u-gradient-color">
+					Toolbox
+        </h1>
+
+				<!-- UX Tools -->
+
+    <section class="c-page__section c-tools-page">
+      <h2 class="c-page__subheader c-tools-subheader u-gradient-color">User Experiences</h2>
+      <div class="c-tools-section">
+        <input type="checkbox" class="c-tools-section-items" id="research">
+        <label class="c-tools-section-label" for="research">
+          <h3 class="c-tools-subheaders">Research</h3>
+        </label>
+        <div class="c-tools-section__body-text" aria="list">
+          <ul class="c__section-list">
+            <li>Quantitative Research</li>
+            <li>Qualitative Research</li>
+            <li>Personas</li>
+            <li>Google Surveys</li>
+            <li>Google Analytics</li>
+            <li>Business Rules</li>
+          </ul>
+        </div>
+        <div class="c-tools-section">
+          <input type="checkbox" class="c-tools-section-items" id="user-testing">
+          <label class="c-tools-section-label " for="user-testing">
+            <h3 class="c-tools-subheaders">Testing</h3>
+          </label>
+          <div class="c-tools-section__body-text" aria="list">
+            <ul class="c__section-list">
+              <li>Google Analytics</li>
+              <li>UserTesting.com</li>
+              <li>OptimalSort</li>
+              <li>Moderated/Unmoderated Observations</li>
+            </ul>
+          </div>
+          <div class="c-tools-section">
+            <input type="checkbox" class="c-tools-section-items" id="Additional-ux">
+            <label class="c-tools-section-label " for="Additional-ux">
+              <h3 class="c-tools-subheaders">Additional</h3>
+            </label>
+            <div class="c-tools-section__body-text" aria="list">
+              <ul class="c__section-list">
+                <li>public-speaking</li>
+                <li>SAFe Agile</li>
+                <li>Human-Centered Interface</li>
+                <li>Accessibility best practices</li>
+              </ul>
+            </div>
+          </div>
+          </div>
+         </section>
+          <!-- UI -->
+          <section class="c-page__section c-tools-page">
+          <h2 class="c-page__subheader c-tools-subheader u-gradient-color">User Interface</h2>
+          <div class="c-tools-section">
+            <input type="checkbox" class="c-tools-section-items" id="layouts">
+            <label class="c-tools-section-label" for="layouts">
+              <h3 class="c-tools-subheaders">layouts</h3>
+            </label>
+            <div class="c-tools-section__body-text" aria="list">
+              <ul class="c__section-list">
+                <li>wireframes</li>
+                <li>mockups</li>
+                <li>Sketch</li>
+                <li>Styleguides</li>
+              </ul>
+            </div>
+            <div class="c-tools-section">
+              <input type="checkbox" class="c-tools-section-items" id="prototyping">
+              <label class="c-tools-section-label" for="prototyping">
+                <h3 class="c-tools-subheaders">prototyping</h3>
+              </label>
+              <div class="c-tools-section__body-text" aria="list">
+                <ul class="c__section-list">
+                  <li>Invision</li>
+                  <li>Adobe XD</li>
+                </ul>
+              </div>
+              <div class="c-tools-section">
+                <input type="checkbox" class="c-tools-section-items" id="Additional-ui">
+                <label class="c-tools-section-label" for="Additional-ui">
+                  <h3 class="c-tools-subheaders">Additional</h3>
+                </label>
+                <div class="c-tools-section__body-text" aria="list">
+                  <ul class="c__section-list">
+                    <li>Material Design</li>
+                    <li>Tasks Flows</li>
+                    <li>User Flows</li>
+                    <li>Wire Flows</li>
+                  </ul>
+                </div>
+              </div>
+              </section>
+              <!-- Full-Stack -->
+               <section class="c-page__section c-tools-page">
+              <h2 class="c-page__subheader c-tools-subheader u-gradient-color">Full-Stack</h2>
+              <div class="c-tools-section">
+                <input type="checkbox" class="c-tools-section-items" id="Front-End">
+                <label class="c-tools-section-label" for="Front-End">
+                  <h3 class="c-tools-subheaders">Front-End</h3>
+                </label>
+                <div class="c-tools-section__body-text">
+                  <ul class="c__section-list">
+                    <li>HTML5</li>
+                    <li>CSS3</li>
+                    <li>Javascript</li>
+                    <li>React.js</li>
+                    <li>Ember.js</li>
+                    <li>SASS</li>
+                    <li>GraphQL</li>
+                    <li>Axios</li>
+                    <li>NPM</li>
+                    <li>Yarn</li>
+                    <li>Webpack</li>
+                  </ul>
+                </div>
+                <cls="c-tools-section">
+                  <input type="checkbox" class="c-tools-section-items" id="back-end">
+                  <label class="c-tools-section-label" for="back-end">
+                    <h3 class="c-tools-subheaders">Back-End</h3>
+                  </label>
+                  <div class="c-tools-section__body-text">
+                    <ul class="c__section-list">
+                      <li>MongoDB</li>
+                      <li>Postgresql</li>
+                    </ul>
+                  </div>
+                  <div class="c-tools-section">
+                    <input type="checkbox" class="c-tools-section-items" id="Additional-fs">
+                    <label class="c-tools-section-label" for="Additional-fs">
+                      <h3 class="c-tools-subheaders">Additional</h3>
+                    </label>
+                    <div class="c-tools-section__body-text">
+                      <ul class="c__section-list">
+                        <li>Mocha/Chai</li>
+                        <li>Qunit</li>
+                        <li>Jest</li>
+                        <li>Encrytion</li>
+                        <li>Computer Hardware</li>
+                      </ul>
+                    </div>
+                  </div>
+                </section>
+                  <!-- Graphic Design -->
+                   <section class="c-page__section c-tools-page">
+                  <h2 class="c-page__subheader c-tools-subheader u-gradient-color">Graphic Design</h2>
+                  <div class="c-tools-section">
+                    <input type="checkbox" class="c-tools-section-items" id="application-gd">
+                    <label class="c-tools-section-label" for="application-gd">
+                      <h3 class="c-tools-subheaders">Applications</h3>
+                    </label>
+                    <div class="c-tools-section__body-text">
+                      <ul class="c__section-list">
+                        <li>Photoshop</li>
+                        <li>Illustrator</li>
+                        <li>InDesign</li>
+                        <li>Typography</li>
+                        <li>Color Theory</li>
+                      </ul>
+                    </div>
+
+                    <div class="c-tools-section">
+                      <input type="checkbox" class="c-tools-section-items" id="Additional-gd">
+                      <label class="c-tools-section-label"
+                        for="Additional-gd">
+                        <h3 class="c-tools-subheaders">Additional</h3>
+                      </label>
+                      <div class="c-tools-section__body-text">
+                        <ul class="c__section-list">
+                          <li>sketching</li>
+                          <li>painting</li>
+                          <li>understaning of visual perception</li>
+                          <li>knowledge of the eye</li>
+                        </ul>
+                      </div>
+                    </div>
+                  </section>
+    </section>
+    <footer class="c-copyright">
+      ©Coriano Harris 2020
+    </footer>
+  </main>
+  <script src="main.js"></script>
+	</body>
+</html>
