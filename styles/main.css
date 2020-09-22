@@ -366,6 +366,7 @@ li {
   width: 100vw;
   z-index: 500px;
    box-shadow: -1px 2px 5px rgba(0, 0, 0, 1);
+  background: #222;
 }
 
 .nav__btn {
@@ -383,8 +384,7 @@ li {
 }
 
 .nav__btn:hover {
-  color: inherit;
-  box-shadow: -1px 2px 5px rgba(0, 0, 0, 1);
+  color: var(--dark-gray);
 }
 
 /* .nav__btn {
@@ -495,7 +495,7 @@ li {
 
 .btn:visited {
   padding-bottom: 4px;
-  border-bottom: 2px solid  #787878;
+  border-bottom: 2px solid  var(--light-gray);
 }
 
 .btn:nth-child(2) {
