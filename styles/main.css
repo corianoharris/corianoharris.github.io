@@ -1245,6 +1245,466 @@ li {
   display: block;
 }
 
+/* Profile */
+
+/* ###Profile */
+
+.o-profile {
+  display: block;
+  justify-content: center;
+  margin: 20px auto;
+  max-width: 500px;
+}
+
+.o-profile-title {
+  word-wrap: wrap;
+  line-height: 1.2em;
+  text-align: center;
+  border-top: thin solid var(--dark-gray);
+  border-bottom: thin solid var(--dark-gray);
+}
+
+.o-profile__img {
+  width: 150px;
+  height: 150px;
+  padding: 10px;
+  border: 10px solid #787878;
+  border-radius: 50%;
+  display: block;
+  margin: 10px auto 20px auto;
+}
+
+.o-profile-info {
+  border-bottom: thin solid #787878;
+  height: auto;
+  padding-bottom: 8px;
+  margin-bottom: 10px;
+  justify-content: center;
+  text-align: center;
+}
+
+.o-profile-name {
+  border-bottom: 8px solid #787878;
+  margin-bottom: 20px;
+
+}
+
+.o-profile-name h3,
+.o-profile-name h4 {
+  display: inline-block;
+  margin: 0;
+  padding: 10px 0;
+  text-transform: uppercase;
+}
+
+.o-profile-name h3 {
+  font-size: 32px;
+  font-weight: 800;
+}
+
+.o-profile-name h4 {
+  font-size: 20px;
+  font-weight: 300;
+}
+
+.o-name-container h2 {
+  font-size: 42px;
+}
+
+.o-name-container h4 {
+  font-size: 28px;
+}
+
+
+.o-job-list {
+  justify-content: flex-start;
+  margin-top: 0;
+  margin-bottom: 0;
+  padding: 0;
+  text-transform: uppercase;
+  width: 100%;
+  font-weight: 700;
+  text-align: left;
+}
+
+.o-contributions-list {
+  justify-content: flex-start;
+  margin-top: 0;
+  margin-bottom: 0;
+  padding: 0;
+  width: 100%;
+  font-weight: 700;
+  text-align: left;
+}
+
+.positions {
+  margin: 0;
+  padding: 0;
+}
+
+.o-profile-passions {
+  margin: 30px 0;
+}
+
+.o-profile-passions-titles {
+  margin: 20px 0;
+}
+
+
+/* ##Form */
+
+.o-form {
+  display: block;
+  justify-content: center;
+  width: 100%;
+  margin: 80px auto;
+  max-width: 800px;
+  background: inherit;
+  font-family: "Raleway", sans-serif;
+  font-weight: 500;
+  letter-spacing: 2px;
+  background: inherit;
+}
+
+.o-userText {
+  width: 90%;
+  border: 1px solid #787878;
+  background: inherit;
+  padding: 20px;
+  margin: 0;
+  border: thin solid #787878;
+  color: inherit;
+}
+
+.o-userText:focus {
+  outline: #787878;
+  width: 100%;
+  margin-right: 10px;
+  background: inherit;
+
+}
+
+.o-userText:last-child:focus {
+  width: 150px;
+}
+
+.o-userText:focus~.o-form__floating-label {
+  top: -85px;
+  left: 10px;
+  font-size: 10px;
+  opacity: 1;
+  color: #787878;
+}
+
+.o-form__floating-label {
+  display: block;
+  position: relative;
+  pointer-events: none;
+  left: 10px;
+  top: -85px;
+  padding: 5px;
+  max-width: 200px;
+  transition: 0.2s ease all;
+  font-size: 11px;
+  z-index: 200px;
+  text-transform: uppercase;
+  background: inherit;
+  font-weight: bold;
+}
+
+.o-userText:not(:focus):invalid~.o-form__floating-label {
+  top: -85px;
+  left: 10px;
+  font-size: 11px;
+  opacity: 1;
+  color: #787878;
+}
+
+.o-userText:focus:invalid~.o-form__floating-label {
+  top: -85px;
+  left: 10px;
+  font-size: 11px;
+  opacity: 1;
+  color: #FF7F7F;
+}
+
+.o-userText:not(:focus)~.o-form__floating-label {
+  color: #787878;
+}
+
+.o-userText:not(:focus):valid~.o-form__floating-label {
+  top: -85px;
+  left: 10px;
+  font-size: 11px;
+  opacity: 1;
+  color: #009900;
+}
+
+
+.o-userText:focus:valid~.o-form__floating-label {
+  top: -85px;
+  left: 10px;
+  font-size: 11px;
+  opacity: 1;
+  color: #009900;
+}
+
+.o-userText:[required]:focus:invalid~.o-form__floating-label {
+  top: -85px;
+  left: 10px;
+  font-size: 11px;
+  opacity: 1;
+  color: #FF7F7F;
+}
+
+.o-userText:[required]:focus:valid~.o-form__floating-label {
+  top: -85px;
+  left: 0;
+  font-size: 11px;
+  opacity: 1;
+  color: #009900;
+}
+
+.o-form__floating-label:after {
+  content: "*";
+  color: #FF7F7F;
+  font-size: 24px;
+  padding-bottom: -10px;
+  vertical-align: center;
+}
+
+.fl-phone::after {
+  content: "";
+}
+
+/* ###textarea */
+
+.o-userFormBody {
+  width: 90%;
+  border: 1px solid #787878;
+  font-size: 1rem;
+  color: #787878;
+  background: inherit;
+  margin-right: 10px;
+  padding: 20px 10px;
+}
+
+.o-userFormBody:focus {
+  width: 100%;
+  color: #787878;
+}
+
+.o-form__message-floating-label::after {
+  content: "*";
+  color: #FF7F7F;
+  vertical-align: center;
+  font-size: 24px;
+}
+
+.o-form__message-floating-label {
+  display: block;
+  position: relative;
+  font-size: 11px;
+  font-weight: bold;
+  top: -220px;
+  left: 10px;
+  text-transform: uppercase;
+  background: inherit;
+  width: 200px;
+}
+
+.o-userFormBody:not(:focus)~.o-form__message-floating-label {
+  color: #787878;
+  left: 10px;
+  top: -220px;
+}
+
+.o-userFormBody:focus:valid~.o-form__message-floating-label {
+  top: -220px;
+  left: 10px;
+  font-size: 11px;
+  opacity: 1;
+  color: #009900;
+}
+
+.o-userFormBody:focus:invalid~.o-form__message-floating-label {
+  top: -220px;
+  left: 10px;
+  font-size: 11px;
+  opacity: 1;
+  color: #FF7F7F;
+}
+
+/* ###Form Button */
+
+.o-form__button {
+  float: right;
+  background: inherit;
+  color: inherit;
+  outline: 0;
+  border: none;
+  padding: 10px;
+  font-size: inherit;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.o-form__button:active,
+.o-form__button:focus,
+.o-form__button:hover {
+  background: inherit;
+  padding-bottom: 10px;
+  border-bottom: medium solid var(--dark-gray);
+
+}
+
+/* Validation tooltips */
+
+[data-texttip],
+[data-emailtip],
+[data-phonetip] {
+  position: relative;
+}
+
+[data-texttip]:before {
+  content: '';
+  /* hides the tooltoolTip when not hovered */
+  display: none;
+  content: '';
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-top: 5px solid rgba(78,78, 78, .6);
+  position: absolute;
+  top: -10px;
+  left: 35%;
+  z-index: 9;
+  font-size: 0;
+  line-height: 0;
+  width: 0;
+  height: 0;
+  color: inherit;
+}
+
+
+[data-texttip]:after {
+  display: none;
+  content: attr(data-texttip);
+  position: absolute;
+  top: -40px;
+  left: 35%;
+  padding: 5px;
+  cursor: pointer;
+  background: rgba(78,78, 78, .6);
+  color: inherit;
+  z-index: 9;
+  font-size: 10px;
+  height: auto;
+  line-height: 18px;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  vertical-align: center;
+  white-space: wrap;
+  word-wrap: normal;
+  width: auto;
+}
+
+[data-phonetip]:before {
+  content: '';
+  /* hides the tooltoolTip when not hovered */
+  display: none;
+  content: '';
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-top: 5px solid  rgba(78,78, 78, .6);
+  position: absolute;
+  top: 10px;
+  left: 35%;
+  z-index: 9;
+  font-size: 0;
+  line-height: 0;
+  width: 0;
+  height: 0;
+  color: inherit;
+}
+
+
+[data-phonetip]:after {
+  display: none;
+  content: attr(data-phonetip);
+  position: absolute;
+  top: -40px;
+  left: 35%;
+  padding: 5px;
+  cursor: pointer;
+  background: rgba(78,78, 78, .6);
+  color: inherit;
+  z-index: 9;
+  font-size: 10px;
+  height: auto;
+  line-height: 18px;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  vertical-align: center;
+  white-space: wrap;
+  word-wrap: normal;
+  width: auto;
+}
+
+[data-emailtip]:before {
+  content: '';
+  /* hides the tooltoolTip when not hovered */
+  display: none;
+  content: '';
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-top: 5px solid rgba(78,78, 78, .6);
+  position: absolute;
+  top: 10px;
+  left: 35%;
+  z-index: 9;
+  font-size: 0;
+  line-height: 0;
+  width: 0;
+  height: 0;
+  color: inherit;
+}
+
+
+[data-emailtip]:after {
+  display: none;
+  content: attr(data-emailtip);
+  position: absolute;
+  top: -40px;
+  left: 35%;
+  padding: 5px;
+  cursor: pointer;
+  background: rgba(78,78, 78, .6);
+  color: inherit;
+  z-index: 9;
+  font-size: 10px;
+  height: auto;
+  line-height: 18px;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  vertical-align: center;
+  white-space: wrap;
+  word-wrap: normal;
+  width: auto;
+}
+
+[data-texttip]:hover:before,
+[data-texttip]:hover:after,
+[data-emailtip]:hover:before,
+[data-emailtip]:hover:after,
+[data-phonetip]:hover:before,
+[data-phonetip]:hover:after {
+  display: block;
+}
+
 
 
 /* ### Media Queries */
