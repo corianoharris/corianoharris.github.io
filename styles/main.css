@@ -1177,7 +1177,7 @@ li {
 .o-filter__pill {
   margin: 10px;
   padding: 10px;
-  border: thin solid #787878;
+  border: thin solid var(--dark-gray);
   border-radius: 20px;
 }
 
@@ -1193,7 +1193,7 @@ li {
 .o-filter__pill-all:active,
 .o-filter__pill-all:focus,
 .o-filter__pill-all:hover {
-  border: thin solid #787878;
+  border: thin solid var(--dark-gray);
 }
 
 .o-filter__pill-ux:active,
