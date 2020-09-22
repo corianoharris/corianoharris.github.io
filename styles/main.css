@@ -1742,6 +1742,27 @@ li {
       ##UTILITIES
 \*---------------------*/
 
+.u-gradient-font {
+  color: inherit;
+  color: linear-gradient(to left, #663399, #33CCFF);
+}
+
+
+.u-gradient-color {
+  background: linear-gradient(#663399, #33CCFF);
+  background: -webkit-linear-gradient(#663399, #33CCFF);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+
+/* Gradient Background */
+
+.u-gradient-background {
+  background: inherit;
+  background: linear-gradient(to left, #663399, #33CCFF);
+}
+
 
 /*---------------------*\
       #END of UTILITIES
