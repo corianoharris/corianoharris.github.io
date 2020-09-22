@@ -1268,14 +1268,14 @@ li {
   width: 150px;
   height: 150px;
   padding: 10px;
-  border: 10px solid #787878;
+  border: 10px solid var(--dark-gray);
   border-radius: 50%;
   display: block;
   margin: 10px auto 20px auto;
 }
 
 .o-profile-info {
-  border-bottom: thin solid #787878;
+  border-bottom: thin solid var(--dark-gray);
   height: auto;
   padding-bottom: 8px;
   margin-bottom: 10px;
@@ -1284,7 +1284,7 @@ li {
 }
 
 .o-profile-name {
-  border-bottom: 8px solid #787878;
+  border-bottom: 8px solid var(--dark-gray);
   margin-bottom: 20px;
 
 }
