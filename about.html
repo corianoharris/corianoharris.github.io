@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta
+			name="viewport"
+			content="width=device-width, initial-scale=1.0"
+		/>
+		<title>| Services</title>
+		<link rel="stylesheet" href="styles/main.css" />
+		<link
+			rel="shortcut icon"
+			href="public/assets/logo.png"
+			type="image/x-icon"
+		/>
+	</head>
+
+	<body>
+		<main role="presentation">
+			<nav class="navbar">
+				<div class="nav__btn u-gradient-background">
+					<p
+						class="menuOpenBtn"
+						id="js-displayNavBtn"
+						onclick="displayNav()"
+						tabindex="0"
+						role="button"
+						aria-label="open the navigation panel"
+					>
+						&#8801;
+					</p>
+				</div>
+			</nav>
+			<div
+				class="scroll__btn u-gradient-background"
+				id="scrollToTopBtn"
+			>
+				<p
+					class="scrollBtn"
+					onclick="topFunction()"
+					tabindex="0"
+					role="button"
+					aria-label="scroll back to the top of page"
+				>
+					&#8657;
+				</p>
+			</div>
+
+			<!-- <nav></nav> -->
+
+			<div class="nav__overlay" id="js-nav">
+				<p
+					class="c-card__button--close"
+					id="js-displayNavBtn"
+					onclick="collapseNav()"
+					tabindex="0"
+					role="button"
+					aira-label="close the navigation panel"
+				>
+					&#8855;
+				</p>
+				<nav class="menu">
+					<input type="checkbox" class="nav_items" id="toggle" />
+					<label id="show-menu" for="toggle">
+						<div
+							class="btn"
+							tabindex="0"
+							role="button"
+							aria-pressed="false"
+						>
+							<p class="closeBtn" onclick="collapseNav()">&#10005;</p>
+						</div>
+						<div class="btn">
+							<a href="creations.html" class="nav_links"
+								><img
+									src="public/assets/create.svg"
+									class="nav_link_icon"
+								/>
+								<p class="nav_link_text">creations</p></a
+							>
+						</div>
+						<div class="btn">
+							<a href="services.html" class="nav_links"
+								><img
+									src="public/assets/services.svg"
+									class="nav_link_icon"
+								/>
+								<p class="nav_link_text">services</p></a
+							>
+						</div>
+						<div class="btn">
+							<a href="tools.html" class="nav_links"
+								><img
+									src="public/assets/tools.svg"
+									class="nav_link_icon"
+								/>
+								<p class="nav_link_text">tools</p></a
+							>
+						</div>
+						<div class="btn">
+							<a href="about.html" class="nav_links"
+								><img
+									src="public/assets/profile.svg"
+									class="nav_link_icon"
+								/>
+								<p class="nav_link_text">about</p></a
+							>
+						</div>
+						<div class="btn">
+							<a href="contact.html" class="nav_links"
+								><img
+									src="public/assets/contact.svg"
+									class="nav_link_icon"
+								/>
+								<p class="nav_link_text">contact</p></a
+							>
+						</div>
+						<div class="btn">
+							<a
+								href="https://github.com/corianoharris"
+								class="nav_links"
+								><img
+									src="public/assets/git.svg"
+									class="nav_link_icon"
+								/>
+								<p class="nav_link_text">github</p></a
+							>
+						</div>
+						<div class="btn">
+							<a
+								href="https://www.linkedin.com/in/corianoharris/"
+								class="nav_links"
+								><img
+									src="public/assets/linkedin.svg"
+									class="nav_link_icon"
+								/>
+								<p class="nav_link_text">linkedin</p></a
+							>
+						</div>
+						<div class="btn">
+							<a href="#" class="nav_links" id="js-themeChanger"
+								><img
+									src="public/assets/toggle-hand.svg"
+									class="nav_link_icon"
+								/>
+								<p class="nav_link_text">theme</p></a
+							>
+						</div>
+					</label>
+				</nav>
+			</div>
+
+			<h1 class="o-profile-title u-gradient-color">About Coriano</h1>
+			<!-- page sections -->
+
+			<section class="o-profile">
+				<img
+					class="o-profile__img"
+					src="public/assets/Coriano.jpg"
+					alt="A image of Coriano Harris seating at table looking at laptop"
+				/>
+				<section class="o-profile-info">
+					<div class="o-profile-name">
+						<h3>Coriano</h3>
+						<h4>Harris</h4>
+					</div>
+					<div class="o-job-list">
+						<h3 class="positions">UX/UI Full-Stack Architect</h3>
+						<h3 class="positions">Graphic Design</h3>
+						<h3 class="positions">Cartoonist</h3>
+						<h3 class="positions">Colorist</h3>
+					</div>
+				</section>
+			</section>
+
+			<!-- mission quote -->
+
+			<section class="c-page__section">
+				<h2 class="c-page__subheader">Professional</h2>
+				<div class="c-section__content c-testimonials">
+					<blockquote class="c-testimonial__quote">
+						<h3 class="e-blockquote__body-text">
+							My ultimate goal is to solve one negative user experience
+							for everyone on the planet.
+						</h3>
+					</blockquote>
+					<h2 class="c-page__subheader">Personal</h2>
+					<blockquote class="c-testimonial__quote">
+						<h3 class="e-blockquote__body-text">
+							I want to be like water. The ability to adjust to any
+							situation.
+						</h3>
+					</blockquote>
+				</div>
+			</section>
+
+			<footer class="c-copyright">©Coriano Harris 2020</footer>
+		</main>
+		<script src="main.js"></script>
+	</body>
+</html>
