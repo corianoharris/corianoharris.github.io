@@ -567,7 +567,7 @@ li {
   position: absolute;
   font-size: 36px;
   font-weight: 900;
-  color: #787878;
+  color: var(--t-dark-text-color);
   padding: 10px;
   border-radius: 100%;
   transition: all 0.3s ease;
@@ -647,6 +647,8 @@ li {
   padding: 10px;
   background: inherit;
   border: thin solid var(--light-gray);
+  max-width: 400px;
+  margin: 0 auto;
 }
 
 .c-card__thumbnail:active,
@@ -817,7 +819,7 @@ li {
   height: 80px;
 }
 
-/* ###Card state */
+/* #Card state */
 
 .c-card__section-items:checked+.c-card__section-label {
   background: inherit;
@@ -981,6 +983,7 @@ li {
   }
 
 }
+
 @media only screen and (min-width: 641px) {
   .c-card {
     width: 60%;
@@ -1097,11 +1100,16 @@ li {
     right: 50px;
     width: 50px;
     height: 50px;
+    padding-top: 10px;
   }
 
   .scrollBtn {
     font-size: 32px;
   }
+
+  .c-tools-section {
+    margin: 20px;
+   }
 }
 
 @media only screen and (min-width: 1024px) {}
