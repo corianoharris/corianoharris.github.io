@@ -595,30 +595,32 @@ li {
   bottom: 5px;
   right: 5px;
   display: flex;
+  text-align: center;
+  vertical-align: center;
   justify-content: center;
   align-items: center;
-  width: 35px;
-  height: 35px;
+  width: 30px;
+  height: 30px;
+  padding-top: 3px;
   border-radius: 100%;
-  overflow: hidden;
+  border: medium solid var(--dark-gray);
   cursor: pointer;
   margin: 25px auto;
   color: inherit;
   background: inherit;
   z-index: 4;
-  box-shadow: -1px 2px 5px rgba(0, 0, 0, 1);
+  font-weight: bolder;
+
 }
+
 
 .scroll__btn:hover {
   color: inherit;
-  box-shadow: -1px 2px 5px rgba(0, 0, 0, 1);
 }
 
 .scrollBtn {
-  font-size: 18px;
+  font-size: 20px;
 }
-
-
 
 
 /* Buttons */
@@ -1072,11 +1074,12 @@ li {
   }
 
   .scroll__btn {
-    bottom: 40px;
-    right: 30px;
-    width: 40px;
-    height: 40px;
-  }
+
+  width: 40px;
+  height: 40px;
+  padding-top: 7px;
+
+}
 
   .scrollBtn {
     font-size: 24px;
