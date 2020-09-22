@@ -309,6 +309,7 @@ a {
 /* ul */
 ul {
   margin: 0 20px;
+  list-style: circle outside none;
 }
 
 li {
@@ -1703,6 +1704,18 @@ li {
 [data-phonetip]:hover:before,
 [data-phonetip]:hover:after {
   display: block;
+}
+
+
+/* UL List Bullets */
+
+.o-job-list {
+  list-style: none;
+}
+
+.o-job-list li {
+  padding: 10px;
+  border: thin solid var(--dark-gray);
 }
 
 
