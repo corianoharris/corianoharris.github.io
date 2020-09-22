@@ -831,6 +831,94 @@ li {
   z-index: -1;
 }
 
+/* Section */
+
+.c-section__list {
+  margin: 0 40px;
+}
+
+/* Tools */
+
+/* ##Tools */
+/*
+.c-tools-subheader {
+  margin: 40px 0 10px 0;
+  line-height: 1.2em;
+  border-bottom: none;
+  font-size: 28px;
+} */
+
+/* .c-tools-section {
+  margin: 30px 0;
+} */
+
+.c-tools-section:last-child {
+  margin-bottom: 40px;
+  border-bottom: 0;
+}
+
+.c-tools-section-label {
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-pack: justify;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  font-size: 20px;
+  background: inherit;
+  font-weight: bold;
+  cursor: pointer;
+  border-bottom: thin dotted var(--light-gray);
+}
+
+
+.c-tools-subheaders {
+  margin: 0;
+  font-size: 20px;
+  text-transform: lowercase;
+  font-weight: 300;
+}
+
+.c-tools-section-label:hover {
+  border-bottom: thick solid var(--dark-gray);
+}
+
+.c-tools-section-label::after {
+  content: "\276F";
+  text-align: center;
+  -webkit-transition: all .35s;
+  transition: all .35s;
+}
+
+.c-tools-section__body-text {
+  max-height: 0;
+  -webkit-transition: all .35s;
+  transition: all .35s;
+  overflow: scroll;
+}
+
+/* #Tools Section State */
+
+
+.c-tools-section-items:checked+.c-tools-section-label {
+  border-bottom: thick solid var(--dark-gray);
+}
+
+.c-tools-section-items:checked+.c-tools-section-label::after {
+  -webkit-transform: rotate(90deg);
+  transform: rotate(90deg);
+}
+
+.c-tools-section-items:checked~.c-tools-section__body-text {
+  max-height: 200px;
+}
+
+.c-tools-section-items {
+  position: absolute;
+  opacity: 0;
+  z-index: -1;
+}
+
 /* Copyright */
 
 .c-copyright {
