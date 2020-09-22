@@ -1364,23 +1364,25 @@ li {
   font-weight: 500;
   letter-spacing: 2px;
   background: inherit;
+  z-index: 0;
 }
 
 .o-userText {
   width: 90%;
-  border: 1px solid #787878;
   background: inherit;
   padding: 20px;
   margin: 0;
-  border: thin solid #787878;
+  border: thin solid var(--dark-gray);
   color: inherit;
 }
 
 .o-userText:focus {
-  outline: #787878;
+  outline: inherit;
   width: 100%;
   margin-right: 10px;
   background: inherit;
+  border: 2px solid var(--light-gray);
+  color: inherit;
 
 }
 
@@ -1393,7 +1395,7 @@ li {
   left: 10px;
   font-size: 10px;
   opacity: 1;
-  color: #787878;
+  color: var(--dark-gray);
 }
 
 .o-form__floating-label {
@@ -1417,7 +1419,7 @@ li {
   left: 10px;
   font-size: 11px;
   opacity: 1;
-  color: #787878;
+  color: var(--dark-gray);
 }
 
 .o-userText:focus:invalid~.o-form__floating-label {
@@ -1429,7 +1431,7 @@ li {
 }
 
 .o-userText:not(:focus)~.o-form__floating-label {
-  color: #787878;
+  color: var(--dark-gray);
 }
 
 .o-userText:not(:focus):valid~.o-form__floating-label {
@@ -1481,9 +1483,9 @@ li {
 
 .o-userFormBody {
   width: 90%;
-  border: 1px solid #787878;
+  border: 1px solid inherit;
   font-size: 1rem;
-  color: #787878;
+  color: inherit;
   background: inherit;
   margin-right: 10px;
   padding: 20px 10px;
@@ -1491,7 +1493,8 @@ li {
 
 .o-userFormBody:focus {
   width: 100%;
-  color: #787878;
+  border: 2px solid var(--light-gray);
+  color: inherit;
 }
 
 .o-form__message-floating-label::after {
@@ -1514,7 +1517,7 @@ li {
 }
 
 .o-userFormBody:not(:focus)~.o-form__message-floating-label {
-  color: #787878;
+  color: var(--dark-gray);
   left: 10px;
   top: -220px;
 }
