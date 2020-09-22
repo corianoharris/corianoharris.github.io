@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta
+			name="viewport"
+			content="width=device-width, initial-scale=1.0"
+		/>
+		<title>| Contact</title>
+		<link rel="stylesheet" href="styles/main.css" />
+		<link
+			rel="shortcut icon"
+			href="public/assets/logo.png"
+			type="image/x-icon"
+		/>
+	</head>
+
+	<body>
+		<main role="presentation">
+			<nav class="navbar">
+				<div class="nav__btn">
+					<p
+						class="menuOpenBtn"
+						id="js-displayNavBtn"
+						onclick="displayNav()"
+						tabindex="0"
+						role="button"
+						aria-label="open the navigation panel"
+					>
+						&#8801;
+					</p>
+				</div>
+			</nav>
+			<div class="scroll__btn" id="scrollToTopBtn">
+				<p
+					class="scrollBtn"
+					onclick="topFunction()"
+					tabindex="0"
+					role="button"
+					aria-label="scroll back to the top of page"
+				>
+					&#8657;
+				</p>
+			</div>
+
+			<!-- <nav></nav> -->
+
+			<div class="nav__overlay" id="js-nav">
+				<p
+					class="c-card__button--close"
+					id="js-displayNavBtn"
+					onclick="collapseNav()"
+					tabindex="0"
+					role="button"
+					aira-label="close the navigation panel"
+				>
+					&#8855;
+				</p>
+				<nav class="menu">
+					<input type="checkbox" class="nav_items" id="toggle" />
+					<label id="show-menu" for="toggle">
+						<div
+							class="btn"
+							tabindex="0"
+							role="button"
+							aria-pressed="false"
+						>
+							<p class="closeBtn" onclick="collapseNav()">&#10005;</p>
+						</div>
+						<div class="btn">
+							<a href="creations.html" class="nav_links"
+								><img
+									src="public/assets/create.svg"
+									class="nav_link_icon"
+								/>
+								<p class="nav_link_text">creations</p></a
+							>
+						</div>
+						<div class="btn">
+							<a href="services.html" class="nav_links"
+								><img
+									src="public/assets/services.svg"
+									class="nav_link_icon"
+								/>
+								<p class="nav_link_text">services</p></a
+							>
+						</div>
+						<div class="btn">
+							<a href="tools.html" class="nav_links"
+								><img
+									src="public/assets/tools.svg"
+									class="nav_link_icon"
+								/>
+								<p class="nav_link_text">tools</p></a
+							>
+						</div>
+						<div class="btn">
+							<a href="about.html" class="nav_links"
+								><img
+									src="public/assets/profile.svg"
+									class="nav_link_icon"
+								/>
+								<p class="nav_link_text">about</p></a
+							>
+						</div>
+						<div class="btn">
+							<a href="contact.html" class="nav_links"
+								><img
+									src="public/assets/contact.svg"
+									class="nav_link_icon"
+								/>
+								<p class="nav_link_text">contact</p></a
+							>
+						</div>
+						<div class="btn">
+							<a
+								href="https://github.com/corianoharris"
+								class="nav_links"
+								><img
+									src="public/assets/git.svg"
+									class="nav_link_icon"
+								/>
+								<p class="nav_link_text">github</p></a
+							>
+						</div>
+						<div class="btn">
+							<a
+								href="https://www.linkedin.com/in/corianoharris/"
+								class="nav_links"
+								><img
+									src="public/assets/linkedin.svg"
+									class="nav_link_icon"
+								/>
+								<p class="nav_link_text">linkedin</p></a
+							>
+						</div>
+						<div class="btn">
+							<a href="#" class="nav_links" id="js-themeChanger"
+								><img
+									src="public/assets/toggle-hand.svg"
+									class="nav_link_icon"
+								/>
+								<p class="nav_link_text">theme</p></a
+							>
+						</div>
+					</label>
+				</nav>
+			</div>
+
+			<h1 class="o-profile-title u-gradient-color">Let's Connect</h1>
+
+			<form
+				name="contact"
+				method="POST"
+				class="o-form"
+				role="form"
+				aria-label="contact form"
+			>
+				<div data-texttip="minimum of 3 characters">
+					<input
+						type="text"
+						name="firstname"
+						class="o-userText"
+						id="firstname"
+						pattern="[A-Za-z]+"
+						required
+						minlength="3"
+					/>
+					<span class="o-form__floating-label">first name</span>
+				</div>
+				<div data-texttip="minimum of 3 characters">
+					<input
+						type="text"
+						name="lastname"
+						class="o-userText"
+						id="lastname"
+						pattern="[A-Za-z].{2,}"
+						required
+					/>
+					<span class="o-form__floating-label fl-grey">last name</span>
+				</div>
+				<div data-texttip="minimum of 3 characters">
+					<input
+						type="text"
+						name="subject"
+						class="o-userText"
+						id="subject"
+						pattern="[A-Za-z].{2,}"
+						required
+					/>
+					<span class="o-form__floating-label fl-grey">subject</span>
+				</div>
+				<div data-emailtip="please include '@' and domain name">
+					<input
+						type="email"
+						name="email"
+						class="o-userText"
+						id="email"
+						pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$"
+						required
+					/>
+					<span class="o-form__floating-label fl-grey">email</span>
+				</div>
+
+				<div data-phonetip="minimum of 10 digits and no letters">
+					<input
+						type="tel"
+						name="tel"
+						pattern="^(?:(?:\+?1\s*(?:[.-]\s*)?)?(?:\(\s*([2-9]1[02-9]|[2-9][02-8]1|[2-9][02-8][02-9])\s*\)|([2-9]1[02-9]|[2-9][02-8]1|[2-9][02-8][02-9]))\s*(?:[.-]\s*)?)?([2-9]1[02-9]|[2-9][02-9]1|[2-9][02-9]{2})\s*(?:[.-]\s*)?([0-9]{4})(?:\s*(?:#|x\.?|ext\.?|extension)\s*(\d+))?$"
+						class="o-userText phone"
+						id="tel"
+						maxlength="15"
+						required
+					/>
+					<span class="o-form__floating-label fl-grey fl-phone"
+						>phone</span
+					>
+				</div>
+
+				<div data-texttip="minimum of 3 characters">
+					<textarea
+						type="text"
+						name="message"
+						class="o-userFormBody"
+						id="message"
+						cols="30"
+						rows="10"
+						minlength="2"
+						required
+					></textarea>
+					<span class="o-form__message-floating-label"
+						>How can I help you?</span
+					>
+				</div>
+				<button
+					class="o-form__button"
+					id="submit"
+					aria-label="contact form submit button"
+				>
+					thank you
+				</button>
+			</form>
+
+			<footer class="c-copyright">©Coriano Harris 2020</footer>
+		</main>
+		<script src="main.js"></script>
+	</body>
+</html>
