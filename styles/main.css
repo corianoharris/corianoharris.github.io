@@ -1716,7 +1716,7 @@ li {
   content: '';
   border-left: 5px solid transparent;
   border-right: 5px solid transparent;
-  border-top: 5px solid rgba(78,78, 78, .6);
+  border-top: 5px solid rgba(78,78, 78);
   position: absolute;
   top: -10px;
   left: 35%;
@@ -1737,7 +1737,7 @@ li {
   left: 35%;
   padding: 5px;
   cursor: pointer;
-  background: rgba(78,78, 78, .6);
+  background: rgba(78,78, 78);
   color: inherit;
   z-index: 9;
   font-size: 10px;
@@ -1759,9 +1759,9 @@ li {
   content: '';
   border-left: 5px solid transparent;
   border-right: 5px solid transparent;
-  border-top: 5px solid  rgba(78,78, 78, .6);
+  border-top: 5px solid  rgba(78,78, 78);
   position: absolute;
-  top: 10px;
+  top: -10px;
   left: 35%;
   z-index: 9;
   font-size: 0;
@@ -1780,7 +1780,7 @@ li {
   left: 35%;
   padding: 5px;
   cursor: pointer;
-  background: rgba(78,78, 78, .6);
+  background: rgba(78,78, 78);
   color: inherit;
   z-index: 9;
   font-size: 10px;
@@ -1802,9 +1802,9 @@ li {
   content: '';
   border-left: 5px solid transparent;
   border-right: 5px solid transparent;
-  border-top: 5px solid rgba(78,78, 78, .6);
+  border-top: 5px solid rgba(78,78, 78);
   position: absolute;
-  top: 10px;
+  top: -10px;
   left: 35%;
   z-index: 9;
   font-size: 0;
@@ -1823,7 +1823,7 @@ li {
   left: 35%;
   padding: 5px;
   cursor: pointer;
-  background: rgba(78,78, 78, .6);
+  background: rgba(78,78, 78);
   color: inherit;
   z-index: 9;
   font-size: 10px;
@@ -1947,33 +1947,10 @@ li {
       ##UTILITIES
 \*---------------------*/
 
-.u-gradient-font {
-  color: inherit;
-  color: linear-gradient(to left, #663399, #33CCFF);
-}
-
-
-.u-gradient-color {
-  background: linear-gradient(#663399, #33CCFF);
-  background: -webkit-linear-gradient(#663399, #33CCFF);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-
-
-/* Gradient Background */
-
-.u-gradient-background {
-  background: inherit;
-  background: linear-gradient(to left, #663399, #33CCFF);
-}
-
 
 /*---------------------*\
       #END of UTILITIES
 \*---------------------*/
-
-
 
 
 /*---------------------*\
