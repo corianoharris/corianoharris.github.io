@@ -204,8 +204,8 @@ html {
 \*---------------------*/
 
 body {
-  background: var(--t-dark-background-color);
-  color: var(--t-dark-text-color);
+  background: var(--t-primary-background-color);
+  color: var(--t-primary-text-color);
   letter-spacing: 2px;
   line-height: 1.2em;
   font-family: var(--f-Raleway);
