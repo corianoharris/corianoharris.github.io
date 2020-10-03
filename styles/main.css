@@ -1220,6 +1220,20 @@ li {
   .c-tools-section {
     margin: 20px;
    }
+
+  .c-btn {
+  font-size: 32px;
+  letter-spacing: 4px;
+  }
+
+  .c-page__subheader {
+    font-size: 48px;
+  }
+
+  .c-profile-quotes {
+  width: 60%;
+}
+
 }
 
 @media only screen and (min-width: 1024px) {}
