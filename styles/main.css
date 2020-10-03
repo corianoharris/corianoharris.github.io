@@ -708,9 +708,10 @@ li {
   vertical-align: center;
   padding: 10px;
   background: inherit;
-  border: thin solid var(--light-gray);
   max-width: 400px;
   margin: 0 auto;
+  /* border: thin solid white; */
+  box-shadow: -1px 2px 5px rgba(0, 0, 0, 1);
 }
 
 .c-card__thumbnail:active,
@@ -718,6 +719,7 @@ li {
 .c-card__thumbnail:hover {
   font-weight: bolder;
   box-shadow: -1px 2px 5px rgba(0, 0, 0, 1);
+  border: thin solid currentColor;
 }
 
 .c-card__thumbnail-title {
@@ -730,12 +732,13 @@ li {
 }
 
 .c__card__thumbnail__subheader {
-  font-size: 10px;
-  color: var(--light-gray);
+  font-size: 13px;
+  color: white;
 }
 
 .c-card__button--show,
 .c-card__button--close {
+  color: white;
   font-size: 42px;
 }
 
