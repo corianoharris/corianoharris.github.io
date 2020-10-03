@@ -285,13 +285,17 @@ blockquote div {
   padding: 10px;
 }
 
+.e-blockquote__body-text::first-letter {
+  font-size: 4em;
+  font-weight: bolder;
+}
+
 blockquote h3 {
   font-weight: bolder;
 }
 
 blockquote h5 {
   font-weight: 800;
-  font-style: italic;
 }
 
 .e-slug__author {
