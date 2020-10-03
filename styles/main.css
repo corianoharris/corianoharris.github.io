@@ -245,8 +245,11 @@ blockquote {
   background: inherit;
   font-size: 20px;
   line-height: 1.2em;
-
   quotes: "\201C""\201D""\2018""\2019";
+}
+
+blockquote::first-letter {
+  font-size:1.2em
 }
 
 blockquote:before {
