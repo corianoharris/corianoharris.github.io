@@ -1633,7 +1633,7 @@ li {
 
 .o-userFormBody:focus {
   width: 100%;
-  border: 2px solid var(--light-gray);
+  border: 2px solid currentColor;
   color: inherit;
 }
 
@@ -1687,7 +1687,6 @@ li {
   outline: 0;
   border: none;
   padding: 10px;
-  font-size: inherit;
   text-align: center;
   text-transform: uppercase;
   letter-spacing: 2px;
@@ -1698,7 +1697,7 @@ li {
 .o-form__button:hover {
   background: inherit;
   padding-bottom: 10px;
-  border-bottom: medium solid var(--dark-gray);
+  border-bottom: medium solid currentColor;
 
 }
 
