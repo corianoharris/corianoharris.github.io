@@ -959,26 +959,25 @@ li {
   display: -webkit-box;
   display: flex;
   -webkit-box-pack: justify;
-  justify-content: space-between;
   align-items: center;
   padding: 10px;
   font-size: 20px;
   background: inherit;
   font-weight: bold;
   cursor: pointer;
-  border-bottom: thin dotted var(--light-gray);
+  /* border-bottom: thin dotted var(--light-gray); */
 }
 
 
 .c-tools-subheaders {
-  margin: 0;
+  margin: 0 20px;
   font-size: 20px;
   text-transform: lowercase;
   font-weight: 300;
 }
 
-.c-tools-section-label:hover {
-  border-bottom: thick solid var(--dark-gray);
+.c-tools-section-label:hover, .c-tools-section-label:active, .c-tools-section-label:focus {
+  color: grey;
 }
 
 .c-tools-section-label::after {
@@ -986,6 +985,7 @@ li {
   text-align: center;
   -webkit-transition: all .35s;
   transition: all .35s;
+  margin-left: 5px;
 }
 
 .c-tools-section__body-text {
@@ -997,10 +997,6 @@ li {
 
 /* #Tools Section State */
 
-
-.c-tools-section-items:checked+.c-tools-section-label {
-  border-bottom: thick solid var(--dark-gray);
-}
 
 .c-tools-section-items:checked+.c-tools-section-label::after {
   -webkit-transform: rotate(90deg);
