@@ -687,9 +687,10 @@ li {
 /* Buttons */
 
 .c-btn {
-  padding: 10px 20px;
+  padding: 15px 0;
   color: inherit;
-  letter-spacing: 2px;
+  font-size: 18px;
+  letter-spacing: 4px;
 }
 
 .c-btn:hover, .c-btn:active, .c-btn:focus {
