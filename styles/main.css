@@ -49,12 +49,12 @@
   /* ##Brand Colors */
 
   /* Dark Theme */
-  --t-dark-background-color: #222;
-  --t-dark-text-color: #33CCFF;
+  --t-dark-background-color: #004466;
+  --t-dark-text-color: #40e0d0;
 
   /* Light Theme */
-  --t-light-background-color: #fff;
-  --t-light-text-color: #663399;
+  --t-light-background-color: #440971;
+  --t-light-text-color: #cf829f;
 
   /* Dark Gray  */
   --dark-gray:#838383;
