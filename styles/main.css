@@ -786,7 +786,7 @@ li {
 }
 
 .c-card {
-  background: #fff;
+  background: #444444;
   margin: 80px auto;
   width: 90%;
   max-height: 700px;
@@ -794,11 +794,13 @@ li {
   border: thin solid var(--light-gray);
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2),
     0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    border-top-left-radius: 20px;
 }
 
 .c-card-img {
   width: 100%;
   height: 200px;
+   border-bottom-right-radius: 40%;
 }
 
 .c-card__section {
@@ -825,26 +827,31 @@ li {
   display: -webkit-box;
   display: flex;
   -webkit-box-pack: justify;
-  justify-content: space-between;
+  justify-content: space-evenly;
   align-items: center;
-  padding: 10px 0 20px 0;
+  padding: 10px 5px 20px 5px;
   font-size: 24px;
   background: transparent;
   font-weight: bold;
   cursor: pointer;
-  margin: 0 10px;
-  border-bottom: thin solid var(--light-gray);
+  text-align: center;
+  color: #fff;
 }
 
-.c-card__section-label:hover {
-  color: inherit;
-}
 
 .c-card__section-label::after {
   content: "\276F";
   text-align: center;
   -webkit-transition: all .35s;
   transition: all .35s;
+  margin: 0 10px;
+  border: thin solid lightgrey;
+  border-radius: 100%;
+  vertical-align: center;
+  padding: 12px 4px;
+  width: 42px;
+  height: 42px;
+  color: grey;
 }
 
 .c-card__section_subheader {
@@ -857,7 +864,7 @@ li {
   width: 100%;
   z-index: 200;
   margin: 0 auto;
-  color: inherit;
+  color: currentColor;
   font-weight: 200;
   -webkit-transition: all .35s;
   transition: all .35s;
@@ -877,17 +884,33 @@ li {
   padding-bottom: 20px;
 }
 
-.c-card_link {
+.c-card_links {
+
   display: flex;
   justify-content: space-evenly;
   align-items: center;
-  height: 80px;
+  padding: 20px 0;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2),
+    0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
+}
+
+.card_link {
+  font-size: inherit;
+  color: currentColor;
+}
+
+.card_link:hover, .card_link:active, .card_link:focus  {
+  padding: 10px;
+  border-bottom: 4px solid currentColor;
 }
 
 /* #Card state */
 
 .c-card__section-items:checked+.c-card__section-label {
-  background: inherit;
+  background: transparent;
+  outline: none;
+
 }
 
 .c-card__section-items:checked+.c-card__section-label::after {
