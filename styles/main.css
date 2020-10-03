@@ -350,15 +350,42 @@ li {
     justify-content: center;
     flex-wrap: wrap;
   }
+
+  h2 {
+    font-size: 28px;
+  }
+
+  p {
+    font-size: 15px
+  }
 }
 @media only screen and (min-width: 981px) {
+
+  h1 {
+    font-size: 100px;
+    letter-spacing: 2px;
+    position:fixed;
+    top: 150px;
+    left: 100px;
+    writing-mode: vertical-lr;
+  }
+
+  h2 {
+    font-size: 36px;
+  }
+
   blockquote img {
    width: 50px;
    height: 50px;
   }
 
   main {
+    margin-top: 200px;
     width: 60%;
+  }
+
+  p {
+    font-size: 1rem;
   }
 }
 
