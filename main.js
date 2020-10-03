@@ -24,7 +24,9 @@ if (theme) {
 	theme.addEventListener(
 		'click',
 		function () {
-			let lightThemeEnabled = document.body.classList.toggle('t-light');
+			let lightThemeEnabled = document.body.classList.toggle(
+				't-secondary'
+			);
 			localStorage.setItem('light-theme-enabled', lightThemeEnabled);
 			collapseNav();
 		},
@@ -33,7 +35,7 @@ if (theme) {
 }
 
 if (isLightThemeEnabled === 'true') {
-	document.body.classList.add('t-light');
+	document.body.classList.add('t-secondary');
 }
 
 // Project Card
