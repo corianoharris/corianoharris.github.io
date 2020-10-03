@@ -49,18 +49,21 @@
   /* ##Brand Colors */
 
   /* Dark Theme */
-  --t-dark-background-color: #004466;
-  --t-dark-text-color: #40e0d0;
+  --t-primary-background-color: #004466;
+  --t-primary-text-color: #40e0d0;
 
   /* Light Theme */
-  --t-light-background-color: #440971;
-  --t-light-text-color: #cf829f;
+  --t-secondary-background-color: #440971;
+  --t-secondary-text-color: #cf829f;
 
   /* Dark Gray  */
   --dark-gray:#838383;
 
   /* Light Gray */
   --light-gray:#cccccc;
+
+  /* White */
+  --white: #e9f1e8;
 }
 
 /*---------------------*\
