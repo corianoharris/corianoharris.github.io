@@ -269,7 +269,7 @@ blockquote img {
   height: 42px;
   border-radius: 100%;
   object-fit: cover;
-  border: thin solid var(--dark-gray);
+  border: thin solid currentColor;
   padding: 4px;
 }
 
