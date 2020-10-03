@@ -1239,7 +1239,7 @@ li {
 
 /* Theme */
 .t-light {
-  background: #fff;
+  background: var(--t-light-background-color);
   color: var(--t-light-text-color);
 }
 
