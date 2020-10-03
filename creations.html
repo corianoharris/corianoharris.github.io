@@ -10,7 +10,7 @@
 		<link rel="stylesheet" href="styles/main.css" />
 		<link
 			rel="shortcut icon"
-			href="public/assets/logo.png"
+			href="public/assets/logo.svg"
 			type="image/x-icon"
 		/>
 	</head>
@@ -18,7 +18,7 @@
 	<body>
 		<main role="presentation">
 			<nav class="navbar">
-				<div class="nav__btn">
+				<div>
 					<p
 						class="menuOpenBtn"
 						id="js-displayNavBtn"
@@ -27,7 +27,7 @@
 						role="button"
 						aria-label="open the navigation panel"
 					>
-						&#8801;
+						menu
 					</p>
 				</div>
 			</nav>
@@ -147,9 +147,7 @@
 				</nav>
 			</div>
 			<section class="c-screen__titles">
-				<h1 class="c-screen__title c-screen__header u-gradient-color">
-					Creations
-				</h1>
+				<h1 class="c-screen__title c-screen__header">Creations</h1>
 			</section>
 
 			<section class="o-filter" id="filter">
@@ -261,6 +259,7 @@
 									<input
 										type="checkbox"
 										class="c-card__section-items"
+										checked="checked"
 										id="Project"
 									/>
 									<label class="c-card__section-label" for="Project"
@@ -302,9 +301,9 @@
 								</div>
 
 								<!-- links -->
-								<div class="c-card__section c-card_link">
-									<a href="#" class="c-btn u-gradient-color">Github</a>
-									<a href="#" class="c-btn u-gradient-color">Site</a>
+								<div class="c-card__section c-card_links">
+									<a href="#" class="card_link">Github</a>
+									<a href="#" class="card_link">Site</a>
 								</div>
 							</div>
 						</section>
