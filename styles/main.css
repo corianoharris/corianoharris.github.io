@@ -411,11 +411,12 @@ li {
   left: 0;
   display: flex;
   justify-content: center;
-  border-bottom: thin solid var(--light-gray);
+  align-items: center;
   width: 100vw;
   z-index: 1000;
-   box-shadow: -1px 2px 5px rgba(0, 0, 0, 1);
-  background: black;
+  background: white;
+  padding: 10px 0;
+  height: 70px;
 }
 
 .nav__btn {
@@ -450,8 +451,25 @@ li {
 } */
 
 .menuOpenBtn {
-  font-size: 90px;
+  font-size: 24px;
+  padding: 10px 0;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  font-weight: 800;
+  /* border-top: medium solid grey;
+  border-bottom: medium solid grey; */
+  background: white;
+
 }
+
+.menuOpenBtn:hover {
+  padding-bottom: 10px;
+  border-top: medium solid currentColor;
+  border-bottom: medium solid currentColor;
+}
+
+
+
 
 .nav__overlay {
   display: none;
@@ -461,7 +479,7 @@ li {
   width: 100%;
   height: 100vh;
   background: hsl(0, 0%, 0%);
-  background: #222;
+  background: currentColor;
   z-index: 2000;
 }
 
@@ -529,20 +547,14 @@ li {
 }
 
 
-.btn:hover {
+.btn:hover,.btn:active,.btn:focus {
   padding-bottom: 4px;
-  border-bottom: 4px solid  var(--t-light-text-color);
-}
-
-.btn:active,
-.btn:focus {
-  padding-bottom: 4px;
-  border-bottom: 2px solid var(--t-dark-text-color);
+  border-bottom: 4px solid grey;
 }
 
 .btn:visited {
   padding-bottom: 4px;
-  border-bottom: 2px solid  var(--light-gray);
+  border-bottom: 2px solid  white;
 }
 
 .btn:nth-child(2) {
@@ -614,12 +626,15 @@ li {
   position: absolute;
   font-size: 36px;
   font-weight: 900;
-  color: var(--t-dark-text-color);
+  color: white;
   padding: 10px;
   border-radius: 100%;
   transition: all 0.3s ease;
-
 }
+
+/* .closeBtn:hover, .closeBtn:active {
+  color: grey;
+} */
 
 /* .menuBtn {
   font-size: 60px;
