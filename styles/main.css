@@ -1850,13 +1850,40 @@ li {
 
 /* UL List Bullets */
 
-.o-job-list {
+.o-job-list,.o-clients-list,.o-contributions-list {
   list-style: none;
+  align-items: center;
 }
 
 .o-job-list li {
   padding: 10px;
-  border: thin solid var(--dark-gray);
+  border: thin solid currentColor;
+  border-radius: 30px;
+  max-width: 200px;
+  word-wrap: wrap;
+  background: white;
+  vertical-align: center;
+  text-align: center;
+}
+
+.o-clients-list li {
+  max-width: 200px;
+  word-wrap: wrap;
+  padding: 10px;
+  border: thin solid currentColor;
+  border-bottom-right-radius: 10px;
+  border-top-left-radius: 10px;
+  background: transparent;
+}
+
+.o-contributions-list li {
+  max-width: 200px;
+  word-wrap: wrap;
+  background: inherit;
+  border: medium dashed currentColor;
+  padding: 10px;
+  vertical-align: center;
+  text-align: center;
 }
 
 
