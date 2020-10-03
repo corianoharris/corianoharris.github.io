@@ -1031,19 +1031,28 @@ li {
 }
 
 .c-page__subheader {
+  font-weight: 500;
   font-size: 28px;
+  letter-spacing: 4px;
   padding-bottom: 10px;
-  border-bottom: thin dotted var(--dark-gray);
+  text-decoration: underline;
+  line-height: 1.2em;
+  text-align: left;
 }
 
-.c-section__list {
+.c__section-list {
   margin: 0 40px;
   display: flex;
   justify-content: flex-start;
   flex-wrap: wrap;
-
+  list-style: none;
 }
 
+.c__section-list li {
+  border: thin solid currentColor;
+  padding: 10px;
+  vertical-align: center;
+}
 .c-section__content {
   height: auto;
 }
