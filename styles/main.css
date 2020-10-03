@@ -1061,11 +1061,24 @@ li {
 
 .c-testimonials {
   display: block;
+
 }
 
-.c-testimonial__quote {
-  margin: 30px;
+
+.c-testimonial {
+  margin: 30px 10px;
+  background: rgba(100, 100, 100, .2);
+  border-bottom-left-radius: 30%;
+  border-top-right-radius: 30%;
+  padding: 0 20px;
 }
+
+.c-profile-quotes {
+  padding: 30px 0px;
+  margin: 0 auto;
+  width: 90%;
+}
+
 
 /* ### Media Queries */
 
