@@ -1193,6 +1193,11 @@ li {
     font-size: 24px;
   }
 
+  .c-page__subheader {
+    font-size: 36px;
+  }
+
+
 }
 
 @media only screen and (min-width: 981px) {
