@@ -1391,7 +1391,7 @@ li {
 }
 
 .o-profile-name {
-  border-bottom: 8px solid var(--dark-gray);
+  padding-bottom: 10px;
   margin-bottom: 20px;
 
 }
@@ -1405,12 +1405,15 @@ li {
 }
 
 .o-profile-name h3 {
-  font-size: 32px;
+  font-size: 40px;
   font-weight: 800;
+  background: white;
+  padding: 10px;
+  border-radius: 20px;
 }
 
 .o-profile-name h4 {
-  font-size: 20px;
+  font-size: 32px;
   font-weight: 300;
 }
 
@@ -1423,16 +1426,32 @@ li {
 }
 
 
-.o-job-list {
+.o-profile__positions {
   justify-content: flex-start;
   margin-top: 0;
   margin-bottom: 0;
-  padding: 0;
-  text-transform: uppercase;
+  padding: 10px 0;
   width: 100%;
-  font-weight: 700;
+  line-height: 2em;
   text-align: left;
+  border-top: medium solid grey;
+  border-bottom: 20px solid grey;
 }
+
+.o-profile__positions h3:nth-child(odd) {
+  text-transform: lowercase;
+  font-size: 28px;
+  letter-spacing: 10px;
+}
+
+
+.o-profile__positions h3:nth-child(even) {
+  text-transform: uppercase;
+  font-size: 32px;
+  letter-spacing: 10px;
+  color: white;
+}
+
 
 .o-contributions-list {
   justify-content: flex-start;
@@ -1841,12 +1860,36 @@ li {
       width: 80%;
       margin: 20% auto;
    }
+
+   .o-profile__positions h3:nth-child(odd),.o-profile__positions h3:nth-child(even) {
+  letter-spacing: 30px;
+
+}
+
 }
 @media only screen and (min-width: 981px) {
    .o-kicker-screen {
       width: 60%;
       margin: 20% auto;
    }
+
+   .o-profile__positions {
+     line-height: 2.5em;
+   }
+
+   .o-profile__positions h3:nth-child(odd) {
+  text-transform: lowercase;
+  font-size: 36px;
+  letter-spacing: 10px;
+
+}
+
+
+.o-profile__positions h3:nth-child(even) {
+  text-transform: uppercase;
+  font-size: 42px;
+  letter-spacing: 30px;
+}
 }
 
 @media only screen and (min-width: 1024px) {}
