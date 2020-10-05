@@ -313,6 +313,7 @@ blockquote h5 {
 a {
   text-decoration:none;
   text-transform: uppercase;
+  color: currentColor;
 }
 
 /* ul */
