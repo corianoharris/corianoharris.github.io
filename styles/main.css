@@ -664,6 +664,10 @@ li {
 
 /* Card */
 
+.filterItem {
+  margin: 20px 0;
+}
+
 /* # Thumbnail Card */
 
 .c-card__thumbnail {
@@ -1218,17 +1222,20 @@ li {
 
 .projects-table {
   margin: 20px auto;
+  overflow: scroll;
+  max-height: 650px;
+  border-top: thin solid currentColor;
 }
 
 /* ##Filter */
 
 .o-filter {
-  margin: 20px auto 0 auto;
+  margin: 20px auto 10px auto;
   height: auto;
 }
 
 .o-filter__header {
-  margin-bottom: 20px;
+  margin-bottom: 30px;
 }
 
 /* ###Pills */
@@ -1241,7 +1248,6 @@ li {
 }
 
 .o-filter__pill {
-  margin: 10px;
   padding: 10px;
   border: thin solid var(--dark-gray);
   border-radius: 20px;
@@ -1250,7 +1256,7 @@ li {
 .o-filter__pill:active,
 .o-filter__pill:focus,
 .o-filter__pill:hover {
-  background: #E9E9E9;
+  background: transparent;
   color: var(--dark-gray);
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2),
     0 6px 20px 0 rgba(0, 0, 0, 0.19);
@@ -1272,8 +1278,8 @@ li {
 .o-filter__pill-ui:active,
 .o-filter__pill-ui:focus,
 .o-filter__pill-ui:hover {
-  border: thin solid var(--white);
-  background: var(--white);
+  border: thin solid #fff;
+  background: #fff;
 }
 
 .o-filter__pill-apps:active,
@@ -1286,8 +1292,8 @@ li {
 .o-filter__pill-designs:active,
 .o-filter__pill-designs:focus,
 .o-filter__pill-designs:hover {
-  border: thin solid var(--white);
-  background: var(--white);
+  border: thin solid #ffff50;
+  background: #ffff50;
 }
 
 .o-filter__pill-talks:active,
@@ -1297,7 +1303,33 @@ li {
   background: #D5C3B4;
 }
 
+.pill-container {
+  padding: none;
+  display: block;
+  align-items: center;
+  margin: 10px;
+}
+
+.o-pill-counter {
+  position: relative;
+  top: -55px;
+  right: 0px;
+  font-size: 11px;
+  font-weight: bold;
+  text-align: center;
+  vertical-align: center;
+  border-radius: 100%;
+  width: 24px;
+  height: 24px;
+  padding-top: 2px;
+  background: #444444;
+  border: thin solid var(--white);
+}
+
+
+
 .filterItem {
+  margin: 20px 0;
   display: none;
 }
 
@@ -1874,6 +1906,13 @@ li {
   font-size: 42px;
   letter-spacing: 30px;
 }
+
+
+ .o-filter {
+  margin: 20px auto 0px auto;
+  height: 100px;
+}
+
 }
 
 @media only screen and (min-width: 1024px) {}
