@@ -745,6 +745,7 @@ li {
   position: absolute;
   top: 10px;
   right: 10px;
+  color: #fff;
 }
 
 .c-card {
@@ -851,8 +852,7 @@ li {
 }
 
 .card_link:hover, .card_link:active, .card_link:focus  {
-   border: medium solid currentColor;
-   border-radius: 10px;
+   background: var(--white);
 }
 
 /* #Card state */
