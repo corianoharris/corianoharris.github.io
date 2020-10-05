@@ -904,7 +904,7 @@ li {
   margin: 0 20px;
   font-size: 20px;
   text-transform: lowercase;
-  font-weight: 300;
+  font-weight: 900;
 }
 
 .c-tools-section-label:hover, .c-tools-section-label:active, .c-tools-section-label:focus {
@@ -933,6 +933,7 @@ li {
   transition: all .35s;
   overflow: scroll;
   scrollbar-color: currentColor var(--dark-gray);
+  font-weight: ;
 }
 
 /* #Tools Section State */
@@ -980,15 +981,15 @@ li {
 }
 
 .c__section-list {
-  margin: 0 40px;
-  display: flex;
+  /* margin: 0 40px; */
+  display: block;
   justify-content: flex-start;
   flex-wrap: wrap;
-  list-style: none;
+  /* list-style: none; */
 }
 
 .c__section-list li {
-  border: thin solid currentColor;
+  /* border: thin solid currentColor; */
   padding: 10px;
   vertical-align: center;
 }
@@ -1136,6 +1137,10 @@ li {
     font-size: 36px;
   }
 
+  .c-tools-subheader {
+    text-align: center;
+}
+
 
 }
 
@@ -1175,8 +1180,13 @@ li {
 
 .c-card__button--show,
 .c-card__button--close {
-  color: var(--white);
   font-size: 56px;
+}
+
+ .c__section-list {
+  display: flex;
+  justify-content: center;
+
 }
 
 }
