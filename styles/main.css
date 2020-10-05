@@ -1848,6 +1848,7 @@ li {
   background: var(--white);
   vertical-align: center;
   text-align: center;
+  font-weight: 800;
 }
 
 .o-clients-list li {
