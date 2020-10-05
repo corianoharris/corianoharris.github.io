@@ -715,23 +715,19 @@ li {
 }
 
 .c-thumbnail-ux {
-  background: #BDDFEB;
-  border: medium solid #BDDFEB;
+  border-left: 30px solid #BDDFEB;
 }
 
 .c-thumbnail-ui {
-  background: var(--white);
-  border: medium solid var(--white);
+  border-left: 30px solid #fff;
 }
 
 .c-thumbnail-designs {
-  background: var(--white);
-  border: medium solid var(--white);
+  border-left: 30px solid #ffff50;
 }
 
 .c-thumbnail-talks {
-  background: #D5C3B4;
-  border: medium solid #D5C3B4;
+  border-left: 30px solid #D5C3B4;
 }
 
 /* # Main Card */
