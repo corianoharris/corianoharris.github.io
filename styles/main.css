@@ -983,11 +983,9 @@ li {
   display: block;
   justify-content: flex-start;
   flex-wrap: wrap;
-  /* list-style: none; */
 }
 
 .c__section-list li {
-  /* border: thin solid currentColor; */
   padding: 10px;
   vertical-align: center;
 }
