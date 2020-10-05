@@ -24,7 +24,9 @@ if (theme) {
 	theme.addEventListener(
 		'click',
 		function () {
-			let lightThemeEnabled = document.body.classList.toggle('t-light');
+			let lightThemeEnabled = document.body.classList.toggle(
+				't-secondary'
+			);
 			localStorage.setItem('light-theme-enabled', lightThemeEnabled);
 			collapseNav();
 		},
@@ -33,17 +35,99 @@ if (theme) {
 }
 
 if (isLightThemeEnabled === 'true') {
-	document.body.classList.add('t-light');
+	document.body.classList.add('t-secondary');
 }
 
 // Project Card
 
-let displayCard = () => {
-	document.getElementById('js-displayMainCard').style.display = 'block';
+// Project 1
+
+let displayProjectOne = () => {
+	document.getElementById('js-projectOne').style.display = 'block';
 };
 
-let collapseCard = () => {
-	document.getElementById('js-displayMainCard').style.display = 'none';
+let collapseProjectOne = () => {
+	document.getElementById('js-projectOne').style.display = 'none';
+};
+
+// Project 2
+
+let displayProjectTwo = () => {
+	document.getElementById('js-projectTwo').style.display = 'block';
+};
+
+let collapseProjectTwo = () => {
+	document.getElementById('js-projectTwo').style.display = 'none';
+};
+
+// Project 3
+
+let displayProjectThree = () => {
+	document.getElementById('js-projectThree').style.display = 'block';
+};
+
+let collapseProjectThree = () => {
+	document.getElementById('js-projectThree').style.display = 'none';
+};
+
+// Project 4
+
+let displayProjectFour = () => {
+	document.getElementById('js-projectFour').style.display = 'block';
+};
+
+let collapseProjectFour = () => {
+	document.getElementById('js-projectFour').style.display = 'none';
+};
+
+// Project 5
+
+let displayProjectFive = () => {
+	document.getElementById('js-projectFive').style.display = 'block';
+};
+
+let collapseProjectFive = () => {
+	document.getElementById('js-projectFive').style.display = 'none';
+};
+
+// Project 6
+
+let displayProjectSix = () => {
+	document.getElementById('js-projectSix').style.display = 'block';
+};
+
+let collapseProjectSix = () => {
+	document.getElementById('js-projectSix').style.display = 'none';
+};
+
+// Project 7
+
+let displayProjectSeven = () => {
+	document.getElementById('js-projectSeven').style.display = 'block';
+};
+
+let collapseProjectSeven = () => {
+	document.getElementById('js-projectSeven').style.display = 'none';
+};
+
+// Project 8
+
+let displayProjectEight = () => {
+	document.getElementById('js-projectEight').style.display = 'block';
+};
+
+let collapseProjectEight = () => {
+	document.getElementById('js-projectEight').style.display = 'none';
+};
+
+// Project 9
+
+let displayProjectNine = () => {
+	document.getElementById('js-projectNine').style.display = 'block';
+};
+
+let collapseProjectNine = () => {
+	document.getElementById('js-projectNine').style.display = 'none';
 };
 
 // Filter
@@ -182,6 +266,50 @@ function topFunction() {
 	document.body.scrollTop = 0;
 	document.documentElement.scrollTop = 0;
 }
+
+// Projects Counter
+
+const projectsCounter = () => {
+	allCounter(),
+		uxCounter(),
+		uiCounter(),
+		appsCounter(),
+		designsCounter(),
+		talksCounter();
+};
+
+const allCounter = () => {
+	let allCounter = document.querySelectorAll('.filterItem');
+	document.querySelector('#all-counter').innerHTML = allCounter.length;
+};
+
+const uxCounter = () => {
+	let uxCounter = document.querySelectorAll('.card-ux');
+	document.querySelector('.ux-counter').innerHTML = uxCounter.length;
+};
+
+const uiCounter = () => {
+	let uiCounter = document.querySelectorAll('.card-ui');
+	document.querySelector('.ui-counter').innerHTML = uiCounter.length;
+};
+
+const appsCounter = () => {
+	let appsCounter = document.querySelectorAll('.card-apps');
+	document.querySelector('.apps-counter').innerHTML =
+		appsCounter.length;
+};
+
+const designsCounter = () => {
+	let designsCounter = document.querySelectorAll('.card-designs');
+	document.querySelector('.designs-counter').innerHTML =
+		designsCounter.length;
+};
+
+const talksCounter = () => {
+	let talksCounter = document.querySelectorAll('.card-talks');
+	document.querySelector('.talks-counter').innerHTML =
+		talksCounter.length;
+};
 
 // // Scroll and change content when It reaches the end of the section
 // let section = document.querySelectorAll(".c-section__content");

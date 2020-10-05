@@ -10,25 +10,33 @@ My company website.
 >   - [Synopsis](#synopsis)
 >   - [Table of contents](#table-of-contents)
 >   - [Technologies](#technologies)
+>   - [Technologies](#project-management)
+>   - [Styleguides](#styleguides)
 >   - [Motivations](#motivations)
 >   - [Takeaways](#takeaways)
->   - [Styleguides](#styleguides)
 >   - [Usage](#usage)
->     - [Screenshots](#screenshots)
 >     - [Features](#features)
 >   - [User Experiences](#user-experiences)
->   - [Use Cases](#use-cases)
+>   - [Testing](#testing)
 >   - [Contributing / Reporting issues](#contributing--reporting-issues)
 >   - [License](#license)
 >   - [Authors](#authors)
 
 ## Techonologies
 
-Html5, CSS3, and ES6
+- HTML5
+- CSS3
+- ES6
+- Google Analysis
+
+## Project Management
+
+- Trello
 
 ## Styleguides
 
-Used prettier and BEMIT CSS
+- AirBnB
+- BEM ITCSS
 
 ## Motivations
 
@@ -36,22 +44,27 @@ A site to display my work.
 
 ## Takeaways
 
-How to take advantage of the input element to make interactive elements and components. As well as simple form validations.
+I learned how to take advantage of the input element attrs to make interactive elements and components. As well as regexp for simple form validations.
+
+## Usage
 
 ### Features
 
-A form component to connect with me.
+- Theme changer
+- Projects filter
+- Interactive card
+- Form with validation
 
-### User Experiences
+## User Experiences
 
-5 users.
+- 5 users.
 
-3 unmoderated users.
-2 moderated users.
+* 3 unmoderated users.
+* 2 moderated users.
 
-## Tests
+## Testing
 
-Describe and show how to run the tests with code examples.
+N/A
 
 ## Authors
 
