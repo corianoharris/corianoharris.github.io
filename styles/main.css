@@ -1187,6 +1187,10 @@ li {
 
 }
 
+.c-btn {
+  font-size: 24px;
+}
+
 }
 
 @media only screen and (min-width: 1024px) {}
