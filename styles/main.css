@@ -301,12 +301,15 @@ blockquote h5 {
   font-family: var(--f-Satisfy);
   color: var(--dark-gray);
   font-weight: 900;
+
 }
 
 blockquote h3,
 blockquote h5 {
   padding: 0;
   margin: 5px;
+  white-space: wrap;
+  word-wrap: wrap;
 }
 
 /* a */
