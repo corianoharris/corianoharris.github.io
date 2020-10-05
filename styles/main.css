@@ -527,7 +527,7 @@ li {
 
 .btn:visited {
   padding-bottom: 4px;
-  border-bottom: 2px solid  var(--var(--white));
+  border-bottom: 2px dotted var(--white);
 }
 
 .btn:nth-child(2) {
