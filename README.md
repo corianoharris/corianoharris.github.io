@@ -35,8 +35,8 @@ My company website.
 
 ## Styleguides
 
-- AirBnB
-- BEM ITCSS
+- [AirBnb](https://github.com/airbnb/javascript)
+- [BEMIT](https://csswizardry.com/2015/08/bemit-taking-the-bem-naming-convention-a-step-further/)
 
 ## Motivations
 
