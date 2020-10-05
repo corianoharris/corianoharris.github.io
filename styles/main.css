@@ -704,7 +704,7 @@ li {
 
 .c-card__button--show,
 .c-card__button--close {
-  color: #000;
+  color: var(--white);
   font-size: 42px;
 }
 
