@@ -443,7 +443,7 @@ li {
   text-transform: uppercase;
   letter-spacing: 4px;
   font-weight: 800;
-  background: var(--white);
+  /* background: var(--white); */
 
 }
 
