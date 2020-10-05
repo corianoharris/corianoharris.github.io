@@ -1033,6 +1033,11 @@ li {
     width: 70%;
   }
 
+   .c__section-list {
+  display: flex;
+  justify-content: flex-start;
+}
+
 }
 
 @media only screen and (min-width: 641px) {
@@ -1186,12 +1191,6 @@ li {
 .c-card__button--show,
 .c-card__button--close {
   font-size: 56px;
-}
-
- .c__section-list {
-  display: flex;
-  justify-content: center;
-
 }
 
 .c-btn {
