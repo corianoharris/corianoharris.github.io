@@ -219,7 +219,7 @@ main {
 
 h1 {
   margin: 100px 0 50px 0;
-  font-size: 36px;
+  font-size: 42px;
   font-weight: 900;
   text-align: center;
   text-transform: uppercase;
@@ -329,6 +329,11 @@ li {
 /* ### Media Queries */
 
 @media only screen and (min-width: 481px) {
+
+  h1 {
+    font-size: 60px;
+  }
+
   h2 {
     font-size: 24px;
   }
@@ -347,6 +352,10 @@ li {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
+  }
+
+  h1 {
+    font-size: 70px;
   }
 
   h2 {
