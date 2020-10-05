@@ -849,11 +849,12 @@ li {
 .card_link {
   font-size: inherit;
   color: currentColor;
+  padding: 10px;
 }
 
 .card_link:hover, .card_link:active, .card_link:focus  {
-  padding: 10px;
-  border-bottom: 4px solid currentColor;
+   border: medium solid currentColor;
+   border-radius: 10px;
 }
 
 /* #Card state */
