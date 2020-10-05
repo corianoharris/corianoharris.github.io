@@ -1732,7 +1732,7 @@ li {
   -moz-border-radius: 3px;
   border-radius: 3px;
   vertical-align: center;
-  var(--white)-space: wrap;
+  white-space: wrap;
   word-wrap: normal;
   width: auto;
 }
@@ -1775,7 +1775,7 @@ li {
   -moz-border-radius: 3px;
   border-radius: 3px;
   vertical-align: center;
-  var(--white)-space: wrap;
+  white-space: wrap;
   word-wrap: normal;
   width: auto;
 }
@@ -1818,7 +1818,7 @@ li {
   -moz-border-radius: 3px;
   border-radius: 3px;
   vertical-align: center;
-  var(--white)-space: wrap;
+  white-space: wrap;
   word-wrap: normal;
   width: auto;
 }
