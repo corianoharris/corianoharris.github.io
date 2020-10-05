@@ -267,6 +267,50 @@ function topFunction() {
 	document.documentElement.scrollTop = 0;
 }
 
+// Projects Counter
+
+const projectsCounter = () => {
+	allCounter(),
+		uxCounter(),
+		uiCounter(),
+		appsCounter(),
+		designsCounter(),
+		talksCounter();
+};
+
+const allCounter = () => {
+	let allCounter = document.querySelectorAll('.filterItem');
+	document.querySelector('#all-counter').innerHTML = allCounter.length;
+};
+
+const uxCounter = () => {
+	let uxCounter = document.querySelectorAll('.card-ux');
+	document.querySelector('.ux-counter').innerHTML = uxCounter.length;
+};
+
+const uiCounter = () => {
+	let uiCounter = document.querySelectorAll('.card-ui');
+	document.querySelector('.ui-counter').innerHTML = uiCounter.length;
+};
+
+const appsCounter = () => {
+	let appsCounter = document.querySelectorAll('.card-apps');
+	document.querySelector('.apps-counter').innerHTML =
+		appsCounter.length;
+};
+
+const designsCounter = () => {
+	let designsCounter = document.querySelectorAll('.card-designs');
+	document.querySelector('.designs-counter').innerHTML =
+		designsCounter.length;
+};
+
+const talksCounter = () => {
+	let talksCounter = document.querySelectorAll('.card-talks');
+	document.querySelector('.talks-counter').innerHTML =
+		talksCounter.length;
+};
+
 // // Scroll and change content when It reaches the end of the section
 // let section = document.querySelectorAll(".c-section__content");
 // let bodyText = document.querySelectorAll(".content");
