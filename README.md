@@ -10,7 +10,7 @@ My company website.
 >   - [Synopsis](#synopsis)
 >   - [Table of contents](#table-of-contents)
 >   - [Technologies](#technologies)
->   - [Technologies](#project-management)
+>   - [Product Management](#project-management)
 >   - [Styleguides](#styleguides)
 >   - [Motivations](#motivations)
 >   - [Takeaways](#takeaways)
@@ -22,7 +22,7 @@ My company website.
 >   - [License](#license)
 >   - [Authors](#authors)
 
-## Techonologies
+## Technologies
 
 - HTML5
 - CSS3
