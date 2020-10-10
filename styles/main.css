@@ -867,6 +867,8 @@ li {
 
 .card_link:hover, .card_link:active, .card_link:focus  {
    background: var(--white);
+   border-top-left-radius: 20px;
+   border-bottom-right-radius: 20px;
 }
 
 /* #Card state */
