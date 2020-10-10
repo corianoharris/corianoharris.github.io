@@ -682,7 +682,7 @@ li {
 
 .c-card__thumbnail {
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
   vertical-align: center;
   padding: 10px;
@@ -698,6 +698,7 @@ li {
   font-weight: bolder;
   box-shadow: -1px 2px 5px rgba(0, 0, 0, 1);
   border: thin solid currentColor;
+  border-left: 30px solid;
 }
 
 .c-card__thumbnail-title {
@@ -768,7 +769,6 @@ li {
   border: thin solid var(--light-gray);
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2),
     0 6px 20px 0 rgba(0, 0, 0, 0.19);
-    border-top-left-radius: 20px;
 }
 
 .c-card-img {
@@ -867,6 +867,8 @@ li {
 
 .card_link:hover, .card_link:active, .card_link:focus  {
    background: var(--white);
+   border-top-left-radius: 20px;
+   border-bottom-right-radius: 20px;
 }
 
 /* #Card state */
