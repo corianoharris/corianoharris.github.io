@@ -682,7 +682,7 @@ li {
 
 .c-card__thumbnail {
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
   vertical-align: center;
   padding: 10px;
@@ -698,6 +698,7 @@ li {
   font-weight: bolder;
   box-shadow: -1px 2px 5px rgba(0, 0, 0, 1);
   border: thin solid currentColor;
+  border-left: 30px solid;
 }
 
 .c-card__thumbnail-title {
