@@ -695,7 +695,8 @@ li {
 .c-card__thumbnail:active,
 .c-card__thumbnail:focus,
 .c-card__thumbnail:hover {
-  font-weight: bolder;
+  justify-content: center;
+  font-weight: bold;
   box-shadow: -1px 2px 5px rgba(0, 0, 0, 1);
   border: thin solid currentColor;
   border-left: 30px solid;
@@ -713,6 +714,10 @@ li {
 .c__card__thumbnail__subheader {
   font-size: 13px;
   color: var(--white);
+}
+
+.c-card__thumbnail__header,.c__card__thumbnail__subheader {
+  text-transform: capitalize;
 }
 
 .c-card__button--show,
