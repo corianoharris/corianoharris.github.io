@@ -1,3 +1,17 @@
+window.addEventListener(
+	'load',
+	function () {
+		allCounter(),
+			uxCounter(),
+			uiCounter(),
+			appsCounter(),
+			designsCounter(),
+			talksCounter();
+		console.log('upload first');
+	},
+	false
+);
+
 const navMenu = document.getElementById('js-nav');
 
 const navDisplayBtn = document.getElementById('js-displayNavBtn');
