@@ -269,6 +269,19 @@ function topFunction() {
 
 // Projects Counter
 
+window.addEventListener(
+	'load',
+	function () {
+		allCounter(),
+			uxCounter(),
+			uiCounter(),
+			appsCounter(),
+			designsCounter(),
+			talksCounter();
+	},
+	false
+);
+
 const projectsCounter = () => {
 	allCounter(),
 		uxCounter(),
