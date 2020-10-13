@@ -1204,6 +1204,11 @@ li {
     font-size: 32px;
   }
 
+   .c-tools-subheader {
+    margin-bottom: 50px 0;
+    text-align: center;
+    }
+
   .c-tools-section {
     margin: 20px;
    }
