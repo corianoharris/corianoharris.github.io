@@ -269,14 +269,14 @@ function topFunction() {
 
 // Projects Counter
 
-const projectsCounter = () => {
-	allCounter(),
-		uxCounter(),
-		uiCounter(),
-		appsCounter(),
-		designsCounter(),
-		talksCounter();
-};
+// const projectsCounter = () => {
+// 	allCounter(),
+// 		uxCounter(),
+// 		uiCounter(),
+// 		appsCounter(),
+// 		designsCounter(),
+// 		talksCounter();
+// };
 
 const allCounter = () => {
 	let allCounter = document.querySelectorAll('.filterItem');
