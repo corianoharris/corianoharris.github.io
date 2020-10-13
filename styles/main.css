@@ -1950,6 +1950,12 @@ li {
      line-height: 2.5em;
    }
 
+  .o-profile__img {
+  width: 175px;
+  height: 175px;
+  margin: -50px auto 50px auto;
+}
+
    .o-profile__positions h3:nth-child(odd) {
   text-transform: lowercase;
   font-size: 36px;
