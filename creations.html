@@ -46,7 +46,21 @@
 		</script>
 		<!-- End Google Tag Manager -->
 
-		<!-- <script src="./projectsCounter.js"></script> -->
+		<script async>
+			window.addEventListener(
+				'load',
+				function () {
+					allCounter(),
+						uxCounter(),
+						uiCounter(),
+						appsCounter(),
+						designsCounter(),
+						talksCounter();
+					console.log('upload first');
+				},
+				false
+			);
+		</script>
 	</head>
 
 	<body>
