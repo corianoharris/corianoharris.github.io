@@ -1974,7 +1974,11 @@ li {
  .o-filter {
   margin: 20px auto 0px auto;
   height: 100px;
-}
+  }
+
+  .o-filter__header {
+  margin-top: -50px;
+  }
 
 }
 
