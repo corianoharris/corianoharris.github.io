@@ -871,7 +871,7 @@ li {
   bottom: 0;
   right: 0;
   display: flex;
-  justify-content: space-evenly;
+  justify-content: center;
   align-items: center;
   margin-top: -12px;
   height: 45px;
@@ -884,11 +884,12 @@ li {
 .card_link {
   font-size: inherit;
   color: currentColor;
-  padding: 5px;
+  padding: 5px 10px;
 }
 
 .card_link:hover, .card_link:active, .card_link:focus  {
    background: #444444;
+   padding: 5px 10px;
    color: #fff;
    border-top-left-radius: 20px;
    border-bottom-right-radius: 20px;
