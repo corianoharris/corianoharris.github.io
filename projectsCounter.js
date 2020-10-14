@@ -1,5 +1,5 @@
 window.addEventListener(
-	'load',
+	'DOMContentLoaded',
 	function () {
 		allCounter(),
 			uxCounter(),
