@@ -803,13 +803,15 @@ li {
 .c-card__content {
   height: 100%;
   overflow: scroll;
+  scrollbar-width: medium;
+  scrollbar-color: white black;
 }
 
 .c-card__section-label {
   display: -webkit-box;
   display: flex;
   -webkit-box-pack: justify;
-  justify-content: space-evenly;
+  justify-content: flex-start;
   align-items: center;
   padding: 10px 5px 20px 5px;
   font-size: 24px;
@@ -848,13 +850,9 @@ li {
   z-index: 200;
   margin: 0 auto;
   color: currentColor;
-  font-weight: 200;
+  font-weight: 900;
   -webkit-transition: all .35s;
   transition: all .35s;
-  overflow: scroll;
-  scrollbar-width: thin;
-  scrollbar-color: var(--light-gray) currentColor ;
-  /* background: transparent; */
 }
 
 .c-card_section-body-text-sections {
