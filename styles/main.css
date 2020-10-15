@@ -373,15 +373,6 @@ li {
 }
 @media only screen and (min-width: 981px) {
 
-  h1 {
-    font-size: 100px;
-    letter-spacing: 2px;
-    position:fixed;
-    top: 150px;
-    left: 50px;
-    writing-mode: vertical-lr;
-  }
-
   h2 {
     font-size: 36px;
   }
@@ -401,7 +392,16 @@ li {
   }
 }
 
-@media only screen and (min-width: 1024px) {}
+@media only screen and (min-width: 1024px) {
+  h1 {
+    font-size: 100px;
+    letter-spacing: 2px;
+    position:fixed;
+    top: 150px;
+    left: 50px;
+    writing-mode: vertical-lr;
+  }
+}
 
 /*---------------------*\
       #END of ELEMENTS
