@@ -1713,12 +1713,11 @@ li {
   position: relative;
   font-size: 11px;
   font-weight: bold;
-  top: -225px;
+  top: 0;
   left: 10px;
   text-transform: uppercase;
   background: inherit;
   width: 100px;
-  border: thin solid white;
 }
 
 .o-form__message-floating-label::after {
@@ -1728,26 +1727,16 @@ li {
   font-size: 24px;
 }
 
-.o-userFormBody:not(:focus)~.o-form__message-floating-label {
-  color: var(--dark-gray);
-  left: 10px;
-  top: -225px;
+.o-userFormBody:not(:focus) {
+  border-color: var(--dark-gray);
 }
 
-.o-userFormBody:focus:valid~.o-form__message-floating-label {
-  top: -225px;
-  left: 10px;
-  font-size: 11px;
-  opacity: 1;
-  color: #009900;
+.o-userFormBody:focus:valid {
+  border-color: #009900;
 }
 
-.o-userFormBody:focus:invalid~.o-form__message-floating-label {
-  top: -225px;
-  left: 10px;
-  font-size: 11px;
-  opacity: 1;
-  color: #FF7F7F;
+.o-userFormBody:focus:invalid {
+  border-color: #FF7F7F;
 }
 
 /* ###Form Button */
@@ -1921,7 +1910,7 @@ li {
   border-right: 5px solid transparent;
   border-top: 5px solid rgba(78,78, 78);
   position: absolute;
-  top: -10px;
+  top: 10px;
   left: 35%;
   z-index: 9;
   font-size: 0;
@@ -1936,7 +1925,7 @@ li {
   display: none;
   content: attr(data-messagetip);
   position: absolute;
-  top: -40px;
+  top: -20px;
   left: 35%;
   padding: 5px;
   cursor: pointer;
@@ -2069,6 +2058,10 @@ li {
 
   .o-filter__header {
   margin-top: -50px;
+  }
+
+  .o-userFormBody {
+    font-size: 1.5em;
   }
 
   /* [data-messagetip]:before {
