@@ -1024,6 +1024,7 @@ li {
   text-decoration: underline;
   line-height: 1.2em;
   text-align: left;
+  margin: 20px 0;
 }
 
 .c__section-list {
@@ -1592,7 +1593,7 @@ li {
 }
 
 .o-userText:focus~.o-form__floating-label {
-  top: -85px;
+  top: -90px;
   left: 10px;
   font-size: 10px;
   opacity: 1;
@@ -1604,7 +1605,7 @@ li {
   position: relative;
   pointer-events: none;
   left: 10px;
-  top: -85px;
+  top: -90px;
   padding: 5px;
   max-width: 200px;
   transition: 0.2s ease all;
@@ -1616,7 +1617,7 @@ li {
 }
 
 .o-userText:not(:focus):invalid~.o-form__floating-label {
-  top: -85px;
+  top: -90px;
   left: 10px;
   font-size: 11px;
   opacity: 1;
@@ -1624,7 +1625,7 @@ li {
 }
 
 .o-userText:focus:invalid~.o-form__floating-label {
-  top: -85px;
+  top: -90px;
   left: 10px;
   font-size: 11px;
   opacity: 1;
@@ -1636,7 +1637,7 @@ li {
 }
 
 .o-userText:not(:focus):valid~.o-form__floating-label {
-  top: -85px;
+  top: -90px;
   left: 10px;
   font-size: 11px;
   opacity: 1;
@@ -1645,7 +1646,7 @@ li {
 
 
 .o-userText:focus:valid~.o-form__floating-label {
-  top: -85px;
+  top: -90px;
   left: 10px;
   font-size: 11px;
   opacity: 1;
@@ -1653,7 +1654,7 @@ li {
 }
 
 .o-userText:[required]:focus:invalid~.o-form__floating-label {
-  top: -85px;
+  top: -90px;
   left: 10px;
   font-size: 11px;
   opacity: 1;
@@ -1661,8 +1662,8 @@ li {
 }
 
 .o-userText:[required]:focus:valid~.o-form__floating-label {
-  top: -85px;
-  left: 0;
+  top: -90px;
+  left: 10px;
   font-size: 11px;
   opacity: 1;
   color: #009900;
@@ -1710,7 +1711,7 @@ li {
   position: relative;
   font-size: 11px;
   font-weight: bold;
-  top: -220px;
+  top: -225px;
   left: 10px;
   text-transform: uppercase;
   background: inherit;
@@ -1720,11 +1721,11 @@ li {
 .o-userFormBody:not(:focus)~.o-form__message-floating-label {
   color: var(--dark-gray);
   left: 10px;
-  top: -220px;
+  top: -225px;
 }
 
 .o-userFormBody:focus:valid~.o-form__message-floating-label {
-  top: -220px;
+  top: -225px;
   left: 10px;
   font-size: 11px;
   opacity: 1;
@@ -1732,7 +1733,7 @@ li {
 }
 
 .o-userFormBody:focus:invalid~.o-form__message-floating-label {
-  top: -220px;
+  top: -225px;
   left: 10px;
   font-size: 11px;
   opacity: 1;
