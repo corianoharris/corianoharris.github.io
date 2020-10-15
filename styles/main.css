@@ -1994,7 +1994,7 @@ li {
   .o-profile__img {
   width: 175px;
   height: 175px;
-  margin: -50px auto 50px auto;
+  margin: 20px auto 50px auto;
 }
 
    .o-profile__positions h3:nth-child(odd) {
