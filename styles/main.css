@@ -972,8 +972,8 @@ li {
   transition: all .35s;
   margin-left: 5px;
   margin: 0 10px;
-  border: thin solid currentColor;
-  border-radius: 100%;
+  /* border: thin solid currentColor;
+  border-radius: 100%; */
   text-align: center;
   vertical-align: center;
   padding: 10px 0px 1px 0px;
