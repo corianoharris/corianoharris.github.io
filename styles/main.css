@@ -1717,7 +1717,8 @@ li {
   left: 10px;
   text-transform: uppercase;
   background: inherit;
-  max-width: 200px;
+  width: 100px;
+  border: thin solid white;
 }
 
 .o-form__message-floating-label::after {
