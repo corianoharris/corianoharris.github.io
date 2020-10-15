@@ -1707,13 +1707,6 @@ li {
   color: inherit;
 }
 
-.o-form__message-floating-label::after {
-  content: "*";
-  color: #FF7F7F;
-  vertical-align: center;
-  font-size: 24px;
-}
-
 .o-form__message-floating-label {
   display: block;
   position: relative;
@@ -1723,7 +1716,14 @@ li {
   left: 10px;
   text-transform: uppercase;
   background: inherit;
-  width: 200px;
+  max-width: 200px;
+}
+
+.o-form__message-floating-label::after {
+  content: "*";
+  color: #FF7F7F;
+  vertical-align: center;
+  font-size: 24px;
 }
 
 .o-userFormBody:not(:focus)~.o-form__message-floating-label {
