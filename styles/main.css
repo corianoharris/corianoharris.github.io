@@ -1699,6 +1699,7 @@ li {
   background: inherit;
   margin-right: 10px;
   padding: 20px 10px;
+  border: thin solid var(--dark-gray);
 }
 
 .o-userFormBody:focus {
@@ -1920,7 +1921,7 @@ li {
   border-top: 5px solid rgba(78,78, 78);
   position: absolute;
   top: -10px;
-  left: 32%;
+  left: 35%;
   z-index: 9;
   font-size: 0;
   line-height: 0;
@@ -1935,7 +1936,7 @@ li {
   content: attr(data-messagetip);
   position: absolute;
   top: -40px;
-  left: 32%;
+  left: 35%;
   padding: 5px;
   cursor: pointer;
   background: rgba(78,78, 78);
@@ -2069,9 +2070,9 @@ li {
   margin-top: -50px;
   }
 
-  [data-messagetip]:before {
+  /* [data-messagetip]:before {
   content: '';
-  /* hides the tooltoolTip when not hovered */
+  hides the tooltoolTip when not hovered
   display: none;
   content: '';
   border-left: 5px solid transparent;
@@ -2086,9 +2087,9 @@ li {
   width: 0;
   height: 0;
   color: inherit;
-}
+} */
 
-
+/*
 [data-messagetip]:after {
   display: none;
   content: attr(data-messagetip);
@@ -2110,7 +2111,7 @@ li {
   white-space: wrap;
   word-wrap: normal;
   width: auto;
-}
+} */
 
 }
 
