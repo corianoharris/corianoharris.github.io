@@ -218,7 +218,7 @@ main {
 }
 
 h1 {
-  margin: 100px 0 30px 0;
+  margin: 90px 0 0px 0;
   font-size: 42px;
   font-weight: 900;
   text-align: center;
@@ -373,15 +373,6 @@ li {
 }
 @media only screen and (min-width: 981px) {
 
-  h1 {
-    font-size: 100px;
-    letter-spacing: 2px;
-    position:fixed;
-    top: 150px;
-    left: 50px;
-    writing-mode: vertical-lr;
-  }
-
   h2 {
     font-size: 36px;
   }
@@ -392,7 +383,7 @@ li {
   }
 
   main {
-    margin-top: 200px;
+    margin-top: 100px;
     width: 70%;
   }
 
@@ -401,7 +392,24 @@ li {
   }
 }
 
-@media only screen and (min-width: 1024px) {}
+@media only screen and (min-width: 1024px) {
+
+    main {
+    margin-top: 150px;
+  }
+
+
+  h1 {
+    font-size: 100px;
+    letter-spacing: 2px;
+    position:fixed;
+    top: 150px;
+    left: 50px;
+    writing-mode: vertical-lr;
+    margin-left: 40px;
+  }
+
+}
 
 /*---------------------*\
       #END of ELEMENTS
@@ -1024,6 +1032,7 @@ li {
   text-decoration: underline;
   line-height: 1.2em;
   text-align: left;
+  margin: 20px 0;
 }
 
 .c__section-list {
@@ -1592,7 +1601,7 @@ li {
 }
 
 .o-userText:focus~.o-form__floating-label {
-  top: -85px;
+  top: -90px;
   left: 10px;
   font-size: 10px;
   opacity: 1;
@@ -1604,7 +1613,7 @@ li {
   position: relative;
   pointer-events: none;
   left: 10px;
-  top: -85px;
+  top: -90px;
   padding: 5px;
   max-width: 200px;
   transition: 0.2s ease all;
@@ -1616,7 +1625,7 @@ li {
 }
 
 .o-userText:not(:focus):invalid~.o-form__floating-label {
-  top: -85px;
+  top: -90px;
   left: 10px;
   font-size: 11px;
   opacity: 1;
@@ -1624,7 +1633,7 @@ li {
 }
 
 .o-userText:focus:invalid~.o-form__floating-label {
-  top: -85px;
+  top: -90px;
   left: 10px;
   font-size: 11px;
   opacity: 1;
@@ -1636,7 +1645,7 @@ li {
 }
 
 .o-userText:not(:focus):valid~.o-form__floating-label {
-  top: -85px;
+  top: -90px;
   left: 10px;
   font-size: 11px;
   opacity: 1;
@@ -1645,7 +1654,7 @@ li {
 
 
 .o-userText:focus:valid~.o-form__floating-label {
-  top: -85px;
+  top: -90px;
   left: 10px;
   font-size: 11px;
   opacity: 1;
@@ -1653,7 +1662,7 @@ li {
 }
 
 .o-userText:[required]:focus:invalid~.o-form__floating-label {
-  top: -85px;
+  top: -90px;
   left: 10px;
   font-size: 11px;
   opacity: 1;
@@ -1661,8 +1670,8 @@ li {
 }
 
 .o-userText:[required]:focus:valid~.o-form__floating-label {
-  top: -85px;
-  left: 0;
+  top: -90px;
+  left: 10px;
   font-size: 11px;
   opacity: 1;
   color: #009900;
@@ -1710,7 +1719,7 @@ li {
   position: relative;
   font-size: 11px;
   font-weight: bold;
-  top: -220px;
+  top: -225px;
   left: 10px;
   text-transform: uppercase;
   background: inherit;
@@ -1720,11 +1729,11 @@ li {
 .o-userFormBody:not(:focus)~.o-form__message-floating-label {
   color: var(--dark-gray);
   left: 10px;
-  top: -220px;
+  top: -225px;
 }
 
 .o-userFormBody:focus:valid~.o-form__message-floating-label {
-  top: -220px;
+  top: -225px;
   left: 10px;
   font-size: 11px;
   opacity: 1;
@@ -1732,7 +1741,7 @@ li {
 }
 
 .o-userFormBody:focus:invalid~.o-form__message-floating-label {
-  top: -220px;
+  top: -225px;
   left: 10px;
   font-size: 11px;
   opacity: 1;
@@ -1985,7 +1994,7 @@ li {
   .o-profile__img {
   width: 175px;
   height: 175px;
-  margin: -50px auto 50px auto;
+  margin: 20px auto 50px auto;
 }
 
    .o-profile__positions h3:nth-child(odd) {
