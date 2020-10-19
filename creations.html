@@ -88,16 +88,6 @@
 			<!-- <nav></nav> -->
 
 			<div class="nav__overlay" id="js-nav">
-				<p
-					class="c-card__button--close"
-					id="js-displayNavBtn"
-					onclick="collapseNav()"
-					tabindex="0"
-					role="button"
-					aira-label="close the navigation panel"
-				>
-					&#8855;
-				</p>
 				<nav class="menu">
 					<input type="checkbox" class="nav_items" id="toggle" />
 					<label id="show-menu" for="toggle">
@@ -271,6 +261,8 @@
 			</section>
 
 			<div class="projects-table">
+
+				<!-- Project 1 -->
 				<div class="filterItem card-apps">
 					<div
 						class="c-card__thumbnail c-thumbnail-apps"
@@ -288,7 +280,7 @@
 							<h5
 								class="c-card__thumbnail-title c__card__thumbnail__subheader"
 							>
-								Full-Stack app.
+								Full-Stack App
 							</h5>
 						</div>
 					</div>
@@ -296,23 +288,24 @@
 					<!-- main card -->
 
 					<section class="c-card__overlay" id="js-projectOne">
-						<p
-							class="c-card__button--close"
-							onclick="collapseProjectOne()"
-							tabindex="0"
-							role="button"
-							aria-label="closes the expanded project c-card__section"
-						>
-							&#8855;
-						</p>
 
 						<!-- card -->
 
 						<section class="c-card">
+							<div class="c-card-main__heading">
+								<p class="c-card-main__back-btn"
+										onclick="collapseProjectOne()"
+							tabindex="0"
+							role="button"
+							aria-label="closes the Note Collector card"
+
+								>Back</p>
+								<h3 class="c-card-main__title">Note Collector</h3>
+							</div>
 							<img
 								src="./public/assets/note-collector.png"
 								class="c-card-img"
-								alt="project image"
+								alt="an image of the form to create a note in the application."
 							/>
 							<div class="c-card__content">
 								<div class="c-card__section">
@@ -320,31 +313,48 @@
 										type="checkbox"
 										class="c-card__section-items"
 										checked="checked"
-										id="Project-1"
+										id="project-1-summary"
 									/>
-									<label class="c-card__section-label" for="Project-1"
-										>Note Collector</label
+									<label class="c-card__section-label c-card-summary" for="project-1-summary"
+										>Summary</label
 									>
 									<div class="c-card__section-body-text">
-										<div class="c-card_section-body-text-sections">
-											<h3 class="c-card__section_subheader">Summary</h3>
-											<p>
+										<p class="c-card-main__body">
 												Note Collector is a full-stack application that
-												allows users to create, store, view, edit, and
-												delete custom notes. This app uses React.js on
+												allows users to create, store, view, edit, and delete custom notes. This app uses React.js on
 												the client-side and serverless functions to
 												connect to an Airtable database.
 											</p>
 										</div>
-										<div class="c-card_section-body-text-sections">
-											<h3 class="c-card__section_subheader">Role</h3>
-											<p>Full-Stack Developer</p>
-										</div>
-										<div class="c-card_section-body-text-sections">
-											<h3 class="c-card__section_subheader">
-												technologies
-											</h3>
-											<ul aria="list">
+									</div>
+
+									<!-- Role -->
+										<div class="c-card__section">
+									<input
+										type="checkbox"
+										class="c-card__section-items"
+										id="project-1-role"
+									/>
+									<label class="c-card__section-label" for="project-1-role"
+										>Role</label
+									>
+									<div class="c-card__section-body-text">
+										<p class="c-card-main__body" > Software Developer
+											</p>
+											</div>
+									</div>
+									<!--- Technologies-->
+										<div class="c-card__section">
+									<input
+										type="checkbox"
+										class="c-card__section-items"
+										id="project-1-tech"
+									/>
+									<label class="c-card__section-label c-card-tech" for="project-1-tech"
+										>technologies</label
+									>
+									<div class="c-card__section-body-text">
+										<ul aria="list" class="c-card-main__body">
 												<li>React.js</li>
 												<li>Airtable</li>
 												<li>Jest</li>
@@ -371,15 +381,17 @@
 							</div>
 						</section>
 					</section>
-				</div>
 
-				<!-- End of apps -->
+
+				<!-- End of Project 1 -->
+
+				<!-- Project 2-->
 
 				<div class="filterItem card-ux">
 					<div
 						class="c-card__thumbnail c-thumbnail-ux"
-						onclick="displayProjectFour()"
 						tabindex="0"
+						onclick="displayProjectTwo()"
 						role="button"
 						aria-expanded="false"
 					>
@@ -387,36 +399,37 @@
 							<h3
 								class="c-card__thumbnail-title c-card__thumbnail__header"
 							>
-								Newists.
+								Newists
 							</h3>
 							<h5
 								class="c-card__thumbnail-title c__card__thumbnail__subheader"
 							>
-								Proof of Concept
+								UX/UI Proof of Concept
 							</h5>
 						</div>
 					</div>
 
 					<!-- main card -->
 
-					<section class="c-card__overlay" id="js-projectFour">
-						<p
-							class="c-card__button--close"
-							onclick="collapseProjectFour()"
-							tabindex="0"
-							role="button"
-							aria-label="closes the expanded project c-card__section"
-						>
-							&#8855;
-						</p>
+					<section class="c-card__overlay" id="js-projectTwo">
 
 						<!-- card -->
 
 						<section class="c-card">
+							<div class="c-card-main__heading">
+								<p class="c-card-main__back-btn"
+										onclick="collapseProjectTwo()"
+							tabindex="0"
+							role="button"
+							aria-label="closes the Newists card"
+
+								>Back</p>
+								<h3 class="c-card-main__title">Newists</h3>
+							</div>
 							<img
 								src="./public/assets/Newists-img.jpeg"
 								class="c-card-img"
-								alt="project image"
+								alt="a image of people interacting with the title, Newists overlay in the center"
 							/>
 							<div class="c-card__content">
 								<div class="c-card__section">
@@ -424,30 +437,47 @@
 										type="checkbox"
 										class="c-card__section-items"
 										checked="checked"
-										id="Project-4"
+										id="project-2-summary"
 									/>
-									<label class="c-card__section-label" for="Project-4"
-										>Newists</label
+									<label class="c-card__section-label c-card-summary" for="project-2-summary"
+										>Summary</label
 									>
 									<div class="c-card__section-body-text">
-										<div class="c-card_section-body-text-sections">
-											<h3 class="c-card__section_subheader">Summary</h3>
-											<p>
+										<p class="c-card-main__body">
 												Newist a POC mobile app that connects tourists
 												and new residents to locals in their
 												communities.
 											</p>
 										</div>
-										<div class="c-card_section-body-text-sections">
-											<h3 class="c-card__section_subheader">Role</h3>
-											<p>UX Researcher</p>
-											<p>UI Designer</p>
-										</div>
-										<div class="c-card_section-body-text-sections">
-											<h3 class="c-card__section_subheader">
-												technologies
-											</h3>
-											<ul aria="list">
+									</div>
+
+									<!-- Role -->
+										<div class="c-card__section">
+									<input
+										type="checkbox"
+										class="c-card__section-items"
+										id="project-2-role"
+									/>
+									<label class="c-card__section-label" for="project-2-role"
+										>Role</label
+									>
+									<div class="c-card__section-body-text">
+											<p class="c-card-main__body">UX Researcher</p>
+											<p class="c-card-main__body">UI Designer</p>
+											</div>
+									</div>
+									<!--- Technologies-->
+										<div class="c-card__section">
+									<input
+										type="checkbox"
+										class="c-card__section-items"
+										id="project-2-tech"
+									/>
+									<label class="c-card__section-label c-card-tech" for="project-2-tech"
+										>technologies</label
+									>
+									<div class="c-card__section-body-text">
+										<ul aria="list" class="c-card-main__body">
 												<li>OptimalSort</li>
 												<li>UserTesting</li>
 												<li>Sketch</li>
@@ -458,11 +488,10 @@
 										</div>
 									</div>
 									<!-- links -->
-									<div class="c-card__section c-card_links">
+									<div class="c-card_links">
 										<a
 											href="./public/assets/Newists.pdf"
-											class="card_link"
-											target="_blank"
+											class="card_link card_link-one"
 											>Slides</a
 										>
 									</div>
@@ -470,15 +499,16 @@
 							</div>
 						</section>
 					</section>
-				</div>
 
-				<!-- End of UX-->
+				<!-- End of Project 2 -->
 
-				<div class="filterItem card-ui">
+				<!-- Project 3 -->
+
+					<div class="filterItem card-ui">
 					<div
 						class="c-card__thumbnail c-thumbnail-ui"
-						onclick="displayProjectSix()"
 						tabindex="0"
+						onclick="displayProjectThree()"
 						role="button"
 						aria-expanded="false"
 					>
@@ -486,36 +516,37 @@
 							<h3
 								class="c-card__thumbnail-title c-card__thumbnail__header"
 							>
-								UI Design Challenges
+								Play & Run
 							</h3>
 							<h5
 								class="c-card__thumbnail-title c__card__thumbnail__subheader"
 							>
-								A collections on ui designs.
+								UI Design Challenge
 							</h5>
 						</div>
 					</div>
 
 					<!-- main card -->
 
-					<section class="c-card__overlay" id="js-projectSix">
-						<p
-							class="c-card__button--close"
-							onclick="collapseProjectSix()"
-							tabindex="0"
-							role="button"
-							aria-label="closes the expanded project c-card__section"
-						>
-							&#8855;
-						</p>
+					<section class="c-card__overlay" id="js-projectThree">
 
 						<!-- card -->
 
 						<section class="c-card">
+							<div class="c-card-main__heading">
+								<p class="c-card-main__back-btn"
+										onclick="collapseProjectThree()"
+							tabindex="0"
+							role="button"
+							aria-label="closes the Play & Run card"
+
+								>Back</p>
+								<h3 class="c-card-main__title">Play & Run</h3>
+							</div>
 							<img
-								src="./public/assets/ui-text-card-img.png"
+								src="./public/assets/UIChallengeDay1SignIn.png"
 								class="c-card-img"
-								alt="project image"
+								alt="an image of the Play and Run login screen for mobile, tablet, and desktop versions"
 							/>
 							<div class="c-card__content">
 								<div class="c-card__section">
@@ -523,67 +554,72 @@
 										type="checkbox"
 										class="c-card__section-items"
 										checked="checked"
-										id="Project"
+										id="project-3-summary"
 									/>
-									<label class="c-card__section-label" for="Project"
-										>UI Designs</label
+									<label class="c-card__section-label c-card-summary" for="project-3-summary"
+										>Summary</label
 									>
 									<div class="c-card__section-body-text">
-										<div class="c-card_section-body-text-sections">
-											<h3 class="c-card__section_subheader">Summary</h3>
-											<p>A 100 Days UI Challenge</p>
+										<p class="c-card-main__body">
+												A UI login design challenge with a 3 hours time limit. I created a design helps guide the user's eyes through each step of the login process.
+											</p>
 										</div>
-										<div class="c-card_section-body-text-sections">
-											<h3 class="c-card__section_subheader">Role</h3>
-											<p>UI Designer</p>
-										</div>
-										<div class="c-card_section-body-text-sections">
-											<h3 class="c-card__section_subheader">Designs</h3>
-											<ul class="c-designs-links" aria="list">
-												<li>
-													<a
-														href="./public/assets/UIChallengeDay1SignIn.png"
-														target="-blank"
-														class="c-designs-link"
-														>Login Page</a
-													>
-												</li>
-												<li>
-													<a
-														href="./public/assets/UIChallengeApp.png"
-														target="-blank"
-														class="c-designs-link"
-														>IPhone App</a
-													>
-												</li>
-											</ul>
-										</div>
-										<div class="c-card_section-body-text-sections">
-											<h3 class="c-card__section_subheader">
-												technologies
-											</h3>
-											<ul aria="list">
+									</div>
+
+									<!-- Role -->
+										<div class="c-card__section">
+									<input
+										type="checkbox"
+										class="c-card__section-items"
+										id="project-3-role"
+									/>
+									<label class="c-card__section-label" for="project-3-role"
+										>Role</label
+									>
+									<div class="c-card__section-body-text">
+											<p class="c-card-main__body">UI Designer</p>
+											</div>
+									</div>
+									<!--- Technologies-->
+										<div class="c-card__section">
+									<input
+										type="checkbox"
+										class="c-card__section-items"
+										id="project-3-tech"
+									/>
+									<label class="c-card__section-label c-card-tech" for="project-3-tech"
+										>technologies</label
+									>
+									<div class="c-card__section-body-text">
+										<ul aria="list" class="c-card-main__body">
 												<li>Sketch</li>
-												<li>Adobe XD</li>
-												<li>Wacom</li>
-												<li>Invision</li>
-												<li>Material Design</li>
+												<li>Illustrator</li>
 											</ul>
 										</div>
+									</div>
+									<!-- links -->
+									<div class="c-card_links">
+											<a
+												href="./public/assets/UIChallengeDay1SignIn.png"
+												target="-blank"
+												class="c-designs-link"
+												>Login Page</a
+											>
 									</div>
 								</div>
 							</div>
 						</section>
 					</section>
-				</div>
 
-				<!--- End of UI -->
+				<!-- End of Project 3 -->
+
+				<!--  Project 4 -->
 
 				<div class="filterItem card-designs">
 					<div
 						class="c-card__thumbnail c-thumbnail-designs"
-						onclick="displayProjectEight()"
 						tabindex="0"
+						onclick="displayProjectFour()"
 						role="button"
 						aria-expanded="false"
 					>
@@ -596,31 +632,32 @@
 							<h5
 								class="c-card__thumbnail-title c__card__thumbnail__subheader"
 							>
-								Logo Designs
+								A collection of Logo Designs
 							</h5>
 						</div>
 					</div>
 
 					<!-- main card -->
 
-					<section class="c-card__overlay" id="js-projectEight">
-						<p
-							class="c-card__button--close"
-							onclick="collapseProjectEight()"
-							tabindex="0"
-							role="button"
-							aria-label="closes the expanded project c-card__section"
-						>
-							&#8855;
-						</p>
+					<section class="c-card__overlay" id="js-projectFour">
 
 						<!-- card -->
 
 						<section class="c-card">
+							<div class="c-card-main__heading">
+								<p class="c-card-main__back-btn"
+										onclick="collapseProjectFour()"
+							tabindex="0"
+							role="button"
+							aria-label="closes the Logos card"
+
+								>Back</p>
+								<h3 class="c-card-main__title">Logos</h3>
+							</div>
 							<img
-								src="./public/assets/logo-text-card-img.png"
+								src="./public/assets/client_logos.png"
 								class="c-card-img"
-								alt="project image"
+								alt="a collections of logo designs"
 							/>
 							<div class="c-card__content">
 								<div class="c-card__section">
@@ -628,52 +665,73 @@
 										type="checkbox"
 										class="c-card__section-items"
 										checked="checked"
-										id="Project-8"
+										id="project-4-summary"
 									/>
-									<label class="c-card__section-label" for="Project-8"
-										>Logos Designs</label
+									<label class="c-card__section-label c-card-summary" for="project-4-summary"
+										>Summary</label
 									>
 									<div class="c-card__section-body-text">
-										<div class="c-card_section-body-text-sections">
-											<h3 class="c-card__section_subheader">Summary</h3>
-											<p>A collection of logo designs.</p>
+										<p class="c-card-main__body">
+												A collection of commissioned logo designs
+											</p>
 										</div>
-										<div class="c-card_section-body-text-sections">
-											<h3 class="c-card__section_subheader">Role</h3>
-											<p>Graphic Designer</p>
-										</div>
-										<div class="c-card_section-body-text-sections">
-											<h3 class="c-card__section_subheader">
-												technologies
-											</h3>
-											<ul aria="list">
-												<li>Adobe Illustrator</li>
-												<li>Wacom</li>
+									</div>
+
+									<!-- Role -->
+										<div class="c-card__section">
+									<input
+										type="checkbox"
+										class="c-card__section-items"
+										id="project-4-role"
+									/>
+									<label class="c-card__section-label" for="project-4-role"
+										>Role</label
+									>
+									<div class="c-card__section-body-text">
+											<p class="c-card-main__body">Graphic Designer</p>
+											</div>
+									</div>
+									<!--- Technologies-->
+										<div class="c-card__section">
+									<input
+										type="checkbox"
+										class="c-card__section-items"
+										id="project-4-tech"
+									/>
+									<label class="c-card__section-label c-card-tech" for="project-4-tech"
+										>technologies</label
+									>
+									<div class="c-card__section-body-text">
+										<ul aria="list" class="c-card-main__body">
+												<li>Illustrator</li>
+												<li>Wacom Digital Pen Tablet</li>
 											</ul>
 										</div>
 									</div>
 									<!-- links -->
-									<div class="c-card__section c-card_links">
-										<a
-											href="./public/assets/client_logos.png"
-											class="card_link"
-											target="_blank"
-											>Logos</a
-										>
+									<div class="c-card_links">
+											<a
+												href="./public/assets/client_logos.png"
+												target="-blank"
+												class="c-designs-link"
+												>Logos</a
+											>
 									</div>
 								</div>
 							</div>
 						</section>
 					</section>
-				</div>
 
-				<!--- Designs -->
+				<!-- End of Project 4 -->
+
+
+				<!--  Project 5 -->
 
 				<div class="filterItem card-talks">
 					<div
 						class="c-card__thumbnail c-thumbnail-talks"
-						onclick="displayProjectNine()"
 						tabindex="0"
+						onclick="displayProjectFive()"
 						role="button"
 						aria-expanded="false"
 					>
@@ -681,36 +739,37 @@
 							<h3
 								class="c-card__thumbnail-title c-card__thumbnail__header"
 							>
-								Understanding Visual Perception
+								Understanding Visual Perception for better UX
 							</h3>
 							<h5
 								class="c-card__thumbnail-title c__card__thumbnail__subheader"
 							>
-								A lightning talk
+								A Lightning Talk
 							</h5>
 						</div>
 					</div>
 
 					<!-- main card -->
 
-					<section class="c-card__overlay" id="js-projectNine">
-						<p
-							class="c-card__button--close"
-							onclick="collapseProjectNine()"
-							tabindex="0"
-							role="button"
-							aria-label="closes the expanded project c-card__section"
-						>
-							&#8855;
-						</p>
+					<section class="c-card__overlay" id="js-projectFive">
 
 						<!-- card -->
 
 						<section class="c-card">
+							<div class="c-card-main__heading">
+								<p class="c-card-main__back-btn"
+										onclick="collapseProjectFive()"
+							tabindex="0"
+							role="button"
+							aria-label="closes the Better UX card"
+
+								>Back</p>
+								<h3 class="c-card-main__title">A Better UX</h3>
+							</div>
 							<img
 								src="./public/assets/visual-percep-talk.png"
 								class="c-card-img"
-								alt="project image"
+								alt="a image of the title page on presentation slides"
 							/>
 							<div class="c-card__content">
 								<div class="c-card__section">
@@ -718,15 +777,13 @@
 										type="checkbox"
 										class="c-card__section-items"
 										checked="checked"
-										id="Project-9"
+										id="project-5-summary"
 									/>
-									<label class="c-card__section-label" for="Project-9"
-										>Project Title</label
+									<label class="c-card__section-label c-card-summary" for="project-5-summary"
+										>Summary</label
 									>
 									<div class="c-card__section-body-text">
-										<div class="c-card_section-body-text-sections">
-											<h3 class="c-card__section_subheader">Summary</h3>
-											<p>
+										<p class="c-card-main__body">
 												This talk focused on how to use visual
 												perception to create meaningful user
 												experiences. The presentation included a
@@ -734,33 +791,54 @@
 												methodology, and the anatomy of the eye.
 											</p>
 										</div>
-										<div class="c-card_section-body-text-sections">
-											<h3 class="c-card__section_subheader">Role</h3>
-											<p>Presenter</p>
-										</div>
-										<div class="c-card_section-body-text-sections">
-											<h3 class="c-card__section_subheader">
-												technologies
-											</h3>
-											<ul aria="list">
+									</div>
+
+									<!-- Role -->
+										<div class="c-card__section">
+									<input
+										type="checkbox"
+										class="c-card__section-items"
+										id="project-5-role"
+									/>
+									<label class="c-card__section-label" for="project-5-role"
+										>Role</label
+									>
+									<div class="c-card__section-body-text">
+											<p class="c-card-main__body">Presenter</p>
+											</div>
+									</div>
+									<!--- Technologies-->
+										<div class="c-card__section">
+									<input
+										type="checkbox"
+										class="c-card__section-items"
+										id="project-5-tech"
+									/>
+									<label class="c-card__section-label c-card-tech" for="project-5-tech"
+										>technologies</label
+									>
+									<div class="c-card__section-body-text">
+										<ul aria="list" class="c-card-main__body">
 												<li>Keynote</li>
-												<li>Zoom</li>
+												<li>Zoom Meetings</li>
 											</ul>
 										</div>
 									</div>
 									<!-- links -->
-									<div class="c-card__section c-card_links">
-										<a
-											href="./public/assets/Visual-Perception-CC .pdf"
-											class="card_link"
-											target="_blank"
-											>Slides</a
-										>
+									<div class="c-card_links">
+											<a
+												href="./public/assets/Visual-Perception-CC.pdf"
+												target="-blank"
+												class="c-designs-link"
+												>Slides</a
+											>
 									</div>
 								</div>
 							</div>
 						</section>
 					</section>
+
+				<!-- End of Project 5 -->
 				</div>
 			</div>
 			<footer class="c-copyright" id="footer">
