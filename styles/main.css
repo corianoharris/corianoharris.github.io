@@ -849,9 +849,9 @@ li {
 
 .c-card-img {
   width: 100%;
-  height: 125px;
+  height: 100%;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-  object-fit: fill;
+  object-fit: cover;
 }
 
 .c-card__section {
