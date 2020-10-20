@@ -879,6 +879,7 @@ li {
   text-align: center;
   color: var(--white);
   border-top:thin dotted white;
+  text-transform: lowercase;
   /* border-bottom:thin dotted white; */
 }
 
