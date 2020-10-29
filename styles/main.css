@@ -1036,7 +1036,7 @@ li {
 }
 
 .c-tools-section-label::after {
-  content: "\276F";
+  content: "\21E2";
   text-align: center;
   -webkit-transition: all .35s;
   transition: all .35s;
