@@ -1152,7 +1152,7 @@ li {
 
    .c__section-list {
   display: flex;
-  justify-content: flex-start;
+  justify-content: center;
 }
 
 .c-card__section-items:checked~.c-card__section-body-text {
