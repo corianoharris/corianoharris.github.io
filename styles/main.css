@@ -219,7 +219,8 @@ main {
 
 h1 {
   margin: 90px 0 0px 0;
-  font-size: 42px;
+  font-size: 36px;
+  font-family: "Monoton", cursive ;
   font-weight: 900;
   text-align: center;
   text-transform: uppercase;
