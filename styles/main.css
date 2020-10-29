@@ -1028,7 +1028,7 @@ li {
   margin: 0 20px;
   font-size: 20px;
   text-transform: lowercase;
-  font-weight: 900;
+  font-weight: 500;
 }
 
 .c-tools-section-label:hover, .c-tools-section-label:active, .c-tools-section-label:focus {
@@ -1057,7 +1057,7 @@ li {
   transition: all .35s;
   overflow: scroll;
   scrollbar-color: currentColor var(--dark-gray);
-  font-weight: ;
+  font-weight: 300;
 }
 
 /* #Tools Section State */
@@ -1101,7 +1101,6 @@ li {
   padding-bottom: 10px;
   text-decoration: underline;
   line-height: 1.2em;
-  text-align: left;
   margin: 20px 0;
 }
 
