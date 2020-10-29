@@ -2,7 +2,7 @@
       #IMPORTS
 \*---------------------*/
 
-@import url("https://fonts.googleapis.com/css2?family=Satisfy&family=Raleway:wght@100;200;300;400;500;600;700;800;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Satisfy&family=Raleway:wght@100;200;300;400;500;600;700;800;900&family=Bungee+Shade&family=Monoton&display=swap");
 
 /*---------------------*\
       #END of IMPORTS
@@ -219,7 +219,8 @@ main {
 
 h1 {
   margin: 90px 0 0px 0;
-  font-size: 42px;
+  font-size: 36px;
+  font-family: "Monoton", cursive ;
   font-weight: 900;
   text-align: center;
   text-transform: uppercase;
@@ -233,8 +234,9 @@ h1 {
 h2 {
   color: var(--white);
   font-size: 20px;
-  font-weight: 800;
-  margin-left: 20px;
+  font-family: "Bungee Shade", sans-serif;
+  font-weight: 900;
+  text-align: left;
 }
 
 /* ##Blockquote */
@@ -363,7 +365,6 @@ li {
 
   h2 {
     margin-left: none;
-    text-align: center;
     font-size: 28px;
   }
 
@@ -400,8 +401,7 @@ li {
 
 
   h1 {
-    font-size: 100px;
-    letter-spacing: 2px;
+    letter-spacing: 4px;
     position:fixed;
     top: 150px;
     left: 50px;
@@ -790,7 +790,7 @@ li {
 }
 
 .c-card {
-  background: #545454;
+  background: rgba(0, 0, 0, .5);
   margin: 20px auto;
   max-width: 90%;
   min-height: 200px;
@@ -799,6 +799,8 @@ li {
   border: thin solid var(--light-gray);
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2),
     0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  border-bottom-right-radius: 30px;
+  border-top-left-radius: 30px;
 }
 
 .c-card-main__heading {
@@ -807,34 +809,38 @@ li {
   left:0;
   display: flex;
   padding: 15px 0;
+  font-weight: 800;
   justify-content: center;
   align-items: center;
   background: white;
-  border-top: thin solid grey;
-  border-bottom: thin solid grey;
+  border-bottom: thin solid #545454;
+  border-bottom-right-radius: 40px;
   word-wrap: wrap;
   white-space: wrap;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2),
+    0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 .c-card-main__title {
   font-size: 1.15em;
   text-transform: uppercase;
   text-align: center;
+
 }
 
 .c-card-main__back-btn {
   position: relative;
   top:  0;
-  left: -15px;
-  margin-left: 5px;
-  font-size: 11px;
-  text-transform: lowercase;
+  left: -35px;
+  font-size: 10px;
+  color: #545454;
+
 }
 
 .c-card-main__back-btn:before {
+  text-transform: lowercase;
   content: "\276E";
-  text-align: center;
-  justify-items: flex-start;
+  text-align: left;
   -webkit-transition: all .35s;
   transition: all .35s;
   margin: 0 3px 0 0;
@@ -859,10 +865,7 @@ li {
 }
 
 .c-card__content {
-  /* height: 100%;
-  overflow: scroll;
-  scrollbar-width: medium;
-  scrollbar-color: white black; */
+  margin-top: -3px;
 }
 
 .c-card__section-label {
@@ -886,8 +889,7 @@ li {
 
 
 .c-card__section-label::after {
-  content: "\276F";
-  text-align: center;
+  content: "\21E2";
   -webkit-transition: all .35s;
   transition: all .35s;
   margin: 0 10px;
@@ -902,7 +904,7 @@ li {
 }
 
 .c-card__section-label:hover, .c-card__section-label:active, .c-card__section-label:focus {
-  background: rgba(0, 0, 0, .9);
+  background: rgba(0, 0, 0, 0.3);
 }
 
 .c-card-summary {
@@ -1026,7 +1028,7 @@ li {
   margin: 0 20px;
   font-size: 20px;
   text-transform: lowercase;
-  font-weight: 900;
+  font-weight: 500;
 }
 
 .c-tools-section-label:hover, .c-tools-section-label:active, .c-tools-section-label:focus {
@@ -1034,7 +1036,7 @@ li {
 }
 
 .c-tools-section-label::after {
-  content: "\276F";
+  content: "\21E2";
   text-align: center;
   -webkit-transition: all .35s;
   transition: all .35s;
@@ -1055,7 +1057,7 @@ li {
   transition: all .35s;
   overflow: scroll;
   scrollbar-color: currentColor var(--dark-gray);
-  font-weight: ;
+  font-weight: 300;
 }
 
 /* #Tools Section State */
@@ -1099,7 +1101,6 @@ li {
   padding-bottom: 10px;
   text-decoration: underline;
   line-height: 1.2em;
-  text-align: left;
   margin: 20px 0;
 }
 
@@ -1151,7 +1152,7 @@ li {
 
    .c__section-list {
   display: flex;
-  justify-content: flex-start;
+  justify-content: center;
 }
 
 .c-card__section-items:checked~.c-card__section-body-text {
@@ -1295,7 +1296,6 @@ li {
   }
 
   .c-page__subheader {
-    margin-top: -30px;
     text-align: center;
   }
 
@@ -1313,7 +1313,7 @@ li {
     right: 50px;
     width: 50px;
     height: 50px;
-    /* padding-top: 5px; */
+    padding-top: 15px;
   }
 
   .scrollBtn {
@@ -1408,6 +1408,7 @@ li {
 }
 
 .o-filter__header {
+  text-align: center;
   margin-bottom: 30px;
 }
 
@@ -1542,6 +1543,8 @@ li {
   border-radius: 50%;
   display: block;
   margin: 10px auto 20px auto;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2),
+    0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 .o-profile-info {
@@ -1663,6 +1666,8 @@ li {
   margin: 0;
   border: thin solid var(--dark-gray);
   color: inherit;
+  border-top-left-radius: 20px ;
+  border-bottom-right-radius: 20px;
 }
 
 .o-userText:focus {
@@ -1779,6 +1784,8 @@ li {
   margin-right: 10px;
   padding: 20px 10px;
   border: thin solid var(--dark-gray);
+  border-top-left-radius: 20px ;
+  border-bottom-right-radius: 20px;
 }
 
 .o-userFormBody:focus {
@@ -2046,7 +2053,7 @@ li {
 
 .o-job-list li {
   padding: 10px;
-  border: thin solid currentColor;
+  border: medium solid currentColor;
   border-radius: 30px;
   max-width: 200px;
   word-wrap: wrap;

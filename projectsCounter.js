@@ -7,7 +7,6 @@ window.addEventListener(
 			appsCounter(),
 			designsCounter(),
 			talksCounter();
-		console.log('upload first');
 	},
 	false
 );
