@@ -2049,7 +2049,7 @@ li {
 
 .o-job-list li {
   padding: 10px;
-  border: thin solid currentColor;
+  border: medium solid currentColor;
   border-radius: 30px;
   max-width: 200px;
   word-wrap: wrap;
