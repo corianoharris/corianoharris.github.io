@@ -790,7 +790,7 @@ li {
 }
 
 .c-card {
-  background: #545454;
+  background: rgba(0, 0, 0, .5);
   margin: 20px auto;
   max-width: 90%;
   min-height: 200px;
@@ -799,6 +799,8 @@ li {
   border: thin solid var(--light-gray);
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2),
     0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  border-bottom-right-radius: 30px;
+  border-top-left-radius: 30px;
 }
 
 .c-card-main__heading {
@@ -807,34 +809,38 @@ li {
   left:0;
   display: flex;
   padding: 15px 0;
+  font-weight: 800;
   justify-content: center;
   align-items: center;
   background: white;
-  border-top: thin solid grey;
-  border-bottom: thin solid grey;
+  border-bottom: thin solid #545454;
+  border-bottom-right-radius: 40px;
   word-wrap: wrap;
   white-space: wrap;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2),
+    0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 .c-card-main__title {
   font-size: 1.15em;
   text-transform: uppercase;
   text-align: center;
+
 }
 
 .c-card-main__back-btn {
   position: relative;
   top:  0;
-  left: -15px;
-  margin-left: 5px;
-  font-size: 11px;
-  text-transform: lowercase;
+  left: -35px;
+  font-size: 10px;
+  color: #545454;
+
 }
 
 .c-card-main__back-btn:before {
+  text-transform: lowercase;
   content: "\276E";
-  text-align: center;
-  justify-items: flex-start;
+  text-align: left;
   -webkit-transition: all .35s;
   transition: all .35s;
   margin: 0 3px 0 0;
@@ -859,10 +865,7 @@ li {
 }
 
 .c-card__content {
-  /* height: 100%;
-  overflow: scroll;
-  scrollbar-width: medium;
-  scrollbar-color: white black; */
+  margin-top: -3px;
 }
 
 .c-card__section-label {
@@ -886,8 +889,7 @@ li {
 
 
 .c-card__section-label::after {
-  content: "\276F";
-  text-align: center;
+  content: "\21E2";
   -webkit-transition: all .35s;
   transition: all .35s;
   margin: 0 10px;
@@ -902,7 +904,7 @@ li {
 }
 
 .c-card__section-label:hover, .c-card__section-label:active, .c-card__section-label:focus {
-  background: rgba(0, 0, 0, .9);
+  background: rgba(0, 0, 0, 0.3);
 }
 
 .c-card-summary {
