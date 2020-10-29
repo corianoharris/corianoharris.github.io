@@ -1666,6 +1666,8 @@ li {
   margin: 0;
   border: thin solid var(--dark-gray);
   color: inherit;
+  border-top-left-radius: 20px ;
+  border-bottom-right-radius: 20px;
 }
 
 .o-userText:focus {
@@ -1782,6 +1784,8 @@ li {
   margin-right: 10px;
   padding: 20px 10px;
   border: thin solid var(--dark-gray);
+  border-top-left-radius: 20px ;
+  border-bottom-right-radius: 20px;
 }
 
 .o-userFormBody:focus {
