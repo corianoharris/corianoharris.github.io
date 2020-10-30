@@ -34,54 +34,6 @@
 		</script>
 		<!-- End Google Tag Manager -->
 
-				<script>
-			window.addEventListener(
-	'load',
-	function () {
-		allCounter();
-			uxCounter();
-			uiCounter();
-			appsCounter();
-			designsCounter();
-			talksCounter();
-	},
-	false
-);
-
-
-const allCounter = () => {
-	let allCounter = document.querySelectorAll('.filterItem');
-	document.getElementById('all-counter').innerHTML = allCounter.length;
-};
-
-const uxCounter = () => {
-	let uxCounter = document.querySelectorAll('.card-ux');
-	document.querySelector('.ux-counter').innerHTML = uxCounter.length;
-};
-
-const uiCounter = () => {
-	let uiCounter = document.querySelectorAll('.card-ui');
-	document.querySelector('.ui-counter').innerHTML = uiCounter.length;
-};
-
-const appsCounter = () => {
-	let appsCounter = document.querySelectorAll('.card-apps');
-	document.querySelector('.apps-counter').innerHTML =
-		appsCounter.length;
-};
-
-const designsCounter = () => {
-	let designsCounter = document.querySelectorAll('.card-designs');
-	document.querySelector('.designs-counter').innerHTML =
-		designsCounter.length;
-};
-
-const talksCounter = () => {
-	let talksCounter = document.querySelectorAll('.card-talks');
-	document.querySelector('.talks-counter').innerHTML =
-		talksCounter.length;
-};
-		</script>
 		<meta charset="UTF-8" />
 		<meta
 			name="viewport"
@@ -1099,6 +1051,48 @@ const talksCounter = () => {
 				©Coriano Harris 2020
 			</footer>
 		</main>
+						<script async>
+
+const allCounter = () => {
+	let allCounterItems = document.querySelectorAll('.filterItem');
+	document.getElementById('all-counter').innerHTML = allCounterItems.length;
+};
+
+allCounter();
+
+const uxCounter = () => {
+	let uxCounterItems = document.querySelectorAll('.card-ux');
+	document.querySelector('.ux-counter').innerHTML = uxCounterItems.length;
+};
+	uxCounter();
+
+const uiCounter = () => {
+	let uiCounterItems = document.querySelectorAll('.card-ui');
+	document.querySelector('.ui-counter').innerHTML = uiCounterItems.length;
+};
+ uiCounter();
+
+const appsCounter = () => {
+	let appsCounterItems = document.querySelectorAll('.card-apps');
+	document.querySelector('.apps-counter').innerHTML =
+		appsCounterItems.length;
+};
+	appsCounter();
+
+const designsCounter = () => {
+	let designsCounter = document.querySelectorAll('.card-designs');
+	document.querySelector('.designs-counter').innerHTML =
+		designsCounter.length;
+};
+	designsCounter();
+
+const talksCounter = () => {
+	let talksCounterItems = document.querySelectorAll('.card-talks');
+	document.querySelector('.talks-counter').innerHTML =
+		talksCounterItems.length;
+};
+	talksCounter();
+		</script>
 		<script src="main.js"></script>
 	</body>
 </html>
