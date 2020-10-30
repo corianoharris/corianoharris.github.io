@@ -804,9 +804,6 @@ li {
 }
 
 .c-card-main__heading {
-  position: sticky;
-  top:0;
-  left:0;
   display: flex;
   padding: 15px 0;
   font-weight: 800;
@@ -822,7 +819,7 @@ li {
 }
 
 .c-card-main__title {
-  font-size: 1.15em;
+  font-size: 1rem;
   text-transform: uppercase;
   text-align: center;
 
@@ -830,17 +827,15 @@ li {
 
 .c-card-main__back-btn {
   position: relative;
-  top:  0;
-  left: -35px;
+  top: 0;
+  left: -10%;
   font-size: 10px;
   color: #545454;
-
 }
 
 .c-card-main__back-btn:before {
   text-transform: lowercase;
   content: "\276E";
-  text-align: left;
   -webkit-transition: all .35s;
   transition: all .35s;
   margin: 0 3px 0 0;
@@ -996,7 +991,7 @@ li {
 
 .c-card__section-items:checked~.c-card__section-body-text {
   max-height: 175px;
-  padding: 5px 5px 5px 5px;
+  padding: 0 10px;
 }
 
 .c-card__section-items {
