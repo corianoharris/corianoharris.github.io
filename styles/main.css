@@ -360,7 +360,7 @@ li {
   }
 
   h1 {
-    font-size: 70px;
+    font-size: 60px;
   }
 
   h2 {
@@ -373,6 +373,10 @@ li {
   }
 }
 @media only screen and (min-width: 981px) {
+
+  /* h1 {
+    margin-bottom: 60px;
+  } */
 
   h2 {
     font-size: 36px;
@@ -405,8 +409,9 @@ li {
     position:fixed;
     top: 150px;
     left: 50px;
-    writing-mode: vertical-lr;
+    writing-mode: vertical-rl;
     margin-left: 40px;
+    transform: rotate(180deg);
   }
 
 }
