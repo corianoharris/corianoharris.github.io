@@ -827,17 +827,15 @@ li {
 
 .c-card-main__back-btn {
   position: relative;
-  top:  0;
-  left: -35px;
+  top: 0;
+  left: -10%;
   font-size: 10px;
   color: #545454;
-
 }
 
 .c-card-main__back-btn:before {
   text-transform: lowercase;
   content: "\276E";
-  text-align: left;
   -webkit-transition: all .35s;
   transition: all .35s;
   margin: 0 3px 0 0;
