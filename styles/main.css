@@ -996,7 +996,7 @@ li {
 
 .c-card__section-items:checked~.c-card__section-body-text {
   max-height: 175px;
-  padding: 5px 5px 5px 5px;
+  padding: 0 10px;
 }
 
 .c-card__section-items {
