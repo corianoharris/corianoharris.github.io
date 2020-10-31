@@ -2081,7 +2081,7 @@ li {
   max-width: 200px;
   word-wrap: wrap;
   background: inherit;
-  border: medium dashed currentColor;
+  border: thin dashed currentColor;
   padding: 10px;
   vertical-align: center;
   text-align: center;
