@@ -560,12 +560,10 @@ li {
 
 
 .btn:hover,.btn:active,.btn:focus {
-  padding-bottom: 4px;
-  border-bottom: 4px solid currentColor;
+  border-bottom: 2px solid currentColor;
 }
 
 .btn:visited {
-  padding-bottom: 4px;
   border-bottom: 2px dotted var(--white);
 }
 
