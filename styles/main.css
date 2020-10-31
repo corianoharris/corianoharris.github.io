@@ -2055,11 +2055,11 @@ li {
 
 .o-job-list li {
   padding: 10px;
-  border: medium solid currentColor;
+  border: thin solid currentColor;
   border-radius: 30px;
   max-width: 200px;
   word-wrap: wrap;
-  background: var(--white);
+  background: transparent;
   vertical-align: center;
   text-align: center;
   font-weight: 800;
