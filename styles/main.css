@@ -537,7 +537,11 @@ li {
 
 .nav_link_text {
   margin-top: -10px;
-  font-size: 10px;
+  font-size: 9px;
+}
+
+.no-break {
+  white-space: nowrap;
 }
 
 .nav_link_text:hover,.nav_link_text:active, .nav_link_text:focus{
