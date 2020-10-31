@@ -560,12 +560,10 @@ li {
 
 
 .btn:hover,.btn:active,.btn:focus {
-  padding-bottom: 4px;
-  border-bottom: 4px solid currentColor;
+  border-bottom: 2px solid currentColor;
 }
 
 .btn:visited {
-  padding-bottom: 4px;
   border-bottom: 2px dotted var(--white);
 }
 
@@ -2057,11 +2055,11 @@ li {
 
 .o-job-list li {
   padding: 10px;
-  border: medium solid currentColor;
+  border: thin solid currentColor;
   border-radius: 30px;
   max-width: 200px;
   word-wrap: wrap;
-  background: var(--white);
+  background: transparent;
   vertical-align: center;
   text-align: center;
   font-weight: 800;
@@ -2083,7 +2081,7 @@ li {
   max-width: 200px;
   word-wrap: wrap;
   background: inherit;
-  border: medium dashed currentColor;
+  border: thin dashed currentColor;
   padding: 10px;
   vertical-align: center;
   text-align: center;

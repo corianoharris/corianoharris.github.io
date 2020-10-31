@@ -28,7 +28,6 @@ if (theme) {
 				't-secondary'
 			);
 			localStorage.setItem('light-theme-enabled', lightThemeEnabled);
-			collapseNav();
 		},
 		false
 	);
@@ -108,26 +107,6 @@ let displayProjectSeven = () => {
 
 let collapseProjectSeven = () => {
 	document.getElementById('js-projectSeven').style.display = 'none';
-};
-
-// Project 8
-
-let displayProjectEight = () => {
-	document.getElementById('js-projectEight').style.display = 'block';
-};
-
-let collapseProjectEight = () => {
-	document.getElementById('js-projectEight').style.display = 'none';
-};
-
-// Project 9
-
-let displayProjectNine = () => {
-	document.getElementById('js-projectNine').style.display = 'block';
-};
-
-let collapseProjectNine = () => {
-	document.getElementById('js-projectNine').style.display = 'none';
 };
 
 // Filter
