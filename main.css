@@ -8,12 +8,25 @@
 /* css variables */
 :root {
   --color-dark-bkgd: #1f1f1f;
-  --color-light-bkgd: ##fff;
+  --color-light-bkgd: #fff;
   --color-brand:  #009092;
   --color-info: #343434;
   --color-error: #990000;
   --font-family: "Raleway",
     sans-serif;
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    --background-color: var(--color-light-bkgd);
+    --text-color: var(--color-dark-bkgd);
+  }
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background-color: var(--color-dark-bkgd);
+    --text-color: var(--color-light-bkgd);
+  }
 }
 
 /* Box sizing rules */
@@ -143,13 +156,13 @@ li {
 a {
   cursor: pointer;
   display: none;
-  font-weight: 100;
+  font-weight: 900;
   padding: 0;
   text-decoration: none;
-  text-transform: lowercase;
+  text-transform: uppercase;
 }
 a:link, a:active, a:hover, a:visited {
-  color: var(--color-brand);
+  color: var(--text-color);
 }
 
 
@@ -506,8 +519,8 @@ button.btn .circle .icon.arrow {
 }
 
 button.btn .button-text {
-  font-weight: 700;
-  line-height: 1.6;
+  font-weight: 900;
+  line-height: 1.625rem;
   position: absolute;
   top: 0;
   left: 0;
