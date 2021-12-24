@@ -447,6 +447,10 @@ nav span {
   letter-spacing: .1rem;
 }
 
+.card-role {
+  margin-bottom: 15px;
+}
+
 /* button */
 
 button {
@@ -539,6 +543,7 @@ button.btn .button-text {
 
 button:hover .circle .icon.arrow {
   background: var(--color-light-bkgd);
+  color: var(--color-dark-bkgd);
   -webkit-transform: translate(1rem, 0);
           transform: translate(1rem, 0);
 }
