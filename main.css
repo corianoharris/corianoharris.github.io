@@ -224,6 +224,7 @@ nav span {
 
 .nav-item a {
   display: block;
+  font-weight: 800;
 }
 
 /* line separator */
