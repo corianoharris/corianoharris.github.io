@@ -576,8 +576,8 @@ button.btn .project-link-text {
 @media (min-width: 900px) {
   button.btn .project-link-text {
     font-size: 1.75rem;
-    left: 20px;
-    top: -55px;
+    left: 40px;
+    top: -40px;
   }
 }
 
