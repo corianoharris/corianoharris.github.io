@@ -336,33 +336,33 @@
 				  aria-label="contact form">
             <label class="custom-field one" aria-label="name form field">
               <input 	id="name" type="text" placeholder="your name" pattern="^([a-zA-Z ]*$){2,200}" required/>
-              <span class="placeholder">name<span>*</span></span>
-              <span class="validation-error-message" aria-label="Please enter your name with letters only.">Please enter your name with letters only.</span>
+              <span class="placeholder">name<span class="asterisk">*</span></span>
+              <span class="validation-error-message" aria-label="Please enter letters only.">Please enter your name with letters only.</span>
             </label>
                   
             <label class="custom-field two" aria-label="phone number form field">
               <input id="phone" type="tel" maxlength="15" placeholder="000-000-0000" pattern="^(?:(?:\+?1\s*(?:[.-]\s*)?)?(?:\(\s*([2-9]1[02-9]|[2-9][02-8]1|[2-9][02-8][02-9])\s*\)|([2-9]1[02-9]|[2-9][02-8]1|[2-9][02-8][02-9]))\s*(?:[.-]\s*)?)?([2-9]1[02-9]|[2-9][02-9]1|[2-9][02-9]{2})\s*(?:[.-]\s*)?([0-9]{4})(?:\s*(?:#|x\.?|ext\.?|extension)\s*(\d+))?$"
               />
               <span class="placeholder">phone number</span>
-              <span class="validation-error-message" aria-label="Please enter your phone number with digits only.">Please enter your phone number with digits only.</span>
+              <span class="validation-error-message" aria-label="Please enter digits only.">Please enter your phone number with digits only.</span>
             </label>
             
               <label class="custom-field three" aria-label="email form field">
                 <input id="email" type="email" placeholder="username@domain" pattern="^([0-9a-zA-Z]([-\.\w]*[0-9a-zA-Z])*@([0-9a-zA-Z][-\w]*[0-9a-zA-Z]\.)+[a-zA-Z]{2,9})"/>
-                <span class="placeholder">email<span>*</span></span>
+                <span class="placeholder">email<span class="asterisk">*</span></span>
                 <span class="validation-error-message"aria-label="">Please enter your email.</span>
               </label>
 
               <label class="custom-field four" aria-label="subject form field">
                 <input id="subject" type="text" placeholder="title" pattern="^([a-z]|[A-Z]|[0-9]|[\w ]+){1,50}"/>
-                <span class="placeholder">subject<span>*</span></span>
+                <span class="placeholder">subject<span class="asterisk">*</span></span>
                 <span class="validation-error-message" aria-label="Please enter your subject text.">Please enter your subject text.</span>
               </label>
                   
               <label class="custom-field five" aria-label="name form field">
                 <textarea id="message" cols="30" rows="10" placeholder="Your message" pattern="^([a-z]|[A-Z]|[0-9]|[\w ]+){1,500}"></textarea>
                 <span class="placeholder">Enter message</span>
-                <span class="validation-error-message validation-error-message-textarea" aria-label="lease enter your message.">Please enter your message.</span>
+                <span class="validation-error-message validation-error-message-textarea" aria-label="please enter your message.">Please enter your message.</span>
               </label>
 
               <p class="info-notify form-info-notify" aria-label="Submitting this form will open and autopopulate the form data in your email client" >Submitting this form will open and autopopulate the form data in your email client</span></p>
