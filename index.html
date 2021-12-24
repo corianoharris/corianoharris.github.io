@@ -1,96 +1,393 @@
 <!DOCTYPE html>
-<html lang="en">
-	<head>
-		<!-- Global site tag (gtag.js) - Google Analytics -->
+  <html lang="en">
+  <head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
 		<script
-			async
-			src="https://www.googletagmanager.com/gtag/js?id=UA-180416572-1"
-		></script>
-		<script>
-			window.dataLayer = window.dataLayer || [];
-			function gtag() {
-				dataLayer.push(arguments);
-			}
-			gtag('js', new Date());
+    async
+    src="https://www.googletagmanager.com/gtag/js?id=UA-180416572-1"
+  ></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+    gtag('js', new Date());
 
-			gtag('config', 'UA-180416572-1');
-		</script>
-		<!-- Google Tag Manager -->
-		<script>
-			(function (w, d, s, l, i) {
-				w[l] = w[l] || [];
-				w[l].push({
-					'gtm.start': new Date().getTime(),
-					event: 'gtm.js',
-				});
-				var f = d.getElementsByTagName(s)[0],
-					j = d.createElement(s),
-					dl = l != 'dataLayer' ? '&l=' + l : '';
-				j.async = true;
-				j.src = 'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
-				f.parentNode.insertBefore(j, f);
-			})(window, document, 'script', 'dataLayer', 'GTM-MBMJ8L7');
-		</script>
-		<!-- End Google Tag Manager -->
+    gtag('config', 'UA-180416572-1');
+  </script>
+  <!-- Google Tag Manager -->
+  <script>
+    (function (w, d, s, l, i) {
+      w[l] = w[l] || [];
+      w[l].push({
+        'gtm.start': new Date().getTime(),
+        event: 'gtm.js',
+      });
+      var f = d.getElementsByTagName(s)[0],
+        j = d.createElement(s),
+        dl = l != 'dataLayer' ? '&l=' + l : '';
+      j.async = true;
+      j.src = 'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+      f.parentNode.insertBefore(j, f);
+    })(window, document, 'script', 'dataLayer', 'GTM-MBMJ8L7');
+  </script>
+  <!-- End Google Tag Manager -->
 
-		<meta charset="UTF-8" />
-		<meta
-			name="viewport"
-			content="width=device-width, initial-scale=1.0"
-		/>
-		<title>Coriano Harris</title>
-		<link rel="stylesheet" href="styles/main.css" />
-		<link
-			rel="shortcut icon"
-			href="public/assets/logo.svg"
-			type="image/x-icon"
-		/>
-	</head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coriano Harris</title>
+    <link rel="stylesheet" href="main.css" />
+  </head>
+  <body>
 
-	<body>
-		<!-- Google Tag Manager (noscript) -->
-		<noscript
-			><iframe
-				src="https://www.googletagmanager.com/ns.html?id=GTM-MBMJ8L7"
-				height="0"
-				width="0"
-				style="display: none; visibility: hidden"
-			></iframe
-		></noscript>
-		<!-- End Google Tag Manager (noscript) -->
-		<div class="scroll__btn" id="scrollToTopBtn">
-			<p
-				class="scrollBtn"
-				onclick="topFunction()"
-				tabindex="0"
-				role="button"
-				aria-label="scroll back to the top of page"
-			>
-				&#8657;
-			</p>
-		</div>
-		<main class="o-kicker-screen" role="presentation">
-			<blockquote class="o-kicker">
-				<h3 class="e-blockquote__body-text">
-					His attention to detail and vast knowledge of the intricacies
-					of graphic design, added with the vision we had for our new
-					company logo equated into a piece of art that truly represents
-					our culture, students, and brand!
-				</h3>
-				<section class="blockquote__slug">
-					<img
-						src="public/assets/RaeColeman.jpg"
-						alt="A image of Rae Coleman performing a ballet move"
-						class="slug__img"
-					/>
-					<div class="blockquote__slug__author-info">
-						<h3 class="e-slug__author">Cici Kelley & Rae Coleman</h3>
-						<h5 class="e-slug__company">Dare Dream Dance</h5>
-					</div>
-				</section>
-			</blockquote>
-			<a href="creations.html" class="c-btn kicker-btn">ENTER</a>
-			<script src="main.js"></script>
-		</main>
-	</body>
+    <!-- Google Tag Manager (noscript) -->
+		<noscript>
+      <iframe
+      src="https://www.googletagmanager.com/ns.html?id=GTM-MBMJ8L7"
+      height="0"
+      width="0"
+      style="display: none; visibility: hidden"
+    ></iframe>
+    </noscript>
+  <!-- End Google Tag Manager (noscript) -->
+
+    <div class="app-wrapper" role="main">
+
+      <nav class="nav" role="navigation" aria-label="main navigation">
+        <span class="nav-icon">
+            &#926;
+        </span>
+        <div class="nav-items hidden">
+          <li class="nav-item" aria-label="navigation me link">
+            <a href="#me">me</a>
+          </li>
+          <li class="nav-item" aria-label="navigation work link">
+            <a href="#work">work</a>
+          </li>
+          <li class="nav-item" aria-label="navigation contact link">
+            <a href="#contact">Say Hi</a>
+          </li> 
+        </div>
+      </nav>
+
+      <div id="me" class="title">
+        <h2>Me</h2>
+      </div>
+
+      <section class="section">
+
+        <div class="profile">
+          <div class="profile-section-one">
+            <div class="picture-profile">
+                    <img class="img profile-img" src="./public/profile/Coriano.jpg" alt="image of coriano harris smiling" loading="lazy">
+                    <div class="name">
+                      <p class="my-name first-name"> Coriano</p>
+                      <p class="my-name last-name">Harris</p>
+                    </div>
+                    <button class="btn project-link" role="button">
+                      <span class="circle">
+                        <span class="icon arrow">&#8594;</span>
+                      </span>
+                      <span class="button-text project-link-text email-link-text"><a href="mailto:corianoharris@gmail.com" target="_blank">email</a></span>
+                    </button>
+                </div>
+                <hr class="separator separator-profile-img">
+                <div class="profile-quotes">
+                    <p class="quotes profile-quote">
+                        " I’m a <span class="roles">researcher</span>, <span class="roles">designer</span>, <span class="roles">developer</span>, and <span class="roles">colorist</span> who loves displaying empathy and 
+                        finding ways to be of service.  Outside of work, you can find me playing soccer, 
+                        letting go in improv, eating way too much french fries, dodging punches and kicks in krav maga and escaping underwater."
+                    </p>
+                </div>
+            </div>
+          <hr class="separator">
+          <div class="profile-section-two">
+            <h3 class="volunteering">Giving Back</h3>
+            <ul class="list clients-list">
+                <li class="list-items">St. Jude</li>
+                <li class="list-items">Code Connector</li>
+                <li class="list-items">CodeCrew</li>
+                <li class="list-items">Tech901</li>
+                <li class="list-items">homeless shelter</li>
+            </ul>
+          </div>
+        </div>
+
+      </section>
+      <div id="work" class="title">
+        <h2 >Work</h2>
+      </div>
+
+      <div class="social-media">
+
+        <button class="btn social-media-links" role="button">
+          <span class="circle">
+            <span class="icon arrow">&#8594;</span>
+          </span>
+          <span class="button-text social-media-links-text"><a href="https://github.com/corianoharris" target="_blank">Github</a></span>
+        </button>
+
+        <button class="btn social-media-links">
+          <span class="circle">
+            <span class="icon arrow">&#8594;</span>
+          </span>
+          <span class="button-text social-media-links-text"><a href="https://www.linkedin.com/in/corianoharris/" target="_blank">LinkedIn</a></span>
+        </button>
+        
+      </div>
+
+      <section class="section">
+
+        <h3>Hear from my clients</h3>
+
+        <div class="clients-quotes">
+
+          <div class="card client-quotes-card">
+            <p class="quotes profile-quote">
+              " He did a masterful job creating posters, news flyers and
+							teasers. CORIANO HARRIS is EXTRAORDINARY! "
+            </p>
+              <picture class="picture-clients">
+                <img class="img clients-img" src="./public/clients/MichealStJohn.jpg" alt="" loading="lazy"/>
+                <p>Micheal St. John</p>
+              </picture>
+          </div>
+
+          <div class="card client-quotes-card">
+            <p class="quotes profile-quote">
+              " I needed a designer to create a promotional poster.
+							Coriano came to the rescue! He made my idea come to life.
+							I couldn't be happier."
+            </p>
+              <picture class="picture-clients">
+                <img class="img clients-img" src="./public/clients/LaurenBrynes.jpg" alt="" loading="lazy"/>
+                <p>Lauren Byrnes</p>
+              </picture>
+          </div>
+
+          <div class="card client-quotes-card">
+            <p class="quotes profile-quote">
+              " His attention to detail and vast knowledge of the intricacies
+              of graphic design, added with the vision we had for our new
+              company logo equated into a piece of art that truly represents
+              our culture, students, and brand! "
+            </p>
+              <picture class="picture-clients">
+                <img class="img clients-img" src="./public/clients/RaeColeman.jpg" alt="" loading="lazy"/>
+                <p>Rae Coleman</p>
+              </picture>
+          </div>
+
+        </div>
+
+        <hr class="separator">
+        <h3>Clients</h3>
+        <ul class="list clients-list">
+          <li class="list-items">ALSAC (St. Jude)</li>
+          <li class="list-items">FedEx</li>
+          <li class="list-items">PartCycle</li>
+          <li class="list-items">Dare Dream Dance</li>
+          <li class="list-items">C4 Atlanta</li>
+          <li class="list-items">Lauren Brynes Production</li>
+          <li class="list-items">Michael St. John Confidential</li>
+        </ul>
+        <hr class="separator"> 
+
+        <h3>Clients projects</h3>
+
+        <div class="clients-projects">
+
+          <div class="card clients-project-card">
+            <picture class="picture-projects">
+              <img class="img project-img" src="./public/projects/fedex_tracking.png" alt="image of FedEx Tracking website" loading="lazy"/>
+            </picture>
+            <div class="card-info">
+              <h4 class="card-company">Company / <span class="card-company-name">FedEx</span></h4>
+              <h4 class="card-role">Role / <span class="card-company-role">ux/ui designer</span></h4>
+              <button class="btn project-link">
+                <span class="circle">
+                  <span class="icon arrow">&#8594;</span>
+                </span>
+                <span class="button-text project-link-text"><a href="https://www.fedex.com/en-us/tracking/advanced.html" target="_blank">fedex tracking</a></span>
+              </button>
+            </div>
+          </div>
+          <div class="card clients-project-card">
+            <picture class="picture-projects">
+              <img class="img project-img" src="./public/projects/partcycle.png" alt="image of PartCycle website" loading="lazy"/>
+            </picture>
+            <div class="card-info">
+              <h4 class="card-company">Company / <span class="card-company-name">PartCycle</span></h4>
+              <h4 class="card-role">Role / <span class="card-company-role">developer</span></h4>
+              <button class="btn project-link" role="button">
+                <span class="circle">
+                  <span class="icon arrow">&#8594;</span>
+                </span>
+                <span class="button-text project-link-text"><a href="https://www.partcycle.com/" target="_blank">partcycle</a></span>
+              </button>
+            </div>
+          </div>
+          <div class="card clients-project-card">
+            <picture class="picture-projects">
+              <img class="img project-img" src="./public/projects/my_supporter_acct.png" alt="image of My Supporter Account website" loading="lazy"/>
+            </picture>
+            <div class="card-info">
+              <h4 class="card-company">Company / <span class="card-company-name">ALSAC (St.Jude)</span></h4>
+              <h4 class="card-role">Role / <span class="card-company-role">developer</span></h4>
+              <button class="btn project-link" role="button">
+                <span class="circle">
+                  <span class="icon arrow">&#8594;</span>
+                </span>
+                <span class="button-text project-link-text"><a href="https://www.stjude.org/give/supporter-profile.html" target="_blank">MSA</a></span>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <hr class="separator">
+
+        <h3>Toolbox</h3>
+
+        <h4>Graphic Design</h4>
+
+        <ul class="list skills-list">
+          <li class="list-items">typography</li>
+          <li class="list-items">adobe creative suite</li>
+          <li class="list-items">color thoery</li>
+          <li class="list-items">coloristic</li>
+          <li class="list-items">design patterns</li>
+        </ul>
+
+      <hr class="separator">
+
+        <h4>UX</h4>
+
+        <ul class="list skills-list">
+          <li class="list-items">google analytics</li>
+          <li class="list-items">usertesting.com</li>
+          <li class="list-items">optimalsort</li>
+          <li class="list-items">hci</li>
+          <li class="list-items">personas</li>
+          <li class="list-items">quantitative research</li>
+          <li class="list-items">qualitative research</li>
+        </ul>
+
+      <hr class="separator">
+
+        <h4>UI</h4>
+
+        <ul class="list skills-list">
+          <li class="list-items">wireframes</li>
+          <li class="list-items">mockups</li>
+          <li class="list-items">information architecture</li>
+          <li class="list-items">sketch</li>
+          <li class="list-items">adobe xd</li>
+          <li class="list-items">invision</li>
+          <li class="list-items">figma</li>
+        </ul>
+
+        <hr class="separator">
+
+        <h4>Development</h4>
+
+        <ul class="list skills-list">
+          <li class="list-items">html5</li>
+          <li class="list-items">css3</li>
+          <li class="list-items">javascript</li>
+          <li class="list-items">react.js</li>
+          <li class="list-items">node.js</li>
+          <li class="list-items">ember.js</li>
+          <li class="list-items">sass</li>
+          <li class="list-items">sql</li>
+          <li class="list-items">mongodb</li>
+          <li class="list-items">rest api</li>
+          <li class="list-items">netlify</li>
+          <li class="list-items">computer science</li>
+        </ul>
+
+        <hr class="separator">
+
+        <h4>Soft Skiills</h4>
+
+        <ul class="list skills-list">
+          <li class="list-items">public-speaking</li>
+          <li class="list-items">mentoring</li>
+          <li class="list-items">time-management</li>
+        </ul>
+
+        <hr class="separator">
+
+        <p class="info-notify project-info-notify" aria-label="view personal project upon request">View personal project upon request.</span></p>
+
+        </section>
+
+        <div id="contact" class="title">
+          <h2 >Let's Talk</h2>
+        </div>
+
+        <section class="section form">
+
+          <form 
+          name="contact"
+          method="POST"
+          role="form"
+				  aria-label="contact form">
+            <label class="custom-field one" aria-label="name form field">
+              <input 	id="name" type="text" placeholder="your name" pattern="^([a-zA-Z ]*$){2,200}" required/>
+              <span class="placeholder">name<span>*</span></span>
+              <span class="validation-error-message" aria-label="Please enter your name with letters only.">Please enter your name with letters only.</span>
+            </label>
+                  
+            <label class="custom-field two" aria-label="phone number form field">
+              <input id="phone" type="tel" maxlength="15" placeholder="000-000-0000" pattern="^(?:(?:\+?1\s*(?:[.-]\s*)?)?(?:\(\s*([2-9]1[02-9]|[2-9][02-8]1|[2-9][02-8][02-9])\s*\)|([2-9]1[02-9]|[2-9][02-8]1|[2-9][02-8][02-9]))\s*(?:[.-]\s*)?)?([2-9]1[02-9]|[2-9][02-9]1|[2-9][02-9]{2})\s*(?:[.-]\s*)?([0-9]{4})(?:\s*(?:#|x\.?|ext\.?|extension)\s*(\d+))?$"
+              />
+              <span class="placeholder">phone numbers</span>
+              <span class="validation-error-message" aria-label="Please enter your phone number with digits only.">Please enter your phone number with digits only.</span>
+            </label>
+            
+              <label class="custom-field three" aria-label="email form field">
+                <input id="email" type="email" placeholder="username@domain" pattern="^([0-9a-zA-Z]([-\.\w]*[0-9a-zA-Z])*@([0-9a-zA-Z][-\w]*[0-9a-zA-Z]\.)+[a-zA-Z]{2,9})"/>
+                <span class="placeholder">email<span>*</span></span>
+                <span class="validation-error-message"aria-label="">Please enter your email.</span>
+              </label>
+
+              <label class="custom-field four" aria-label="subject form field">
+                <input id="subject" type="text" placeholder="title" pattern="^([a-z]|[A-Z]|[0-9]|[\w ]+){1,50}"/>
+                <span class="placeholder">subject<span>*</span></span>
+                <span class="validation-error-message" aria-label="Please enter your subject text.">Please enter your subject text.</span>
+              </label>
+                  
+              <label class="custom-field five" aria-label="name form field">
+                <textarea id="message" cols="30" rows="10" placeholder="Your message" pattern="^([a-z]|[A-Z]|[0-9]|[\w ]+){1,500}"></textarea>
+                <span class="placeholder">Enter message</span>
+                <span class="validation-error-message validation-error-message-textarea" aria-label="lease enter your message.">Please enter your message.</span>
+              </label>
+
+              <p class="info-notify form-info-notify" aria-label="Submitting this form will open and autopopulate the form data in your email client" >Submitting this form will open and autopopulate the form data in your email client</span></p>
+
+              <div class="button-container" role="button">
+                <button id="submit" class="btn social-media-links" role="button" aria-label="contact form submit button">
+                  <span class="circle">
+                    <span class="icon arrow">&#8594;</span>
+                  </span>
+                  <span class="button-text project-links-text form"><a href="#">Submit</a></span>
+                </button>
+              </div>
+          </form>
+
+        </section>
+
+        <footer class="section footer">
+          <p class="copyright">&copy;
+            Coriano Harris
+            <span class="copyright-year"></span>
+          </p>
+        </footer>
+
+      </div>
+
+      <script src="main.js"></script>
+
+  </body>
 </html>
