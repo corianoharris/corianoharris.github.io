@@ -197,19 +197,19 @@ input {
 
 /* navigation */
 nav {
+  align-items: center;
+  background: var(--color-brand);
+  border-radius: 1.625rem;
+  box-shadow: 0 4px 8px 0 rgba(138, 135, 135, 0.2), 0 6px 20px 0 rgba(136, 134, 134, 0.19);
+  display: flex;
+  height: 3.5rem;
+  justify-content: space-between;
+  margin-right: 20px;
   position: fixed;
   top: 10px;
   right: 10px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
   transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
-  margin-right: 20px;
   width: auto;
-  height: 3.5rem;
-  background: var(--color-brand);
-  border-radius: 1.625rem;
-  box-shadow:  0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   z-index: 2000;
 }
 .nav-icon {
@@ -272,7 +272,7 @@ nav span {
 
 /* section title */
 .title {
-  margin: 80px 0 0 0;
+  padding-top: 10px;
   width: 100%;
   text-align: center;
 }
@@ -339,7 +339,7 @@ nav span {
 .list-items {
   background-color: var(--color-brand);
   border-radius: .5rem;
-  box-shadow:  0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  box-shadow: 0 4px 8px 0 rgba(138, 135, 135, 0.2), 0 6px 20px 0 rgba(136, 134, 134, 0.19);
   font-size: .7rem;
   font-weight: 900;
   padding: 10px;
@@ -347,10 +347,9 @@ nav span {
 
 /** card **/
 .card {
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  box-shadow: 0 4px 8px 0 rgba(138, 135, 135, 0.2), 0 6px 20px 0 rgba(136, 134, 134, 0.19);
   height: 100%;
   margin-bottom: 20px;
-  /* padding: 10px 0 0px 0; */
   width: 100%;
 }
 .card-info {
@@ -396,7 +395,7 @@ nav span {
 }
 /* client projects */
 .clients-project-card {
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  box-shadow: 0 4px 8px 0 rgba(138, 135, 135, 0.2), 0 6px 20px 0 rgba(136, 134, 134, 0.19);
   height: auto;
   width: 280px;
   word-wrap: break-word;
@@ -441,7 +440,7 @@ nav span {
 }
 
 .card-company-name, .card-company-role {
-  color: var(--color-light-bkgd);
+  color: var(--color-brand);
   font-size: 1rem;
   font-weight: 300;
   letter-spacing: .1rem;
@@ -555,7 +554,7 @@ button:hover .button-text {
 
 .email-link-text a {
   display: block;
-  padding-top: 7px;
+  padding-top: 5px;
 }
 
 .project-link {
@@ -575,8 +574,7 @@ button.btn .project-link-text {
 }
 @media (min-width: 900px) {
   button.btn .project-link-text {
-    font-size: 1.75rem;
-    left: 40px;
+    left: 30px;
     top: -40px;
   }
 }
@@ -627,7 +625,7 @@ button.btn .project-link-text {
   font-weight: 700;
 }
 .profile-quotes {
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  box-shadow: 0 4px 8px 0 rgba(138, 135, 135, 0.2), 0 6px 20px 0 rgba(136, 134, 134, 0.19);
   width: 100%;
 }
 @media (min-width: 900px) {
@@ -787,7 +785,7 @@ margin: 20px 0;
 .button {
   border: 1px solid var(--color-brand);
   border-radius: .3rem;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  box-shadow: 0 4px 8px 0 rgba(138, 135, 135, 0.2), 0 6px 20px 0 rgba(136, 134, 134, 0.19);
   color: var(--color-brand);
   font-size: 1rem;
   margin: 30px 0;
