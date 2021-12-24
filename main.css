@@ -582,9 +582,10 @@ button:hover .button-text {
 
 button.btn .project-link-text {
   font-size: 1.25rem;
-  font-weight: 900;
+  font-weight: 00;
   position: relative;
   left: 10px;
+  letter-spacing: .5rem;
   top: -45px;
 }
 @media (min-width: 900px) {
