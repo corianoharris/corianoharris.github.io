@@ -528,6 +528,7 @@ button.btn .circle .icon.arrow {
   display: flex;
   font-size: .8rem;
   justify-content: center;
+  letter-spacing: .2rem;
   padding-left: 10px;
   
 }
