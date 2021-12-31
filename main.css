@@ -844,11 +844,20 @@ margin: 20px 0;
 /* --- state --- */
 
 /* navigation */
+
+
+.nav-item a:visited:not(:hover) { 
+  border-bottom: 2px solid black;
+  color: black;
+  padding-bottom: 3px; 
+};
+
 .nav-item a:visited {
-  border-bottom: 1px solid var(--color-info);
-  color: var(--color-info);
+  border-bottom: 1px solid #6c6866;
+  color: #6c6866;
   padding-bottom: 3px;
-}
+} 
+
 .nav-item a:hover {
   border-bottom: 2px solid white;
   color: white;
@@ -859,6 +868,7 @@ margin: 20px 0;
   color: black;
   padding-bottom: 3px;
 }
+
 
 /** form **/
 .asterisk {
