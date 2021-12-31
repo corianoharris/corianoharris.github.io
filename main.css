@@ -2,7 +2,6 @@
 /* --- Base --- */
 
 /* imports */
-/* @import url("https://fonts.googleapis.com/css2?family=Raleway:wght@100;200;300;400;500;600;700;800;900"); */
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap');
 
 
@@ -291,7 +290,7 @@ nav span {
 
 /* section title */
 .title {
-  padding-top: 10px;
+  padding-top: 25px;
   width: 100%;
   text-align: center;
 }
