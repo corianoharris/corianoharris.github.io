@@ -70,7 +70,4 @@ function contact_submit(e) {
 const copyrightYear = document.querySelector('.copyright-year');
 copyrightYear.innerText = new Date().getFullYear();
 
-const divMe = document.querySelector("#me");
-const divWork = document.querySelector("#work");
-const divContact = document.querySelector("#contact");
 
