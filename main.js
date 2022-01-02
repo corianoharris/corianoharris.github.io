@@ -1,6 +1,9 @@
 
+const navLinks = document.querySelectorAll(".nav-item");
 const firstNavLink = document.querySelectorAll(".nav-item")[0];
 const lastNavLink = document.querySelectorAll(".nav-item")[2];
+const titles = document.querySelectorAll(".title");
+
 
 firstNavLink.addEventListener('keydown', (e) => {
 	if(e.shiftKey && e.key === 'Tab') {
@@ -14,13 +17,15 @@ lastNavLink.addEventListener('keydown', (e) => {
 	}
 })
 
-
 const navLinksContainer = document.querySelector(".nav-items");
 const navIcon = document.querySelector(".nav-icon");
 
 navIcon.addEventListener('click', () => {
  navLinksContainer.classList.toggle("hidden");
-})
+	for ( let i = 0; i < titles.length; i++) {
+		titles[i].classList.toggle("paddingNone");
+	}	
+ })
 
 const form = document.forms['contact'];
 
@@ -64,4 +69,8 @@ function contact_submit(e) {
 
 const copyrightYear = document.querySelector('.copyright-year');
 copyrightYear.innerText = new Date().getFullYear();
+
+const divMe = document.querySelector("#me");
+const divWork = document.querySelector("#work");
+const divContact = document.querySelector("#contact");
 

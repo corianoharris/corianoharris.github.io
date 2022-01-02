@@ -973,6 +973,14 @@ input:-webkit-autofill:focus {
   display: none;
 }
 
+.paddingTop {
+  padding-top: 25px;
+}
+
+.paddingNone {
+  padding: 0;
+}
+
 /* --- theme --- */
 
 
