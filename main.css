@@ -361,7 +361,7 @@ nav span {
   font-size: .7rem;
   font-weight: 400;
   letter-spacing: .2rem;
-  padding: 10px 5px;
+  padding: 2px 5px;
   text-transform: lowercase;
 }
 
@@ -649,9 +649,9 @@ button.btn .project-link-text {
 }
 .last-name {
   font-size: 42px;
-  font-style: ;
   letter-spacing: .5rem;
   font-weight: 100;
+  margin-top: -15px;
 }
 .profile-quotes {
   box-shadow: 0 4px 8px 0 rgba(138, 135, 135, 0.2), 0 6px 20px 0 rgba(136, 134, 134, 0.19);
