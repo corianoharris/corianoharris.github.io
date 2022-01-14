@@ -134,8 +134,10 @@ h2::first-letter {
   color: var(--text-color);
   font-size: 42px;
   font-weight: 900;
+  height: 40px;
   margin: 0 2px;
-  padding: 5px;
+  padding: 0 10px;
+  width: 40px;
 }
 
 @media (min-width: 648px) {
