@@ -519,13 +519,11 @@ button.btn .circle .icon {
   top: 0;
   bottom: 0;
   margin: auto;
-  background: var(--color-light-bkgd);
   transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
 }
 button.btn .circle .icon.arrow {
   position: absolute;
   top: -20px;
-  background: var(--color-light-bkgd);
   color: var(--text-color);
   height: 0.125rem;
   left: 0.625rem;
@@ -566,7 +564,6 @@ button.btn .button-text {
 }
 
 button:hover .circle .icon.arrow {
-  background: var(--color-light-bkgd);
   color: var(--color-dark-bkgd);
   -webkit-transform: translate(1rem, 0);
           transform: translate(1rem, 0);
