@@ -777,6 +777,7 @@ margin: 20px 0;
 .custom-field.one input, .custom-field.two input, .custom-field.three input, .custom-field.four input, .custom-field.five textarea  {
   background: none;
   border: 2px solid var(--color-brand);
+  color: var(--color-brand);
   transition: border-color 0.3s ease;
 }
 .custom-field.one input + .placeholder, .custom-field.two input + .placeholder, .custom-field.three input + .placeholder, .custom-field.four input + .placeholder  {   
@@ -883,6 +884,7 @@ margin: 20px 0;
 input:focus{
   padding-top: 50px;
 }
+
 input:focus, textarea.focus {
   color: var(--color-brand);
 }
@@ -930,6 +932,7 @@ input:not(:focus)::placeholder,textarea:not(:focus)::placeholder{
 .custom-field.five textarea:focus  {
   border-color: var(--color-brand);
   border: none;
+  color: var(--color-brand);
   transition-delay: 0.1s;
 }
 .custom-field.one input.dirty + .placeholder,
@@ -942,6 +945,7 @@ input:not(:focus)::placeholder,textarea:not(:focus)::placeholder{
 .custom-field.four input:not(:placeholder-shown) + .placeholder,
 .custom-field.four input:focus + .placeholder {
   border-radius: .5rem;
+  color: white;
   font-size: 15px;
   padding: 5px;
   top: -30px;
