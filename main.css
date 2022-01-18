@@ -580,26 +580,14 @@ button:hover .button-text {
 }
 
 .project-link {
+  display: flex;
+  align-items: center;
   height: auto;
-  margin: 0 auto;
-  position: relative;
-  left: 0px;
-  transform: scale(60%);
+  font-size: 10vw;
 }
 
 button.btn .project-link-text {
-  font-size: 1.25rem;
-  font-weight: 00;
-  position: relative;
-  left: 10px;
-  letter-spacing: .5rem;
-  top: -45px;
-}
-@media (min-width: 900px) {
-  button.btn .project-link-text {
-    left: 30px;
-    top: -40px;
-  }
+  justify-self: end;
 }
 
 /* --- custom --- */
@@ -628,26 +616,24 @@ button.btn .project-link-text {
 /* profile name */
 .name {
   display: block;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
   margin: 20px auto;
   gap: 1rem;
   line-height: 2rem;
-  text-align: center;
+  text-align: left;
   width: 200px;
 }
 .first-name {
-  font-size: 28px;
+  font-size: 42px;
   font-weight: 700;
   letter-spacing: .2rem;
   margin: 0 auto;
   margin-bottom: 20px;
-  border-bottom: 10px solid var(--color-brand);
-  text-align: center;
-  width: 150px;
+  width: auto;
 }
 .last-name {
-  font-size: 42px;
+  font-size: 20px;
   letter-spacing: .5rem;
   font-weight: 100;
   margin-top: -15px;
