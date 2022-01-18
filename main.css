@@ -477,10 +477,10 @@ nav span {
 button {
   background: transparent;
   border: 0;
-  cursor: pointer;
   display: inline-block;
   font-size: .8rem;
   font-family: inherit;
+  margin: 0 auto;
   outline: none;
   padding: 0;
   position: relative;
@@ -489,7 +489,7 @@ button {
 }
 button.btn {
   height: auto;
-  width: 260px;
+  width: 245px;
 }
 button.btn .circle {
   background: var(--color-brand);
@@ -538,7 +538,6 @@ button.btn .circle .icon.arrow {
   justify-content: center;
   letter-spacing: .2rem;
   padding-left: 10px;
-  
 }
 .button-text:hover a {
   color: var(--color-light-bkgd);
@@ -584,9 +583,11 @@ button:hover .button-text {
   align-items: center;
   height: auto;
   font-size: 10vw;
+  margin-bottom: 20px;
 }
 
-button.btn .project-link-text {
+.project-link-text a {
+  margin-left: -20px;
   justify-self: end;
 }
 
