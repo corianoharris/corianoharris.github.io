@@ -536,10 +536,17 @@ button.btn .circle .icon.arrow {
   align-items: center;
   display: flex;
   font-size: .9rem;
-  justify-content: left;
+  justify-content: center;
   letter-spacing: .2rem;
-  padding-left: 55px;
+  padding-left: -10px;
 }
+
+@media (max-width: 640px) {
+  .button-text {
+    padding-left: 10px;
+  }
+}
+
 .button-text:hover a {
   color: var(--color-light-bkgd);
 }
@@ -571,6 +578,11 @@ button:hover .circle .icon.arrow {
 
 button:hover .button-text {
   color: var(--color-light-bkgd);
+}
+
+.social-media-links-text {
+  justify-content: center;
+  padding-left: 55px;
 }
 
 .email-link-text a {
