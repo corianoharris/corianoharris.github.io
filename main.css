@@ -538,7 +538,15 @@ button.btn .circle .icon.arrow {
   font-size: .9rem;
   justify-content: center;
   letter-spacing: .2rem;
+  padding-left: -10px;
 }
+
+@media (max-width: 640px) {
+  .button-text {
+    padding-left: 10px;
+  }
+}
+
 .button-text:hover a {
   color: var(--color-light-bkgd);
 }
