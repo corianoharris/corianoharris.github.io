@@ -234,7 +234,8 @@ nav {
 }
 .nav-icon {
   color: var(--color-light-bkgd);
-  font-size: 42px;
+  font-size: 64px;
+  margin-top: -10px;
 }
 
 nav span {
@@ -534,10 +535,10 @@ button.btn .circle .icon.arrow {
 .button-text {
   align-items: center;
   display: flex;
-  font-size: .8rem;
-  justify-content: center;
+  font-size: .9rem;
+  justify-content: left;
   letter-spacing: .2rem;
-  padding-left: 10px;
+  padding-left: 55px;
 }
 .button-text:hover a {
   color: var(--color-light-bkgd);
