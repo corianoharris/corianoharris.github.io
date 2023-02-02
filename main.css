@@ -392,16 +392,21 @@ nav span {
 
 /* client card */
 .client-quotes-card {
-  height: auto;
+  display: flex;
+  justify-content: center;
+  position: relative;
+  height: 200px;
   padding-bottom: 10px;
   width: auto;
 }
-@media (min-width: 648x) {
+@media (min-width: 648px) {
   .client-quotes-card {
   width: 350px;
   }
 }
 .picture-clients {
+  position: absolute;
+  bottom: 10px;
   align-items: center;
   display: flex;
   gap: 1rem;
