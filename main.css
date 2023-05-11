@@ -1,7 +1,7 @@
 /* --- Base --- */
 
 /* imports */
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Darumadrop+One&family=Roboto:wght@700&family=Varela+Round&display=swap");
 
 /* css variables */
 :root {
@@ -10,8 +10,6 @@
   --color-brand: #25b8ad;
   --color-info: #343434;
   --color-error: #ff0000;
-  --font-family: "Raleway", sans-serif;
-
   background-color: var(--color-light-bkgd);
 }
 
@@ -45,14 +43,6 @@ ol[role="list"] {
 /* Set core root defaults */
 html:focus-within {
   scroll-behavior: smooth;
-}
-
-/* Set core body defaults */
-body {
-  color: black;
-  min-height: 100vh;
-  text-rendering: optimizeSpeed;
-  line-height: 1.5rem;
 }
 
 /* A elements that don't have a class get default styles */
@@ -95,9 +85,11 @@ select {
 body {
   background-color: var(--background-color);
   color: var(--text-color);
-  font-family: var(--font-family);
+  font-family: "Varela Round", sans-serif;
   line-height: 1.625rem;
   text-transform: uppercase;
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
 }
 
 h2 {
@@ -279,7 +271,6 @@ nav span {
 .title {
   padding-top: 40px;
   width: 100%;
-  text-align: center;
 }
 
 /* links */
@@ -376,7 +367,7 @@ nav span {
 .card {
   box-shadow: 0 4px 8px 0 rgba(138, 135, 135, 0.2),
     0 6px 20px 0 rgba(136, 134, 134, 0.19);
-  height: 100%;
+  height: auto;
   margin-bottom: 20px;
   width: 100%;
 }
@@ -384,8 +375,8 @@ nav span {
   align-items: center;
   display: block;
   justify-content: center;
-  padding: 10px;
   text-align: center;
+  height: auto;
 }
 .card-info a {
   align-items: center;
@@ -393,6 +384,12 @@ nav span {
   justify-content: flex;
   padding: 5px;
   width: auto;
+}
+
+/* Clients pills */
+.clients-list li {
+  background-color: var(--color-brand);
+  color: white;
 }
 
 /* client card */
@@ -428,18 +425,32 @@ nav span {
   width: 60px;
 }
 /* client projects */
-.clients-project-card {
+.project-card {
   box-shadow: 0 4px 8px 0 rgba(138, 135, 135, 0.2),
     0 6px 20px 0 rgba(136, 134, 134, 0.19);
   height: auto;
   width: 280px;
   word-wrap: break-word;
+  border-radius: 2rem;
+  padding: 10px;
 }
 @media (min-width: 900px) {
-  .clients-project-card {
+  .project-card {
     width: 350px;
   }
 }
+@media (min-width: 748px) {
+  .project-card {
+    width: 280px;
+  }
+}
+@media (min-width: 320px) {
+  .project-card {
+    width: 100%;
+  }
+}
+
+/* project 
 .project-img {
   border: 0;
   border-bottom: 5px solid var(--color-brand);
@@ -467,6 +478,12 @@ nav span {
     grid-template-columns: repeat(2, 1fr);
   }
 }
+@media (min-width: 320px) {
+  .clients-projects {
+    gap: 1rem;
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
 @media (min-width: 1024px) {
   .clients-projects {
     gap: 1.5rem;
@@ -487,6 +504,16 @@ nav span {
   font-size: 1rem;
   font-weight: 500;
   word-wrap: none;
+  padding: none;
+}
+
+@media (max-width: 480px) {
+  .card-company-role {
+    color: var(--color-brand);
+    font-size: 14px;
+    font-weight: 900;
+    word-wrap: none;
+  }
 }
 
 .card-role {
