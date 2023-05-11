@@ -728,6 +728,14 @@ button:hover .button-text {
     flex-direction: row;
     gap: 5rem;
   }
+  .social-media-links a {
+    padding-left: 20px;
+  }
+}
+@media (max-width: 764px) {
+  .social-media-links a {
+    padding-left: 20px;
+  }
 }
 
 .profile-img {
