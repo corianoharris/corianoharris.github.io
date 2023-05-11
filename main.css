@@ -329,12 +329,18 @@ nav span {
   grid-template-columns: repeat(1, 1fr);
   justify-items: center;
 }
-@media (min-width: 648px) {
+@media (max-width: 900px) {
+  .clients-quotes {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+@media (min-width: 1024px) {
   .clients-quotes {
     grid-template-columns: repeat(2, 1fr);
   }
 }
-@media (min-width: 1024px) {
+
+@media (min-width: 1200px) {
   .clients-quotes {
     grid-template-columns: repeat(3, 1fr);
   }
@@ -394,9 +400,10 @@ nav span {
   display: flex;
   justify-content: center;
   position: relative;
-  height: 200px;
-  padding-bottom: 10px;
+  height: auto;
+  padding-bottom: 65px;
   width: auto;
+  box-shadow: none;
 }
 @media (min-width: 648px) {
   .client-quotes-card {
