@@ -11,19 +11,8 @@
   --color-info: #343434;
   --color-error: #ff0000;
   --font-family: "Raleway", sans-serif;
-}
 
-@media (prefers-color-scheme: light) {
-  :root {
-    --background-color: var(--color-light-bkgd);
-    --text-color: var(--color-dark-bkgd);
-  }
-}
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background-color: var(--color-dark-bkgd);
-    --text-color: var(--color-light-bkgd);
-  }
+  background-color: var(--color-light-bkgd);
 }
 
 /* Box sizing rules */
