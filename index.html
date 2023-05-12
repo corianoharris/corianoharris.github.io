@@ -36,6 +36,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="title" content="Coriano Harris">
+    <meta name="description" content="Coriano Harris website.">
     <title>Coriano Harris</title>
     <link rel="icon" href="public/images/favicon.svg" sizes="any" type="image/x-icon">
     <link rel="stylesheet" href="main.css" />
@@ -55,22 +57,16 @@
 
     <div class="app-wrapper" role="main">
 
-      <nav class="nav" role="navigation" aria-label="main navigation">
-        <span class="nav-icon">
-          &#8801;
-        </span>
-        <div class="nav-items hidden">
-          <li class="nav-item" aria-label="navigation me link">
-            <a href="#me">me</a>
-          </li>
-          <li class="nav-item" aria-label="navigation work link">
-            <a href="#work">work</a>
-          </li>
-          <li class="nav-item" aria-label="navigation contact link">
-            <a href="#contact">Say Hi</a>
-          </li> 
+      <nav id="myNav" class="overlay" role="navigation" aria-label="navigation">
+        <a href="javascript:void(0)" id="nav-closebtn">&times;</a>
+        <div class="overlay-content">
+          <a class="nav-items" href="#me" onclick="closeNav()"><p class="nav-link-text">me</p></a>
+          <a class="nav-items" href="#work" onclick="closeNav()">work</a>
+          <a class="nav-items" href="#contact" onclick="closeNav()">let's make something</a>
         </div>
       </nav>
+
+      <span id="nav-hamburger" >&#9776;</span>
 
       <div id="me" class="title paddingNone">
         <h2>Me</h2>
@@ -323,7 +319,7 @@
 
         </section>
 
-        <div id="contact" class="title paddingNone">
+        <div id="contact" class="title paddingTop">
           <h3>Let's have a chat that'll leave us both grinning!</h3>
         </div>
 
