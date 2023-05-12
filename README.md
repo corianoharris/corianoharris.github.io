@@ -40,18 +40,16 @@ My company website.
 
 ## Motivations
 
-A site to display my work.
+A site to display my professional work.
 
 ## Takeaways
 
-I learned how to take advantage of the input element attrs to make interactive elements and components. As well as regexp for simple form validations.
+Contine to find JavaScript challeneging yet fasincating!
 
 ## Usage
 
 ### Features
 
-- Theme changer
-- Projects filter
 - Interactive card
 - Form with validation
 
