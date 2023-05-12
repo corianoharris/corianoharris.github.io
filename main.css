@@ -7,7 +7,7 @@
 :root {
   --color-dark-bkgd: #1f1f1f;
   --color-light-bkgd: #fff;
-  --color-brand: #25b8ad;
+  --color-brand: #be3455;
   --color-info: #343434;
   --color-error: #ff0000;
   background-color: var(--color-light-bkgd);
