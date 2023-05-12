@@ -36,6 +36,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="title" content="Coriano Harris">
+    <meta name="description" content="Coriano Harris website.">
     <title>Coriano Harris</title>
     <link rel="icon" href="public/images/favicon.svg" sizes="any" type="image/x-icon">
     <link rel="stylesheet" href="main.css" />
@@ -55,22 +57,16 @@
 
     <div class="app-wrapper" role="main">
 
-      <nav class="nav" role="navigation" aria-label="main navigation">
-        <span class="nav-icon">
-          &#8801;
-        </span>
-        <div class="nav-items hidden">
-          <li class="nav-item" aria-label="navigation me link">
-            <a href="#me">me</a>
-          </li>
-          <li class="nav-item" aria-label="navigation work link">
-            <a href="#work">work</a>
-          </li>
-          <li class="nav-item" aria-label="navigation contact link">
-            <a href="#contact">Say Hi</a>
-          </li> 
+      <nav id="myNav" class="overlay" role="navigation" aria-label="navigation">
+        <a href="javascript:void(0)" id="nav-closebtn">&times;</a>
+        <div class="overlay-content">
+          <a class="nav-items" href="#me" onclick="closeNav()"><p class="nav-link-text">me</p></a>
+          <a class="nav-items" href="#work" onclick="closeNav()">work</a>
+          <a class="nav-items" href="#contact" onclick="closeNav()">let's make something</a>
         </div>
       </nav>
+
+      <span id="nav-hamburger" >&#9776;</span>
 
       <div id="me" class="title paddingNone">
         <h2>Me</h2>
@@ -95,27 +91,26 @@
                 </div>
                 <div class="profile-quotes">
                     <p class="quotes profile-quote">
-                        " I’m a <span class="roles">researcher</span>, <span class="roles">designer</span>, <span class="roles">developer</span>, and <span class="roles">colorist</span> who loves displaying empathy and 
-                        finding ways to be of service.  Outside of work, you can find me playing soccer, 
-                        letting go in improv, eating way too much french fries, dodging punches and kicks in krav maga and escaping underwater."
+                        I am a versatile professional with a passion for <span class="roles">research</span>, <span class="roles">design</span>, <span class="roles">development</span>, and <span class="roles">colors</span>. 
+                        My work is driven by a deep sense of empathy and a genuine desire to make a meaningful impact. 
                     </p>
                 </div>
             </div>
           <hr class="separator">
           <div class="profile-section-two">
-            <h3 class="volunteering">Giving Back</h3>
+            <h3 class="volunteering">Where I'm spreading my passions!</h3>
             <ul class="list clients-list">
                 <li class="list-items">St. Jude</li>
                 <li class="list-items">Code Connector</li>
                 <li class="list-items">CodeCrew</li>
                 <li class="list-items">Tech901</li>
                 <li class="list-items">GiveCamp Memphis</li>
-                <li class="list-items">homeless shelter</li>
+                <li class="list-items">UX Mastery</li>
             </ul>
           </div>
         </div>
-
       </section>
+      <hr class="separator">
       <div id="work" class="title paddingNone">
         <h2 >Work</h2>
       </div>
@@ -147,14 +142,13 @@
 
       <section class="section">
 
-        <h3>Hear from my clients</h3>
+        <h3>What my awesome clients have to say.</h3>
 
         <div class="clients-quotes">
 
           <div class="card client-quotes-card">
             <p class="quotes profile-quote">
-              " He did a masterful job creating posters, news flyers and
-							teasers. CORIANO HARRIS is EXTRAORDINARY! "
+              I had been searching for the perfect designer to bring my promotional poster idea to life and luckily, I found Coriano!  It's clear that he's not only talented but also has a real knack for bringing his clients' ideas to fruition. Thank you so much, Coriano"
             </p>
               <picture class="picture-clients">
                 <img class="img clients-img" src="./public/images/clients/MichealStJohn.jpeg" alt="" loading="lazy"/>
@@ -164,9 +158,7 @@
 
           <div class="card client-quotes-card">
             <p class="quotes profile-quote">
-              " I needed a designer to create a promotional poster.
-							Coriano came to the rescue! He made my idea come to life.
-							I couldn't be happier."
+              I am truly blown away by Coriano Harris's talent! He created some amazing posters, news flyers, and teasers that really caught my eye. It's clear that he's a master at what he does and he puts so much care and effort into his work
             </p>
               <picture class="picture-clients">
                 <img class="img clients-img" src="./public/images/clients/LaurenBrynes.jpeg" alt="" loading="lazy"/>
@@ -176,8 +168,7 @@
 
           <div class="card client-quotes-card">
             <p class="quotes profile-quote">
-              " Ability to incorporate our new vision equated into a piece of art that truly represents
-              our culture, students, and brand!"
+              The way you've captured our culture, our students, and our brand is truly remarkable. It's clear that you have a real talent for creating pieces that resonate with people and convey a message."
             </p>
               <picture class="picture-clients">
                 <img class="img clients-img" src="./public/images/clients/RaeColeman.jpeg" alt="" loading="lazy"/>
@@ -188,7 +179,7 @@
         </div>
 
         <hr class="separator">
-        <h3>Clients</h3>
+        <h3>Made some wicked awesome projects with these employers</h3>
         <ul class="list clients-list">
           <li class="list-items">Ally Financial</li>
           <li class="list-items">ALSAC (St. Jude)</li>
@@ -196,132 +187,22 @@
           <li class="list-items">PartCycle</li>
           <li class="list-items">Dare Dream Dance</li>
           <li class="list-items">C4 Atlanta</li>
-          <li class="list-items">Lauren Brynes Productions</li>
+          <li class="list-items">Lauren Brynes</li>
           <li class="list-items">Michael St. John</li>
+          <li class="list-items">Juice Mound Memphis</li>
+          <li class="list-items">Sweet Cheeks Ministry</li>
         </ul>
-        <hr class="separator"> 
+        <hr class="separator">  
 
-        <h3>client's projects</h3>
-
-        <div class="clients-projects">
-
-          <div class="card clients-project-card">
-            <picture class="picture-projects">
-              <img class="img project-img" src="./public/images/projects/allyFin.png" alt="image of FedEx Tracking website" loading="lazy"/>
-            </picture>
-            <div class="card-info">
-              <h4 class="card-company">Company / <span class="card-company-name">Ally Financial</span></h4>
-              <h4 class="card-role">Role / <span class="card-company-role"> UI developer</span></h4>
-              <button class="btn project-link">
-                <span class="circle">
-                  <span class="icon arrow">&#8594;</span>
-                </span>
-                <span class="button-text project-link-text"><a href="https://www.ally.com" target="_blank">website</a></span>
-              </button>
-            </div>
-          </div>
-
-          <div class="card clients-project-card">
-            <picture class="picture-projects">
-              <img class="img project-img" src="./public/images/projects/fedex_tracking.png" alt="image of FedEx Tracking website" loading="lazy"/>
-            </picture>
-            <div class="card-info">
-              <h4 class="card-company">Company / <span class="card-company-name">FedEx</span></h4>
-              <h4 class="card-role">Role / <span class="card-company-role"> UI designer / developer</span></h4>
-              <button class="btn project-link">
-                <span class="circle">
-                  <span class="icon arrow">&#8594;</span>
-                </span>
-                <span class="button-text project-link-text"><a href="https://www.fedex.com/en-us/tracking/advanced.html" target="_blank">website</a></span>
-              </button>
-            </div>
-          </div>
-      
-          <div class="card clients-project-card">
-            <picture class="picture-projects">
-              <img class="img project-img" src="./public/images/projects/my_supporter_acct.png" alt="image of My Supporter Account website" loading="lazy"/>
-            </picture>
-            <div class="card-info">
-              <h4 class="card-company">Company / <span class="card-company-name">ALSAC (St.Jude)</span></h4>
-              <h4 class="card-role">Role / <span class="card-company-role">developer</span></h4>
-              <button class="btn project-link" role="button">
-                <span class="circle">
-                  <span class="icon arrow">&#8594;</span>
-                </span>
-                <span class="button-text project-link-text"><a href="https://www.stjude.org/give/supporter-profile.html" target="_blank">website</a></span>
-              </button>
-            </div>
-          </div>
-          <div class="card clients-project-card">
-            <picture class="picture-projects">
-              <img class="img project-img mockup-img" src="./public/images/projects/juice_orange_mound.png" alt="image of Juice Orange Mound" loading="lazy"/>
-            </picture>
-            <div class="card-info">
-              <h4 class="card-company">Jucie Orange Mound</h4>
-              <h4 class="card-role">Role / <span class="card-company-role"> UI designer / developer</span></h4>
-              <button class="btn project-link">
-                <span class="circle">
-                  <span class="icon arrow">&#8594;</span>
-                </span>
-                <span class="button-text project-link-text"><a href="https://xd.adobe.com/spec/c9e03965-0f81-452d-6202-63724102081a-bfd1/" target="_blank">mockups</a></span>
-              </button>
-              <button class="btn project-link">
-                <span class="circle">
-                  <span class="icon arrow">&#8594;</span>
-                </span>
-                <span class="button-text project-link-text"><a href="https://www.juiceorangemound.org/" target="_blank">website</a></span>
-              </button>
-            </div>
-          </div>
-
-        <div class="card clients-project-card">
-            <picture class="picture-projects">
-              <img class="img project-img mockup-img" src="./public/images/projects/sweet_cheeks_ministry.png" alt="image of Juice Orange Mound" loading="lazy"/>
-            </picture>
-            <div class="card-info">
-              <h4 class="card-company">Sweet Cheeks Ministry</h4>
-              <h4 class="card-role">Role / <span class="card-company-role"> UI designer / developer</span></h4>
-              <button class="btn project-link">
-                <span class="circle">
-                  <span class="icon arrow">&#8594;</span>
-                </span>
-                <span class="button-text project-link-text"><a href="https://xd.adobe.com/spec/db9e2324-aa59-4822-72c4-dff6991a5635-adaf/" target="_blank">mockups</a></span>
-              </button>
-              <button class="btn project-link">
-                <span class="circle">
-                  <span class="icon arrow">&#8594;</span>
-                </span>
-                <span class="button-text project-link-text"><a href="https://www.sweetcheeksdiaperministry.org/" target="_blank">website</a></span>
-              </button>
-            </div>
-        </div>
-
-        <div class="card clients-project-card">
-          <picture class="picture-projects">
-            <img class="img project-img" src="./public/images/projects/partcycle.png" alt="image of PartCycle website" loading="lazy"/>
-          </picture>
-          <div class="card-info">
-            <h4 class="card-company">Company / <span class="card-company-name">PartCycle</span></h4>
-            <h4 class="card-role">Role / <span class="card-company-role">developer</span></h4>
-          </div>
-        </div>
-
-       </div>
-        
-
-        <hr class="separator"> 
-
-        <h3>personal projects</h3>
+        <h3>Endeavors</h3>
 
         <div class="clients-projects">
 
-          <div class="card clients-project-card">
-            <picture class="picture-projects">
-              <img class="img project-img" src="./public/images/personal/notsy.png" alt="image of the Notsy login page" loading="lazy"/>
-            </picture>
+          <div class="card project-card">
             <div class="card-info">
               <h4 class="card-company">Notsy</h4>
-              <h4 class="card-role">Role / <span class="card-company-role"> UI designer / developer</span></h4>
+              <h4 class="card-company">Fullstack React App</h4>
+              <h4 class="card-role">Role / <span class="card-company-role"> UI designer/developer</span></h4>
               <button class="btn project-link">
                 <span class="circle">
                   <span class="icon arrow">&#8594;</span>
@@ -331,34 +212,21 @@
             </div>
           </div>
 
-          <div class="card clients-project-card">
-            <picture class="picture-projects">
-              <img class="img project-img mockup-img" src="./public/images/projects/newcal.png" alt="image of Newcal presentation" loading="lazy"/>
-            </picture>
+          <div class="card project-card">
             <div class="card-info">
-              <h4 class="card-company">Newcal</h4>
-              <h4 class="card-role">Role / <span class="card-company-role"> UX researcher / designer</span></h4>
+              <h4 class="card-company">Ecobon UX Case Study</h4>
+              <h4 class="card-role">Role / <span class="card-company-role"> UX researcher/designer</span></h4>
               <button class="btn project-link">
                 <span class="circle">
                   <span class="icon arrow">&#8594;</span>
                 </span>
-                <span class="button-text project-link-text"><a href="https://www.youtube.com/watch?v=7cX321DkxR0" target="_blank">mockups</a></span>
+                <span class="button-text project-link-text"><a href="public/ecobon-case-study.pdf" target="_blank">mockups</a></span>
               </button>
-            </div>
-          </div>
-
-          <div class="card clients-project-card">
-            <picture class="picture-projects">
-              <img class="img project-img mockup-img" src="./public/images/projects/cheetahs.jpg" alt="image of Donate to the Zoo Cheetahs" loading="lazy"/>
-            </picture>
-            <div class="card-info">
-              <h4 class="card-company">Donate to the Zoo Cheetah</h4>
-              <h4 class="card-role">Role / <span class="card-company-role"> UI designer</span></h4>
               <button class="btn project-link">
                 <span class="circle">
                   <span class="icon arrow">&#8594;</span>
                 </span>
-                <span class="button-text project-link-text"><a href="public/donateAZooAnimalMockup/Donate-to-the-Zoo-Cheetahs.pdf" target="_blank">mockups</a></span>
+                <span class="button-text project-link-text"><a href="tinyurl.com/ecobon-new-onbaording" target="_blank">prototype</a></span>
               </button>
             </div>
           </div>
@@ -451,8 +319,8 @@
 
         </section>
 
-        <div id="contact" class="title paddingNone">
-          <h2 >Let's Talk</h2>
+        <div id="contact" class="title paddingTop">
+          <h3>Let's have a chat that'll leave us both grinning!</h3>
         </div>
 
         <section class="section form">
