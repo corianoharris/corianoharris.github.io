@@ -504,17 +504,15 @@ input {
 .card-company,
 .card-role {
   font-size: 0.7rem;
-  border-bottom: 1px solid var(--background-color);
+  border-bottom: 1px solid var(--color-brand);
 }
 
-.card-company-name,
 .card-company-role {
   color: var(--color-brand);
   font-size: 1rem;
   font-weight: 500;
   word-wrap: none;
   padding: none;
-  border-bottom: 1px solid gray;
 }
 
 .card-company-name {
@@ -523,7 +521,6 @@ input {
 
 @media (max-width: 480px) {
   .card-company-role {
-    color: var(--color-brand);
     font-size: 14px;
     font-weight: 900;
     word-wrap: none;
