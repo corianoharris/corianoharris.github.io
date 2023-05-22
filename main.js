@@ -118,18 +118,18 @@ function contact_submit(e) {
   // Stop Form From Submitting
   e.preventDefault();
 
-  // Set Initial Variables
-  var target = e.target || e.srcElement;
-  var to = "corianoharris@gmail.com";
-  var uri = "mailto:" + to;
-  var body = "";
+  // Set Initial letiables
+  let target = e.target || e.srcElement;
+  let to = "corianoharris@gmail.com";
+  let uri = "mailto:" + to;
+  let body = "";
 
-  // Set Form Values to Variables
-  var name = document.getElementById("name").value;
-  var subject = document.getElementById("subject").value;
-  var email = document.getElementById("email").value;
-  var tel = document.getElementById("phone").value;
-  var message = document.getElementById("message").value;
+  // Set Form Values to letiables
+  let name = document.getElementById("name").value;
+  let subject = document.getElementById("subject").value;
+  let email = document.getElementById("email").value;
+  let tel = document.getElementById("phone").value;
+  let message = document.getElementById("message").value;
 
   // Build Body / Message with all Input Fields
   body += "Name: " + name + "\xa0" + "\r\n";
