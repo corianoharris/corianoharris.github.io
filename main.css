@@ -271,6 +271,7 @@ input {
 .info-notify {
   border-left: 5px solid var(--color-brand);
   padding-left: 10px;
+  margin-bottom: 20px;
 }
 @media (min-width: 648px) {
   .info-notify {
@@ -810,6 +811,7 @@ form {
 }
 .custom-field input,
 .custom-field textarea {
+  margin: 10px 0;
   appearance: none;
   border: none;
   border-radius: 3px;
@@ -821,21 +823,18 @@ form {
   -moz-appearance: none;
 }
 
-.custom-field input {
+/* .custom-field input {
   margin: 10px 0;
-}
+} */
 
-.custom-field textarea {
+/* .custom-field textarea {
   margin: 20px 0;
-}
+} */
 
 .custom-field .placeholder {
-  left: 12px;
-  line-height: 100%;
   position: absolute;
   overflow: hidden;
   text-overflow: ellipsis;
-  top: 10px;
   width: auto;
   transform: translateY(-50%);
   transition: top 0.3s ease, color 0.3s ease, font-size 0.3s ease;
@@ -844,23 +843,33 @@ form {
 }
 
 /* form fields */
+
+.input-wrapper {
+  margin: 15px 0;
+  border-bottom: 1px solid var(--color-brand);
+  border-radius: 4px;
+  text-align: left;
+}
+
 .custom-field.one input,
 .custom-field.two input,
 .custom-field.three input,
 .custom-field.four input,
 .custom-field.five textarea {
+  margin-bottom: 20px;
   background: none;
   border: 2px solid var(--color-brand);
   color: var(--color-brand);
   transition: border-color 0.3s ease;
+  border: none;
 }
 .custom-field.one input + .placeholder,
 .custom-field.two input + .placeholder,
 .custom-field.three input + .placeholder,
 .custom-field.four input + .placeholder {
-  left: 0;
+  /* left: 0;
   padding: 5px;
-  top: -2px;
+  top: -2px; */
 }
 .custom-field.five textarea {
   padding: 10px;
@@ -874,19 +883,24 @@ form {
 }
 .validation-error-message {
   display: none;
+  margin: 0 0 0 10px;
+  width: auto;
   position: relative;
   top: -15px;
   left: 0;
-  padding: 5px;
-  border: 1px solid var(--color-brand);
+  padding: 5px 10px;
   text-align: left;
-  color: var(--color-error);
+  border: 1px solid var(--color-brand);
+  border-radius: 0.5rem;
+  text-transform: none;
+  color: darkgray;
+  box-shadow: 0 4px 8px 0 rgba(138, 135, 135, 0.2),
+    0 6px 20px 0 rgba(136, 134, 134, 0.19);
 }
 .validation-error-message-textarea {
-  display: none;
   top: -22px;
 }
-.form-info-notify {
+*/ .form-info-notify {
   font-size: 10px;
   font-style: italic;
   font-weight: 900;
@@ -946,7 +960,7 @@ form {
   font-size: 2rem;
 }
 input:focus {
-  padding-top: 50px;
+  padding-top: 20px;
 }
 
 input:focus,
@@ -956,21 +970,22 @@ textarea.focus {
 .custom-field.five textarea:focus {
   padding: 20px 0 0 10px;
 }
-input:not(:focus):not(:placeholder-shown):invalid ~ .validation-error-message,
+/* input:not(:focus):not(:placeholder-shown):invalid ~ .validation-error-message,
 textarea:not(:focus):not(:placeholder-shown):invalid
   ~ .validation-error-message-textarea {
-  color: var(--color-error);
+  color: darkgray;
   display: block;
   font-size: 12px;
   opacity: 1;
-}
-@media (min-width: 900px) {
+  line-height: 12px;
+} */
+/* @media (min-width: 900px) {
   input:not(:focus):not(:placeholder-shown):invalid ~ .validation-error-message,
   textarea:not(:focus):not(:placeholder-shown):invalid
     ~ .validation-error-message-textarea {
     font-size: 1rem;
   }
-}
+} */
 input:not(:focus)::placeholder,
 textarea:not(:focus)::placeholder {
   display: block;
@@ -980,12 +995,12 @@ textarea:not(:focus)::placeholder {
 .custom-field input.dirty + .placeholder,
 .custom-field input:focus + .placeholder,
 .custom-field input:not(:placeholder-shown) + .placeholder {
-  top: -12px;
+  /* top: -12px;
   color: var(--color-brand);
   font-size: 15px;
   width: auto;
   border-radius: 0.2rem;
-  padding: 5px;
+  padding: 5px; */
 }
 
 /* form fields */
@@ -1021,22 +1036,22 @@ textarea:not(:focus)::placeholder {
 .custom-field.four input.dirty + .placeholder,
 .custom-field.four input:not(:placeholder-shown) + .placeholder,
 .custom-field.four input:focus + .placeholder {
-  border-radius: 0.5rem;
+  /* border-radius: 0.5rem;
   color: white;
   font-size: 15px;
   padding: 5px;
   top: -30px;
-  width: auto;
+  width: auto; */
 }
 .custom-field.five textarea.dirty + .placeholder,
 .custom-field.five textarea:not(:placeholder-shown) + .placeholder,
 .custom-field.five textarea:focus + .placeholder {
-  border-radius: 0.5rem;
+  /* border-radius: 0.5rem;
   color: var(--color-brand);
   font-size: 15px;
   padding: 8px 5px;
   top: -290px;
-  width: auto;
+  width: auto; */
 }
 
 /* Removing input background colour for Chrome autocomplete */
@@ -1054,6 +1069,10 @@ input:-webkit-autofill:focus {
 /* --- utils --- */
 .hidden {
   display: none;
+}
+
+.display {
+  display: block;
 }
 
 .paddingTop {
