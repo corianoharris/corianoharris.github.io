@@ -907,6 +907,12 @@ form {
   margin-bottom: 30px;
   text-align: left;
 }
+
+.errors {
+  font-size: 12px;
+  color: darkgray;
+}
+
 .button-container {
   text-align: center;
 }

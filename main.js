@@ -51,6 +51,12 @@ const UI_LIST = document.getElementById("js-ui-list");
 const DEV_LIST = document.getElementById("js-dev-list");
 const SOFT_LIST = document.getElementById("js-soft-list");
 
+// input elements
+const nameField = document.getElementById("name");
+const emailField = document.getElementById("email");
+const telField = document.getElementById("phone");
+const textMessageField = document.getElementById("message");
+
 // util functions
 
 function renderListItems(array, element) {
@@ -106,8 +112,16 @@ function closeNav() {
   document.getElementById("myNav").style.display = "none";
 }
 
+const maxLength = 5;
+// Regular expression for alphabets and space
+
 // form
 const form = document.forms["contact"];
+const nameInput = document.getElementById("name").value;
+const subjectInput = document.getElementById("subject").value;
+const emailInput = document.getElementById("email").value;
+const telInput = document.getElementById("phone").value;
+const messageInput = document.getElementById("message").value;
 
 if (form) {
   const submitBtn = document.getElementById("submit");
@@ -118,32 +132,192 @@ function contact_submit(e) {
   // Stop Form From Submitting
   e.preventDefault();
 
+  // if (!validateRegex(nameInput, nameRegex, nameErrorMessage, messageRegex)) {
+  //   return; // Exit if any validation fails
+  // }
+
   // Set Initial letiables
   let target = e.target || e.srcElement;
   let to = "corianoharris@gmail.com";
   let uri = "mailto:" + to;
   let body = "";
 
-  // Set Form Values to letiables
-  let name = document.getElementById("name").value;
-  let subject = document.getElementById("subject").value;
-  let email = document.getElementById("email").value;
-  let tel = document.getElementById("phone").value;
-  let message = document.getElementById("message").value;
-
   // Build Body / Message with all Input Fields
-  body += "Name: " + name + "\xa0" + "\r\n";
-  body += "Phone Number: " + tel + "\r\n";
+  body += "Name: " + nameInput + "\xa0" + "\r\n";
+  body += "Phone Number: " + telInput + "\r\n";
   body += message + "\r\n\r\n";
 
   // Build final Mailto URI
-  uri += "from=" + encodeURIComponent(email);
-  uri += "?subject=" + encodeURIComponent(subject);
+  uri += "from=" + encodeURIComponent(emailInput);
+  uri += "?subject=" + encodeURIComponent(subjectInput);
   uri += "&body=" + encodeURIComponent(body);
 
   // Open Mailto in New Window / Tab
   window.open(uri, "_blank");
 }
+
+// Form validations
+
+// name
+
+// function validateName() {
+//   let nameRegex = /^[a-zA-Z\s]+$/; // Regular expression for alphabets and space
+//   let maxLength = 30;
+//   const nameErrorMessage = document.getElementById("name-error-message");
+
+//   if (nameInput.trim() === "") {
+//     nameErrorMessage.innerHTML = "Name is required";
+//     nameErrorMessage.style.display = "block";
+//   } else nameErrorMessage.style.display = "none";
+
+//   if (!nameRegex.test(nameInput)) {
+//     nameErrorMessage.innerHTML = "Name can only contain alphabets and space";
+//     nameErrorMessage.style.display = "block";
+//   } else nameErrorMessage.style.display = "none";
+
+//   if (nameInput.length > maxLength) {
+//     nameErrorMessage.innerHTML = "Name should be less than 20 characters";
+//     nameErrorMessage.style.display = "block";
+//   } else nameErrorMessage.style.display = "none";
+// }
+
+// function validateTel() {
+//   let nameRegex = /^[a-zA-Z\s]+$/; // Regular expression for alphabets and space
+//   let maxLength = 10;
+//   const nameErrorMessage = document.getElementById("name-error-message");
+
+//   if (nameInput.trim() === "") {
+//     nameErrorMessage.innerHTML = "Name is required";
+//     nameErrorMessage.style.display = "block";
+//   } else nameErrorMessage.style.display = "none";
+
+//   if (!nameRegex.test(nameInput)) {
+//     nameErrorMessage.innerHTML = "Name can only contain alphabets and space";
+//     nameErrorMessage.style.display = "block";
+//   } else nameErrorMessage.style.display = "none";
+
+//   if (nnameInput.length > maxLength) {
+//     nameErrorMessage.innerHTML = "Name should be 10 numbers";
+//     nameErrorMessage.style.display = "block";
+//   } else nameErrorMessage.style.display = "none";
+// }
+
+function validateEmail() {
+  let emailRegex = /^[a-zA-Z][a-zA-Z0-9.]+@[a-zA-Z]{2,10}\.[a-zA-Z]{2,10}$/;
+  let maxLength = 150;
+  const emailErrorMessage = document.getElementById("email-error-message");
+
+  if (emailInput.trim() === "") {
+    emailErrorMessage.innerHTML = "Email is required";
+    emailErrorMessage.style.display = "block";
+  } else emailErrorMessage.style.display = "none";
+
+  if (!emailRegex.test(emailInput)) {
+    emailErrorMessage.innerHTML = "Invalid email address";
+    emailErrorMessage.style.display = "block";
+  } else emailErrorMessage.style.display = "none";
+
+  if (emailInput.length > maxLength) {
+    emailErrorMessage.innerHTML = "Email should be less than 150 characters";
+    emailErrorMessage.style.display = "block";
+  } else emailErrorMessage.style.display = "none";
+}
+
+const nameErrorMessage = document.getElementById("name-error-message");
+const li = document.getElementById("name-errors");
+
+// async function validateName() {
+//   await validateRegex(nameRegex, messageRegex);
+//   await validateMaxLength(messageMaxLength);
+//   await validateEmptyInput(messageEmpty);
+// }
+
+/**
+ *
+ * @param {*} input
+ * @param {*} regex
+ * @param {*} errorElement
+ * @param {*} message
+ *
+ * Util fns for validation
+ */
+
+const validateName = () => {
+  let nameInput = document.forms["contact"]["fullname"].value;
+  const wrapper = document.getElementById("name-error-message");
+
+  const liName = document.getElementById("error-name-regex");
+  const liMaxLength = document.getElementById("error-name-length");
+  const liEmpty = document.getElementById("error-name-empty");
+
+  const nameRegex = /^[a-zA-Z\s]+$/;
+
+  const regexMessage = "Name can only contain alphabets and space";
+  const maxLengthMessage = "Name should be less than 25 characters";
+  const emptyMessage = "Name is required";
+
+  let error;
+
+  let regexText;
+  let maxLengthText;
+  let emptyText;
+
+  if (!nameRegex.test(nameInput)) {
+    error = true;
+    regexText = regexMessage;
+    liName.style.display = "block";
+    wrapper.style.display = "block";
+  } else {
+    error = false;
+    regexText = "";
+    liName.style.display = "none";
+    wrapper.style.display = "none";
+  }
+
+  if (nameInput.length > 25) {
+    error = true;
+    maxLengthText = maxLengthMessage;
+    liMaxLength.style.display = "block";
+    wrapper.style.display = "block";
+  } else {
+    error = false;
+    maxLengthText = "";
+    liMaxLength.style.display = "none";
+    wrapper.style.display = "none";
+  }
+
+  if (nameInput.trim() === "") {
+    error = true;
+    emptyText = emptyMessage;
+    liEmpty.style.display = "block";
+    wrapper.style.display = "block";
+  } else {
+    error = false;
+    emptyText = "";
+    liEmpty.style.display = "none";
+  }
+
+  if (
+    liName.style.display === "block" ||
+    liMaxLength.style.display === "block" ||
+    liEmpty.style.display === "block"
+  ) {
+    wrapper.style.display = "block";
+  } else wrapper.style.display = "none";
+
+  liName.textContent = regexText;
+  liMaxLength.textContent = maxLengthText;
+  liEmpty.textContent = emptyText;
+};
+
+// input event listeners
+
+nameField.addEventListener("input", validateName, false);
+nameField.removeEventListener("blur", validateName, false);
+
+// if (nameInput.trim() < nameInput) {
+//   nameErrorMessage.style.display = "none";
+// }
 
 const copyrightYear = document.querySelector(".copyright-year");
 copyrightYear.innerText = new Date().getFullYear();
