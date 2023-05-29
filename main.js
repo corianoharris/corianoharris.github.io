@@ -55,7 +55,8 @@ const SOFT_LIST = document.getElementById("js-soft-list");
 const nameField = document.getElementById("name");
 const emailField = document.getElementById("email");
 const telField = document.getElementById("phone");
-const textMessageField = document.getElementById("message");
+const subjectField = document.getElementById("subject");
+const messageField = document.getElementById("message");
 
 // util functions
 
@@ -204,7 +205,6 @@ function contact_submit(e) {
 
 function validateEmail() {
   let emailInput = document.forms["contact"]["email"].value;
-  console.log(emailInput);
   const wrapper = document.getElementById("email-error-message");
 
   const liRegex = document.getElementById("error-email-regex");
@@ -289,7 +289,7 @@ const validateName = () => {
   let nameInput = document.forms["contact"]["fullname"].value;
   const wrapper = document.getElementById("name-error-message");
 
-  const liName = document.getElementById("error-name-regex");
+  const liRegex = document.getElementById("error-name-regex");
   const liMaxLength = document.getElementById("error-name-length");
   const liEmpty = document.getElementById("error-name-empty");
 
@@ -308,12 +308,12 @@ const validateName = () => {
   if (!nameRegex.test(nameInput)) {
     error = true;
     regexText = regexMessage;
-    liName.style.display = "block";
+    liRegex.style.display = "block";
     wrapper.style.display = "block";
   } else {
     error = false;
     regexText = "";
-    liName.style.display = "none";
+    liRegex.style.display = "none";
     wrapper.style.display = "none";
   }
 
@@ -341,14 +341,142 @@ const validateName = () => {
   }
 
   if (
-    liName.style.display === "block" ||
+    liRegex.style.display === "block" ||
     liMaxLength.style.display === "block" ||
     liEmpty.style.display === "block"
   ) {
     wrapper.style.display = "block";
   } else wrapper.style.display = "none";
 
-  liName.textContent = regexText;
+  liRegex.textContent = regexText;
+  liMaxLength.textContent = maxLengthText;
+  liEmpty.textContent = emptyText;
+};
+
+const validateSubject = () => {
+  let subjectInput = document.forms["contact"]["subject"].value;
+  const wrapper = document.getElementById("subject-error-message");
+
+  const liRegex = document.getElementById("error-subject-regex");
+  const liMaxLength = document.getElementById("error-subject-length");
+  const liEmpty = document.getElementById("error-subject-empty");
+
+  const subjectRegex = /^[a-zA-Z\s]+$/;
+
+  const regexMessage = "Subject can only contain alphabets and space";
+  const maxLengthMessage = "Subject should be 50 characters or less";
+  const emptyMessage = "Subject is required";
+
+  let error;
+
+  let regexText;
+  let maxLengthText;
+  let emptyText;
+
+  if (!subjectRegex.test(subjectInput)) {
+    error = true;
+    regexText = regexMessage;
+    liRegex.style.display = "block";
+  } else {
+    error = false;
+    regexText = "";
+    liRegex.style.display = "none";
+  }
+
+  if (subjectInput.length > 25) {
+    error = true;
+    maxLengthText = maxLengthMessage;
+    liMaxLength.style.display = "block";
+  } else {
+    error = false;
+    maxLengthText = "";
+    liMaxLength.style.display = "none";
+  }
+
+  if (subjectInput.trim() === "") {
+    error = true;
+    emptyText = emptyMessage;
+    liEmpty.style.display = "block";
+    wrapper.style.display = "block";
+  } else {
+    error = false;
+    emptyText = "";
+    liEmpty.style.display = "none";
+  }
+
+  if (
+    liRegex.style.display === "block" ||
+    liMaxLength.style.display === "block" ||
+    liEmpty.style.display === "block"
+  ) {
+    wrapper.style.display = "block";
+  } else wrapper.style.display = "none";
+
+  liRegex.textContent = regexText;
+  liMaxLength.textContent = maxLengthText;
+  liEmpty.textContent = emptyText;
+};
+
+const validateMessage = () => {
+  let messageInput = document.forms["contact"]["message"].value;
+  const wrapper = document.getElementById("message-error-message");
+
+  const liRegex = document.getElementById("error-message-regex");
+  const liMaxLength = document.getElementById("error-message-length");
+  const liEmpty = document.getElementById("error-message-empty");
+
+  const messageRegex = /^[a-zA-Z\s]+$/;
+
+  const regexMessage = "Message can only contain alphabets and space";
+  const maxLengthMessage = "Message should be 1000 characters or less";
+  const emptyMessage = "Message is required";
+
+  let error;
+
+  let regexText;
+  let maxLengthText;
+  let emptyText;
+
+  if (!messageRegex.test(messageInput)) {
+    error = true;
+    regexText = regexMessage;
+    liRegex.style.display = "block";
+  } else {
+    error = false;
+    regexText = "";
+    liRegex.style.display = "none";
+  }
+
+  if (messageInput.length > 1000) {
+    error = true;
+    maxLengthText = maxLengthMessage;
+    liMaxLength.style.display = "block";
+  } else {
+    error = false;
+    maxLengthText = "";
+    liMaxLength.style.display = "none";
+  }
+
+  if (messageInput.trim() === "") {
+    error = true;
+    emptyText = emptyMessage;
+    liEmpty.style.display = "block";
+    wrapper.style.display = "block";
+  } else {
+    error = false;
+    emptyText = "";
+    liEmpty.style.display = "none";
+  }
+
+  if (
+    liRegex.style.display === "block" ||
+    liMaxLength.style.display === "block" ||
+    liEmpty.style.display === "block"
+  ) {
+    wrapper.style.display = "block";
+  } else wrapper.style.display = "none";
+
+  liRegex.textContent = regexText;
   liMaxLength.textContent = maxLengthText;
   liEmpty.textContent = emptyText;
 };
@@ -415,6 +543,12 @@ telField.removeEventListener("blur", validatePhone);
 
 emailField.addEventListener("input", validateEmail, false);
 emailField.removeEventListener("blur", validateEmail);
+
+subjectField.addEventListener("input", validateSubject, false);
+subjectField.removeEventListener("blur", validateSubject);
+
+messageField.addEventListener("input", validateMessage, false);
+messageField.removeEventListener("blur", validateMessage);
 
 // if (nameInput.trim() < nameInput) {
 //   nameErrorMessage.style.display = "none";

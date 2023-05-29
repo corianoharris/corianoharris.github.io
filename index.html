@@ -337,17 +337,25 @@
 
             <div class="input-wrapper">
               <label class="custom-field four" aria-label="subject form field"><span class="placeholder">subject<span class="asterisk">*</span></span>
-                <input id="subject" type="text" placeholder="title" pattern="^([a-z]|[A-Z]|[0-9]|[\w ]+){1,50}"/> 
-                <span id="subject-error-message" class="validation-error-message" aria-label="Please enter your subject text.">Please enter your subject text.</span>
+                <input id="subject" type="text" placeholder="title" name="subject"/> 
               </label>
+              <div id="subject-error-message" class="validation-error-message" aria-label="error message">
+                <li id="error-subject-regex" class="errors"></li>
+                <li id="error-subject-length" class="errors"></li>
+                <li id="error-subject-empty" class="errors"></li>
               </div>
+            </div>
               
               <div class="input-wrapper">
-              <label class="custom-field five" aria-label="name form field"><span class="placeholder">Your message<span class="asterisk">*</span></span>
-                <textarea id="message" cols="30" rows="10" placeholder="Your message" pattern="^([a-z]|[A-Z]|[0-9]|[\w ]+){1,500}"></textarea>
-                <span id="textbox-error-message" class="validation-error-message validation-error-message-textarea" aria-label="please enter your message.">Please enter your message.</span>
+              <label class="custom-field five" aria-label="message form field"><span class="placeholder">Your message<span class="asterisk">*</span></span>
+                <textarea id="message" cols="30" rows="10" placeholder="Your message" name="message" cols="30" rows="10"></textarea>
               </label>
-              </div>    
+              <div id="message-error-message" class="validation-error-message" aria-label="error message">
+                <li id="error-message-regex" class="errors"></li>
+                <li id="error-message-length" class="errors"></li>
+                <li id="error-message-empty" class="errors"></li>
+              </div>
+             </div>    
 
 
               <p class="info-notify form-info-notify" aria-label="Submitting this form will open and autopopulate the form data in your email client" >Submitting this form will open and autopopulate this form data into your email client</span></p>
