@@ -203,24 +203,67 @@ function contact_submit(e) {
 // }
 
 function validateEmail() {
-  let emailRegex = /^[a-zA-Z][a-zA-Z0-9.]+@[a-zA-Z]{2,10}\.[a-zA-Z]{2,10}$/;
-  let maxLength = 150;
-  const emailErrorMessage = document.getElementById("email-error-message");
+  let emailInput = document.forms["contact"]["email"].value;
+  console.log(emailInput);
+  const wrapper = document.getElementById("email-error-message");
 
-  if (emailInput.trim() === "") {
-    emailErrorMessage.innerHTML = "Email is required";
-    emailErrorMessage.style.display = "block";
-  } else emailErrorMessage.style.display = "none";
+  const liRegex = document.getElementById("error-email-regex");
+  const liMaxLength = document.getElementById("error-email-length");
+  const liEmpty = document.getElementById("error-email-empty");
+  let emailRegex = /^[a-zA-Z][a-zA-Z0-9.]+@[a-zA-Z]{2,10}\.[a-zA-Z]{2,10}$/;
+
+  const regexMessage =
+    "Minimum of 2 characters before and after @ sign and minimum of 2 character after .";
+  const maxLengthMessage = "Email should be less than 50 characters or less";
+  const emptyMessage = "Email is required";
+
+  let error;
+
+  let regexText;
+  let maxLengthText;
+  let emptyText;
 
   if (!emailRegex.test(emailInput)) {
-    emailErrorMessage.innerHTML = "Invalid email address";
-    emailErrorMessage.style.display = "block";
-  } else emailErrorMessage.style.display = "none";
+    error = true;
+    regexText = regexMessage;
+    liRegex.style.display = "block";
+  } else {
+    error = false;
+    regexText = "";
+    liRegex.style.display = "none";
+  }
 
-  if (emailInput.length > maxLength) {
-    emailErrorMessage.innerHTML = "Email should be less than 150 characters";
-    emailErrorMessage.style.display = "block";
-  } else emailErrorMessage.style.display = "none";
+  if (emailInput.length > 50) {
+    error = true;
+    maxLengthText = maxLengthMessage;
+    liMaxLength.style.display = "block";
+  } else {
+    error = false;
+    maxLengthText = "";
+    liMaxLength.style.display = "none";
+  }
+
+  if (emailInput.trim() === "") {
+    error = true;
+    emptyText = emptyMessage;
+    liEmpty.style.display = "block";
+  } else {
+    error = false;
+    emptyText = "";
+    liEmpty.style.display = "none";
+  }
+
+  if (
+    liRegex.style.display === "block" ||
+    liMaxLength.style.display === "block" ||
+    liEmpty.style.display === "block"
+  ) {
+    wrapper.style.display = "block";
+  } else wrapper.style.display = "none";
+
+  liRegex.textContent = regexText;
+  liMaxLength.textContent = maxLengthText;
+  liEmpty.textContent = emptyText;
 }
 
 const nameErrorMessage = document.getElementById("name-error-message");
@@ -253,7 +296,7 @@ const validateName = () => {
   const nameRegex = /^[a-zA-Z\s]+$/;
 
   const regexMessage = "Name can only contain alphabets and space";
-  const maxLengthMessage = "Name should be less than 25 characters";
+  const maxLengthMessage = "Name should be 25 characters or less";
   const emptyMessage = "Name is required";
 
   let error;
@@ -310,9 +353,6 @@ const validateName = () => {
   liEmpty.textContent = emptyText;
 };
 
-let phoneInput = document.forms["contact"]["phone"].value;
-console.log(phoneInput);
-
 const validatePhone = () => {
   const wrapper = document.getElementById("phone-error-message");
   const phone = document.getElementById("phone");
@@ -328,7 +368,7 @@ const validatePhone = () => {
 
   phone.value = phoneInput;
 
-  const maxLengthMessage = "Max 10 numbers";
+  const maxLengthMessage = "MMust be 10 numbers";
   const regexMessage = "Phone can only contain numbers";
 
   let maxLengthText;
@@ -344,7 +384,7 @@ const validatePhone = () => {
     LiRegex.style.display = "none";
   }
 
-  if (phoneInput.length >= 10) {
+  if (phoneInput.length > 10) {
     error = true;
     maxLengthText = maxLengthMessage;
     liMaxLength.style.display = "block";
@@ -368,10 +408,13 @@ const validatePhone = () => {
 // input event listeners
 
 nameField.addEventListener("input", validateName, false);
-nameField.removeEventListener("blur", validateName, false);
+nameField.removeEventListener("blur", validateName);
 
 telField.addEventListener("input", validatePhone, false);
-telField.removeEventListener("blur", validatePhone, false);
+telField.removeEventListener("blur", validatePhone);
+
+emailField.addEventListener("input", validateEmail, false);
+emailField.removeEventListener("blur", validateEmail);
 
 // if (nameInput.trim() < nameInput) {
 //   nameErrorMessage.style.display = "none";

@@ -316,8 +316,7 @@
 
           <div class="input-wrapper">
             <label class="custom-field two" aria-label="phone number form field"> <span class="placeholder">phone number</span>
-              <input id="phone" type="tel" maxlength="10" placeholder="000-000-0000" name="phone" >
-              <span id="tel-error-message" class="validation-error-message" aria-label="Please enter digits only.">Please enter digits only.</span>
+              <input id="phone" type="tel" maxlength="10" placeholder="000-000-0000" name="phone" />
             </label>
             <div id="phone-error-message" class="validation-error-message" aria-label="error message">
               <li id="error-phone-regex" class="errors"></li>
@@ -327,9 +326,13 @@
 
             <div class="input-wrapper">
               <label class="custom-field three" aria-label="email form field"> <span class="placeholder">email<span class="asterisk">*</span></span>
-                <input id="email" type="email" placeholder="username@domain" pattern="^([0-9a-zA-Z]([-\.\w]*[0-9a-zA-Z])*@([0-9a-zA-Z][-\w]*[0-9a-zA-Z]\.)+[a-zA-Z]{2,9})"/>
-                <span  id="email-error-message" class="validation-error-message"aria-label="">Please enter your email.</span>
+                <input id="email" type="email" placeholder="username@domain" name="email"/>
               </label>
+              <div id="email-error-message" class="validation-error-message" aria-label="error message">
+                <li id="error-email-regex" class="errors"></li>
+                <li id="error-email-length" class="errors"></li>
+                <li id="error-email-empty" class="errors"></li>
+              </div>
             </div>
 
             <div class="input-wrapper">
