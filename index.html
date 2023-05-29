@@ -316,10 +316,13 @@
 
           <div class="input-wrapper">
             <label class="custom-field two" aria-label="phone number form field"> <span class="placeholder">phone number</span>
-              <input id="phone" type="tel" maxlength="15" placeholder="000-000-0000" pattern="^(?:(?:\+?1\s*(?:[.-]\s*)?)?(?:\(\s*([2-9]1[02-9]|[2-9][02-8]1|[2-9][02-8][02-9])\s*\)|([2-9]1[02-9]|[2-9][02-8]1|[2-9][02-8][02-9]))\s*(?:[.-]\s*)?)?([2-9]1[02-9]|[2-9][02-9]1|[2-9][02-9]{2})\s*(?:[.-]\s*)?([0-9]{4})(?:\s*(?:#|x\.?|ext\.?|extension)\s*(\d+))?$"
-              />
+              <input id="phone" type="tel" maxlength="10" placeholder="000-000-0000" name="phone" >
               <span id="tel-error-message" class="validation-error-message" aria-label="Please enter digits only.">Please enter digits only.</span>
             </label>
+            <div id="phone-error-message" class="validation-error-message" aria-label="error message">
+              <li id="error-phone-regex" class="errors"></li>
+              <li id="error-phone-length" class="errors"></li>
+            </div>
             </div>
 
             <div class="input-wrapper">

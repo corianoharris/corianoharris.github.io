@@ -310,10 +310,68 @@ const validateName = () => {
   liEmpty.textContent = emptyText;
 };
 
+let phoneInput = document.forms["contact"]["phone"].value;
+console.log(phoneInput);
+
+const validatePhone = () => {
+  const wrapper = document.getElementById("phone-error-message");
+  const phone = document.getElementById("phone");
+  let phoneInput = document.forms["contact"]["phone"].value.replace(
+    /(\d{3})(\d{3})(\d{4})/,
+    "$1-$2-$3"
+  );
+  const liMaxLength = document.getElementById("error-phone-length");
+  const LiRegex = document.getElementById("error-name-regex");
+  const phoneRegex = /^[0-9]*$/;
+
+  // const phoneFormat = phoneInput.replace(/(\d{3})(\d{3})(\d{4})/, "$1-$2-$3");
+
+  phone.value = phoneInput;
+
+  const maxLengthMessage = "Max 10 numbers";
+  const regexMessage = "Phone can only contain numbers";
+
+  let maxLengthText;
+  let regexText;
+
+  if (!phoneRegex.test(phoneInput)) {
+    error = true;
+    regexText = regexMessage;
+    LiRegex.style.display = "block";
+  } else {
+    error = false;
+    regexText = "";
+    LiRegex.style.display = "none";
+  }
+
+  if (phoneInput.length >= 10) {
+    error = true;
+    maxLengthText = maxLengthMessage;
+    liMaxLength.style.display = "block";
+  } else {
+    error = false;
+    maxLengthText = "";
+    liMaxLength.style.display = "none";
+  }
+
+  if (
+    liMaxLength.style.display === "block" ||
+    LiRegex.style.display === "block"
+  ) {
+    wrapper.style.display = "block";
+  } else wrapper.style.display = "none";
+
+  liMaxLength.textContent = maxLengthText;
+  LiRegex.textContent = regexText;
+};
+
 // input event listeners
 
 nameField.addEventListener("input", validateName, false);
 nameField.removeEventListener("blur", validateName, false);
+
+telField.addEventListener("input", validatePhone, false);
+telField.removeEventListener("blur", validatePhone, false);
 
 // if (nameInput.trim() < nameInput) {
 //   nameErrorMessage.style.display = "none";
