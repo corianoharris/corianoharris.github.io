@@ -139,27 +139,9 @@ const submitBtn = document.getElementById("submit");
 const submitButtonCircle = document.querySelector("#submit-circle");
 submitBtn.addEventListener("click", contact_submit, false);
 
-// if (
-//   nameErrorWrapper.style.display === "block" ||
-//   emailErrorWrpper.style.display === "block" ||
-//   phoneErrorWrapper.style.display === "block" ||
-//   subjectErrorWrapper.style.display === "block" ||
-//   messageErrorWrpper.style.display === "block"
-// ) {
-//   submitBtn.setAttribute("disabled", true);
-//   submitButtonCircle.style.backgroundColor = "#D3D3D3";
-// } else {
-//   submitBtn.setAttribute("disabled", false);
-//   submitButtonCircle.style.backgroundColor = "#be3455";
-// }
-
 function contact_submit(e) {
   // Stop Form From Submitting
   e.preventDefault();
-
-  // if (!validateRegex(nameInput, nameRegex, nameErrorMessage, messageRegex)) {
-  //   return; // Exit if any validation fails
-  // }
 
   // Set Initial letiables
   let target = e.target || e.srcElement;
@@ -182,50 +164,6 @@ function contact_submit(e) {
 }
 
 // Form validations
-
-// name
-
-// function validateName() {
-//   let nameRegex = /^[a-zA-Z\s]+$/; // Regular expression for alphabets and space
-//   let maxLength = 30;
-//   const nameErrorMessage = document.getElementById("name-error-message");
-
-//   if (nameInput.trim() === "") {
-//     nameErrorMessage.innerHTML = "Name is required";
-//     nameErrorMessage.style.display = "block";
-//   } else nameErrorMessage.style.display = "none";
-
-//   if (!nameRegex.test(nameInput)) {
-//     nameErrorMessage.innerHTML = "Name can only contain alphabets and space";
-//     nameErrorMessage.style.display = "block";
-//   } else nameErrorMessage.style.display = "none";
-
-//   if (nameInput.length > maxLength) {
-//     nameErrorMessage.innerHTML = "Name should be less than 20 characters";
-//     nameErrorMessage.style.display = "block";
-//   } else nameErrorMessage.style.display = "none";
-// }
-
-// function validateTel() {
-//   let nameRegex = /^[a-zA-Z\s]+$/; // Regular expression for alphabets and space
-//   let maxLength = 10;
-//   const nameErrorMessage = document.getElementById("name-error-message");
-
-//   if (nameInput.trim() === "") {
-//     nameErrorMessage.innerHTML = "Name is required";
-//     nameErrorMessage.style.display = "block";
-//   } else nameErrorMessage.style.display = "none";
-
-//   if (!nameRegex.test(nameInput)) {
-//     nameErrorMessage.innerHTML = "Name can only contain alphabets and space";
-//     nameErrorMessage.style.display = "block";
-//   } else nameErrorMessage.style.display = "none";
-
-//   if (nnameInput.length > maxLength) {
-//     nameErrorMessage.innerHTML = "Name should be 10 numbers";
-//     nameErrorMessage.style.display = "block";
-//   } else nameErrorMessage.style.display = "none";
-// }
 
 function validateEmail() {
   let emailInput = document.forms["contact"]["email"].value;
@@ -559,19 +497,19 @@ const validatePhone = () => {
 
 // input event listeners
 
-nameField.addEventListener("input", validateName, false);
+nameField.addEventListener("keydown", validateName, false);
 nameField.removeEventListener("blur", validateName);
 
-telField.addEventListener("input", validatePhone, false);
+telField.addEventListener("keydown", validatePhone, false);
 telField.removeEventListener("blur", validatePhone);
 
-emailField.addEventListener("input", validateEmail, false);
+emailField.addEventListener("keydown", validateEmail, false);
 emailField.removeEventListener("blur", validateEmail);
 
-subjectField.addEventListener("input", validateSubject, false);
+subjectField.addEventListener("keydown", validateSubject, false);
 subjectField.removeEventListener("blur", validateSubject);
 
-messageField.addEventListener("input", validateMessage, false);
+messageField.addEventListener("keydown", validateMessage, false);
 messageField.removeEventListener("blur", validateMessage);
 
 form.addEventListener(
@@ -593,9 +531,6 @@ form.addEventListener(
   },
   false
 );
-// if (nameInput.trim() < nameInput) {
-//   nameErrorMessage.style.display = "none";
-// }
 
 const copyrightYear = document.querySelector(".copyright-year");
 copyrightYear.innerText = new Date().getFullYear();
