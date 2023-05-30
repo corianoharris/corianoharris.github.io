@@ -272,7 +272,9 @@ input {
   border-left: 5px solid var(--color-brand);
   padding-left: 10px;
   margin-bottom: 20px;
+  text-align: left;
 }
+
 @media (min-width: 648px) {
   .info-notify {
     width: 350px;
@@ -553,7 +555,7 @@ button.btn {
   width: 245px;
 }
 button.btn .circle {
-  background: var(--color-brand);
+  background-color: var(--color-brand);
   border-radius: 1.625rem;
   box-shadow: 0 4px 8px 0 rgba(138, 135, 135, 0.2),
     0 6px 20px 0 rgba(136, 134, 134, 0.19);
@@ -1095,4 +1097,8 @@ input:-webkit-autofill:focus {
   padding: 0;
 }
 
+.disabled {
+  background-color: darkgray;
+  pointer-events: none;
+}
 /* --- theme --- */

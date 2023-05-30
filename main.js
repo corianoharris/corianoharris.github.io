@@ -1,11 +1,15 @@
-window.addEventListener("load", (event) => {
-  renderListItems(COMMUNITIES, COMMUNITY_LIST);
-  renderListItems(CLIENTS, CLIENTS_LIST);
-  renderListItems(GRAPHIC_DESIGN, GRAPHIC_LIST);
-  renderListItems(UX, UX_LIST);
-  renderListItems(UI, UI_LIST);
-  renderListItems(DEV, DEV_LIST);
-});
+window.addEventListener(
+  "load",
+  (event) => {
+    renderListItems(COMMUNITIES, COMMUNITY_LIST);
+    renderListItems(CLIENTS, CLIENTS_LIST);
+    renderListItems(GRAPHIC_DESIGN, GRAPHIC_LIST);
+    renderListItems(UX, UX_LIST);
+    renderListItems(UI, UI_LIST);
+    renderListItems(DEV, DEV_LIST);
+  },
+  false
+);
 
 /**
  * CONSTANTS
@@ -124,10 +128,30 @@ const emailInput = document.getElementById("email").value;
 const telInput = document.getElementById("phone").value;
 const messageInput = document.getElementById("message").value;
 
-if (form) {
-  const submitBtn = document.getElementById("submit");
-  submitBtn.addEventListener("click", contact_submit, false);
-}
+//error parent element
+const nameErrorWrapper = document.getElementById("name-error-message");
+const emailErrorWrpper = document.getElementById("email-error-message");
+const phoneErrorWrapper = document.getElementById("phone-error-message");
+const subjectErrorWrapper = document.getElementById("subject-error-message");
+const messageErrorWrpper = document.getElementById("message-error-message");
+
+const submitBtn = document.getElementById("submit");
+const submitButtonCircle = document.querySelector("#submit-circle");
+submitBtn.addEventListener("click", contact_submit, false);
+
+// if (
+//   nameErrorWrapper.style.display === "block" ||
+//   emailErrorWrpper.style.display === "block" ||
+//   phoneErrorWrapper.style.display === "block" ||
+//   subjectErrorWrapper.style.display === "block" ||
+//   messageErrorWrpper.style.display === "block"
+// ) {
+//   submitBtn.setAttribute("disabled", true);
+//   submitButtonCircle.style.backgroundColor = "#D3D3D3";
+// } else {
+//   submitBtn.setAttribute("disabled", false);
+//   submitButtonCircle.style.backgroundColor = "#be3455";
+// }
 
 function contact_submit(e) {
   // Stop Form From Submitting
@@ -550,6 +574,25 @@ subjectField.removeEventListener("blur", validateSubject);
 messageField.addEventListener("input", validateMessage, false);
 messageField.removeEventListener("blur", validateMessage);
 
+form.addEventListener(
+  "input",
+  () => {
+    if (
+      nameErrorWrapper.style.display === "block" ||
+      emailErrorWrpper.style.display === "block" ||
+      phoneErrorWrapper.style.display === "block" ||
+      subjectErrorWrapper.style.display === "block" ||
+      messageErrorWrpper.style.display === "block"
+    ) {
+      submitBtn.setAttribute("disabled", true);
+      submitButtonCircle.style.backgroundColor = "#D3D3D3";
+    } else {
+      submitBtn.setAttribute("disabled", false);
+      submitButtonCircle.style.backgroundColor = "#be3455";
+    }
+  },
+  false
+);
 // if (nameInput.trim() < nameInput) {
 //   nameErrorMessage.style.display = "none";
 // }
