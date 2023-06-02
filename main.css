@@ -5,13 +5,15 @@
 
 /* css variables */
 :root {
-  --color-dark-bkgd: #1f1f1f;
-  --color-light-bkgd: #fff;
+  --color-dark: #1f1f1f;
+  --color-white: #fff;
   --color-brand: #be3455;
   --color-info: #343434;
   --color-error: #ff0000;
-  background-color: var(--color-light-bkgd);
+  background-color: var(--color-white);
 }
+
+/* RESETS */
 
 /* Box sizing rules */
 *,
@@ -81,7 +83,8 @@ select {
   }
 }
 
-/* globals */
+/* GLOBALS */
+
 body {
   background-color: var(--background-color);
   color: var(--text-color);
@@ -291,8 +294,6 @@ input {
   width: auto;
 }
 
-/* error */
-
 /* section title */
 .title {
   padding-top: 40px;
@@ -346,11 +347,13 @@ input {
   grid-template-columns: repeat(1, 1fr);
   justify-items: center;
 }
+
 @media (max-width: 900px) {
   .clients-quotes {
     grid-template-columns: repeat(1, 1fr);
   }
 }
+
 @media (min-width: 1024px) {
   .clients-quotes {
     grid-template-columns: repeat(2, 1fr);
@@ -483,27 +486,32 @@ input {
   height: auto;
   justify-items: center;
 }
+
 @media (min-width: 648px) {
   .clients-projects {
     gap: 1rem;
     grid-template-columns: repeat(2, 1fr);
   }
 }
+
 @media (min-width: 320px) {
   .clients-projects {
     gap: 1rem;
     grid-template-columns: repeat(1, 1fr);
   }
 }
+
 @media (min-width: 1024px) {
   .clients-projects {
     gap: 1.5rem;
     grid-template-columns: repeat(3, 1fr);
   }
 }
+
 .picture-projects {
   margin-top: none;
 }
+
 .card-company,
 .card-role {
   font-size: 0.7rem;
@@ -550,10 +558,12 @@ button {
   text-decoration: none;
   vertical-align: middle;
 }
+
 button.btn {
   height: auto;
   width: 245px;
 }
+
 button.btn .circle {
   background-color: var(--color-brand);
   border-radius: 1.625rem;
@@ -571,11 +581,11 @@ button.btn .circle {
 
 button.btn:hover .circle {
   width: 100%;
-  color: var(--color-light-bkgd);
+  color: var(--color-white);
 }
 
 .button.btn:hover .button-text {
-  color: var(--color-light-bkgd);
+  color: var(--color-white);
 }
 
 button.btn .circle .icon {
@@ -585,6 +595,7 @@ button.btn .circle .icon {
   margin: auto;
   transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
 }
+
 button.btn .circle .icon.arrow {
   position: absolute;
   top: -20px;
@@ -595,6 +606,7 @@ button.btn .circle .icon.arrow {
   width: 1.125rem;
   font-size: 32px;
 }
+
 .button-text {
   align-items: center;
   display: flex;
@@ -605,7 +617,7 @@ button.btn .circle .icon.arrow {
 }
 
 .button-text:hover a {
-  color: var(--color-light-bkgd);
+  color: var(--color-white);
 }
 
 button.btn .button-text {
@@ -636,13 +648,13 @@ button.btn .button-text {
 }
 
 button:hover .circle .icon.arrow {
-  color: var(--color-dark-bkgd);
+  color: var(--color-dark);
   -webkit-transform: translate(1rem, 0);
   transform: translate(1rem, 0);
 }
 
 button:hover .button-text {
-  color: var(--color-light-bkgd);
+  color: var(--color-white);
 }
 
 .social-media-links-text {
@@ -710,6 +722,7 @@ button:hover .button-text {
   text-align: left;
   width: 200px;
 }
+
 .first-name {
   font-size: 42px;
   font-weight: 700;
@@ -725,6 +738,7 @@ button:hover .button-text {
   font-weight: 100;
   margin-top: -15px;
 }
+
 .profile-quotes {
   font-size: 28px;
   margin: auto;
@@ -768,11 +782,13 @@ button:hover .button-text {
   font-weight: 900;
   font-size: 1rem;
 }
+
 @media (min-width: 900px) {
   .social-media {
     flex-direction: row;
     gap: 5rem;
   }
+
   .social-media-links a {
     padding-left: 20px;
   }
@@ -793,6 +809,7 @@ form {
   display: inline-block;
   width: 100%;
 }
+
 @media (min-width: 640px) {
   form {
     width: 80%;
@@ -811,6 +828,7 @@ form {
   top: 0;
   width: 100%;
 }
+
 .custom-field input,
 .custom-field textarea {
   margin: 10px 0;
@@ -824,14 +842,6 @@ form {
   -ms-appearance: none;
   -moz-appearance: none;
 }
-
-/* .custom-field input {
-  margin: 10px 0;
-} */
-
-/* .custom-field textarea {
-  margin: 20px 0;
-} */
 
 .custom-field .placeholder {
   position: absolute;
@@ -865,23 +875,10 @@ form {
   transition: border-color 0.3s ease;
   border: none;
 }
-.custom-field.one input + .placeholder,
-.custom-field.two input + .placeholder,
-.custom-field.three input + .placeholder,
-.custom-field.four input + .placeholder {
-  /* left: 0;
-  padding: 5px;
-  top: -2px; */
-}
+
 .custom-field.five textarea {
   padding: 10px;
   color: var(--color-brand);
-}
-
-.custom-field.five textarea + .placeholder {
-  top: -275px;
-  left: 0;
-  padding: 5px;
 }
 
 #message {
@@ -983,88 +980,12 @@ textarea.focus {
 .custom-field.five textarea:focus {
   padding: 20px 0 0 10px;
 }
-/* input:not(:focus):not(:placeholder-shown):invalid ~ .validation-error-message,
-textarea:not(:focus):not(:placeholder-shown):invalid
-  ~ .validation-error-message-textarea {
-  color: darkgray;
-  display: block;
-  font-size: 12px;
-  opacity: 1;
-  line-height: 12px;
-} */
-/* @media (min-width: 900px) {
-  input:not(:focus):not(:placeholder-shown):invalid ~ .validation-error-message,
-  textarea:not(:focus):not(:placeholder-shown):invalid
-    ~ .validation-error-message-textarea {
-    font-size: 1rem;
-  }
-} */
+
 input:not(:focus)::placeholder,
 textarea:not(:focus)::placeholder {
   display: block;
   font-size: 11px;
   opacity: 0;
-}
-.custom-field input.dirty + .placeholder,
-.custom-field input:focus + .placeholder,
-.custom-field input:not(:placeholder-shown) + .placeholder {
-  /* top: -12px;
-  color: var(--color-brand);
-  font-size: 15px;
-  width: auto;
-  border-radius: 0.2rem;
-  padding: 5px; */
-}
-
-/* form fields */
-.custom-field.one input.dirty,
-.custom-field.one input:not(:placeholder-shown),
-.custom-field.one input:focus,
-.custom-field.two input.dirty,
-.custom-field.two input:not(:placeholder-shown),
-.custom-field.two input:focus,
-.custom-field.three input.dirty,
-.custom-field.three input:not(:placeholder-shown),
-.custom-field.three input:focus,
-.custom-field.four input.dirty,
-.custom-field.four input:not(:placeholder-shown),
-.custom-field.four input:focus,
-.custom-field.five textarea.dirty,
-.custom-field.five textarea:not(:placeholder-shown),
-.custom-field.five textarea:focus {
-  border-color: var(--color-brand);
-  border: none;
-  color: var(--color-brand);
-  transition-delay: 0.1s;
-}
-.custom-field.one input.dirty + .placeholder,
-.custom-field.one input:not(:placeholder-shown) + .placeholder,
-.custom-field.one input:focus + .placeholder,
-.custom-field.two input.dirty + .placeholder,
-.custom-field.two input:not(:placeholder-shown) + .placeholder,
-.custom-field.two input:focus + .placeholder,
-.custom-field.three input.dirty + .placeholder,
-.custom-field.three input:not(:placeholder-shown) + .placeholder,
-.custom-field.three input:focus + .placeholder,
-.custom-field.four input.dirty + .placeholder,
-.custom-field.four input:not(:placeholder-shown) + .placeholder,
-.custom-field.four input:focus + .placeholder {
-  /* border-radius: 0.5rem;
-  color: white;
-  font-size: 15px;
-  padding: 5px;
-  top: -30px;
-  width: auto; */
-}
-.custom-field.five textarea.dirty + .placeholder,
-.custom-field.five textarea:not(:placeholder-shown) + .placeholder,
-.custom-field.five textarea:focus + .placeholder {
-  /* border-radius: 0.5rem;
-  color: var(--color-brand);
-  font-size: 15px;
-  padding: 8px 5px;
-  top: -290px;
-  width: auto; */
 }
 
 /* Removing input background colour for Chrome autocomplete */
