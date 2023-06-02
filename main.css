@@ -276,6 +276,8 @@ input {
   padding-left: 10px;
   margin-bottom: 20px;
   text-align: left;
+  text-transform: lowercase;
+  color: gray;
 }
 
 @media (min-width: 648px) {
