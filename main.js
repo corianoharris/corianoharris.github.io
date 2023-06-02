@@ -1,20 +1,15 @@
 window.addEventListener(
   "load",
-  (event) => {
-    renderListItems(COMMUNITIES, COMMUNITY_LIST);
-    renderListItems(CLIENTS, CLIENTS_LIST);
-    renderListItems(GRAPHIC_DESIGN, GRAPHIC_LIST);
-    renderListItems(UX, UX_LIST);
-    renderListItems(UI, UI_LIST);
-    renderListItems(DEV, DEV_LIST);
+  () => {
+    renderListItems(communitiesISupport, communitiesISupportList);
+    renderListItems(CLIENTS, clientsList);
+    renderListItems(graphicDesignSkills, graphicDesignSkillsList);
+    renderListItems(uxSkills, uxSkillsList);
+    renderListItems(uiSkills, uiSkillsList);
+    renderListItems(devSkills, devSkillsList);
   },
   false
 );
-
-/**
- * CONSTANTS
- * LISTS
- */
 
 const CLIENTS = [
   "Partcycle",
@@ -27,11 +22,11 @@ const CLIENTS = [
   "Navy Seals Foundation Memphis",
   "Sweet Cheeks Ministry",
 ];
-const COMMUNITIES = ["Tech901", "GiveCamp Memphis", "UX Mastery"];
-const GRAPHIC_DESIGN = ["page layout"];
-const UX = ["quantitative research", "analytics"];
-const UI = ["sketch", "invision", "mockups", "color theory", "adobe xd"];
-const DEV = [
+const communitiesISupport = ["Tech901", "GiveCamp Memphis", "UX Mastery"];
+const graphicDesignSkills = ["page layout"];
+const uxSkills = ["quantitative research", "analytics"];
+const uiSkills = ["sketch", "invision", "mockups", "color theory", "adobe xd"];
+const devSkills = [
   "sass",
   "ember.js",
   "next.js",
@@ -44,70 +39,34 @@ const DEV = [
   "pair programming",
   "cross browser testing",
 ];
-// const SOFT_SKILLS = [""];
 
-// ul list elements
-const CLIENTS_LIST = document.getElementById("js-clients-list");
-const COMMUNITY_LIST = document.getElementById("js-community-list");
-const GRAPHIC_LIST = document.getElementById("js-graphic-list");
-const UX_LIST = document.getElementById("js-ux-list");
-const UI_LIST = document.getElementById("js-ui-list");
-const DEV_LIST = document.getElementById("js-dev-list");
-const SOFT_LIST = document.getElementById("js-soft-list");
+/**
+ * Insert a if needed here...
+ * const SOFT_SKILLS
+ * const SOFT_LIST = document.getElementById("js-soft-list");
+ */
+
+// ul elements
+const clientsList = document.getElementById("js-clients-list");
+const communitiesISupportList = document.getElementById("js-community-list");
+const graphicDesignSkillsList = document.getElementById("js-graphic-list");
+const uxSkillsList = document.getElementById("js-ux-list");
+const uiSkillsList = document.getElementById("js-ui-list");
+const devSkillsList = document.getElementById("js-dev-list");
 
 // input elements
-const nameField = document.getElementById("name");
-const emailField = document.getElementById("email");
-const telField = document.getElementById("phone");
-const subjectField = document.getElementById("subject");
-const messageField = document.getElementById("message");
-
-// util functions
-
-function renderListItems(array, element) {
-  for (item of array) {
-    let li = document.createElement("li");
-    li.innerHTML = item;
-    li.classList.add("list-items");
-    element.appendChild(li);
-  }
-}
+const NAME_FIELD = document.getElementById("name");
+const EMAIL_FIELD = document.getElementById("email");
+const PHONE_FIELD = document.getElementById("phone");
+const SUBJECT_FIELD = document.getElementById("subject");
+const MESSAGE_FIELD = document.getElementById("message");
 
 // navigation
 const navLinks = document.querySelectorAll(".nav-link-text");
 const firstNavLink = document.querySelectorAll(".nav-items")[0];
 const lastNavLink = document.querySelectorAll(".nav-items")[2];
-
-firstNavLink.addEventListener("keydown", (e) => {
-  if (e.shiftKey && e.key === "Tab") {
-    lastNavLink.focus();
-  }
-});
-
-lastNavLink.addEventListener("keydown", (e) => {
-  if (e.key === "Tab") {
-    firstNavLink.focus();
-  }
-});
-
 const navHamburger = document.getElementById("nav-hamburger");
 const closeNavBtn = document.getElementById("nav-closebtn");
-
-navHamburger.addEventListener(
-  "click",
-  () => {
-    openNav();
-  },
-  false
-);
-
-closeNavBtn.addEventListener(
-  "click",
-  () => {
-    closeNav();
-  },
-  false
-);
 
 function openNav() {
   document.getElementById("myNav").style.display = "block";
@@ -117,55 +76,28 @@ function closeNav() {
   document.getElementById("myNav").style.display = "none";
 }
 
-const maxLength = 5;
-// Regular expression for alphabets and space
-
 // form
-const form = document.forms["contact"];
+const FORM = document.forms["contact"];
 const nameInput = document.getElementById("name").value;
 const subjectInput = document.getElementById("subject").value;
 const emailInput = document.getElementById("email").value;
 const telInput = document.getElementById("phone").value;
 const messageInput = document.getElementById("message").value;
 
-//error parent element
+// error parent element
 const nameErrorWrapper = document.getElementById("name-error-message");
 const emailErrorWrpper = document.getElementById("email-error-message");
 const phoneErrorWrapper = document.getElementById("phone-error-message");
 const subjectErrorWrapper = document.getElementById("subject-error-message");
 const messageErrorWrpper = document.getElementById("message-error-message");
-
 const submitBtn = document.getElementById("submit");
 const submitButtonCircle = document.querySelector("#submit-circle");
-submitBtn.addEventListener("click", contact_submit, false);
-
-function contact_submit(e) {
-  // Stop Form From Submitting
-  e.preventDefault();
-
-  // Set Initial letiables
-  let target = e.target || e.srcElement;
-  let to = "corianoharris@gmail.com";
-  let uri = "mailto:" + to;
-  let body = "";
-
-  // Build Body / Message with all Input Fields
-  body += "Name: " + nameInput + "\xa0" + "\r\n";
-  body += "Phone Number: " + telInput + "\r\n";
-  body += message + "\r\n\r\n";
-
-  // Build final Mailto URI
-  uri += "from=" + encodeURIComponent(emailInput);
-  uri += "?subject=" + encodeURIComponent(subjectInput);
-  uri += "&body=" + encodeURIComponent(body);
-
-  // Open Mailto in New Window / Tab
-  window.open(uri, "_blank");
-}
+const nameErrorMessage = document.getElementById("name-error-message");
+const li = document.getElementById("name-errors");
 
 // Form validations
 
-function validateEmail() {
+const validateEmail = () => {
   let emailInput = document.forms["contact"]["email"].value;
   const wrapper = document.getElementById("email-error-message");
 
@@ -226,26 +158,7 @@ function validateEmail() {
   liRegex.textContent = regexText;
   liMaxLength.textContent = maxLengthText;
   liEmpty.textContent = emptyText;
-}
-
-const nameErrorMessage = document.getElementById("name-error-message");
-const li = document.getElementById("name-errors");
-
-// async function validateName() {
-//   await validateRegex(nameRegex, messageRegex);
-//   await validateMaxLength(messageMaxLength);
-//   await validateEmptyInput(messageEmpty);
-// }
-
-/**
- *
- * @param {*} input
- * @param {*} regex
- * @param {*} errorElement
- * @param {*} message
- *
- * Util fns for validation
- */
+};
 
 const validateName = () => {
   let nameInput = document.forms["contact"]["fullname"].value;
@@ -380,7 +293,6 @@ const validateSubject = () => {
 };
 
 const validateMessage = () => {
-  let messageInput = document.forms["contact"]["message"].value;
   const wrapper = document.getElementById("message-error-message");
 
   const liRegex = document.getElementById("error-message-regex");
@@ -393,8 +305,8 @@ const validateMessage = () => {
   const maxLengthMessage = "Message should be 1000 characters or less";
   const emptyMessage = "Message is required";
 
+  let messageInput = document.forms["contact"]["message"].value;
   let error;
-
   let regexText;
   let maxLengthText;
   let emptyText;
@@ -409,7 +321,7 @@ const validateMessage = () => {
     liRegex.style.display = "none";
   }
 
-  if (messageInput.length > 1000) {
+  if (messageInput.length > 500) {
     error = true;
     maxLengthText = maxLengthMessage;
     liMaxLength.style.display = "block";
@@ -495,24 +407,79 @@ const validatePhone = () => {
   LiRegex.textContent = regexText;
 };
 
-// input event listeners
+const contact_submit = (e) => {
+  // Stop Form From Submitting
+  e.preventDefault();
 
-nameField.addEventListener("keydown", validateName, false);
-nameField.removeEventListener("blur", validateName);
+  // Set Initial letiables
+  let target = e.target || e.srcElement;
+  let to = "corianoharris@gmail.com";
+  let uri = "mailto:" + to;
+  let body = "";
 
-telField.addEventListener("keydown", validatePhone, false);
-telField.removeEventListener("blur", validatePhone);
+  // Build Body / Message with all Input Fields
+  body += "Name: " + nameInput + "\xa0" + "\r\n";
+  body += "Phone Number: " + telInput + "\r\n";
+  body += message + "\r\n\r\n";
 
-emailField.addEventListener("keydown", validateEmail, false);
-emailField.removeEventListener("blur", validateEmail);
+  // Build final Mailto URI
+  uri += "from=" + encodeURIComponent(emailInput);
+  uri += "?subject=" + encodeURIComponent(subjectInput);
+  uri += "&body=" + encodeURIComponent(body);
 
-subjectField.addEventListener("keydown", validateSubject, false);
-subjectField.removeEventListener("blur", validateSubject);
+  // Open Mailto in New Window / Tab
+  window.open(uri, "_blank");
+};
 
-messageField.addEventListener("keydown", validateMessage, false);
-messageField.removeEventListener("blur", validateMessage);
+const copyrightYear = document.querySelector(".copyright-year");
+copyrightYear.innerText = new Date().getFullYear();
 
-form.addEventListener(
+// UTILS
+
+const renderListItems = (array, element) => {
+  for (item of array) {
+    let li = document.createElement("li");
+    li.innerHTML = item;
+    li.classList.add("list-items");
+    element.appendChild(li);
+  }
+};
+
+// EVENT LISTENERS
+
+// nav
+
+firstNavLink.addEventListener("keydown", (e) => {
+  if (e.shiftKey && e.key === "Tab") {
+    lastNavLink.focus();
+  }
+});
+
+lastNavLink.addEventListener("keydown", (e) => {
+  if (e.key === "Tab") {
+    firstNavLink.focus();
+  }
+});
+
+navHamburger.addEventListener(
+  "click",
+  () => {
+    openNav();
+  },
+  false
+);
+
+closeNavBtn.addEventListener(
+  "click",
+  () => {
+    closeNav();
+  },
+  false
+);
+
+// form
+
+FORM.addEventListener(
   "input",
   () => {
     if (
@@ -532,5 +499,19 @@ form.addEventListener(
   false
 );
 
-const copyrightYear = document.querySelector(".copyright-year");
-copyrightYear.innerText = new Date().getFullYear();
+NAME_FIELD.addEventListener("keydown", validateName, false);
+NAME_FIELD.removeEventListener("blur", validateName);
+
+PHONE_FIELD.addEventListener("keydown", validatePhone, false);
+PHONE_FIELD.removeEventListener("blur", validatePhone);
+
+EMAIL_FIELD.addEventListener("keydown", validateEmail, false);
+EMAIL_FIELD.removeEventListener("blur", validateEmail);
+
+SUBJECT_FIELD.addEventListener("keydown", validateSubject, false);
+SUBJECT_FIELD.removeEventListener("blur", validateSubject);
+
+MESSAGE_FIELD.addEventListener("keydown", validateMessage, false);
+MESSAGE_FIELD.removeEventListener("blur", validateMessage);
+
+submitBtn.addEventListener("click", contact_submit, false);
