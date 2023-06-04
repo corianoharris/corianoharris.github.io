@@ -298,7 +298,6 @@ input {
 
 /* section title */
 .title {
-  padding-top: 40px;
   width: 100%;
 }
 
@@ -1009,10 +1008,6 @@ input:-webkit-autofill:focus {
 
 .display {
   display: block;
-}
-
-.paddingTop {
-  padding-top: 25px;
 }
 
 .paddingNone {
