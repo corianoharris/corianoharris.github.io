@@ -913,7 +913,7 @@ form {
   text-align: left;
 }
 
-.errors {
+.validation-error-message li {
   font-size: 12px;
   color: darkgray;
 }
