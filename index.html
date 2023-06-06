@@ -299,9 +299,10 @@
 				  aria-label="contact form">
           <div class="input-wrapper">
             <label class="custom-field one" aria-label="name form field"><span class="placeholder">name<span class="asterisk">*</span></span>
-              <input 	id="name" type="text" name="fullname" placeholder="your name"  required/>
+              <input 	id="name" type="text" name="fullname" placeholder="your name"  maxLength="25" required/>
             </label>
             <div id="name-error-message" class="validation-error-message" aria-label="error message" tabindex="0">
+              <li id="error-name-no-space-as-first-char" class="errors"></li>
               <li id="error-name-regex" class="errors"></li>
               <li id="error-name-length" class="errors"></li>
               <li id="error-name-empty" class="errors"></li>
@@ -310,7 +311,7 @@
 
           <div class="input-wrapper">
             <label class="custom-field two" aria-label="phone number form field"> <span class="placeholder">phone number</span>
-              <input id="phone" type="tel" maxlength="10" placeholder="000-000-0000" name="phone" />
+              <input id="phone" type="tel"  placeholder="1 (000) 000-0000" name="phone" maxLength="14"/>
             </label>
             <div id="phone-error-message" class="validation-error-message" aria-label="error message" tabindex="0">
               <li id="error-phone-regex" class="errors"></li>
@@ -320,7 +321,7 @@
 
             <div class="input-wrapper">
               <label class="custom-field three" aria-label="email form field"> <span class="placeholder">email<span class="asterisk">*</span></span>
-                <input id="email" type="email" placeholder="username@domain" name="email"/>
+                <input id="email" type="email" placeholder="username@domain" name="email" maxLength="50"/>
               </label>
               <div id="email-error-message" class="validation-error-message" aria-label="error message" tabindex="0">
                 <li id="error-email-regex" class="errors"></li>
@@ -331,9 +332,10 @@
 
             <div class="input-wrapper">
               <label class="custom-field four" aria-label="subject form field"><span class="placeholder">subject<span class="asterisk">*</span></span>
-                <input id="subject" type="text" placeholder="title" name="subject"/> 
+                <input id="subject" type="text" placeholder="title" name="subject" maxLength="25"/> 
               </label>
               <div id="subject-error-message" class="validation-error-message" aria-label="error message" tabindex="0">
+                <li id="error-subject-no-space-as-first-char" class="errors"></li>
                 <li id="error-subject-regex" class="errors"></li>
                 <li id="error-subject-length" class="errors"></li>
                 <li id="error-subject-empty" class="errors"></li>
@@ -342,9 +344,10 @@
               
               <div class="input-wrapper">
               <label class="custom-field five" aria-label="message form field"><span class="placeholder">Your message<span class="asterisk">*</span></span>
-                <textarea id="message" cols="30" rows="10" placeholder="Your message" name="message" cols="30" rows="10"></textarea>
+                <textarea id="message" cols="30" rows="10" placeholder="Your message" name="message" cols="30" rows="10" maxLength="500"></textarea>
               </label>
               <div id="message-error-message" class="validation-error-message" aria-label="error message" tabindex="0">
+                <li id="error-message-no-space-as-first-char" class="errors"></li>
                 <li id="error-message-regex" class="errors"></li>
                 <li id="error-message-length" class="errors"></li>
                 <li id="error-message-empty" class="errors"></li>
