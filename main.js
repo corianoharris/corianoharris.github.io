@@ -1,17 +1,4 @@
-window.addEventListener(
-  "load",
-  () => {
-    renderListItems(communitiesISupport, communitiesISupportList);
-    renderListItems(CLIENTS, clientsList);
-    renderListItems(graphicDesignSkills, graphicDesignSkillsList);
-    renderListItems(uxSkills, uxSkillsList);
-    renderListItems(uiSkills, uiSkillsList);
-    renderListItems(devSkills, devSkillsList);
-  },
-  false
-);
-
-const CLIENTS = [
+const clients = [
   "Partcycle",
   "CodeCrew",
   "Dare Dream Dance",
@@ -22,11 +9,17 @@ const CLIENTS = [
   "Navy Seals Foundation Memphis",
   "Sweet Cheeks Ministry",
 ];
-const communitiesISupport = ["Tech901", "GiveCamp Memphis", "UX Mastery"];
-const graphicDesignSkills = ["page layout"];
-const uxSkills = ["quantitative research", "analytics"];
-const uiSkills = ["sketch", "invision", "mockups", "color theory", "adobe xd"];
-const devSkills = [
+const communities = ["Tech901", "GiveCamp Memphis", "UX Mastery"];
+const graphicDesignKeywords = ["page layout"];
+const uxKeywords = ["quantitative research", "analytics"];
+const uiKeywords = [
+  "sketch",
+  "invision",
+  "mockups",
+  "color theory",
+  "adobe xd",
+];
+const devKeywords = [
   "sass",
   "ember.js",
   "next.js",
@@ -42,17 +35,17 @@ const devSkills = [
 
 /**
  * Insert a if needed here...
- * const SOFT_SKILLS
+ * const softKeywords
  * const SOFT_LIST = document.getElementById("js-soft-list");
  */
 
 // ul elements
 const clientsList = document.getElementById("js-clients-list");
-const communitiesISupportList = document.getElementById("js-community-list");
-const graphicDesignSkillsList = document.getElementById("js-graphic-list");
-const uxSkillsList = document.getElementById("js-ux-list");
-const uiSkillsList = document.getElementById("js-ui-list");
-const devSkillsList = document.getElementById("js-dev-list");
+const communitiesList = document.getElementById("js-community-list");
+const graphicDesignKeywordsList = document.getElementById("js-graphic-list");
+const uxKeywordsList = document.getElementById("js-ux-list");
+const uiKeywordsList = document.getElementById("js-ui-list");
+const devKeywordsList = document.getElementById("js-dev-list");
 
 // input elements
 const NAME_FIELD = document.getElementById("name");
@@ -76,28 +69,27 @@ function closeNav() {
   document.getElementById("myNav").style.display = "none";
 }
 
-// form
+// form fields
 const FORM = document.forms["contact"];
 const nameInput = document.getElementById("name").value;
 const subjectInput = document.getElementById("subject").value;
 const emailInput = document.getElementById("email").value;
-const telInput = document.getElementById("phone").value;
+const phoneInput = document.getElementById("phone").value;
 const messageInput = document.getElementById("message").value;
 
-// error parent element
-const nameErrorWrapper = document.getElementById("name-error-message");
-const emailErrorWrpper = document.getElementById("email-error-message");
-const phoneErrorWrapper = document.getElementById("phone-error-message");
-const subjectErrorWrapper = document.getElementById("subject-error-message");
-const messageErrorWrpper = document.getElementById("message-error-message");
+// error elemeents
+const nameError = document.getElementById("name-error-message");
+const emailError = document.getElementById("email-error-message");
+const phoneError = document.getElementById("phone-error-message");
+const subjectError = document.getElementById("subject-error-message");
+const messageError = document.getElementById("message-error-message");
+
 const submitBtn = document.getElementById("submit");
 const submitButtonCircle = document.querySelector("#submit-circle");
-const nameErrorMessage = document.getElementById("name-error-message");
-const li = document.getElementById("name-errors");
 
 // Form validations
 
-const validateEmail = () => {
+const validateEmailValue = () => {
   let emailInput = document.forms["contact"]["email"].value;
   const wrapper = document.getElementById("email-error-message");
 
@@ -161,7 +153,7 @@ const validateEmail = () => {
   liEmpty.textContent = emptyText;
 };
 
-const validateName = () => {
+const validateNameValue = () => {
   let nameInput = document.forms["contact"]["fullname"].value;
   const wrapper = document.getElementById("name-error-message");
 
@@ -241,7 +233,7 @@ const validateName = () => {
   liEmpty.textContent = emptyText;
 };
 
-const validateSubject = () => {
+const validateSubjectValue = () => {
   let subjectInput = document.forms["contact"]["subject"].value;
   const wrapper = document.getElementById("subject-error-message");
 
@@ -323,7 +315,7 @@ const validateSubject = () => {
   liEmpty.textContent = emptyText;
 };
 
-const validateMessage = () => {
+const validateMessageValue = () => {
   let messageInput = document.forms["contact"]["message"].value;
   const wrapper = document.getElementById("message-error-message");
 
@@ -405,7 +397,7 @@ const validateMessage = () => {
   liEmpty.textContent = emptyText;
 };
 
-const validatePhone = () => {
+const validatePhoneValue = () => {
   const wrapper = document.getElementById("phone-error-message");
   let phone = document.getElementById("phone");
   let phoneFormat = document.forms["contact"]["phone"].value.replace(
@@ -422,8 +414,6 @@ const validatePhone = () => {
   const maxLengthMessage = "Max numbers is 10";
   const regexMessage = "Phone can only contain numbers";
 
-  console.log(phone.value.length);
-
   phone.value = phoneFormat;
 
   let maxLengthText;
@@ -439,7 +429,7 @@ const validatePhone = () => {
     LiRegex.style.display = "none";
   }
 
-  if (phoneFormat.length >= 14) {
+  if (phoneFormat.length >= 15) {
     error = true;
     maxLengthText = maxLengthMessage;
     liMaxLength.style.display = "block";
@@ -460,28 +450,29 @@ const validatePhone = () => {
   LiRegex.textContent = regexText;
 };
 
-const contact_submit = (e) => {
-  // Stop Form From Submitting
-  e.preventDefault();
+const postFormDataToEmailClient = (e) => {
+  // get form field values
+  let name = document.getElementById("name").value;
+  let phone = document.getElementById("phone").value;
+  let subject = document.getElementById("subject").value;
+  let message = document.getElementById("message").value;
 
-  // Set Initial letiables
-  let target = e.target || e.srcElement;
+  // Set Initial values
   let to = "corianoharris@gmail.com";
   let uri = "mailto:" + to;
   let body = "";
 
   // Build Body / Message with all Input Fields
-  body += "Name: " + nameInput + "\xa0" + "\r\n";
-  body += "Phone Number: " + telInput + "\r\n";
+  body += "Name: " + name + "\xa0" + "\r\n";
+  body += "Phone Number: " + phone + "\r\n";
   body += message + "\r\n\r\n";
 
   // Build final Mailto URI
-  uri += "from=" + encodeURIComponent(emailInput);
-  uri += "?subject=" + encodeURIComponent(subjectInput);
+  uri += "?subject=" + encodeURIComponent(subject);
   uri += "&body=" + encodeURIComponent(body);
 
   // Open Mailto in New Window / Tab
-  window.open(uri, "_blank");
+  window.open(uri);
 };
 
 const copyrightYear = document.querySelector(".copyright-year");
@@ -489,7 +480,7 @@ copyrightYear.innerText = new Date().getFullYear();
 
 // UTILS
 
-const renderListItems = (array, element) => {
+const displayListOfKeywords = (array, element) => {
   for (item of array) {
     let li = document.createElement("li");
     li.innerHTML = item;
@@ -499,6 +490,19 @@ const renderListItems = (array, element) => {
 };
 
 // EVENT LISTENERS
+
+window.addEventListener(
+  "load",
+  () => {
+    displayListOfKeywords(communities, communitiesList);
+    displayListOfKeywords(clients, clientsList);
+    displayListOfKeywords(graphicDesignKeywords, graphicDesignKeywordsList);
+    displayListOfKeywords(uxKeywords, uxKeywordsList);
+    displayListOfKeywords(uiKeywords, uiKeywordsList);
+    displayListOfKeywords(devKeywords, devKeywordsList);
+  },
+  false
+);
 
 // nav
 
@@ -532,39 +536,44 @@ closeNavBtn.addEventListener(
 
 // form
 
+// form default button state
+window.addEventListener("DOMContentLoaded", () => {
+  const submitButtonDefaultState = document.getElementById("submit-circle");
+  submitButtonDefaultState.style.backgroundColor = "#D3D3D3";
+  submitButtonDefaultState.style.cursor = "none";
+});
+
 FORM.addEventListener(
   "input",
   () => {
     if (
-      nameErrorWrapper.style.display === "block" ||
-      emailErrorWrpper.style.display === "block" ||
-      phoneErrorWrapper.style.display === "block" ||
-      subjectErrorWrapper.style.display === "block" ||
-      messageErrorWrpper.style.display === "block"
+      nameError.style.display === "block" ||
+      emailError.style.display === "block" ||
+      phoneError.style.display === "block" ||
+      subjectError.style.display === "block" ||
+      messageError.style.display === "block"
     ) {
       submitBtn.setAttribute("disabled", true);
       submitButtonCircle.style.backgroundColor = "#D3D3D3";
     } else {
-      submitBtn.setAttribute("disabled", false);
+      submitBtn.removeAttribute("disabled");
       submitButtonCircle.style.backgroundColor = "#be3455";
     }
   },
   false
 );
 
-NAME_FIELD.addEventListener("keydown", validateName, false);
-NAME_FIELD.removeEventListener("blur", validateName);
+NAME_FIELD.addEventListener("keydown", validateNameValue, false);
+NAME_FIELD.removeEventListener("blur", validateNameValue);
 
-PHONE_FIELD.addEventListener("keydown", validatePhone, false);
-PHONE_FIELD.removeEventListener("blur", validatePhone);
+PHONE_FIELD.addEventListener("keydown", validatePhoneValue, false);
+PHONE_FIELD.removeEventListener("blur", validatePhoneValue);
 
-EMAIL_FIELD.addEventListener("keydown", validateEmail, false);
-EMAIL_FIELD.removeEventListener("blur", validateEmail);
+EMAIL_FIELD.addEventListener("keydown", validateEmailValue, false);
+EMAIL_FIELD.removeEventListener("blur", validateEmailValue);
 
-SUBJECT_FIELD.addEventListener("keydown", validateSubject, false);
-SUBJECT_FIELD.removeEventListener("blur", validateSubject);
+SUBJECT_FIELD.addEventListener("keydown", validateSubjectValue, false);
+SUBJECT_FIELD.removeEventListener("blur", validateSubjectValue);
 
-MESSAGE_FIELD.addEventListener("keydown", validateMessage, false);
-MESSAGE_FIELD.removeEventListener("blur", validateMessage);
-
-submitBtn.addEventListener("click", contact_submit, false);
+MESSAGE_FIELD.addEventListener("keydown", validateMessageValue, false);
+MESSAGE_FIELD.removeEventListener("blur", validateMessageValue);

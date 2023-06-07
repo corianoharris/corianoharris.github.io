@@ -1,9 +1,14 @@
-/* --- Base --- */
+/* 
+Following the OMCSS File structure
+https://github.com/alimansoor/omcss
+*/
 
-/* imports */
+/* --- BASE --- */
+
+/** imports **/
 @import url("https://fonts.googleapis.com/css2?family=Darumadrop+One&family=Roboto:wght@700&family=Varela+Round&display=swap");
 
-/* css variables */
+/** variables **/
 :root {
   --color-dark: #1f1f1f;
   --color-white: #fff;
@@ -13,7 +18,7 @@
   background-color: var(--color-white);
 }
 
-/* RESETS */
+/** resets **/
 
 /* Box sizing rules */
 *,
@@ -37,7 +42,6 @@ dd {
 }
 
 /* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
-ul[role="list"],
 ol[role="list"] {
   list-style: none;
 }
@@ -83,7 +87,7 @@ select {
   }
 }
 
-/* GLOBALS */
+/** globals **/
 
 body {
   background-color: var(--background-color);
@@ -153,6 +157,7 @@ a {
   text-decoration: none;
   text-transform: uppercase;
 }
+
 a:link,
 a:active,
 a:hover,
@@ -170,7 +175,8 @@ input {
   padding: 10px 5px;
 }
 
-/* --- layouts --- */
+/* --- LAYOUTS --- */
+
 .app-wrapper {
   background-color: inherit;
   display: block;
@@ -180,15 +186,16 @@ input {
   padding: 15px;
   height: 100%;
 }
+
 @media (min-width: 648px) {
   .app-wrapper {
     width: 80%;
   }
 }
 
-/* --- modules --- */
+/* --- MODULES --- */
 
-/* navigation */
+/** navigation **/
 
 #nav-hamburger {
   position: sticky;
@@ -254,6 +261,7 @@ input {
   .overlay a {
     font-size: 20px;
   }
+
   p .overlay #nav-closebtn {
     font-size: 40px;
     top: 15px;
@@ -261,9 +269,22 @@ input {
   }
 }
 
-/* end of navigation */
+/* navigation  state */
+.nav-item a:visited {
+  color: #6c6866;
+  padding-bottom: 3px;
+}
 
-/* line separator */
+.nav-item a:hover {
+  color: white;
+}
+
+.nav-item a:active,
+.nav-item a:link {
+  color: white;
+}
+
+/** separator **/
 .separator {
   margin: 30px 0;
 }
@@ -285,6 +306,7 @@ input {
     width: 350px;
   }
 }
+
 @media (min-width: 900px) {
   .info-notify {
     width: 600px;
@@ -296,7 +318,7 @@ input {
   width: auto;
 }
 
-/* section title */
+/* section header */
 .title {
   width: 100%;
 }
@@ -308,11 +330,12 @@ input {
   padding: 2px 5px;
 }
 
-/* content section */
+/* section content */
 .section {
   margin: 20px 0;
   padding: 20px 5px;
 }
+
 @media (min-width: 900px) {
   .section {
     padding: 20px 10px;
@@ -373,7 +396,7 @@ input {
   }
 }
 
-/* list */
+/** list **/
 .list {
   display: flex;
   flex-wrap: wrap;
@@ -401,6 +424,7 @@ input {
   margin-bottom: 20px;
   width: 100%;
 }
+
 .card-info {
   align-items: center;
   display: block;
@@ -408,6 +432,7 @@ input {
   text-align: center;
   height: auto;
 }
+
 .card-info a {
   align-items: center;
   display: inline-block;
@@ -416,13 +441,15 @@ input {
   width: auto;
 }
 
-/* Clients pills */
+/** clients **/
+
+/** keyword pills **/
 .clients-list li {
   background-color: var(--color-brand);
   color: white;
 }
 
-/* client card */
+/** quote card **/
 .client-quotes-card {
   display: flex;
   justify-content: center;
@@ -432,11 +459,13 @@ input {
   width: auto;
   box-shadow: none;
 }
+
 @media (min-width: 648px) {
   .client-quotes-card {
     width: 350px;
   }
 }
+
 .picture-clients {
   position: absolute;
   bottom: 10px;
@@ -450,11 +479,13 @@ input {
   text-transform: capitalize;
   font-style: italic;
 }
+
 .clients-img {
   height: 60px;
   width: 60px;
 }
-/* client projects */
+
+/* projects card */
 .project-card {
   box-shadow: 0 4px 8px 0 rgba(138, 135, 135, 0.2),
     0 6px 20px 0 rgba(136, 134, 134, 0.19);
@@ -464,16 +495,19 @@ input {
   border-radius: 2rem;
   padding: 10px;
 }
+
 @media (min-width: 900px) {
   .project-card {
     width: 350px;
   }
 }
+
 @media (min-width: 748px) {
   .project-card {
     width: 280px;
   }
 }
+
 @media (min-width: 320px) {
   .project-card {
     width: 100%;
@@ -543,7 +577,7 @@ input {
   margin-bottom: 15px;
 }
 
-/* button */
+/** button **/
 
 button {
   background: transparent;
@@ -658,6 +692,133 @@ button:hover .button-text {
   color: var(--color-white);
 }
 
+/* form */
+
+#contact h2 {
+  text-align: left;
+}
+
+form {
+  display: inline-block;
+  width: 100%;
+}
+
+@media (min-width: 640px) {
+  form {
+    width: 80%;
+  }
+
+  .form {
+    text-align: center;
+  }
+}
+
+.custom-field {
+  border-top: 20px solid transparent;
+  position: relative;
+  font-size: 14px;
+  margin: 10px 0;
+  padding: 12px 0;
+  top: 0;
+  width: 100%;
+}
+
+.custom-field input,
+.custom-field textarea {
+  margin: 10px 0;
+  appearance: none;
+  border: none;
+  border-radius: 3px;
+  font-size: 14px;
+  outline: none;
+  width: 100%;
+  -webkit-appearance: none;
+  -ms-appearance: none;
+  -moz-appearance: none;
+}
+
+.custom-field .placeholder {
+  position: absolute;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  width: auto;
+  transform: translateY(-50%);
+  transition: top 0.3s ease, color 0.3s ease, font-size 0.3s ease;
+  margin: 10px 0;
+  white-space: nowrap;
+}
+
+/* form fields */
+
+.input-wrapper {
+  margin: 15px 0;
+  border-bottom: 1px solid var(--color-brand);
+  border-radius: 4px;
+  text-align: left;
+}
+
+.custom-field input,
+.custom-field textarea {
+  margin-bottom: 20px;
+  background: none;
+  border: 2px solid var(--color-brand);
+  color: var(--color-brand);
+  transition: border-color 0.3s ease;
+  border: none;
+}
+
+.custom-field textarea {
+  padding: 10px;
+  color: var(--color-brand);
+}
+
+#message {
+  padding: 20px 10px;
+  height: auto;
+}
+
+.validation-error-message {
+  display: none;
+  margin: 0 0 0 10px;
+  width: auto;
+  position: relative;
+  top: -15px;
+  left: 0;
+  padding: 5px 10px;
+  text-align: left;
+  border-radius: 0.5rem;
+  text-transform: none;
+  color: darkgray;
+  box-shadow: 0 4px 8px 0 rgba(138, 135, 135, 0.2),
+    0 6px 20px 0 rgba(136, 134, 134, 0.19);
+}
+
+.validation-error-message-textarea {
+  top: -22px;
+}
+
+*/ .form-info-notify {
+  font-size: 10px;
+  font-style: italic;
+  font-weight: 900;
+  margin-bottom: 30px;
+  text-align: left;
+}
+
+.validation-error-message li {
+  font-size: 12px;
+  color: darkgray;
+}
+
+.footer {
+  border-radius: 0;
+  bottom: 0;
+  margin-top: 30px;
+  position: relative;
+}
+
+/** --- PAGES --- **/
+
 .social-media-links-text {
   justify-content: center;
   width: 300px;
@@ -689,9 +850,7 @@ button:hover .button-text {
   justify-self: end;
 }
 
-/* --- custom --- */
-
-/** profile **/
+/* profile */
 .profile {
   display: block;
   justify-content: center;
@@ -724,7 +883,7 @@ button:hover .button-text {
   width: 200px;
 }
 
-.first-name {
+#first-name {
   font-size: 42px;
   font-weight: 700;
   letter-spacing: 0.2rem;
@@ -733,7 +892,7 @@ button:hover .button-text {
   width: auto;
 }
 
-.last-name {
+#last-name {
   font-size: 20px;
   letter-spacing: 0.5rem;
   font-weight: 100;
@@ -805,122 +964,10 @@ button:hover .button-text {
   width: 150px;
 }
 
-/* form */
-form {
-  display: inline-block;
-  width: 100%;
-}
-
-@media (min-width: 640px) {
-  form {
-    width: 80%;
-  }
-  .form {
-    text-align: center;
-  }
-}
-
-.custom-field {
-  border-top: 20px solid transparent;
-  position: relative;
-  font-size: 14px;
-  margin: 10px 0;
-  padding: 12px 0;
-  top: 0;
-  width: 100%;
-}
-
-.custom-field input,
-.custom-field textarea {
-  margin: 10px 0;
-  appearance: none;
-  border: none;
-  border-radius: 3px;
-  font-size: 14px;
-  outline: none;
-  width: 100%;
-  -webkit-appearance: none;
-  -ms-appearance: none;
-  -moz-appearance: none;
-}
-
-.custom-field .placeholder {
-  position: absolute;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  width: auto;
-  transform: translateY(-50%);
-  transition: top 0.3s ease, color 0.3s ease, font-size 0.3s ease;
-  margin: 10px 0;
-  white-space: nowrap;
-}
-
-/* form fields */
-
-.input-wrapper {
-  margin: 15px 0;
-  border-bottom: 1px solid var(--color-brand);
-  border-radius: 4px;
-  text-align: left;
-}
-
-.custom-field.one input,
-.custom-field.two input,
-.custom-field.three input,
-.custom-field.four input,
-.custom-field.five textarea {
-  margin-bottom: 20px;
-  background: none;
-  border: 2px solid var(--color-brand);
-  color: var(--color-brand);
-  transition: border-color 0.3s ease;
-  border: none;
-}
-
-.custom-field.five textarea {
-  padding: 10px;
-  color: var(--color-brand);
-}
-
-#message {
-  padding: 20px 10px;
-  height: auto;
-}
-
-.validation-error-message {
-  display: none;
-  margin: 0 0 0 10px;
-  width: auto;
-  position: relative;
-  top: -15px;
-  left: 0;
-  padding: 5px 10px;
-  text-align: left;
-  border-radius: 0.5rem;
-  text-transform: none;
-  color: darkgray;
-  box-shadow: 0 4px 8px 0 rgba(138, 135, 135, 0.2),
-    0 6px 20px 0 rgba(136, 134, 134, 0.19);
-}
-.validation-error-message-textarea {
-  top: -22px;
-}
-*/ .form-info-notify {
-  font-size: 10px;
-  font-style: italic;
-  font-weight: 900;
-  margin-bottom: 30px;
-  text-align: left;
-}
-
-.validation-error-message li {
-  font-size: 12px;
-  color: darkgray;
-}
-
 .button-container {
   text-align: center;
 }
+
 .button {
   border: 1px solid var(--color-brand);
   border-radius: 0.3rem;
@@ -934,88 +981,6 @@ form {
   width: 100px;
 }
 
-.footer {
-  border-radius: 0;
-  bottom: 0;
-  margin-top: 30px;
-  position: relative;
-}
-
 .copyright {
   text-align: center;
 }
-
-/* --- state --- */
-
-/* navigation */
-
-.nav-item a:visited {
-  color: #6c6866;
-  padding-bottom: 3px;
-}
-
-.nav-item a:hover {
-  color: white;
-}
-.nav-item a:active,
-.nav-item a:link {
-  color: white;
-}
-
-/** form **/
-.asterisk {
-  position: relative;
-  top: 8px;
-  left: 0;
-  color: var(--color-error);
-  font-size: 2rem;
-}
-input:focus {
-  padding-top: 20px;
-}
-
-input:focus,
-textarea.focus {
-  color: var(--color-brand);
-}
-.custom-field.five textarea:focus {
-  padding: 20px 0 0 10px;
-}
-
-input:not(:focus)::placeholder,
-textarea:not(:focus)::placeholder {
-  display: block;
-  font-size: 11px;
-  opacity: 0;
-}
-
-/* Removing input background colour for Chrome autocomplete */
-input:-webkit-autofill,
-input:-webkit-autofill:hover,
-input:-webkit-autofill:active,
-input:-webkit-autofill:focus {
-  background-color: transparent !important;
-  box-shadow: 0 0 0 1000px #202020 inset !important;
-  color: var(--color-brand) !important;
-  -webkit-box-shadow: 0 0 0 1000px #202020 inset !important;
-  -webkit-text-fill-color: #fff !important;
-}
-
-/* --- utils --- */
-.hidden {
-  display: none;
-}
-
-.display {
-  display: block;
-}
-
-.paddingNone {
-  padding: 0;
-}
-
-.disabled {
-  background-color: darkgray;
-  pointer-events: none;
-}
-/* --- theme --- */
