@@ -791,6 +791,7 @@ form {
   color: darkgray;
   box-shadow: 0 4px 8px 0 rgba(138, 135, 135, 0.2),
     0 6px 20px 0 rgba(136, 134, 134, 0.19);
+  font-size: 14px;
 }
 
 .validation-error-message-textarea {
