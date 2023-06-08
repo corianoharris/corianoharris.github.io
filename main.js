@@ -101,9 +101,9 @@
     let emailRegex = /^[a-zA-Z0-9.]+@[a-zA-Z]{2,10}\.[a-zA-Z]{2,10}$/;
 
     const regexMessage =
-      "Minimum of 2 characters before and after @ sign and minimum of 2 character after.";
-    const maxLengthMessage = "Email should be less than 50 characters or less";
-    const emptyMessage = "Email can't be empty";
+      "- have 2 characters before and after @ sign and minimum of 2 character after.";
+    const maxLengthMessage = "- 50 characters or less";
+    const emptyMessage = " - not be empty";
 
     let error;
 
@@ -167,10 +167,10 @@
 
     const nameRegex = /^[a-zA-Z\s]+$/;
 
-    const noSpaceAsFirstChar = "Name can't start with a space";
-    const regexMessage = "Name can only contain alphabets and spaces";
-    const maxLengthMessage = "Name should be 25 characters or less";
-    const emptyMessage = "Name can't be empty";
+    const noSpaceAsFirstChar = "- not start with a space";
+    const regexMessage = "- only contain alphabets and spaces";
+    const maxLengthMessage = "- be 25 characters or less";
+    const emptyMessage = "- not be empty";
 
     let error;
 
@@ -247,11 +247,10 @@
 
     const subjectRegex = /^[a-z0-9]+([-_\s]{1}[a-z0-9]+)*$/i;
 
-    const noSpaceAsFirstChar = "Subject can't start with a space";
-    const regexMessage =
-      "Subject can only contain alphanumeric characters and spaces";
-    const maxLengthMessage = "Subject should be 50 characters or less";
-    const emptyMessage = "Subject can't be empty";
+    const noSpaceAsFirstChar = " - not start with a space";
+    const regexMessage = " - only contain alphanumeric characters and spaces";
+    const maxLengthMessage = " - 50 characters or less";
+    const emptyMessage = "- Subject can't be empty";
 
     let error;
 
@@ -329,11 +328,10 @@
 
     const messageRegex = /^[a-z0-9]+([-_\s]{1}[a-z0-9]+)*$/i;
 
-    const regexMessage =
-      "Message can only contain alphanumeric characters and spaces";
-    const maxLengthMessage = "Message should be 500 characters or less";
-    const emptyMessage = "Message can't be empty";
-    const noSpaceAsFirstChar = "Message can't start with a space";
+    const regexMessage = "- only contain alphanumeric characters and spaces";
+    const maxLengthMessage = "- be 500 characters or less";
+    const emptyMessage = "- not be empty";
+    const noSpaceAsFirstChar = "- not start with a space";
 
     let error;
 
@@ -412,8 +410,8 @@
 
     // const phoneFormat = phoneInput.replace(/(\d{3})(\d{3})(\d{4})/, "$1-$2-$3");
 
-    const maxLengthMessage = "Max numbers is 10";
-    const regexMessage = "Phone can only contain numbers";
+    const maxLengthMessage = "- 10 numbers";
+    const regexMessage = "- only contain numbers";
 
     phone.value = phoneFormat;
 
