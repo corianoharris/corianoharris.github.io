@@ -86,7 +86,6 @@
   const messageError = document.getElementById("message-error-message");
 
   const submitBtn = document.getElementById("submit");
-  const submitButtonCircle = document.querySelector("#submit-circle");
 
   // Form validations
 
@@ -450,6 +449,7 @@
   };
 
   const postFormDataToEmailClient = (e) => {
+    e.preventDefault();
     // get form field values
     let name = document.getElementById("name").value;
     let phone = document.getElementById("phone").value;
@@ -471,7 +471,7 @@
     uri += "&body=" + encodeURIComponent(body);
 
     // Open Mailto in New Window / Tab
-    window.open(uri);
+    window.open(uri, "_blank");
   };
 
   const copyrightYear = document.querySelector(".copyright-year");
@@ -537,9 +537,8 @@
 
   // form default button state
   window.addEventListener("DOMContentLoaded", () => {
-    const submitButtonDefaultState = document.getElementById("submit-circle");
-    submitButtonDefaultState.style.backgroundColor = "#D3D3D3";
-    submitButtonDefaultState.style.cursor = "none";
+    submitBtn.style.backgroundColor = "#D3D3D3";
+    submitBtn.style.cursor = "none";
   });
 
   FORM.addEventListener(
@@ -553,14 +552,18 @@
         messageError.style.display === "block"
       ) {
         submitBtn.setAttribute("disabled", true);
-        submitButtonCircle.style.backgroundColor = "#D3D3D3";
+        submitBtn.style.backgroundColor = "#D3D3D3";
+        submitBtn.style.color = "#be3455";
       } else {
         submitBtn.removeAttribute("disabled");
-        submitButtonCircle.style.backgroundColor = "#be3455";
+        submitBtn.style.backgroundColor = "#be3455";
+        submitBtn.style.color = "white";
       }
     },
     false
   );
+
+  submitBtn.addEventListener("click", postFormDataToEmailClient, false);
 
   NAME_FIELD.addEventListener("keydown", validateNameValue, false);
   NAME_FIELD.removeEventListener("blur", validateNameValue);
