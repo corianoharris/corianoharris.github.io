@@ -298,7 +298,8 @@ input {
   margin-bottom: 20px;
   text-align: left;
   text-transform: lowercase;
-  color: gray;
+  font-weight: bold;
+  font-size: 13px;
 }
 
 @media (min-width: 648px) {
@@ -710,30 +711,12 @@ form {
 }
 
 .custom-field {
-  border-top: 20px solid transparent;
-  position: relative;
-  font-size: 14px;
-  margin: 10px 0;
-  padding: 12px 0;
-  top: 0;
+  display: flex;
   width: 100%;
+  font-size: 14px;
 }
 
-.custom-field input,
-.custom-field textarea {
-  margin: 10px 0;
-  appearance: none;
-  border: none;
-  border-radius: 3px;
-  font-size: 14px;
-  outline: none;
-  width: 100%;
-  -webkit-appearance: none;
-  -ms-appearance: none;
-  -moz-appearance: none;
-}
-
-.custom-field .placeholder {
+.custom-field .label-text {
   position: absolute;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -744,23 +727,31 @@ form {
   white-space: nowrap;
 }
 
-/* form fields */
-
-.input-wrapper {
-  margin: 15px 0;
-  border-bottom: 1px solid var(--color-brand);
-  border-radius: 4px;
-  text-align: left;
+.required {
+  color: var(--color-brand);
+  text-transform: lowercase;
+  padding-left: 5px;
 }
+
+/* form fields */
 
 .custom-field input,
 .custom-field textarea {
-  margin-bottom: 20px;
+  margin: 20px 0;
   background: none;
-  border: 2px solid var(--color-brand);
+  border: 2px solid grey;
   color: var(--color-brand);
   transition: border-color 0.3s ease;
-  border: none;
+  flex-grow: 1;
+  padding-left: 10px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px 0 rgba(138, 135, 135, 0.2),
+    0 6px 20px 0 rgba(136, 134, 134, 0.19);
+}
+
+.custom-field input:focus-visible,
+.custom-field textarea:focus-visible {
+  outline-color: var(--color-brand);
 }
 
 .custom-field textarea {
@@ -784,9 +775,7 @@ form {
   text-align: left;
   border-radius: 0.5rem;
   text-transform: none;
-  color: darkgray;
-  box-shadow: 0 4px 8px 0 rgba(138, 135, 135, 0.2),
-    0 6px 20px 0 rgba(136, 134, 134, 0.19);
+  color: var(--color-brand);
   font-size: 14px;
 }
 
@@ -804,7 +793,6 @@ form {
 
 .validation-error-message li {
   font-size: 12px;
-  color: darkgray;
 }
 
 .footer {

@@ -103,8 +103,7 @@
 
     let emailRegex = /^[a-zA-Z0-9.]+@[a-zA-Z]{2,10}\.[a-zA-Z]{2,10}$/;
 
-    const regexMessage =
-      "- have 2 characters before and after @ sign and minimum of 2 character after.";
+    const regexMessage = "- not contain spaces before or after the '@' symbol.";
     const maxLengthMessage = "- 50 characters or less";
     const emptyMessage = " - not be empty";
 
@@ -413,10 +412,12 @@
 
     // const phoneFormat = phoneInput.replace(/(\d{3})(\d{3})(\d{4})/, "$1-$2-$3");
 
-    const maxLengthMessage = "- 10 numbers";
+    const maxLengthMessage = "- contain 10 digits";
     const regexMessage = "- only contain numbers";
 
     phone.value = phoneFormat;
+
+    console.log(phoneFormat.length);
 
     let maxLengthText;
     let regexText;
@@ -431,7 +432,7 @@
       LiRegex.style.display = "none";
     }
 
-    if (phoneFormat.length >= 15) {
+    if (phoneFormat.length > 14 || phoneFormat.length < 14) {
       error = true;
       maxLengthText = maxLengthMessage;
       liMaxLength.style.display = "block";
