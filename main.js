@@ -465,7 +465,7 @@
     // Build Body / Message with all Input Fields
     body += "Name: " + name + "\xa0" + "\r\n";
     body += "Phone Number: " + phone + "\r\n";
-    body += "\r\n\r\n\r\n" + message;
+    body += "\r\n\r\n" + message;
 
     // Build final Mailto URI
     uri += "?subject=" + encodeURIComponent(subject);
@@ -473,6 +473,9 @@
 
     // Open Mailto in New Window / Tab
     window.open(uri, "_blank");
+
+    //reset form
+    FORM.reset();
   };
 
   const copyrightYear = document.querySelector(".copyright-year");
