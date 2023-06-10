@@ -410,14 +410,10 @@
     const LiRegex = document.getElementById("error-phone-regex");
     const phoneRegex = /^(?=.*[0-9])[- +()0-9]+$/;
 
-    // const phoneFormat = phoneInput.replace(/(\d{3})(\d{3})(\d{4})/, "$1-$2-$3");
-
-    const maxLengthMessage = "- contain 10 digits";
+    const maxLengthMessage = "- contain 10 numbers";
     const regexMessage = "- only contain numbers";
 
     phone.value = phoneFormat;
-
-    console.log(phoneFormat.length);
 
     let maxLengthText;
     let regexText;
@@ -469,7 +465,7 @@
     // Build Body / Message with all Input Fields
     body += "Name: " + name + "\xa0" + "\r\n";
     body += "Phone Number: " + phone + "\r\n";
-    body += message + "\r\n\r\n";
+    body += "\r\n\r\n\r\n" + message;
 
     // Build final Mailto URI
     uri += "?subject=" + encodeURIComponent(subject);
