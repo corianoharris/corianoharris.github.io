@@ -55,11 +55,11 @@
     <nav id="myNav" class="overlay" role="navigation" aria-label="navigation">
       <a href="javascript:void(0)" id="nav-closebtn">&times;</a>
       <div class="overlay-content">
-        <a class="nav-items" href="#me" onclick="closeNav()">
+        <a class="nav-items" href="#me">
           <p class="nav-link-text">me</p>
         </a>
-        <a class="nav-items" href="#work" onclick="closeNav()">work</a>
-        <a class="nav-items" href="#contact" onclick="closeNav()">let's make something</a>
+        <a class="nav-items" href="#work">work</a>
+        <a class="nav-items" href="#contact">let's make something</a>
       </div>
     </nav>
 
@@ -338,8 +338,8 @@
     <section class="section form">
       <form id="form" name="contact" method="POST" role="form" aria-label="contact form" onsubmit="return false;">
         <div class="input-wrapper">
-          <label id="one" class="custom-field" aria-label="name form field"><span class="placeholder">name<span
-                class="asterisk">*</span></span>
+          <label id="one" class="custom-field" aria-label="name form field"><span class="label-text">name<span
+                class="required">(required)</span></span>
             <input id="name" type="text" name="fullname" placeholder="your name" maxLength="25" required />
           </label>
           <ul id="name-error-message" class="validation-error-message" aria-label="error message" tabindex="0"
@@ -352,9 +352,9 @@
         </div>
 
         <div class="input-wrapper">
-          <label id="two" class="custom-field" aria-label="phone number form field"> <span class="placeholder">phone
+          <label id="two" class="custom-field" aria-label="phone number form field"> <span class="label-text">phone
               number</span>
-            <input id="phone" type="tel" placeholder="1 (000) 000-0000" name="phone" maxLength="14" />
+            <input id="phone" type="tel" placeholder="(000) 000-0000" name="phone" maxLength="14" />
           </label>
           <ul id="phone-error-message" class="validation-error-message" aria-label="error message" tabindex="0"
             role="list">Phone must:
@@ -364,12 +364,12 @@
         </div>
 
         <div class="input-wrapper">
-          <label id="three" class="custom-field" aria-label="email form field"> <span class="placeholder">email<span
-                class="asterisk">*</span></span>
+          <label id="three" class="custom-field" aria-label="email form field"> <span class="label-text">email<span
+                class="required">(required)</span></span>
             <input id="email" type="email" placeholder="username@domain" name="email" maxLength="50" />
           </label>
           <ul id="email-error-message" class="validation-error-message" aria-label="error message" tabindex="0"
-            role="list">Email must have:
+            role="list">Email must:
             <li id="error-email-regex" class="errors" role="listitem"></li>
             <li id="error-email-length" class="errors" role="listitem"></li>
             <li id="error-email-empty" class="errors" role="listitem"></li>
@@ -377,8 +377,8 @@
         </div>
 
         <div class="input-wrapper">
-          <label id="four" class="custom-field" aria-label="subject form field"><span class="placeholder">subject<span
-                class="asterisk">*</span></span>
+          <label id="four" class="custom-field" aria-label="subject form field"><span class="label-text">subject<span
+                class="required">(required)</span></span>
             <input id="subject" type="text" placeholder="title" name="subject" maxLength="25" />
           </label>
           <ul id="subject-error-message" class="validation-error-message" aria-label="error message" tabindex="0"
@@ -391,8 +391,8 @@
         </div>
 
         <div class="input-wrapper">
-          <label id="five" class="custom-field" aria-label="message form field"><span class="placeholder">Your
-              message<span class="asterisk">*</span></span>
+          <label id="five" class="custom-field" aria-label="message form field"><span class="label-text">Your
+              message<span class="required">(required)</span></span>
             <textarea id="message" cols="30" rows="10" placeholder="Your message" name="message" cols="30" rows="10"
               maxLength="500"></textarea>
           </label>
@@ -406,15 +406,12 @@
         </div>
 
         <p class="info-notify form-info-notify"
-          aria-label="Submitting this form will open and autopopulate the form data in your email client">Submitting
-          this form will open and autopopulate this form data into your email client</span></p>
+          aria-label="Submitting this form will open and autopopulate the form data in your email client">By submitting this form, the data will automatically open and populate in your email client</span></p>
 
         <div class="button-container" role="button">
-          <button  type="submit" id="submit" class="btn social-media-links" role="button" aria-label="contact form submit button" onclick="postFormDataToEmailClient()">
-            <span id="submit-circle" class="circle">
-              <span id="submit-arrow" class="icon arrow">&#8594;</span>
-            </span>
-            <span class="button-text project-links-text form"><a href="return false;">Submit</a></span>
+      </form>
+          <button  type="submit" id="submit" class="btn social-media-links" role="button" aria-label="contact form submit button">
+            Submit
           </button>
         </div>
       </form>

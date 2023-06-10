@@ -56,11 +56,15 @@
   const MESSAGE_FIELD = document.getElementById("message");
 
   // navigation
-  const navLinks = document.querySelectorAll(".nav-link-text");
+  const navLinks = [].slice.call(document.querySelectorAll(".nav-items"));
   const firstNavLink = document.querySelectorAll(".nav-items")[0];
   const lastNavLink = document.querySelectorAll(".nav-items")[2];
   const navHamburger = document.getElementById("nav-hamburger");
   const closeNavBtn = document.getElementById("nav-closebtn");
+
+  navLinks.forEach((link) => {
+    link.addEventListener("click", closeNav, false);
+  });
 
   function openNav() {
     document.getElementById("myNav").style.display = "block";
@@ -86,7 +90,6 @@
   const messageError = document.getElementById("message-error-message");
 
   const submitBtn = document.getElementById("submit");
-  const submitButtonCircle = document.querySelector("#submit-circle");
 
   // Form validations
 
@@ -100,8 +103,7 @@
 
     let emailRegex = /^[a-zA-Z0-9.]+@[a-zA-Z]{2,10}\.[a-zA-Z]{2,10}$/;
 
-    const regexMessage =
-      "- have 2 characters before and after @ sign and minimum of 2 character after.";
+    const regexMessage = "- not contain spaces before or after the '@' symbol.";
     const maxLengthMessage = "- 50 characters or less";
     const emptyMessage = " - not be empty";
 
@@ -408,9 +410,7 @@
     const LiRegex = document.getElementById("error-phone-regex");
     const phoneRegex = /^(?=.*[0-9])[- +()0-9]+$/;
 
-    // const phoneFormat = phoneInput.replace(/(\d{3})(\d{3})(\d{4})/, "$1-$2-$3");
-
-    const maxLengthMessage = "- 10 numbers";
+    const maxLengthMessage = "- contain 10 numbers";
     const regexMessage = "- only contain numbers";
 
     phone.value = phoneFormat;
@@ -428,7 +428,7 @@
       LiRegex.style.display = "none";
     }
 
-    if (phoneFormat.length >= 15) {
+    if (phoneFormat.length > 14 || phoneFormat.length < 14) {
       error = true;
       maxLengthText = maxLengthMessage;
       liMaxLength.style.display = "block";
@@ -450,6 +450,7 @@
   };
 
   const postFormDataToEmailClient = (e) => {
+    e.preventDefault();
     // get form field values
     let name = document.getElementById("name").value;
     let phone = document.getElementById("phone").value;
@@ -464,14 +465,14 @@
     // Build Body / Message with all Input Fields
     body += "Name: " + name + "\xa0" + "\r\n";
     body += "Phone Number: " + phone + "\r\n";
-    body += message + "\r\n\r\n";
+    body += "\r\n\r\n\r\n" + message;
 
     // Build final Mailto URI
     uri += "?subject=" + encodeURIComponent(subject);
     uri += "&body=" + encodeURIComponent(body);
 
     // Open Mailto in New Window / Tab
-    window.open(uri);
+    window.open(uri, "_blank");
   };
 
   const copyrightYear = document.querySelector(".copyright-year");
@@ -537,9 +538,8 @@
 
   // form default button state
   window.addEventListener("DOMContentLoaded", () => {
-    const submitButtonDefaultState = document.getElementById("submit-circle");
-    submitButtonDefaultState.style.backgroundColor = "#D3D3D3";
-    submitButtonDefaultState.style.cursor = "none";
+    submitBtn.style.backgroundColor = "#D3D3D3";
+    submitBtn.style.cursor = "none";
   });
 
   FORM.addEventListener(
@@ -553,14 +553,18 @@
         messageError.style.display === "block"
       ) {
         submitBtn.setAttribute("disabled", true);
-        submitButtonCircle.style.backgroundColor = "#D3D3D3";
+        submitBtn.style.backgroundColor = "#D3D3D3";
+        submitBtn.style.color = "#be3455";
       } else {
         submitBtn.removeAttribute("disabled");
-        submitButtonCircle.style.backgroundColor = "#be3455";
+        submitBtn.style.backgroundColor = "#be3455";
+        submitBtn.style.color = "white";
       }
     },
     false
   );
+
+  submitBtn.addEventListener("click", postFormDataToEmailClient, false);
 
   NAME_FIELD.addEventListener("keydown", validateNameValue, false);
   NAME_FIELD.removeEventListener("blur", validateNameValue);
