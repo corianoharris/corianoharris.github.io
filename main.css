@@ -694,10 +694,6 @@ button:hover .button-text {
 
 /* form */
 
-#contact h2 {
-  text-align: left;
-}
-
 form {
   display: inline-block;
   width: 100%;

@@ -56,11 +56,15 @@
   const MESSAGE_FIELD = document.getElementById("message");
 
   // navigation
-  const navLinks = document.querySelectorAll(".nav-link-text");
+  const navLinks = [].slice.call(document.querySelectorAll(".nav-items"));
   const firstNavLink = document.querySelectorAll(".nav-items")[0];
   const lastNavLink = document.querySelectorAll(".nav-items")[2];
   const navHamburger = document.getElementById("nav-hamburger");
   const closeNavBtn = document.getElementById("nav-closebtn");
+
+  navLinks.forEach((link) => {
+    link.addEventListener("click", closeNav, false);
+  });
 
   function openNav() {
     document.getElementById("myNav").style.display = "block";
