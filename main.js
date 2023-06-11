@@ -56,7 +56,7 @@
   const MESSAGE_FIELD = document.getElementById("message");
 
   // navigation
-  const navLinks = [].slice.call(document.querySelectorAll(".nav-items"));
+  const navLinks = [...document.querySelectorAll(".nav-items")];
   const firstNavLink = document.querySelectorAll(".nav-items")[0];
   const lastNavLink = document.querySelectorAll(".nav-items")[2];
   const navHamburger = document.getElementById("nav-hamburger");
@@ -507,7 +507,7 @@
     false
   );
 
-  // nav
+  // nav keyboard tabbing
 
   firstNavLink.addEventListener("keydown", (e) => {
     if (e.shiftKey && e.key === "Tab") {

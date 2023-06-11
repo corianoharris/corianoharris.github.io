@@ -649,7 +649,6 @@ button.btn .circle .icon.arrow {
   font-size: 0.9rem;
   justify-content: center;
   letter-spacing: 0.2rem;
-  padding-left: -10px;
 }
 
 .button-text:hover a {
@@ -669,7 +668,7 @@ button.btn .button-text {
   text-transform: uppercase;
   transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
   width: auto;
-  padding-left: 55px;
+  padding-left: 40px;
 }
 
 @media (min-width: 760px) {
@@ -806,7 +805,7 @@ form {
 
 .social-media-links-text {
   justify-content: center;
-  width: 300px;
+  width: auto;
 }
 
 @media (max-width: 740px) {
@@ -886,15 +885,16 @@ form {
 
 .profile-quotes {
   font-size: 28px;
+  width: 70%;
   margin: auto;
-  padding-left: 15px;
-  width: 80%;
   height: auto;
+  line-height: 40px;
 }
 
 @media only screen and (max-width: 576px) {
   .profile-quotes {
     width: 100%;
+    margin-top: 30px;
     padding: none;
   }
 }
@@ -908,25 +908,23 @@ form {
 
 /* social media */
 .social-media {
-  align-items: center;
   display: flex;
   flex-direction: column;
-  gap: 1.5rem;
+  align-items: center;
   justify-content: center;
-  text-align: center;
-  transform: scale(60%);
-  width: auto;
+  gap: 3rem;
+  width: 100%;
+  margin: 30px 0;
 }
 
 .social-media-links a {
-  align-items: center;
   display: inline-block;
-  font-size: 1rem;
   justify-content: center;
-  letter-spacing: 0.5rem;
+  align-items: center;
   width: auto;
-  font-weight: 900;
   font-size: 1rem;
+  font-weight: 900;
+  letter-spacing: 0.25rem;
 }
 
 @media (min-width: 900px) {
