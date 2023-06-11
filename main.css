@@ -649,7 +649,6 @@ button.btn .circle .icon.arrow {
   font-size: 0.9rem;
   justify-content: center;
   letter-spacing: 0.2rem;
-  /* padding-left: -10px; */
 }
 
 .button-text:hover a {
@@ -886,15 +885,16 @@ form {
 
 .profile-quotes {
   font-size: 28px;
+  width: 70%;
   margin: auto;
-  padding-left: 15px;
-  width: 80%;
   height: auto;
+  line-height: 40px;
 }
 
 @media only screen and (max-width: 576px) {
   .profile-quotes {
     width: 100%;
+    margin-top: 30px;
     padding: none;
   }
 }
