@@ -558,10 +558,12 @@
         submitBtn.setAttribute("disabled", true);
         submitBtn.style.backgroundColor = "#D3D3D3";
         submitBtn.style.color = "#be3455";
+        submitBtn.style.cursor = "none";
       } else {
         submitBtn.removeAttribute("disabled");
         submitBtn.style.backgroundColor = "#be3455";
         submitBtn.style.color = "white";
+        submitBtn.style.cursor = "pointer";
       }
     },
     false

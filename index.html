@@ -341,7 +341,7 @@
         <div class="input-wrapper">
           <label id="one" class="custom-field" aria-label="name form field"><span class="label-text">name<span
                 class="required">(required)</span></span>
-            <input id="name" type="text" name="fullname" placeholder="your name" maxLength="25" required />
+            <input id="name" type="text" name="fullname" placeholder="your name" maxLength="25" autocomplete="off" required />
           </label>
           <ul id="name-error-message" class="validation-error-message" aria-label="error message" tabindex="0"
             role="list"> Name must:
@@ -355,7 +355,7 @@
         <div class="input-wrapper">
           <label id="two" class="custom-field" aria-label="phone number form field"> <span class="label-text">phone
               number</span>
-            <input id="phone" type="tel" placeholder="(000) 000-0000" name="phone" maxLength="14" />
+            <input id="phone" type="tel" placeholder="(000) 000-0000" name="phone" maxLength="14" autocomplete="off"/>
           </label>
           <ul id="phone-error-message" class="validation-error-message" aria-label="error message" tabindex="0"
             role="list">Phone must:
@@ -367,7 +367,7 @@
         <div class="input-wrapper">
           <label id="three" class="custom-field" aria-label="email form field"> <span class="label-text">email<span
                 class="required">(required)</span></span>
-            <input id="email" type="email" placeholder="username@domain" name="email" maxLength="50" />
+            <input id="email" type="email" placeholder="username@domain" name="email" maxLength="50" autocomplete="off"/>
           </label>
           <ul id="email-error-message" class="validation-error-message" aria-label="error message" tabindex="0"
             role="list">Email must:
@@ -380,7 +380,7 @@
         <div class="input-wrapper">
           <label id="four" class="custom-field" aria-label="subject form field"><span class="label-text">subject<span
                 class="required">(required)</span></span>
-            <input id="subject" type="text" placeholder="title" name="subject" maxLength="25" />
+            <input id="subject" type="text" placeholder="title" name="subject" maxLength="25" autocomplete="off" />
           </label>
           <ul id="subject-error-message" class="validation-error-message" aria-label="error message" tabindex="0"
             role="list">Subject must:
@@ -395,7 +395,7 @@
           <label id="five" class="custom-field" aria-label="message form field"><span class="label-text">Your
               message<span class="required">(required)</span></span>
             <textarea id="message" cols="30" rows="10" placeholder="Your message" name="message" cols="30" rows="10"
-              maxLength="500"></textarea>
+              maxLength="500" autocomplete="off"></textarea>
           </label>
           <ul id="message-error-message" class="validation-error-message" aria-label="error message" tabindex="0"
             role="list">Message must:
