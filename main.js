@@ -1,4 +1,4 @@
-(function () {
+(function runCode() {
   const clients = [
     "Partcycle",
     "CodeCrew",
