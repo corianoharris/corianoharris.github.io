@@ -474,6 +474,8 @@
     // Open Mailto in New Window / Tab
     window.open(uri, "_blank");
 
+    console.log(url);
+
     //reset form
     FORM.reset();
   };
