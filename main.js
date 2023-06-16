@@ -457,6 +457,8 @@
     let subject = document.getElementById("subject").value;
     let message = document.getElementById("message").value;
 
+    const submitBtnLink = document.getElementById("submit-url");
+
     // Set Initial values
     let to = "corianoharris@gmail.com";
     let uri = "mailto:" + to;
@@ -470,6 +472,8 @@
     // Build final Mailto URI
     uri += "?subject=" + encodeURIComponent(subject);
     uri += "&body=" + encodeURIComponent(body);
+
+    submitBtnLink.setAttribute("href", `${url}`);
 
     // Open Mailto in New Window / Tab
     window.open(uri, "_blank");
