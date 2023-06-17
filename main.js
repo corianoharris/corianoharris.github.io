@@ -474,11 +474,10 @@
     uri += "&body=" + encodeURIComponent(body);
 
     submitBtnLink.setAttribute("href", uri);
+    submitBtnLink.click();
 
     // Open Mailto in New Window / Tab
     window.open(uri, "_blank");
-
-    console.log(uri);
 
     //reset form
     FORM.reset();
@@ -564,7 +563,7 @@
         submitBtn.setAttribute("disabled", true);
         submitBtn.style.backgroundColor = "#D3D3D3";
         submitBtn.style.color = "#be3455";
-        submitBtn.style.cursor = "none";
+        submitBtn.style.cursor = "not-allowed";
       } else {
         submitBtn.removeAttribute("disabled");
         submitBtn.style.backgroundColor = "#be3455";
