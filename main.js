@@ -457,8 +457,6 @@
     let subject = document.getElementById("subject").value;
     let message = document.getElementById("message").value;
 
-    const submitBtnLink = document.getElementById("submit-url");
-
     // Set Initial values
     let to = "corianoharris@gmail.com";
     let uri = "mailto:" + to;
@@ -472,9 +470,6 @@
     // Build final Mailto URI
     uri += "?subject=" + encodeURIComponent(subject);
     uri += "&body=" + encodeURIComponent(body);
-
-    submitBtnLink.setAttribute("href", uri);
-    submitBtnLink.click();
 
     // Open Mailto in New Window / Tab
     window.open(uri, "_blank");
@@ -563,7 +558,7 @@
         submitBtn.setAttribute("disabled", true);
         submitBtn.style.backgroundColor = "#D3D3D3";
         submitBtn.style.color = "#be3455";
-        submitBtn.style.cursor = "not-allowed";
+        submitBtn.style.cursor = "none";
       } else {
         submitBtn.removeAttribute("disabled");
         submitBtn.style.backgroundColor = "#be3455";
