@@ -473,12 +473,12 @@
     uri += "?subject=" + encodeURIComponent(subject);
     uri += "&body=" + encodeURIComponent(body);
 
-    submitBtnLink.setAttribute("href", `${url}`);
+    submitBtnLink.setAttribute("href", uri);
 
     // Open Mailto in New Window / Tab
     window.open(uri, "_blank");
 
-    console.log(url);
+    console.log(uri);
 
     //reset form
     FORM.reset();
