@@ -694,18 +694,14 @@ button:hover .button-text {
 
 /* form */
 
-form {
-  display: inline-block;
+#form {
+  display: "inline-block";
   width: 100%;
 }
 
-@media (min-width: 640px) {
-  form {
-    width: 80%;
-  }
-
-  .form {
-    text-align: center;
+@media (max-width: 680px) {
+  #form {
+    display: none;
   }
 }
 
@@ -978,6 +974,16 @@ form {
   font-size: 1rem;
   font-weight: bolder;
   letter-spacing: 2px;
+}
+
+#contact-section-link {
+  display: none;
+}
+
+@media (max-width: 648px) {
+  #contact-section-link {
+    display: block;
+  }
 }
 
 .copyright {
