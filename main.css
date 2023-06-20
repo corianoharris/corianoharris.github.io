@@ -649,6 +649,7 @@ button.btn .circle .icon.arrow {
   font-size: 0.9rem;
   justify-content: center;
   letter-spacing: 0.2rem;
+  padding-right: 30px;
 }
 
 .button-text:hover a {
@@ -668,7 +669,6 @@ button.btn .button-text {
   text-transform: uppercase;
   transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
   width: auto;
-  padding-left: 40px;
 }
 
 @media (min-width: 760px) {
