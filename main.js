@@ -449,8 +449,7 @@
     LiRegex.textContent = regexText;
   };
 
-  const postFormDataToEmailClient = (e) => {
-    e.preventDefault();
+  const formFormattedUri = () => {
     // get form field values
     let name = document.getElementById("name").value;
     let phone = document.getElementById("phone").value;
@@ -470,9 +469,19 @@
     // Build final Mailto URI
     uri += "?subject=" + encodeURIComponent(subject);
     uri += "&body=" + encodeURIComponent(body);
+    return uri;
+  }
 
+ 
+
+
+  
+ 
+
+  const postFormDataToEmailClient = (e) => {
+    e.preventDefault();
     // Open Mailto in New Window / Tab
-    window.open(uri, "_blank");
+    window.open(formFormattedUri(), "_blank");
 
     //reset form
     FORM.reset();

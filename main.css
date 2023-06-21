@@ -330,7 +330,7 @@ input {
   justify-content: space-evenly;
 }
 
-@media (max-width: 764px) {
+@media ( max-width: 764px) {
   .social-media {
     display: block;
     text-align: center;
@@ -607,10 +607,10 @@ button {
 }
 
 button:hover {
-  background-color: var(--color-brand);
-  box-shadow: 0 4px 8px 0 rgba(138, 135, 135, 0.2),
+   background-color: var(--color-brand);
+   box-shadow: 0 4px 8px 0 rgba(138, 135, 135, 0.2),
     0 6px 20px 0 rgba(136, 134, 134, 0.19);
-  color: var(--color-white);
+    color: var(--color-white);
 }
 
 
@@ -625,22 +625,10 @@ button:hover {
 
 
 @media (min-width: 760px) {
-  .button-text {
+.button-text {
     width: auto;
   }
 }
-
-/* .button.btn .button-text a {
-  margin-left: none;
-  text-align: left;
-} */
-
-/* button:hover .circle .icon.arrow {
-  color: var(--color-dark);
-  -webkit-transform: translate(1rem, 0);
-  transform: translate(1rem, 0);
-} */
-
 
 /* form */
 
@@ -773,7 +761,7 @@ button:hover {
   .profile-section-one {
     align-items: center;
     display: flex;
-    gap: 1rem;
+    gap: 8rem;
     justify-content: center;
   }
 }
@@ -814,15 +802,12 @@ button:hover {
 
 .profile-quotes {
   font-size: 28px;
-  width: 70%;
-  margin: auto;
-  height: auto;
+  width: 100%;
   line-height: 40px;
 }
 
 @media only screen and (max-width: 576px) {
   .profile-quotes {
-    width: 100%;
     margin-top: 30px;
     padding: none;
   }
