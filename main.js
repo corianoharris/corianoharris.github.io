@@ -556,7 +556,7 @@
         messageError.style.display === "block"
       ) {
         submitBtn.setAttribute("disabled", true);
-        submitBtn.style.backgroundColor = "#D3D3D3";
+        submitBtn.style.backgroundColor = "#f4f0ec";
         submitBtn.style.color = "#be3455";
         submitBtn.style.cursor = "none";
       } else {
