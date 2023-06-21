@@ -162,7 +162,7 @@ a:link,
 a:active,
 a:hover,
 a:visited {
-  color: var(--text-color);
+  color: black;
 }
 
 .img {
@@ -281,7 +281,7 @@ input {
 
 .nav-item a:active,
 .nav-item a:link {
-  color: white;
+  color: var(--color-white);
 }
 
 /** separator **/
@@ -613,16 +613,28 @@ button:hover {
     color: var(--color-white);
 }
 
-
+button:hover a {
+  color: var(--color-white);
+}
 
 .button-text {
   font-size: 0.9rem;
   text-align: center;
   letter-spacing: 0.2rem;
   padding: 20px 0;
+  color: black;
 }
 
-
+/* .button-text:link,
+.button-text:active,
+.button-text:hover,
+.button-text:visited {
+  color: var(--color-white);
+} */
+ 
+/* .button:hover  a {
+  color: var(--color-white);
+} */
 
 @media (min-width: 760px) {
 .button-text {
@@ -858,6 +870,7 @@ button:hover {
 @media (max-width: 648px) {
   #contact-section-link {
     display: block;
+    margin: 0 auto;
   }
 }
 
