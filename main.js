@@ -472,12 +472,6 @@
     return uri;
   }
 
- 
-
-
-  
- 
-
   const postFormDataToEmailClient = (e) => {
     e.preventDefault();
     // Open Mailto in New Window / Tab
