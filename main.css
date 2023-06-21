@@ -625,17 +625,6 @@ button:hover a {
   color: black;
 }
 
-/* .button-text:link,
-.button-text:active,
-.button-text:hover,
-.button-text:visited {
-  color: var(--color-white);
-} */
- 
-/* .button:hover  a {
-  color: var(--color-white);
-} */
-
 @media (min-width: 760px) {
 .button-text {
     width: auto;
