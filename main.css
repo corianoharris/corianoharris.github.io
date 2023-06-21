@@ -15,6 +15,7 @@ https://github.com/alimansoor/omcss
   --color-brand: #be3455;
   --color-info: #343434;
   --color-error: #ff0000;
+  --color-disable: #d5d5d5;
   background-color: var(--color-white);
 }
 
@@ -151,7 +152,6 @@ li {
 
 a {
   cursor: pointer;
-  display: none;
   font-weight: 900;
   padding: 0;
   text-decoration: none;
@@ -322,6 +322,19 @@ input {
 /* section header */
 .title {
   width: 100%;
+}
+
+/* social media */
+.social-media {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+@media ( max-width: 764px) {
+  .social-media {
+    display: block;
+    text-align: center;
+  }
 }
 
 /* links */
@@ -558,7 +571,7 @@ input {
   color: var(--color-brand);
   font-size: 1rem;
   font-weight: 500;
-  word-wrap: none;
+  word-wrap: break-word;
   padding: none;
 }
 
@@ -581,115 +594,40 @@ input {
 /** button **/
 
 button {
-  background: transparent;
-  border: 0;
-  display: inline-block;
+  border: 3px solid var(--color-brand);
+  border-radius: 3rem;
   font-size: 0.8rem;
   font-family: inherit;
-  margin: 0 auto;
+  margin: 20px 0;
+  padding: 5px 0;
   outline: none;
-  padding: 0;
-  position: relative;
-  color: black;
-  text-decoration: none;
-  vertical-align: middle;
-}
-
-button.btn {
   height: auto;
   width: 245px;
+  background-color: white;
 }
 
-button.btn .circle {
-  background-color: var(--color-brand);
-  border-radius: 1.625rem;
-  box-shadow: 0 4px 8px 0 rgba(138, 135, 135, 0.2),
+button:hover {
+   background-color: var(--color-brand);
+   box-shadow: 0 4px 8px 0 rgba(138, 135, 135, 0.2),
     0 6px 20px 0 rgba(136, 134, 134, 0.19);
-  display: block;
-  height: 3rem;
-  justify-content: center;
-  left: 0;
-  margin: 0;
-  position: relative;
-  transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
-  width: 3rem;
+    color: var(--color-white);
 }
 
-button.btn:hover .circle {
-  width: 100%;
-  color: var(--color-white);
-}
 
-.button.btn:hover .button-text {
-  color: var(--color-white);
-}
-
-button.btn .circle .icon {
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  margin: auto;
-  transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
-}
-
-button.btn .circle .icon.arrow {
-  position: absolute;
-  top: -20px;
-  color: var(--text-color);
-  height: 0.125rem;
-  left: 0.625rem;
-  transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
-  width: 1.125rem;
-  font-size: 32px;
-}
 
 .button-text {
-  align-items: center;
-  display: flex;
   font-size: 0.9rem;
-  justify-content: center;
+  text-align: center;
   letter-spacing: 0.2rem;
+  padding: 20px 0;
 }
 
-.button-text:hover a {
-  color: var(--color-white);
-}
 
-button.btn .button-text {
-  font-weight: 900;
-  line-height: 1.625rem;
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  color: black;
-  text-align: left;
-  text-transform: uppercase;
-  transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
-  width: auto;
-  padding-left: 40px;
-}
 
 @media (min-width: 760px) {
-  button.btn .button-text {
+.button-text {
     width: auto;
   }
-}
-
-.button.btn .button-text a {
-  margin-left: none;
-  text-align: left;
-}
-
-button:hover .circle .icon.arrow {
-  color: var(--color-dark);
-  -webkit-transform: translate(1rem, 0);
-  transform: translate(1rem, 0);
-}
-
-button:hover .button-text {
-  color: var(--color-white);
 }
 
 /* form */
@@ -799,23 +737,6 @@ button:hover .button-text {
 
 /** --- PAGES --- **/
 
-.social-media-links-text {
-  justify-content: center;
-  width: auto;
-}
-
-@media (max-width: 740px) {
-  .social-media-links-text {
-    justify-content: center;
-    padding-left: none;
-  }
-}
-
-.email-link-text a {
-  display: block;
-  padding-top: 5px;
-  margin-left: -50px;
-}
 
 .project-link {
   display: flex;
@@ -840,7 +761,7 @@ button:hover .button-text {
   .profile-section-one {
     align-items: center;
     display: flex;
-    gap: 1rem;
+    gap: 8rem;
     justify-content: center;
   }
 }
@@ -881,15 +802,12 @@ button:hover .button-text {
 
 .profile-quotes {
   font-size: 28px;
-  width: 70%;
-  margin: auto;
-  height: auto;
+  width: 100%;
   line-height: 40px;
 }
 
 @media only screen and (max-width: 576px) {
   .profile-quotes {
-    width: 100%;
     margin-top: 30px;
     padding: none;
   }
@@ -900,38 +818,6 @@ button:hover .button-text {
   font-size: 32px;
   font-weight: 700;
   text-transform: lowercase;
-}
-
-/* social media */
-.social-media {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 3rem;
-  width: 100%;
-  margin: 30px 0;
-}
-
-.social-media-links a {
-  display: inline-block;
-  justify-content: center;
-  align-items: center;
-  width: auto;
-  font-size: 1rem;
-  font-weight: 900;
-  letter-spacing: 0.25rem;
-}
-
-@media (min-width: 900px) {
-  .social-media {
-    flex-direction: row;
-    gap: 5rem;
-  }
-
-  .social-media-links a {
-    padding-left: 20px;
-  }
 }
 
 .profile-img {
@@ -950,21 +836,10 @@ button:hover .button-text {
   text-align: center;
 }
 
-.button {
-  margin: 30px 0;
-  border: 1px solid var(--color-brand);
-  border-radius: 0.3rem;
-  box-shadow: 0 4px 8px 0 rgba(138, 135, 135, 0.2),
-    0 6px 20px 0 rgba(136, 134, 134, 0.19);
-  width: 100px;
-  padding: 10px 10px;
-  color: var(--color-brand);
-  font-size: 1rem;
-  text-align: center;
-}
 
 #submit {
   border-radius: 0.3rem;
+  border: none;
   box-shadow: 0 4px 8px 0 rgba(138, 135, 135, 0.2),
     0 6px 20px 0 rgba(136, 134, 134, 0.19);
   margin: 30px 0;

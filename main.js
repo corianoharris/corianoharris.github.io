@@ -449,8 +449,7 @@
     LiRegex.textContent = regexText;
   };
 
-  const postFormDataToEmailClient = (e) => {
-    e.preventDefault();
+  const formFormattedUri = () => {
     // get form field values
     let name = document.getElementById("name").value;
     let phone = document.getElementById("phone").value;
@@ -470,9 +469,13 @@
     // Build final Mailto URI
     uri += "?subject=" + encodeURIComponent(subject);
     uri += "&body=" + encodeURIComponent(body);
+    return uri;
+  }
 
+  const postFormDataToEmailClient = (e) => {
+    e.preventDefault();
     // Open Mailto in New Window / Tab
-    window.open(uri, "_blank");
+    window.open(formFormattedUri(), "_blank");
 
     //reset form
     FORM.reset();
@@ -556,7 +559,7 @@
         messageError.style.display === "block"
       ) {
         submitBtn.setAttribute("disabled", true);
-        submitBtn.style.backgroundColor = "#D3D3D3";
+        submitBtn.style.backgroundColor = "#f4f0ec";
         submitBtn.style.color = "#be3455";
         submitBtn.style.cursor = "none";
       } else {
