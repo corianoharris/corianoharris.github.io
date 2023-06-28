@@ -607,7 +607,7 @@ button {
   padding: 5px 0;
   outline: none;
   height: auto;
-  width: 245px;
+  width: 100%;
   background-color: white;
 }
 
@@ -631,8 +631,15 @@ button:hover a {
 }
 
 @media (min-width: 760px) {
+button {
+  width: 250px;
+  margin: 20px;
+}
+
 .button-text {
-    width: auto;
+    width: 100%;
+    margin-left: none;
+    margin-right: none;
   }
 }
 
