@@ -511,7 +511,7 @@ iframe {
   height: auto;
   width: 280px;
   word-wrap: break-word;
-  border-radius: 2rem;
+  border-radius: 5px;
   padding: 10px;
 }
 
