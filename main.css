@@ -879,3 +879,8 @@ button {
 .copyright {
   text-align: center;
 }
+
+.video-container {
+  margin: 0 auto;
+  max-width: 600px;
+}
