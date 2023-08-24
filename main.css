@@ -509,13 +509,18 @@ iframe {
   box-shadow: 0 4px 8px 0 rgba(138, 135, 135, 0.2),
     0 6px 20px 0 rgba(136, 134, 134, 0.19);
   height: auto;
-  width: 280px;
+  max-width: 350px;
   word-wrap: break-word;
   border-radius: 5px;
   padding: 10px;
 }
 
-@media (min-width: 900px) {
+.project-card:hover {
+  box-shadow: 0 4px 8px 0 rgba(190, 52, 85, 0.2),
+    0 6px 20px 0 rgba(190, 52, 85, 0.19);
+}
+
+/* @media (min-width: 900px) {
   .project-card {
     width: 350px;
   }
@@ -525,7 +530,7 @@ iframe {
   .project-card {
     width: 280px;
   }
-}
+} */
 
 @media (min-width: 320px) {
   .project-card {
