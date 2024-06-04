@@ -781,6 +781,7 @@ label {
 
 .footer {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   text-align: center;
@@ -795,6 +796,15 @@ label {
   padding: 10px 20px;
   border-top: 3px solid #eceef3;
   color: var(--color-white);
+}
+
+.footer-email span {
+  font-size: 12px;
+}
+
+.footer-email {
+  font-size: 14px;
+  color: var(--color-dark-grey);
 }
 
 /** -- END OF FOOTER -- **/
