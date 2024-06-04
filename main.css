@@ -380,8 +380,8 @@ main-nav__hidden-list.hidden {
 .tooltip {
     visibility: hidden;
     width: max-content;
-    background-color: var(--color-white);
-    color: var(--color-dark-grey);
+    background-color: var(--color-dark-grey);
+    color: var(--color-white);
     text-align: left;
     border-radius: 6px;
     padding: 5px;
@@ -392,16 +392,17 @@ main-nav__hidden-list.hidden {
     opacity: 0;
     transition: opacity 0.6s;
     word-break: break-all;
-    font-size: 1rem; /* Allows words to break to the next line */
+    font-size: 1rem;
+    border: 2px solid white; /* Allows words to break to the next line */
 }
 
 .tooltip::after {
   content: "";
   position: absolute;
   bottom: 100%; /* At the bottom of the tooltip */
-  left: 80%;
+  left: 85%;
   margin-left: -5px;
-  border-width: 5px;
+  border-width: 10px;
   border-style: solid;
   border-color: var(--color-white) transparent transparent transparent;
  transform: rotate(180deg);
