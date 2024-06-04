@@ -37,7 +37,9 @@
   <meta name="title" content="Coriano Harris">
   <meta name="description" content="Coriano Harris website.">
   <title>Coriano Harris</title>
-  <link rel="icon" href="public/images/favicon.svg" sizes="any" type="image/x-icon">
+  <link rel="icon" href="public/images/wave-hand.svg" sizes="any" type="image/x-icon">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,700;1,400;1,700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="main.css" />
 </head>
 
@@ -50,400 +52,580 @@
   </noscript>
   <!-- End Google Tag Manager (noscript) -->
 
-  <div class="app-wrapper" role="main">
-
-    <nav id="myNav" class="overlay" role="navigation" aria-label="navigation">
-      <a href="javascript:void(0)" id="nav-closebtn">&times;</a>
-      <div class="overlay-content">
-        <a class="nav-items" href="#me">
-          <p class="nav-link-text">me</p>
-        </a>
-        <a class="nav-items" href="#work">work</a>
-        <a class="nav-items" href="#contact">let's make something</a>
-      </div>
-    </nav>
-
-    <span id="nav-hamburger">&#9776;</span>
-
-    <div id="me" class="title">
-      <h2>Me</h2>
-    </div>
-
-    <section class="section">
-
-      <div class="profile">
-        <div class="profile-section-one">
-          <div class="picture-profile">
-            <img class="img profile-img" src="./public/images/profile/coriano-profile.png"
-              alt="portrait of coriano harris">
-            <div class="name">
-              <p id="first-name" class="my-name"> Coriano</p>
-              <p id="last-name" class="my-name">Harris</p>
+  <nav class="main-nav js-main-nav" aria-label="Main">
+    <a href="#me" class="main-nav__logo">
+      <h2>Coriano<span>Harris</span></h2>
+    </a>
+    <ul class="main-nav__list js-main-nav__list" aria-orientation="horizontal">
+      <li class="main-nav__item js-main-nav-item"><a href="#me" aria-label="information about me" aria-current="page">me</a></li>
+      <li class="main-nav__item js-main-nav-item"><a href="public/documents/coriano-harris-resume.pdf"  aria-label="view my resume">resume</a></li>
+      <li class="main-nav__item js-main-nav-item"><a href="#services" aria-label="check out my services">services</a></li>
+      <li class="main-nav__item js-main-nav-item"><a href="#samples" aria-label="check out work samples">samples</a></li>
+       <li class="main-nav__item js-main-nav-item"><a href="#" aria-label="send me an email">email</a></li>
+      <li class="main-nav__item js-main-nav-item"><a href="#clients" aria-label="check out my clients">clients</a></li>
+  
+      <li class="main-nav__item js-main-nav-item"><a href="#testimonials" aria-label="check out what clients have to say">reviews</a></li>
+  
+      <li class="main-nav__item js-main-nav-item"><a href="#tools" aria-label="check out my skills">tools</a></li>
+      <li class="main-nav__item js-main-nav-item"><a href="#social" aria-label="check out social activities">social</a></li>
+  
+      <li class="main-nav__item js-main-nav-item"><a href="https://www.linkedin.com/in/corianoharris/" aria-label="connect with me on linkedin ">linkedin</a></li>
+      <li class="main-nav__item js-main-nav-item"><a href="https://github.com/corianoharris" aria-label="check out GitHub">github</a></li>
+     
+    </ul>
+    <button class="main-nav__icon-btn js-main-nav__icon-btn"><i class="fa-solid fa-bars fa-lg"></i></button>
+    <ul class="main-nav__hidden-list fade hidden js-main-nav__hidden-list" aria-orientation="vertical"></ul>
+  </nav>
+  <main>
+    <div id="me" class="decorative-section">
+      <svg id="wave" class="top-svg" style=" transition: 0.3s" viewBox="0 0 1440 100" version="1.1" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <linearGradient id="sw-gradient-0" x1="0" x2="0" y1="1" y2="0">
+            <stop stop-color="rgba(243, 106, 62, 1)" offset="0%"></stop>
+            <stop stop-color="rgba(255, 199, 185, 1)" offset="100%"></stop>
+          </linearGradient>
+        </defs>
+        <path style="transform:translate(0, 0px); opacity:1" fill="url(#sw-gradient-0)" d="M0,90L10,76.7C20,63,40,37,60,21.7C80,7,100,3,120,6.7C140,10,160,20,180,20C200,20,220,10,240,20C260,30,280,60,300,73.3C320,87,340,83,360,70C380,57,400,33,420,20C440,7,460,3,480,3.3C500,3,520,7,540,20C560,33,580,57,600,66.7C620,77,640,73,660,65C680,57,700,43,720,40C740,37,760,43,780,41.7C800,40,820,30,840,26.7C860,23,880,27,900,30C920,33,940,37,960,45C980,53,1000,67,1020,66.7C1040,67,1060,53,1080,50C1100,47,1120,53,1140,51.7C1160,50,1180,40,1200,35C1220,30,1240,30,1260,36.7C1280,43,1300,57,1320,58.3C1340,60,1360,50,1380,53.3C1400,57,1420,73,1430,81.7L1440,90L1440,100L1430,100C1420,100,1400,100,1380,100C1360,100,1340,100,1320,100C1300,100,1280,100,1260,100C1240,100,1220,100,1200,100C1180,100,1160,100,1140,100C1120,100,1100,100,1080,100C1060,100,1040,100,1020,100C1000,100,980,100,960,100C940,100,920,100,900,100C880,100,860,100,840,100C820,100,800,100,780,100C760,100,740,100,720,100C700,100,680,100,660,100C640,100,620,100,600,100C580,100,560,100,540,100C520,100,500,100,480,100C460,100,440,100,420,100C400,100,380,100,360,100C340,100,320,100,300,100C280,100,260,100,240,100C220,100,200,100,180,100C160,100,140,100,120,100C100,100,80,100,60,100C40,100,20,100,10,100L0,100Z"></path>
+      </svg>
+  
+      <section class="decorative-section__content" aria-labelledby="decorative-section__content-title-me">
+        <h3 id="decorative-section__content-title-me" class="decorative-section__content-title">me<span>.</span></h3>
+        <div class="decorative-section__content-body flex">
+  
+          <div class="card remove-bkg remove-b-shadow">
+            <div class="card__image-container b-shadow">
+              <img src="public/images/profile/coriano-profile.png" alt="Coriano Harris smiling" class="card__image">
             </div>
-
-          </div>
-          <div class="profile-quotes">
-            <p class="quotes profile-quote">
-              A passion for <span class="roles">research</span>, <span class="roles">design</span>, <span
-                class="roles">development</span>, and <span class="roles">colors</span>.
-              Driven by a deep sense of empathy and a genuine desire to make a meaningful impact."
-            </p>
+            <div class="card__body p-10">
+              <h3 class="card__title ">
+                Design Technologist
+              </h3>
+              <div class="card__copy">
+                <blockquote role="quote">As a design technologist, I get to blend creativity with tech to bring awesome ideas to life. Working with designers, developers, and stakeholders, I make sure our products not only look great but work seamlessly. From prototyping and user testing to crafting interactive designs, I focus on creating experiences that users love. Keeping companies ahead of the curve by pushing the limits of digital innovation and making sure we deliver top-notch, engaging products.</blockquote>
+              </div>
+            </div>
+  
           </div>
         </div>
-
-        <hr class="separator">
-
-        <div class="profile-section-two">
-          <h3 class="volunteering">Where I'm spreading my passions!</h3>
-          <ul id="js-community-list" class="list clients-list" role="list">
-            <li class="list-items" role="listitem">St. Jude</li>
-            <li class="list-items" role="listitem">Code Connector</li>
-            <li class="list-items" role="listitem">CodeCrew</li>
-          </ul>
-        </div>
-
-        <hr class="separator">
-        <h3>Social Events</h3>
-        <div class="video-container">
-        <iframe allow="autoplay" width="100%" height="300" src="https://www.iheart.com/podcast/269-the-code-to-life-62799139/episode/coriano-harris-never-be-a-spectator-62810785/?embed=true" frameborder="0"></iframe>
-      </div>
-         <div class="social-media">
-      <button class="btn" role="button">
-        <a class="button-text" href="\https://www.meetup.com/memphis-technology-user-groups/events/dfskqsyfckblc/" target="_blank">UX/UI Bytes Meetup</a>
-      </button>
-
-      <!-- <button class="btn">
-        <a class="button-text" href="" target="_blank">blog</a>
-      </button> -->
-
+      </section>
+  
+      <svg id="wave" class="bottom-svg" style=" transition: 0.3s" viewBox="0 0 1440 100" version="1.1" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <linearGradient id="sw-gradient-0" x1="0" x2="0" y1="1" y2="0">
+            <stop stop-color="rgba(243, 106, 62, 1)" offset="0%"></stop>
+            <stop stop-color="rgba(255, 199, 185, 1)" offset="100%"></stop>
+          </linearGradient>
+        </defs>
+        <path style="transform:translate(0, 0px); opacity:1" fill="url(#sw-gradient-0)" d="M0,90L10,76.7C20,63,40,37,60,21.7C80,7,100,3,120,6.7C140,10,160,20,180,20C200,20,220,10,240,20C260,30,280,60,300,73.3C320,87,340,83,360,70C380,57,400,33,420,20C440,7,460,3,480,3.3C500,3,520,7,540,20C560,33,580,57,600,66.7C620,77,640,73,660,65C680,57,700,43,720,40C740,37,760,43,780,41.7C800,40,820,30,840,26.7C860,23,880,27,900,30C920,33,940,37,960,45C980,53,1000,67,1020,66.7C1040,67,1060,53,1080,50C1100,47,1120,53,1140,51.7C1160,50,1180,40,1200,35C1220,30,1240,30,1260,36.7C1280,43,1300,57,1320,58.3C1340,60,1360,50,1380,53.3C1400,57,1420,73,1430,81.7L1440,90L1440,100L1430,100C1420,100,1400,100,1380,100C1360,100,1340,100,1320,100C1300,100,1280,100,1260,100C1240,100,1220,100,1200,100C1180,100,1160,100,1140,100C1120,100,1100,100,1080,100C1060,100,1040,100,1020,100C1000,100,980,100,960,100C940,100,920,100,900,100C880,100,860,100,840,100C820,100,800,100,780,100C760,100,740,100,720,100C700,100,680,100,660,100C640,100,620,100,600,100C580,100,560,100,540,100C520,100,500,100,480,100C460,100,440,100,420,100C400,100,380,100,360,100C340,100,320,100,300,100C280,100,260,100,240,100C220,100,200,100,180,100C160,100,140,100,120,100C100,100,80,100,60,100C40,100,20,100,10,100L0,100Z"></path>
+      </svg>
     </div>
-
-      </div>
-    </section>
-
-    <hr class="separator">
-
-    <div id="work" class="title">
-      <h2>Work</h2>
+  
+    <div id="social" class="decorative-section">
+      <svg id="wave" class="top-svg" style=" transition: 0.3s" viewBox="0 0 1440 100" version="1.1" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <linearGradient id="sw-gradient-0" x1="0" x2="0" y1="1" y2="0">
+            <stop stop-color="rgba(243, 106, 62, 1)" offset="0%"></stop>
+            <stop stop-color="rgba(255, 199, 185, 1)" offset="100%"></stop>
+          </linearGradient>
+        </defs>
+        <path style="transform:translate(0, 0px); opacity:1" fill="url(#sw-gradient-0)" d="M0,90L10,76.7C20,63,40,37,60,21.7C80,7,100,3,120,6.7C140,10,160,20,180,20C200,20,220,10,240,20C260,30,280,60,300,73.3C320,87,340,83,360,70C380,57,400,33,420,20C440,7,460,3,480,3.3C500,3,520,7,540,20C560,33,580,57,600,66.7C620,77,640,73,660,65C680,57,700,43,720,40C740,37,760,43,780,41.7C800,40,820,30,840,26.7C860,23,880,27,900,30C920,33,940,37,960,45C980,53,1000,67,1020,66.7C1040,67,1060,53,1080,50C1100,47,1120,53,1140,51.7C1160,50,1180,40,1200,35C1220,30,1240,30,1260,36.7C1280,43,1300,57,1320,58.3C1340,60,1360,50,1380,53.3C1400,57,1420,73,1430,81.7L1440,90L1440,100L1430,100C1420,100,1400,100,1380,100C1360,100,1340,100,1320,100C1300,100,1280,100,1260,100C1240,100,1220,100,1200,100C1180,100,1160,100,1140,100C1120,100,1100,100,1080,100C1060,100,1040,100,1020,100C1000,100,980,100,960,100C940,100,920,100,900,100C880,100,860,100,840,100C820,100,800,100,780,100C760,100,740,100,720,100C700,100,680,100,660,100C640,100,620,100,600,100C580,100,560,100,540,100C520,100,500,100,480,100C460,100,440,100,420,100C400,100,380,100,360,100C340,100,320,100,300,100C280,100,260,100,240,100C220,100,200,100,180,100C160,100,140,100,120,100C100,100,80,100,60,100C40,100,20,100,10,100L0,100Z"></path>
+      </svg>
+      
+  
+      <section class="decorative-section__content js-tabs-social" aria-labelledby="decorative-section__content-title-social">
+        <h3 id="decorative-section__content-title-social" class="decorative-section__content-title">socials<span>.</span></h3>
+        <div class="card stack-items-center remove-bkg remove-b-shadow">
+          <div class="card__body p-10">
+            <div class="tabs" role="tablist">
+              <button class="tab-button tab-button--active" data-tab="tab-social-1" aria-controls="tab-social-1" aria-selected="true">tribes.</button>
+              <button class="tab-button" data-tab="tab-social-2" aria-controls="tab-social-2" aria-selected="false">workshops.</button>
+              <button class="tab-button" data-tab="tab-social-3" aria-controls="tab-social-3" aria-selected="false">talks.</button>
+            </div>
+            <div class="tab-content tab-content--active" id="tab-social-1" role="tabpanel" aria-labelledby="tab-social-1">
+              <div class="card__copy">
+                <ul>
+                  <li>Code Connector</li>
+                  <li>UX Mastery</li>
+                  <li>San Diego Tech Hub</li>
+                  <li>Friends of Figma, San Diego</li>
+                  <li>Memphis Tech</li>
+                  <li>National Cartooning Society</li>
+                  <li>Navy Seals Foundation, Memphis & San Diego </li>
+                </ul>
+              </div>
+            </div>
+            <div class="tab-content" id="tab-social-2" role="tabpanel" aria-labelledby="tab-social-2" hidden>
+              <div class="card__copy">
+                <ul>
+                  <li><a class="socials-links" href="https://www.meetup.com/memphis-technology-user-groups/events/300427779/?utm_medium=referral&utm_campaign=share-btn_savedevents_share_modal&utm_source=link">UX/UI Bytes</a></li>
+                </ul>
+              </div>
+            </div>
+            <div class="tab-content" id="tab-social-3" role="tabpanel" aria-labelledby="tab-social-3" hidden>
+              <div class="card__copy">
+                <ul>
+                  <li>
+                    Coriano Harris: Never Be a Spectator
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <svg id="wave" class="bottom-svg" style=" transition: 0.3s" viewBox="0 0 1440 100" version="1.1" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <linearGradient id="sw-gradient-0" x1="0" x2="0" y1="1" y2="0">
+            <stop stop-color="rgba(243, 106, 62, 1)" offset="0%"></stop>
+            <stop stop-color="rgba(255, 199, 185, 1)" offset="100%"></stop>
+          </linearGradient>
+        </defs>
+        <path style="transform:translate(0, 0px); opacity:1" fill="url(#sw-gradient-0)" d="M0,90L10,76.7C20,63,40,37,60,21.7C80,7,100,3,120,6.7C140,10,160,20,180,20C200,20,220,10,240,20C260,30,280,60,300,73.3C320,87,340,83,360,70C380,57,400,33,420,20C440,7,460,3,480,3.3C500,3,520,7,540,20C560,33,580,57,600,66.7C620,77,640,73,660,65C680,57,700,43,720,40C740,37,760,43,780,41.7C800,40,820,30,840,26.7C860,23,880,27,900,30C920,33,940,37,960,45C980,53,1000,67,1020,66.7C1040,67,1060,53,1080,50C1100,47,1120,53,1140,51.7C1160,50,1180,40,1200,35C1220,30,1240,30,1260,36.7C1280,43,1300,57,1320,58.3C1340,60,1360,50,1380,53.3C1400,57,1420,73,1430,81.7L1440,90L1440,100L1430,100C1420,100,1400,100,1380,100C1360,100,1340,100,1320,100C1300,100,1280,100,1260,100C1240,100,1220,100,1200,100C1180,100,1160,100,1140,100C1120,100,1100,100,1080,100C1060,100,1040,100,1020,100C1000,100,980,100,960,100C940,100,920,100,900,100C880,100,860,100,840,100C820,100,800,100,780,100C760,100,740,100,720,100C700,100,680,100,660,100C640,100,620,100,600,100C580,100,560,100,540,100C520,100,500,100,480,100C460,100,440,100,420,100C400,100,380,100,360,100C340,100,320,100,300,100C280,100,260,100,240,100C220,100,200,100,180,100C160,100,140,100,120,100C100,100,80,100,60,100C40,100,20,100,10,100L0,100Z"></path>
+      </svg>
     </div>
-
-    <div class="social-media">
-
-      <button class="btn" role="button">
-
-        <a class="button-text" href="public/documents/coriano-harris-resume.pdf" target="_blank">Resume</a>
-      </button>
-
-      <button class="btn" role="button">
-        <a class="button-text" href="https://github.com/corianoharris" target="_blank">Github</a>
-      </button>
-
-      <button class="btn">
-        <a class="button-text" href="https://www.linkedin.com/in/corianoharris/" target="_blank">LinkedIn</a>
-      </button>
-
+  
+    <div id="clients" class="decorative-section">
+      <svg id="wave" class="top-svg" style=" transition: 0.3s" viewBox="0 0 1440 100" version="1.1" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <linearGradient id="sw-gradient-0" x1="0" x2="0" y1="1" y2="0">
+            <stop stop-color="rgba(243, 106, 62, 1)" offset="0%"></stop>
+            <stop stop-color="rgba(255, 199, 185, 1)" offset="100%"></stop>
+          </linearGradient>
+        </defs>
+        <path style="transform:translate(0, 0px); opacity:1" fill="url(#sw-gradient-0)" d="M0,90L10,76.7C20,63,40,37,60,21.7C80,7,100,3,120,6.7C140,10,160,20,180,20C200,20,220,10,240,20C260,30,280,60,300,73.3C320,87,340,83,360,70C380,57,400,33,420,20C440,7,460,3,480,3.3C500,3,520,7,540,20C560,33,580,57,600,66.7C620,77,640,73,660,65C680,57,700,43,720,40C740,37,760,43,780,41.7C800,40,820,30,840,26.7C860,23,880,27,900,30C920,33,940,37,960,45C980,53,1000,67,1020,66.7C1040,67,1060,53,1080,50C1100,47,1120,53,1140,51.7C1160,50,1180,40,1200,35C1220,30,1240,30,1260,36.7C1280,43,1300,57,1320,58.3C1340,60,1360,50,1380,53.3C1400,57,1420,73,1430,81.7L1440,90L1440,100L1430,100C1420,100,1400,100,1380,100C1360,100,1340,100,1320,100C1300,100,1280,100,1260,100C1240,100,1220,100,1200,100C1180,100,1160,100,1140,100C1120,100,1100,100,1080,100C1060,100,1040,100,1020,100C1000,100,980,100,960,100C940,100,920,100,900,100C880,100,860,100,840,100C820,100,800,100,780,100C760,100,740,100,720,100C700,100,680,100,660,100C640,100,620,100,600,100C580,100,560,100,540,100C520,100,500,100,480,100C460,100,440,100,420,100C400,100,380,100,360,100C340,100,320,100,300,100C280,100,260,100,240,100C220,100,200,100,180,100C160,100,140,100,120,100C100,100,80,100,60,100C40,100,20,100,10,100L0,100Z"></path>
+      </svg>
+      <section class="decorative-section__content" aria-labelledby="decorative-section__content-title-clients">
+        <h3 id="decorative-section__content-title-clients" class="decorative-section__content-title">clients<span>.</span></h3>
+        <div class="card stack-items-center remove-bkg remove-b-shadow">
+          <div class="card__body p-10">
+            <div class="items-flex-container">
+              <div class="card--small" role="group" aria-labelledby="card--small__title" aria-describedby="card-subtitle">
+                <div class="card--small__image-container">
+                  <img src="public/images/clients/logos/cetera.jpeg" alt="Cetera Financial Group" class="card--small__image">
+                </div>
+                <div class="card--small__copy">
+                  <div id="card--small__title" class="card--small__title">Cetera Financial Group</div>
+                  <div id="card--small__subtitle" class="card--small__subtitle">Principal Design Technologist</div>
+                  <a class="card--small__link hidden" href="#">view</a>
+                </div>
+              </div>
+              <div class="card--small" role="group" aria-labelledby="card-title" aria-describedby="card-subtitle">
+                <div class="card--small__image-container">
+                  <img src="public/images/clients/logos/ally_fin.png" alt="Ally Financial" class="card--small__image">
+                </div>
+                <div class="card--small__copy">
+                  <div id="card--small__title" class="card--small__title">Ally Financial</div>
+                  <div id="card--small__subtitle" class="card--small__subtitle">UI Developer</div>
+                  <a class="card--small__link hidden" href="#">view</a>
+                </div>
+              </div>
+              <div class="card--small" role="group" aria-labelledby="card-title" aria-describedby="card-subtitle">
+                <div class="card--small__image-container">
+                  <img src="public/images/clients/logos/st.jude.png" alt="St. Jude Children Hospital" class="card--small__image">
+                </div>
+                <div class="card--small__copy">
+                  <div id="card--small__title" class="card--small__title">St. Jude (Alsac)</div>
+                  <div id="card--small__subtitle" class="card--small__subtitle">UI Developer</div>
+                  <a class="card--small__link hidden" href="#">view</a>
+                </div>
+              </div>
+              <div class="card--small" role="group" aria-labelledby="card-title" aria-describedby="card-subtitle">
+                <div class="card--small__image-container">
+                  <img src="public/images/clients/logos/fedex.png" alt="FedEx Services" class="card--small__image">
+                </div>
+                <div class="card--small__copy">
+                  <div id="card--small__title" class="card--small__title">FedEx</div>
+                  <div id="card--small__subtitle" class="card--small__subtitle">UI Developer</div>
+                  <a class="card--small__link hidden" href="#">view</a>
+                </div>
+              </div>
+              <div class="card--small" role="group" aria-labelledby="card-title" aria-describedby="card-subtitle">
+                <div class="card--small__image-container">
+                  <img src="public/images/clients/logos/fedex.png" alt="FedEx Services" class="card--small__image">
+                </div>
+                <div class="card--small__copy">
+                  <div id="card--small__title" class="card--small__title">FedEx</div>
+                  <div id="card--small__subtitle" class="card--small__subtitle">UX/UI Designer</div>
+                  <a class="card--small__link hidden" href="#">view</a>
+                </div>
+              </div>
+              <div class="card--small" role="group" aria-labelledby="card-title" aria-describedby="card-subtitle">
+                <div class="card--small__image-container">
+                  <img src="public/images/clients/logos/partcycle.png" alt="small card image" class="card--small__image">
+                </div>
+                <div class="card--small__copy">
+                  <div id="card--small__title" class="card--small__title">Partcycle LLC</div>
+                  <div id="card--small__subtitle" class="card--small__subtitle">UI Developer</div>
+                  <a class="card--small__link hidden" href="#">view</a>
+                </div>
+              </div>
+  
+            </div>
+          </div>
+        </div>
+  
+      </section>
+      <svg id="wave" class="bottom-svg" style=" transition: 0.3s" viewBox="0 0 1440 100" version="1.1" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <linearGradient id="sw-gradient-0" x1="0" x2="0" y1="1" y2="0">
+            <stop stop-color="rgba(243, 106, 62, 1)" offset="0%"></stop>
+            <stop stop-color="rgba(255, 199, 185, 1)" offset="100%"></stop>
+          </linearGradient>
+        </defs>
+        <path style="transform:translate(0, 0px); opacity:1" fill="url(#sw-gradient-0)" d="M0,90L10,76.7C20,63,40,37,60,21.7C80,7,100,3,120,6.7C140,10,160,20,180,20C200,20,220,10,240,20C260,30,280,60,300,73.3C320,87,340,83,360,70C380,57,400,33,420,20C440,7,460,3,480,3.3C500,3,520,7,540,20C560,33,580,57,600,66.7C620,77,640,73,660,65C680,57,700,43,720,40C740,37,760,43,780,41.7C800,40,820,30,840,26.7C860,23,880,27,900,30C920,33,940,37,960,45C980,53,1000,67,1020,66.7C1040,67,1060,53,1080,50C1100,47,1120,53,1140,51.7C1160,50,1180,40,1200,35C1220,30,1240,30,1260,36.7C1280,43,1300,57,1320,58.3C1340,60,1360,50,1380,53.3C1400,57,1420,73,1430,81.7L1440,90L1440,100L1430,100C1420,100,1400,100,1380,100C1360,100,1340,100,1320,100C1300,100,1280,100,1260,100C1240,100,1220,100,1200,100C1180,100,1160,100,1140,100C1120,100,1100,100,1080,100C1060,100,1040,100,1020,100C1000,100,980,100,960,100C940,100,920,100,900,100C880,100,860,100,840,100C820,100,800,100,780,100C760,100,740,100,720,100C700,100,680,100,660,100C640,100,620,100,600,100C580,100,560,100,540,100C520,100,500,100,480,100C460,100,440,100,420,100C400,100,380,100,360,100C340,100,320,100,300,100C280,100,260,100,240,100C220,100,200,100,180,100C160,100,140,100,120,100C100,100,80,100,60,100C40,100,20,100,10,100L0,100Z"></path>
+      </svg>
     </div>
-
-    <section class="section">
-      <h3>What my awesome clients have to say.</h3>
-      <div class="clients-quotes">
-        <div class="card client-quotes-card">
-          <p class="quotes profile-quote">
-            I had been searching for the perfect designer to bring my promotional poster idea to life and luckily, I
-            found Coriano! It's clear that he's not only talented but also has a real knack for bringing his clients'
-            ideas to fruition. Thank you so much, Coriano!"
-          </p>
-          <picture class="picture-clients">
-            <img class="img clients-img" src="./public/images/clients/michael-st-john.png" alt="Micheal St John at the Oscars" />
-            <p>Micheal St. John</p>
-          </picture>
-        </div>
-
-        <div class="card client-quotes-card">
-          <p class="quotes profile-quote">
-            I am truly blown away by Coriano Harris's talent! He created some amazing posters, news flyers, and teasers
-            that really caught my eye. It's clear that he's a master at what he does and he puts so much care and effort
-            into his work."
-          </p>
-          <picture class="picture-clients">
-            <img class="img clients-img" src="./public/images/clients/lauren-brynes.png" alt="Lauren Brynes smiling" />
-            <p>Lauren Byrnes</p>
-          </picture>
-        </div>
-        <div class="card client-quotes-card">
-          <p class="quotes profile-quote">
-             I was the keynote presenter at the Charleston Jewish Federation Lion of Judah event, presenting the program.  They loved it!  AND, 31 other communities have already ordered 2,500 kits so we are well on our way!
-          </p>
-          <picture class="picture-clients">
-            <img class="img clients-img" src="./public/images/clients/laura-linder.jpg" alt="Laura Linder smiling" />
-            <p>Laura Linder</p>
-          </picture>
-        </div>
-        <div class="card client-quotes-card">
-          <p class="quotes profile-quote">
-            The way you've captured our culture, our students, and our brand is truly remarkable. It's clear that you
-            have a real talent for creating pieces that resonate with people and convey a message."
-          </p>
-          <picture class="picture-clients">
-            <img class="img clients-img" src="./public/images/clients/rae-coleman.png" alt="Rae Coleman dancing" />
-            <p>Rae Coleman</p>
-          </picture>
-        </div>
-      </div>
-
-      <hr class="separator">
-
-      <h3>Made some wicked awesome projects with these employers</h3>
-      <ul id="js-clients-list" class="list clients-list" role="list">
-        <li class="list-items" role="listitem">Ally Financial</li>
-        <li class="list-items" role="listitem">ALSAC (St. Jude)</li>
-        <li class="list-items" role="listitem">FedEx</li>
-      </ul>
-
-      <hr class="separator">
-
-      <h3>Projects</h3>
-      <div class="clients-projects">
-        <div class="card project-card">
-          <div class="card-info">
-            <h4 class="card-company">Notezy</h4>
-            <h4 class="card-company">Fullstack React App</h4>
-            <h4 class="card-role">Role / <span class="card-company-role">UX/UI designer & developer</span></h4>
-            <button class="btn">
-              <a class="button-text" href="https://notezyapp.netlify.app" target="_blank">website</a>
-            </button>
+  
+    <div id="reviews" class="decorative-section">
+      <svg id="wave" class="top-svg" style=" transition: 0.3s" viewBox="0 0 1440 100" version="1.1" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <linearGradient id="sw-gradient-0" x1="0" x2="0" y1="1" y2="0">
+            <stop stop-color="rgba(243, 106, 62, 1)" offset="0%"></stop>
+            <stop stop-color="rgba(255, 199, 185, 1)" offset="100%"></stop>
+          </linearGradient>
+        </defs>
+        <path style="transform:translate(0, 0px); opacity:1" fill="url(#sw-gradient-0)" d="M0,90L10,76.7C20,63,40,37,60,21.7C80,7,100,3,120,6.7C140,10,160,20,180,20C200,20,220,10,240,20C260,30,280,60,300,73.3C320,87,340,83,360,70C380,57,400,33,420,20C440,7,460,3,480,3.3C500,3,520,7,540,20C560,33,580,57,600,66.7C620,77,640,73,660,65C680,57,700,43,720,40C740,37,760,43,780,41.7C800,40,820,30,840,26.7C860,23,880,27,900,30C920,33,940,37,960,45C980,53,1000,67,1020,66.7C1040,67,1060,53,1080,50C1100,47,1120,53,1140,51.7C1160,50,1180,40,1200,35C1220,30,1240,30,1260,36.7C1280,43,1300,57,1320,58.3C1340,60,1360,50,1380,53.3C1400,57,1420,73,1430,81.7L1440,90L1440,100L1430,100C1420,100,1400,100,1380,100C1360,100,1340,100,1320,100C1300,100,1280,100,1260,100C1240,100,1220,100,1200,100C1180,100,1160,100,1140,100C1120,100,1100,100,1080,100C1060,100,1040,100,1020,100C1000,100,980,100,960,100C940,100,920,100,900,100C880,100,860,100,840,100C820,100,800,100,780,100C760,100,740,100,720,100C700,100,680,100,660,100C640,100,620,100,600,100C580,100,560,100,540,100C520,100,500,100,480,100C460,100,440,100,420,100C400,100,380,100,360,100C340,100,320,100,300,100C280,100,260,100,240,100C220,100,200,100,180,100C160,100,140,100,120,100C100,100,80,100,60,100C40,100,20,100,10,100L0,100Z"></path>
+      </svg>
+      <section class="decorative-section__content" aria-labelledby="decorative-section__content-title-reviews">
+  
+        <h3 id="decorative-section__content-title-reviews" class="decorative-section__content-title">reviews<span>.</span></h3>
+        <div class="slider">
+          <div class="slider__body">
+            <div class="card remove-bkg remove-b-shadow js-card-reviews">
+              <div class="card__image-container b-shadow">
+                <img src="public/images/clients/michael-st-john.png" alt="Michael St. John at the Oscars" class="card__image">
+              </div>
+              <div class="card__body p-10">
+                <div class="card__title ">
+                  Michael St. John
+                </div>
+                <div class="card__copy">
+                  <blockquote role="quote"> " I had been searching for the perfect designer to bring my promotional poster idea to life and luckily, I found Coriano! It's clear that he's not only talented but also has a real knack for bringing his clients' ideas to fruition. Thank you so much, Coriano! "</blockquote>
+                </div>
+              </div>
+  
+            </div>
+            <div class="card remove-bkg remove-b-shadow js-card-reviews">
+              <div class="card__image-container b-shadow">
+                <img src="public/images/clients/lauren-brynes.png" alt="Lauren Brynes smiling" class="card__image">
+              </div>
+              <div class="card__body p-10">
+                <div class="card__title ">
+                  Lauren Brynes
+                </div>
+                <div class="card__copy">
+                  <blockquote role="quote"> " I am truly blown away by Coriano Harris's talent! He created some amazing posters, news flyers, and teasers that really caught my eye. It's clear that he's a master at what he does and he puts so much care and effort into his work.</blockquote>
+                </div>
+              </div>
+  
+            </div>
+            <div class="card remove-bkg remove-b-shadow js-card-reviews">
+              <div class="card__image-container b-shadow">
+                <img src="public/images/clients/laura-linder.jpg" alt="Laura Linder smiling" class="card__image">
+              </div>
+              <div class="card__body p-10">
+                <div class="card__title ">
+                  Laura Linder
+                </div>
+                <div class="card__copy">
+                  <blockquote role="quote"> " I was the keynote presenter at the Charleston Jewish Federation Lion of Judah event, presenting the program. They loved it! AND, 31 other communities have already ordered 2,500 kits so we are well on our way!</blockquote>
+                </div>
+              </div>
+  
+            </div>
+  
+          </div>
+  
+          <div class="button-container">
+            <button id="prevBtn" class="buttons w-100 js-prevBtn" disabled>Previous</button>
+            <button id="nextBtn" class="buttons w-100 js-nextBtn">Next</button>
           </div>
         </div>
-
-        <div class="card project-card">
-          <div class="card-info">
-            <h4 class="card-company">Prediabetes Risk Test</h4>
-            <h4 class="card-company">Nextjs App hosted by Netlify</h4>
-            <h4 class="card-role">Role / <span class="card-company-role">UX/UI designer & developer</span></h4>
-            <button class="btn">
-              <a class="button-text" href="https://prediabetes-risk-test.netlify.app/"
-                target="_blank">website</a>
-            </button>
-          </div>
-        </div>
-
-        <div class="card project-card">
-          <div class="card-info">
-            <h4 class="card-company">Ecobon</h4>
-            <h4 class="card-company">Created in Figma</h4>
-            <h4 class="card-role">Role / <span class="card-company-role">UX Researcher</span></h4>
-            <button class="btn ">
-              <a class="button-text" href="public/images/projects/ecobon-case-study.pdf" target="_blank">UX case study</a>
-            </button>
-          </div>
-        </div>
-
-        <div class="card project-card">
-          <div class="card-info">
-            <h4 class="card-company">Zoo Donator</h4>
-            <h4 class="card-company">Created in Figma</h4>
-            <h4 class="card-role">Role / <span class="card-company-role">UI designer</span></h4>
-            <button class="btn">
-              <a class="button-text" href="https://www.figma.com/proto/JZpFcManwUYTEe9pJ2VOIu/Zoo-Donator?type=design&node-id=35-145&t=Z3B5J3FZlEasGr6f-1&scaling=scale-down&page-id=0%3A1&starting-point-node-id=35%3A145&mode=design"
-                target="_blank">Prototype</a>
-            </button>
-          </div>
-        </div>
-
-        <div class="card project-card">
-          <div class="card-info">
-            <h4 class="card-company">PlayRun App</h4>
-            <h4 class="card-company">Adobe XD Mockup</h4>
-            <h4 class="card-role">Role / <span class="card-company-role">UI designer</span></h4>
-            <button class="btn">
-              <a class="button-text" href="public/images/projects/play-run-login-mockup-devices.png"
-                target="_blank">Login</a>
-            </button>
-          </div>
-        </div>
-
-        <div class="card project-card">
-          <div class="card-info">
-            <h4 class="card-company">Logos Designs</h4>
-            <h4 class="card-company">Adobe Illustrator</h4>
-            <h4 class="card-role">Role / <span class="card-company-role">graphic designer</span></h4>
-            <button class="btn">
-              <a class="button-text" href="public/images/projects/logos.jpg" target="_blank">logos</a>
-            </button>
-          </div>
-        </div>
-      </div>
-
-      <hr class="separator">
-
-      <h3>Toolbox</h3>
-
-      <h4>Graphic Design</h4>
-      <ul id="js-graphic-list" class="list skills-list" role="list">
-        <li class="list-items" role="listitem">typography</li>
-        <li class="list-items" role="listitem">adobe creative suite</li>
-        <li class="list-items" role="listitem">coloristic</li>
-      </ul>
-
-      <hr class="separator">
-
-      <h4>UX</h4>
-      <ul id="js-ux-list" class="list skills-list" role="list">
-        <li class="list-items" role="listitem">human centered interactions</li>
-        <li class="list-items" role="listitem">personas</li>
-        <li class="list-items" role="listitem">qualitative research</li>
-      </ul>
-
-      <hr class="separator">
-      <h4>UI</h4>
-      <ul id="js-ui-list" class="list skills-list" role="list">
-        <li class="list-items" role="listitem">wireframes</li>
-        <li class="list-items" role="listitem">information architecture</li>
-        <li class="list-items" role="listitem">figma</li>
-      </ul>
-
-      <hr class="separator">
-
-      <h4>Development</h4>
-      <ul id="js-dev-list" class="list skills-list" role="list">
-        <li class="list-items" role="listitem">html5</li>
-        <li class="list-items" role="listitem">css3</li>
-        <li class="list-items" role="listitem">javascript</li>
-        <li class="list-items" role="listitem">react.js</li>
-        <li class="list-items" role="listitem">a11y</li>
-        <li class="list-items" role="listitem">jest</li>
-        <li class="list-items" role="listitem">cypress</li>
-        <li class="list-items" role="listitem">cross browser testing</li>
-        <li class="list-items" role="listitem">jest</li>
-        <li class="list-items" role="listitem">cypress</li>
-        <li class="list-items" role="listitem">chrome devtools</li>
-        <li class="list-items" role="listitem">git</li>
-        <li class="list-items" role="listitem">github</li>
-        <li class="list-items" role="listitem">gitlab</li>
-        <li class="list-items" role="listitem">bitbucket</li>
-      </ul>
-
-      <hr class="separator">
-
-      <h4>Soft Skiills</h4>
-      <ul id="js-soft-list" class="list skills-list" role="list">
-        <li class="list-items" role="listitem">public-speaking</li>
-        <li class="list-items" role="listitem">mentoring</li>
-        <li class="list-items" role="listitem">time-management</li>
-      </ul>
-
-      <hr class="separator">
-
-      <p class="info-notify project-info-notify" aria-label="view personal project">Feel free to explore my personal
-        projects upon request</p>
-
-    </section>
-
-    <div id="contact" class="title">
-      <h2>Chat</h2>
+  
+      </section>
+  
+      <svg id="wave" class="bottom-svg" style=" transition: 0.3s" viewBox="0 0 1440 100" version="1.1" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <linearGradient id="sw-gradient-0" x1="0" x2="0" y1="1" y2="0">
+            <stop stop-color="rgba(243, 106, 62, 1)" offset="0%"></stop>
+            <stop stop-color="rgba(255, 199, 185, 1)" offset="100%"></stop>
+          </linearGradient>
+        </defs>
+        <path style="transform:translate(0, 0px); opacity:1" fill="url(#sw-gradient-0)" d="M0,90L10,76.7C20,63,40,37,60,21.7C80,7,100,3,120,6.7C140,10,160,20,180,20C200,20,220,10,240,20C260,30,280,60,300,73.3C320,87,340,83,360,70C380,57,400,33,420,20C440,7,460,3,480,3.3C500,3,520,7,540,20C560,33,580,57,600,66.7C620,77,640,73,660,65C680,57,700,43,720,40C740,37,760,43,780,41.7C800,40,820,30,840,26.7C860,23,880,27,900,30C920,33,940,37,960,45C980,53,1000,67,1020,66.7C1040,67,1060,53,1080,50C1100,47,1120,53,1140,51.7C1160,50,1180,40,1200,35C1220,30,1240,30,1260,36.7C1280,43,1300,57,1320,58.3C1340,60,1360,50,1380,53.3C1400,57,1420,73,1430,81.7L1440,90L1440,100L1430,100C1420,100,1400,100,1380,100C1360,100,1340,100,1320,100C1300,100,1280,100,1260,100C1240,100,1220,100,1200,100C1180,100,1160,100,1140,100C1120,100,1100,100,1080,100C1060,100,1040,100,1020,100C1000,100,980,100,960,100C940,100,920,100,900,100C880,100,860,100,840,100C820,100,800,100,780,100C760,100,740,100,720,100C700,100,680,100,660,100C640,100,620,100,600,100C580,100,560,100,540,100C520,100,500,100,480,100C460,100,440,100,420,100C400,100,380,100,360,100C340,100,320,100,300,100C280,100,260,100,240,100C220,100,200,100,180,100C160,100,140,100,120,100C100,100,80,100,60,100C40,100,20,100,10,100L0,100Z"></path>
+      </svg>
+  
     </div>
-    <h3>Let's have a chat that'll leave us both grinning!</h3>
-    <section class="section form">
-      <form id="form" name="contact" method="POST" role="form" aria-label="contact form"
-        onsubmit="postFormDataToEmailClient()">
-        <div class="input-wrapper">
-          <label id="one" class="custom-field" aria-label="name form field"><span class="label-text">name<span
-                class="required">(required)</span></span>
-            <input id="name" type="text" name="fullname" placeholder="your name" maxLength="25" autocomplete="off"
-              required />
-          </label>
-          <ul id="name-error-message" class="validation-error-message" aria-label="error message" tabindex="0"
-            role="list"> Name must:
-            <li id="error-name-no-space-as-first-char" class="errors" role="listitem"></li>
-            <li id="error-name-regex" class="errors" role="listitem"></li>
-            <li id="error-name-length" class="errors" role="listitem"></li>
-            <li id="error-name-empty" class="errors" role="listitem"></li>
-          </ul>
+  
+    <div id="services" class="decorative-section">
+      <svg id="wave" class="top-svg" style=" transition: 0.3s" viewBox="0 0 1440 100" version="1.1" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <linearGradient id="sw-gradient-0" x1="0" x2="0" y1="1" y2="0">
+            <stop stop-color="rgba(243, 106, 62, 1)" offset="0%"></stop>
+            <stop stop-color="rgba(255, 199, 185, 1)" offset="100%"></stop>
+          </linearGradient>
+        </defs>
+        <path style="transform:translate(0, 0px); opacity:1" fill="url(#sw-gradient-0)" d="M0,90L10,76.7C20,63,40,37,60,21.7C80,7,100,3,120,6.7C140,10,160,20,180,20C200,20,220,10,240,20C260,30,280,60,300,73.3C320,87,340,83,360,70C380,57,400,33,420,20C440,7,460,3,480,3.3C500,3,520,7,540,20C560,33,580,57,600,66.7C620,77,640,73,660,65C680,57,700,43,720,40C740,37,760,43,780,41.7C800,40,820,30,840,26.7C860,23,880,27,900,30C920,33,940,37,960,45C980,53,1000,67,1020,66.7C1040,67,1060,53,1080,50C1100,47,1120,53,1140,51.7C1160,50,1180,40,1200,35C1220,30,1240,30,1260,36.7C1280,43,1300,57,1320,58.3C1340,60,1360,50,1380,53.3C1400,57,1420,73,1430,81.7L1440,90L1440,100L1430,100C1420,100,1400,100,1380,100C1360,100,1340,100,1320,100C1300,100,1280,100,1260,100C1240,100,1220,100,1200,100C1180,100,1160,100,1140,100C1120,100,1100,100,1080,100C1060,100,1040,100,1020,100C1000,100,980,100,960,100C940,100,920,100,900,100C880,100,860,100,840,100C820,100,800,100,780,100C760,100,740,100,720,100C700,100,680,100,660,100C640,100,620,100,600,100C580,100,560,100,540,100C520,100,500,100,480,100C460,100,440,100,420,100C400,100,380,100,360,100C340,100,320,100,300,100C280,100,260,100,240,100C220,100,200,100,180,100C160,100,140,100,120,100C100,100,80,100,60,100C40,100,20,100,10,100L0,100Z"></path>
+      </svg>
+      <section class="decorative-section__content" aria-labelledby="decorative-section__content-title-services">
+  
+        <h3 id="decorative-section__content-title-services" class="decorative-section__content-title">services<span>.</span></h3>
+        <div class="card remove-bkg remove-b-shadow">
+          <div class="card__body p-10">
+            <div class="card__copy">
+              <ul>
+                <li>Rapid wireframing and interactive prototyping</li>
+                <li>UI and Interaction Design</li>
+                <li>Qualitative and Quantitative Research and Analysis</li>
+                <li>Design Systems</li>
+                <li>Color Theory Analysis</li>
+                <li>Front End Development</li>
+                <li>Accessibility Audits</li>
+                <li>Public Speaking</li>
+              </ul>
+            </div>
+          </div>
         </div>
-
-        <div class="input-wrapper">
-          <label id="two" class="custom-field" aria-label="phone number form field"> <span class="label-text">phone
-              number</span>
-            <input id="phone" type="tel" placeholder="(000) 000-0000" name="phone" maxLength="14" autocomplete="off" />
-          </label>
-          <ul id="phone-error-message" class="validation-error-message" aria-label="error message" tabindex="0"
-            role="list">Phone must:
-            <li id="error-phone-regex" class="errors" role="listitem"></li>
-            <li id="error-phone-length" class="errors" role="listitem"></li>
-          </ul>
+      </section>
+  
+      <svg id="wave" class="bottom-svg" style=" transition: 0.3s" viewBox="0 0 1440 100" version="1.1" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <linearGradient id="sw-gradient-0" x1="0" x2="0" y1="1" y2="0">
+            <stop stop-color="rgba(243, 106, 62, 1)" offset="0%"></stop>
+            <stop stop-color="rgba(255, 199, 185, 1)" offset="100%"></stop>
+          </linearGradient>
+        </defs>
+        <path style="transform:translate(0, 0px); opacity:1" fill="url(#sw-gradient-0)" d="M0,90L10,76.7C20,63,40,37,60,21.7C80,7,100,3,120,6.7C140,10,160,20,180,20C200,20,220,10,240,20C260,30,280,60,300,73.3C320,87,340,83,360,70C380,57,400,33,420,20C440,7,460,3,480,3.3C500,3,520,7,540,20C560,33,580,57,600,66.7C620,77,640,73,660,65C680,57,700,43,720,40C740,37,760,43,780,41.7C800,40,820,30,840,26.7C860,23,880,27,900,30C920,33,940,37,960,45C980,53,1000,67,1020,66.7C1040,67,1060,53,1080,50C1100,47,1120,53,1140,51.7C1160,50,1180,40,1200,35C1220,30,1240,30,1260,36.7C1280,43,1300,57,1320,58.3C1340,60,1360,50,1380,53.3C1400,57,1420,73,1430,81.7L1440,90L1440,100L1430,100C1420,100,1400,100,1380,100C1360,100,1340,100,1320,100C1300,100,1280,100,1260,100C1240,100,1220,100,1200,100C1180,100,1160,100,1140,100C1120,100,1100,100,1080,100C1060,100,1040,100,1020,100C1000,100,980,100,960,100C940,100,920,100,900,100C880,100,860,100,840,100C820,100,800,100,780,100C760,100,740,100,720,100C700,100,680,100,660,100C640,100,620,100,600,100C580,100,560,100,540,100C520,100,500,100,480,100C460,100,440,100,420,100C400,100,380,100,360,100C340,100,320,100,300,100C280,100,260,100,240,100C220,100,200,100,180,100C160,100,140,100,120,100C100,100,80,100,60,100C40,100,20,100,10,100L0,100Z"></path>
+      </svg>
+  
+    </div>
+  
+    <div id="skills" class="decorative-section">
+  
+      <svg id="wave" class="top-svg" style=" transition: 0.3s" viewBox="0 0 1440 100" version="1.1" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <linearGradient id="sw-gradient-0" x1="0" x2="0" y1="1" y2="0">
+            <stop stop-color="rgba(243, 106, 62, 1)" offset="0%"></stop>
+            <stop stop-color="rgba(255, 199, 185, 1)" offset="100%"></stop>
+          </linearGradient>
+        </defs>
+        <path style="transform:translate(0, 0px); opacity:1" fill="url(#sw-gradient-0)" d="M0,90L10,76.7C20,63,40,37,60,21.7C80,7,100,3,120,6.7C140,10,160,20,180,20C200,20,220,10,240,20C260,30,280,60,300,73.3C320,87,340,83,360,70C380,57,400,33,420,20C440,7,460,3,480,3.3C500,3,520,7,540,20C560,33,580,57,600,66.7C620,77,640,73,660,65C680,57,700,43,720,40C740,37,760,43,780,41.7C800,40,820,30,840,26.7C860,23,880,27,900,30C920,33,940,37,960,45C980,53,1000,67,1020,66.7C1040,67,1060,53,1080,50C1100,47,1120,53,1140,51.7C1160,50,1180,40,1200,35C1220,30,1240,30,1260,36.7C1280,43,1300,57,1320,58.3C1340,60,1360,50,1380,53.3C1400,57,1420,73,1430,81.7L1440,90L1440,100L1430,100C1420,100,1400,100,1380,100C1360,100,1340,100,1320,100C1300,100,1280,100,1260,100C1240,100,1220,100,1200,100C1180,100,1160,100,1140,100C1120,100,1100,100,1080,100C1060,100,1040,100,1020,100C1000,100,980,100,960,100C940,100,920,100,900,100C880,100,860,100,840,100C820,100,800,100,780,100C760,100,740,100,720,100C700,100,680,100,660,100C640,100,620,100,600,100C580,100,560,100,540,100C520,100,500,100,480,100C460,100,440,100,420,100C400,100,380,100,360,100C340,100,320,100,300,100C280,100,260,100,240,100C220,100,200,100,180,100C160,100,140,100,120,100C100,100,80,100,60,100C40,100,20,100,10,100L0,100Z"></path>
+      </svg>
+      <section class="decorative-section__content js-tabs-skills" aria-labelledby="decorative-section__content-title-skills">
+        <h3 id="decorative-section__content-title-skills" class="decorative-section__content-title">tools<span>.</span></h3>
+        <div class="card stack-items-center remove-bkg remove-b-shadow">
+          <div class="card__body p-10">
+            <div class="tabs" role="tablist">
+              <button class="tab-button tab-button--active" data-tab="tab-tools-1" aria-controls="tab-tools-1" aria-selected="true">research.</button>
+              <button class="tab-button" data-tab="tab-tools-2" aria-controls="tab-tools-2" aria-selected="false">design.</button>
+              <button class="tab-button" data-tab="tab-tools-3" aria-controls="tab-tools-3" aria-selected="false">coding.</button>
+            </div>
+            <div class="tab-content tab-content--active" id="tab-tools-1" role="tabpanel" aria-labelledby="tab-tools-1">
+              <div class="pills">
+                <span class="pill">Miro</span>
+                <span class="pill">Quantitative Research</span>
+                <span class="pill">Quantitative Research</span>
+                <span class="pill">User Testings</span>
+                <span class="pill">mentoring</span>
+              </div>
+            </div>
+          </div>
+          <div class="tab-content" id="tab-tools-2" role="tabpanel" aria-labelledby="tab-tools-2" hidden>
+            <div class="pills">
+              <span class="pill">coloristics</span>
+              <span class="pill">graphic design</span>
+              <span class="pill">Human Center Interaction </span>
+              <span class="pill">Figma</span>
+              <span class="pill">Design Thinking</span>
+              <span class="pill">Informational Architecture</span>
+              <span class="pill">mentoring</span>
+            </div>
+          </div>
+  
+          <div class="tab-content" id="tab-tools-3" role="tabpanel" aria-labelledby="tab-tools-3" hidden>
+            <div class="pills">
+              <span class="pill">html5</span>
+              <span class="pill">CSS3</span>
+              <span class="pill">JavaScript</span>
+              <span class="pill">Node</span>
+              <span class="pill">React</span> <span class="pill">Angular</span>
+              <span class="pill">Next.js</span><span class="pill">mentoring</span><span class="pill">Component Driven Design</span> <span class="pill">Sass</span> <span class="pill">Tailwind</span> <span class="pill">AXE Scan</span> <span class="pill">Lighthouse</span>
+              <span class="pill">Jest</span>
+              <span class="pill">Jasmine</span><span class="pill">Cypress</span>
+              <span class="pill">Github</span><span class="pill">Bitubucket</span>
+              <span class="pill">Jira</span><span class="pill">VS Code</span>
+            </div>
+          </div>
         </div>
-
-        <div class="input-wrapper">
-          <label id="three" class="custom-field" aria-label="email form field"> <span class="label-text">email<span
-                class="required">(required)</span></span>
-            <input id="email" type="email" placeholder="username@domain" name="email" maxLength="50"
-              autocomplete="off" />
-          </label>
-          <ul id="email-error-message" class="validation-error-message" aria-label="error message" tabindex="0"
-            role="list">Email must:
-            <li id="error-email-regex" class="errors" role="listitem"></li>
-            <li id="error-email-length" class="errors" role="listitem"></li>
-            <li id="error-email-empty" class="errors" role="listitem"></li>
-          </ul>
-        </div>
-
-        <div class="input-wrapper">
-          <label id="four" class="custom-field" aria-label="subject form field"><span class="label-text">subject<span
-                class="required">(required)</span></span>
-            <input id="subject" type="text" placeholder="title" name="subject" maxLength="25" autocomplete="off" />
-          </label>
-          <ul id="subject-error-message" class="validation-error-message" aria-label="error message" tabindex="0"
-            role="list">Subject must:
-            <li id="error-subject-no-space-as-first-char" class="errors"></li>
-            <li id="error-subject-regex" class="errors" role="listitem"></li>
-            <li id="error-subject-length" class="errors" role="listitem"></li>
-            <li id="error-subject-empty" class="errors" role="listitem"></li>
-          </ul>
-        </div>
-
-        <div class="input-wrapper">
-          <label id="five" class="custom-field" aria-label="message form field"><span class="label-text">Your
-              message<span class="required">(required)</span></span>
-            <textarea id="message" cols="30" rows="10" placeholder="Your message" name="message" cols="30" rows="10"
-              maxLength="500" autocomplete="off"></textarea>
-          </label>
-          <ul id="message-error-message" class="validation-error-message" aria-label="error message" tabindex="0"
-            role="list">Message must:
-            <li id="error-message-no-space-as-first-char" class="errors" role="listitem"></li>
-            <li id="error-message-regex" class="errors" role="listitem"></li>
-            <li id="error-message-length" class="errors" role="listitem"></li>
-            <li id="error-message-empty" class="errors" role="listitem"></li>
-          </ul>
-        </div>
-
-        <p class="info-notify form-info-notify"
-          aria-label="Submitting this form will open and autopopulate the form data in your email client">By submitting
-          this form, the data will automatically open and populate in your email client</span></p>
-
-        <div class="button-container" role="button">
-          <button type="submit" id="submit" class="btn" role="button" aria-label="contact form submit button">Submit
-          </button>
-        </div>
-      </form>
-
-
-
-    </section>
-    <button id="contact-section-link" class="btn" role="button">
-      <a class="button-text" href="mailto:corianoharris@gmail.com" target="_blank">Reach out</a>
-    </button>
-
-    <footer class="section footer">
-      <p class="copyright"> Copyrights &copy;
-        <span class="copyright-year"></span>
-        Coriano Harris. All rights reserved.
-      </p>
-    </footer>
-
-  </div>
+  
+      </section>
+      <svg id="wave" class="bottom-svg" style=" transition: 0.3s" viewBox="0 0 1440 100" version="1.1" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <linearGradient id="sw-gradient-0" x1="0" x2="0" y1="1" y2="0">
+            <stop stop-color="rgba(243, 106, 62, 1)" offset="0%"></stop>
+            <stop stop-color="rgba(255, 199, 185, 1)" offset="100%"></stop>
+          </linearGradient>
+        </defs>
+        <path style="transform:translate(0, 0px); opacity:1" fill="url(#sw-gradient-0)" d="M0,90L10,76.7C20,63,40,37,60,21.7C80,7,100,3,120,6.7C140,10,160,20,180,20C200,20,220,10,240,20C260,30,280,60,300,73.3C320,87,340,83,360,70C380,57,400,33,420,20C440,7,460,3,480,3.3C500,3,520,7,540,20C560,33,580,57,600,66.7C620,77,640,73,660,65C680,57,700,43,720,40C740,37,760,43,780,41.7C800,40,820,30,840,26.7C860,23,880,27,900,30C920,33,940,37,960,45C980,53,1000,67,1020,66.7C1040,67,1060,53,1080,50C1100,47,1120,53,1140,51.7C1160,50,1180,40,1200,35C1220,30,1240,30,1260,36.7C1280,43,1300,57,1320,58.3C1340,60,1360,50,1380,53.3C1400,57,1420,73,1430,81.7L1440,90L1440,100L1430,100C1420,100,1400,100,1380,100C1360,100,1340,100,1320,100C1300,100,1280,100,1260,100C1240,100,1220,100,1200,100C1180,100,1160,100,1140,100C1120,100,1100,100,1080,100C1060,100,1040,100,1020,100C1000,100,980,100,960,100C940,100,920,100,900,100C880,100,860,100,840,100C820,100,800,100,780,100C760,100,740,100,720,100C700,100,680,100,660,100C640,100,620,100,600,100C580,100,560,100,540,100C520,100,500,100,480,100C460,100,440,100,420,100C400,100,380,100,360,100C340,100,320,100,300,100C280,100,260,100,240,100C220,100,200,100,180,100C160,100,140,100,120,100C100,100,80,100,60,100C40,100,20,100,10,100L0,100Z"></path>
+      </svg>
+    </div>
+  
+    <div id="samples" class="decorative-section">
+      <svg id="wave" class="top-svg" style=" transition: 0.3s" viewBox="0 0 1440 100" version="1.1" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <linearGradient id="sw-gradient-0" x1="0" x2="0" y1="1" y2="0">
+            <stop stop-color="rgba(243, 106, 62, 1)" offset="0%"></stop>
+            <stop stop-color="rgba(255, 199, 185, 1)" offset="100%"></stop>
+          </linearGradient>
+        </defs>
+        <path style="transform:translate(0, 0px); opacity:1" fill="url(#sw-gradient-0)" d="M0,90L10,76.7C20,63,40,37,60,21.7C80,7,100,3,120,6.7C140,10,160,20,180,20C200,20,220,10,240,20C260,30,280,60,300,73.3C320,87,340,83,360,70C380,57,400,33,420,20C440,7,460,3,480,3.3C500,3,520,7,540,20C560,33,580,57,600,66.7C620,77,640,73,660,65C680,57,700,43,720,40C740,37,760,43,780,41.7C800,40,820,30,840,26.7C860,23,880,27,900,30C920,33,940,37,960,45C980,53,1000,67,1020,66.7C1040,67,1060,53,1080,50C1100,47,1120,53,1140,51.7C1160,50,1180,40,1200,35C1220,30,1240,30,1260,36.7C1280,43,1300,57,1320,58.3C1340,60,1360,50,1380,53.3C1400,57,1420,73,1430,81.7L1440,90L1440,100L1430,100C1420,100,1400,100,1380,100C1360,100,1340,100,1320,100C1300,100,1280,100,1260,100C1240,100,1220,100,1200,100C1180,100,1160,100,1140,100C1120,100,1100,100,1080,100C1060,100,1040,100,1020,100C1000,100,980,100,960,100C940,100,920,100,900,100C880,100,860,100,840,100C820,100,800,100,780,100C760,100,740,100,720,100C700,100,680,100,660,100C640,100,620,100,600,100C580,100,560,100,540,100C520,100,500,100,480,100C460,100,440,100,420,100C400,100,380,100,360,100C340,100,320,100,300,100C280,100,260,100,240,100C220,100,200,100,180,100C160,100,140,100,120,100C100,100,80,100,60,100C40,100,20,100,10,100L0,100Z"></path>
+      </svg>
+      <section class="decorative-section__content js-tab-samples" aria-labelledby="decorative-section__content-title-samples">
+        <h3 id="decorative-section__content-title-samples" class="decorative-section__content-title">samples<span>.</span></h3>
+        <div class="card stack-items-center remove-bkg remove-b-shadow">
+          <div class="card__body p-10">
+            <div class="tabs" role="tablist">
+              <button class="tab-button tab-button--active" data-tab="tab-samples-1" aria-controls="tab-samples-1" aria-selected="true">ux/ui</button>
+              <button class="tab-button" data-tab="tab-samples-2" aria-controls="tab-samples-2" aria-selected="false">coding</button>
+            </div>
+            <div class="tab-content tab-content--active" id="tab-samples-1" role="tabpanel" aria-labelledby="tab-samples-1">
+              <div class="items-flex-container">
+  
+                <div class="card--small" role="group" aria-labelledby="card-title" aria-describedby="card-subtitle">
+                  <div class="card--small__image-container">
+                    <img src="public/images/projects/ecobon-logo.png" alt="ecobon logo" class="card--small__image">
+                  </div>
+                  <div class="card--small__copy">
+                    <div id="card--small__title" class="card--small__title">UX Case Study</div>
+                    <div id="card--small__subtitle" class="card--small__subtitle">Figma</div>
+                    <a class="card--small__link" href="public/images/projects/ecobon-case-study.pdf" target="_blank">view</a>
+                  </div>
+                </div>
+                <div class="card--small" role="group" aria-labelledby="card-title" aria-describedby="card-subtitle">
+                  <div class="card--small__image-container">
+                    <img src="public/images/projects/play-run-logo.png" alt="play run logo" class="card--small__image">
+                  </div>
+                  <div class="card--small__copy">
+                    <div id="card--small__title" class="card--small__title">Play & Run Landing Page</div>
+                    <div id="card--small__subtitle" class="card--small__subtitle">Figma</div>
+                    <a class="card--small__link" href="public/images/projects/play-run-login-mockup-devices.png" target="_blank">view</a>
+                  </div>
+                </div>
+                <div class="card--small" role="group" aria-labelledby="card-title" aria-describedby="card-subtitle">
+                  <div class="card--small__image-container">
+                    <img src="public/images/projects/interactive-prototype.png" alt="play run logo" class="card--small__image">
+                  </div>
+                  <div class="card--small__copy">
+                    <div id="card--small__title" class="card--small__title">Interactive Prototype</div>
+                    <div id="card--small__subtitle" class="card--small__subtitle">Figma</div>
+                    <a class="card--small__link" href="https://www.figma.com/proto/JZpFcManwUYTEe9pJ2VOIu/Zoo-Donator?node-id=35-145&t=G5JAX5fecGUUuhLw-1&scaling=scale-down&page-id=0%3A1&starting-point-node-id=35%3A145" target="_blank">view</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="tab-content" id="tab-samples-2" role="tabpanel" aria-labelledby="tab-samples-2" hidden>
+  
+              <div class="items-flex-container">
+  
+                <div class="card--small" role="group" aria-labelledby="card--small__title" aria-describedby="card--small__subtitle">
+                  <div class="card--small__image-container">
+                    <img src="public/images/projects/notezy-logo.png" alt="Notezy logo" class="card--small__image">
+                  </div>
+                  <div class="card--small__copy">
+                    <div id="card--small__title" class="card--small__title">Notezy</div>
+                    <div id="card--small__subtitle" class="card--small__subtitle">React</div>
+                    <a class="card--small__link" href="https://notezyapp.netlify.app/">view</a>
+                  </div>
+                </div>
+  
+                <div class="card--small" role="group" aria-labelledby="card--small__title" aria-describedby="card-subtitle">
+                  <div class="card--small__image-container">
+                    <img src="public/images/projects/prediabetes-test-logo.png" alt="screenshot of prediabetes risk test" class="card--small__image">
+                  </div>
+                  <div class="card--small__copy">
+                    <div id="card--small__title" class="card--small__title">Prediabetes Test</div>
+                    <div id="card--small__subtitle" class="card--small__subtitle">Next.js</div>
+                    <a class="card--small__link" href="https://prediabetes-risk-test.netlify.app/" target="_blank">view</a>
+                  </div>
+                </div>
+  
+              </div>
+            </div>
+          </div>
+      </section>
+  
+      <svg id="wave" class="bottom-svg" style=" transition: 0.3s" viewBox="0 0 1440 100" version="1.1" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <linearGradient id="sw-gradient-0" x1="0" x2="0" y1="1" y2="0">
+            <stop stop-color="rgba(243, 106, 62, 1)" offset="0%"></stop>
+            <stop stop-color="rgba(255, 199, 185, 1)" offset="100%"></stop>
+          </linearGradient>
+        </defs>
+        <path style="transform:translate(0, 0px); opacity:1" fill="url(#sw-gradient-0)" d="M0,90L10,76.7C20,63,40,37,60,21.7C80,7,100,3,120,6.7C140,10,160,20,180,20C200,20,220,10,240,20C260,30,280,60,300,73.3C320,87,340,83,360,70C380,57,400,33,420,20C440,7,460,3,480,3.3C500,3,520,7,540,20C560,33,580,57,600,66.7C620,77,640,73,660,65C680,57,700,43,720,40C740,37,760,43,780,41.7C800,40,820,30,840,26.7C860,23,880,27,900,30C920,33,940,37,960,45C980,53,1000,67,1020,66.7C1040,67,1060,53,1080,50C1100,47,1120,53,1140,51.7C1160,50,1180,40,1200,35C1220,30,1240,30,1260,36.7C1280,43,1300,57,1320,58.3C1340,60,1360,50,1380,53.3C1400,57,1420,73,1430,81.7L1440,90L1440,100L1430,100C1420,100,1400,100,1380,100C1360,100,1340,100,1320,100C1300,100,1280,100,1260,100C1240,100,1220,100,1200,100C1180,100,1160,100,1140,100C1120,100,1100,100,1080,100C1060,100,1040,100,1020,100C1000,100,980,100,960,100C940,100,920,100,900,100C880,100,860,100,840,100C820,100,800,100,780,100C760,100,740,100,720,100C700,100,680,100,660,100C640,100,620,100,600,100C580,100,560,100,540,100C520,100,500,100,480,100C460,100,440,100,420,100C400,100,380,100,360,100C340,100,320,100,300,100C280,100,260,100,240,100C220,100,200,100,180,100C160,100,140,100,120,100C100,100,80,100,60,100C40,100,20,100,10,100L0,100Z"></path>
+      </svg>
+    </div>
+  
+    <div id="contact" class="decorative-section hidden" aria-labelledby="decorative-section__content-title-contact">
+      <svg id="wave" class="top-svg" style=" transition: 0.3s" viewBox="0 0 1440 100" version="1.1" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <linearGradient id="sw-gradient-0" x1="0" x2="0" y1="1" y2="0">
+            <stop stop-color="rgba(243, 106, 62, 1)" offset="0%"></stop>
+            <stop stop-color="rgba(255, 199, 185, 1)" offset="100%"></stop>
+          </linearGradient>
+        </defs>
+        <path style="transform:translate(0, 0px); opacity:1" fill="url(#sw-gradient-0)" d="M0,90L10,76.7C20,63,40,37,60,21.7C80,7,100,3,120,6.7C140,10,160,20,180,20C200,20,220,10,240,20C260,30,280,60,300,73.3C320,87,340,83,360,70C380,57,400,33,420,20C440,7,460,3,480,3.3C500,3,520,7,540,20C560,33,580,57,600,66.7C620,77,640,73,660,65C680,57,700,43,720,40C740,37,760,43,780,41.7C800,40,820,30,840,26.7C860,23,880,27,900,30C920,33,940,37,960,45C980,53,1000,67,1020,66.7C1040,67,1060,53,1080,50C1100,47,1120,53,1140,51.7C1160,50,1180,40,1200,35C1220,30,1240,30,1260,36.7C1280,43,1300,57,1320,58.3C1340,60,1360,50,1380,53.3C1400,57,1420,73,1430,81.7L1440,90L1440,100L1430,100C1420,100,1400,100,1380,100C1360,100,1340,100,1320,100C1300,100,1280,100,1260,100C1240,100,1220,100,1200,100C1180,100,1160,100,1140,100C1120,100,1100,100,1080,100C1060,100,1040,100,1020,100C1000,100,980,100,960,100C940,100,920,100,900,100C880,100,860,100,840,100C820,100,800,100,780,100C760,100,740,100,720,100C700,100,680,100,660,100C640,100,620,100,600,100C580,100,560,100,540,100C520,100,500,100,480,100C460,100,440,100,420,100C400,100,380,100,360,100C340,100,320,100,300,100C280,100,260,100,240,100C220,100,200,100,180,100C160,100,140,100,120,100C100,100,80,100,60,100C40,100,20,100,10,100L0,100Z"></path>
+      </svg>
+      <h3 id="decorative-section__content-title-contact" class="decorative-section__content-title">Say hi<span>.</span></h3>
+  
+      <div class="form-container">
+        <form id="form" class="form js-form" aria-labelledby="decorative-section__content-title-contact">
+          <div class="form-control js-form-control">
+            <label class="form-control__label" for="username">Name:<span><sup>*</sup></span></label>
+            <input class="form-control__input js-username" type="text" id="username" placeholder="Enter Name" aria-describedby="username-warning" aria-required="true">
+            <small id="username-warning" class="warning-message js-warning" aria-live="polite"></small>
+          </div>
+          <div class="form-control js-form-control">
+            <label class="form-control__label" for="email">Email:<span><sup>*</sup></span></label>
+            <input class="form-control__input js-email" type="text" id="email" placeholder="Enter email" aria-describedby="email-warning" aria-required="true">
+            <small id="email-warning" class="warning-message js-warning" aria-live="polite"></small>
+          </div>
+          <div class="form-control js-form-control">
+            <label class="form-control__label" for="phone">Phone</label>
+            <input class="form-control__input js-phone" type="tel" id="phone" name="phone">
+            <small id="phone-warning" class="warning-message js-warning" aria-live="polite"></small>
+          </div>
+          <div class="form-control js-form-control">
+            <label class="form-control__label" for="message">Message:<span><sup>*</sup></span></label>
+            <textarea id="message" class="form-control__message width-100 js-message" name="message" placeholder="How can I help?" required></textarea>
+            <small id="message-warning" class="text-message-message js-warning" aria-live="polite"></small>
+          </div>
+          <button type="submit" disabled id="submit" class="buttons js-submit">Submit</button>
+        </form>
+      </div>
+  
+      <svg id="wave" class="bottom-svg" style=" transition: 0.3s" viewBox="0 0 1440 100" version="1.1" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <linearGradient id="sw-gradient-0" x1="0" x2="0" y1="1" y2="0">
+            <stop stop-color="rgba(243, 106, 62, 1)" offset="0%"></stop>
+            <stop stop-color="rgba(255, 199, 185, 1)" offset="100%"></stop>
+          </linearGradient>
+        </defs>
+        <path style="transform:translate(0, 0px); opacity:1" fill="url(#sw-gradient-0)" d="M0,90L10,76.7C20,63,40,37,60,21.7C80,7,100,3,120,6.7C140,10,160,20,180,20C200,20,220,10,240,20C260,30,280,60,300,73.3C320,87,340,83,360,70C380,57,400,33,420,20C440,7,460,3,480,3.3C500,3,520,7,540,20C560,33,580,57,600,66.7C620,77,640,73,660,65C680,57,700,43,720,40C740,37,760,43,780,41.7C800,40,820,30,840,26.7C860,23,880,27,900,30C920,33,940,37,960,45C980,53,1000,67,1020,66.7C1040,67,1060,53,1080,50C1100,47,1120,53,1140,51.7C1160,50,1180,40,1200,35C1220,30,1240,30,1260,36.7C1280,43,1300,57,1320,58.3C1340,60,1360,50,1380,53.3C1400,57,1420,73,1430,81.7L1440,90L1440,100L1430,100C1420,100,1400,100,1380,100C1360,100,1340,100,1320,100C1300,100,1280,100,1260,100C1240,100,1220,100,1200,100C1180,100,1160,100,1140,100C1120,100,1100,100,1080,100C1060,100,1040,100,1020,100C1000,100,980,100,960,100C940,100,920,100,900,100C880,100,860,100,840,100C820,100,800,100,780,100C760,100,740,100,720,100C700,100,680,100,660,100C640,100,620,100,600,100C580,100,560,100,540,100C520,100,500,100,480,100C460,100,440,100,420,100C400,100,380,100,360,100C340,100,320,100,300,100C280,100,260,100,240,100C220,100,200,100,180,100C160,100,140,100,120,100C100,100,80,100,60,100C40,100,20,100,10,100L0,100Z"></path>
+      </svg>
+    </div>
+  
+    <button id="backToTopBtn" class="button__back-to-top js-button__back-to-top b-shadow" title="Go to top" aria-label="Back to top"><i class="fas fa-arrow-up fa-lg" aria-hidden="true"></i></button>
+  
+    <div class="footer">
+      <h5 class="copyright" aria-label="Coriano Harris. All rights reserved.">&copy;<span class="copyright-year js-copyright-year"></span> Coriano Harris. All rights reserved.</h5>
+    </div>
+  </main>
+  
+  <script src="https://cdn.jsdelivr.net/npm/dompurify@2.3.6/dist/purify.min.js"></script>
 
   <script src="main.js"></script>
 
 </body>
 
 </html>
+
+© [Year] [Your Name or Your Company]. All rights reserved.

@@ -1,591 +1,334 @@
 (function runCode() {
-  const clients = [
-    "Partcycle",
-    "CodeCrew",
-    "Dare Dream Dance",
-    "C4 Atlanta",
-    "Lauren Brynes Productions",
-    "St. John’s Confidential File",
-    "Juice Mound Memphis",
-    "Navy Seals Foundation Memphis",
-    "Sweet Cheeks Ministry",
-  ];
-  const communities = ["Tech901", "GiveCamp Memphis", "UX Mastery"];
-  const graphicDesignKeywords = ["page layout"];
-  const uxKeywords = ["quantitative research", "analytics"];
-  const uiKeywords = [
-    "sketch",
-    "invision",
-    "mockups",
-    "color theory",
-    "adobe xd",
-  ];
-  const devKeywords = [
-    "sass",
-    "ember.js",
-    "next.js",
-    "node.js",
-    "docusaurus",
-    "airtable",
-    "restful api",
-    "netlify",
-    "AXE a11y scan",
-    "pair programming",
-    "cross browser testing",
-  ];
+  document.addEventListener("DOMContentLoaded", function () {
+    // Executes after all DOM elements are loaded
+  
+    // DOM elements
+    const nav = document.querySelector(".js-main-nav");
+    const navBtn = nav.querySelector(".js-main-nav__icon-btn");
+    const allNavLinksItems = nav.querySelectorAll(".js-main-nav-item a");
+    const mainNavlinks = nav.querySelector(".js-main-nav__list");
+    const mainNavHiddenlinks = nav.querySelector(".js-main-nav__hidden-list");
+  
+    const cards = document.querySelectorAll(".js-card-reviews");
+    const prevBtn = document.querySelector(".js-prevBtn");
+    const nextBtn = document.querySelector(".js-nextBtn");
+  
+    const backToTopBtn = document.querySelector(".js-button__back-to-top");
+    const form = document.querySelector(".js-form");
+    const username = document.querySelector(".js-username");
+    const email = document.querySelector(".js-email");
+    const message = document.querySelector(".js-message");
+    const phone = document.querySelector(".js-phone");
+    const submitButton = document.querySelector(".js-submit");
 
-  /**
-   * Insert a if needed here...
-   * const softKeywords
-   * const SOFT_LIST = document.getElementById("js-soft-list");
-   */
-
-  // ul elements
-  const clientsList = document.getElementById("js-clients-list");
-  const communitiesList = document.getElementById("js-community-list");
-  const graphicDesignKeywordsList = document.getElementById("js-graphic-list");
-  const uxKeywordsList = document.getElementById("js-ux-list");
-  const uiKeywordsList = document.getElementById("js-ui-list");
-  const devKeywordsList = document.getElementById("js-dev-list");
-
-  // input elements
-  const NAME_FIELD = document.getElementById("name");
-  const EMAIL_FIELD = document.getElementById("email");
-  const PHONE_FIELD = document.getElementById("phone");
-  const SUBJECT_FIELD = document.getElementById("subject");
-  const MESSAGE_FIELD = document.getElementById("message");
-
-  // navigation
-  const navLinks = [...document.querySelectorAll(".nav-items")];
-  const firstNavLink = document.querySelectorAll(".nav-items")[0];
-  const lastNavLink = document.querySelectorAll(".nav-items")[2];
-  const navHamburger = document.getElementById("nav-hamburger");
-  const closeNavBtn = document.getElementById("nav-closebtn");
-
-  navLinks.forEach((link) => {
-    link.addEventListener("click", closeNav, false);
-  });
-
-  function openNav() {
-    document.getElementById("myNav").style.display = "block";
-  }
-
-  function closeNav() {
-    document.getElementById("myNav").style.display = "none";
-  }
-
-  // form fields
-  const FORM = document.forms["contact"];
-  const nameInput = document.getElementById("name").value;
-  const subjectInput = document.getElementById("subject").value;
-  const emailInput = document.getElementById("email").value;
-  const phoneInput = document.getElementById("phone").value;
-  const messageInput = document.getElementById("message").value;
-
-  // error elemeents
-  const nameError = document.getElementById("name-error-message");
-  const emailError = document.getElementById("email-error-message");
-  const phoneError = document.getElementById("phone-error-message");
-  const subjectError = document.getElementById("subject-error-message");
-  const messageError = document.getElementById("message-error-message");
-
-  const submitBtn = document.getElementById("submit");
-
-  // Form validations
-
-  const validateEmailValue = () => {
-    let emailInput = document.forms["contact"]["email"].value;
-    const wrapper = document.getElementById("email-error-message");
-
-    const liRegex = document.getElementById("error-email-regex");
-    const liMaxLength = document.getElementById("error-email-length");
-    const liEmpty = document.getElementById("error-email-empty");
-
-    let emailRegex = /^[a-zA-Z0-9.]+@[a-zA-Z]{2,10}\.[a-zA-Z]{2,10}$/;
-
-    const regexMessage = "- not contain spaces before or after the '@' symbol.";
-    const maxLengthMessage = "- 50 characters or less";
-    const emptyMessage = " - not be empty";
-
-    let error;
-
-    let regexText;
-    let maxLengthText;
-    let emptyText;
-
-    if (!emailRegex.test(emailInput)) {
-      error = true;
-      regexText = regexMessage;
-      liRegex.style.display = "block";
-    } else {
-      error = false;
-      regexText = "";
-      liRegex.style.display = "none";
+    const copyrightYear = document.querySelector(".js-copyright-year");
+    const currentYear = new Date().getFullYear();
+    copyrightYear.innerText = currentYear;
+  
+    // Function to sanitize input values using DOMPurify
+    function sanitizeInput(input) {
+      return DOMPurify.sanitize(input.value.trim());
     }
-
-    if (emailInput.length >= 50) {
-      error = true;
-      maxLengthText = maxLengthMessage;
-      liMaxLength.style.display = "block";
-    } else {
-      error = false;
-      maxLengthText = "";
-      liMaxLength.style.display = "none";
-    }
-
-    if (emailInput.trim() === "") {
-      error = true;
-      emptyText = emptyMessage;
-      liEmpty.style.display = "block";
-    } else {
-      error = false;
-      emptyText = "";
-      liEmpty.style.display = "none";
-    }
-
-    if (
-      liRegex.style.display === "block" ||
-      liMaxLength.style.display === "block" ||
-      liEmpty.style.display === "block"
-    ) {
-      wrapper.style.display = "block";
-    } else wrapper.style.display = "none";
-
-    liRegex.textContent = regexText;
-    liMaxLength.textContent = maxLengthText;
-    liEmpty.textContent = emptyText;
-  };
-
-  const validateNameValue = () => {
-    let nameInput = document.forms["contact"]["fullname"].value;
-    const wrapper = document.getElementById("name-error-message");
-
-    const liRegex = document.getElementById("error-name-regex");
-    const liMaxLength = document.getElementById("error-name-length");
-    const liEmpty = document.getElementById("error-name-empty");
-    const liNoSpaceAsFirstChar = document.getElementById(
-      "error-name-no-space-as-first-char"
-    );
-
-    const nameRegex = /^[a-zA-Z\s]+$/;
-
-    const noSpaceAsFirstChar = "- not start with a space";
-    const regexMessage = "- only contain alphabets and spaces";
-    const maxLengthMessage = "- be 25 characters or less";
-    const emptyMessage = "- not be empty";
-
-    let error;
-
-    let noSpaceFirstCharText;
-    let regexText;
-    let maxLengthText;
-    let emptyText;
-
-    if (nameInput.indexOf(" ") === 0) {
-      error = true;
-      noSpaceFirstCharText = noSpaceAsFirstChar;
-      liNoSpaceAsFirstChar.style.display = "block";
-    } else {
-      error = false;
-      noSpaceFirstCharText = "";
-      liNoSpaceAsFirstChar.style.display = "none";
-    }
-
-    if (!nameRegex.test(nameInput)) {
-      error = true;
-      regexText = regexMessage;
-      liRegex.style.display = "block";
-    } else {
-      error = false;
-      regexText = "";
-      liRegex.style.display = "none";
-    }
-
-    if (nameInput.length >= 25) {
-      error = true;
-      maxLengthText = maxLengthMessage;
-      liMaxLength.style.display = "block";
-    } else {
-      error = false;
-      maxLengthText = "";
-      liMaxLength.style.display = "none";
-    }
-
-    if (nameInput.trim() === "") {
-      error = true;
-      emptyText = emptyMessage;
-      liEmpty.style.display = "block";
-    } else {
-      error = false;
-      emptyText = "";
-      liEmpty.style.display = "none";
-    }
-
-    if (
-      liNoSpaceAsFirstChar.style.display === "block" ||
-      liRegex.style.display === "block" ||
-      liMaxLength.style.display === "block" ||
-      liEmpty.style.display === "block"
-    ) {
-      wrapper.style.display = "block";
-    } else wrapper.style.display = "none";
-
-    liNoSpaceAsFirstChar.textContent = noSpaceFirstCharText;
-    liRegex.textContent = regexText;
-    liMaxLength.textContent = maxLengthText;
-    liEmpty.textContent = emptyText;
-  };
-
-  const validateSubjectValue = () => {
-    let subjectInput = document.forms["contact"]["subject"].value;
-    const wrapper = document.getElementById("subject-error-message");
-
-    const liRegex = document.getElementById("error-subject-regex");
-    const liMaxLength = document.getElementById("error-subject-length");
-    const liEmpty = document.getElementById("error-subject-empty");
-    const liNoSpaceAsFirstChar = document.getElementById(
-      "error-subject-no-space-as-first-char"
-    );
-
-    const subjectRegex = /^[a-z0-9]+([-_\s]{1}[a-z0-9]+)*$/i;
-
-    const noSpaceAsFirstChar = " - not start with a space";
-    const regexMessage = " - only contain alphanumeric characters and spaces";
-    const maxLengthMessage = " - 50 characters or less";
-    const emptyMessage = "- Subject can't be empty";
-
-    let error;
-
-    let noSpaceFirstCharText;
-    let regexText;
-    let maxLengthText;
-    let emptyText;
-
-    if (subjectInput.indexOf(" ") === 0) {
-      error = true;
-      noSpaceFirstCharText = noSpaceAsFirstChar;
-      liNoSpaceAsFirstChar.style.display = "block";
-    } else {
-      error = false;
-      noSpaceFirstCharText = "";
-      liNoSpaceAsFirstChar.style.display = "none";
-    }
-
-    if (!subjectRegex.test(subjectInput)) {
-      error = true;
-      regexText = regexMessage;
-      liRegex.style.display = "block";
-    } else {
-      error = false;
-      regexText = "";
-      liRegex.style.display = "none";
-    }
-
-    if (subjectInput.length >= 25) {
-      error = true;
-      maxLengthText = maxLengthMessage;
-      liMaxLength.style.display = "block";
-    } else {
-      error = false;
-      maxLengthText = "";
-      liMaxLength.style.display = "none";
-    }
-
-    if (subjectInput.trim() === "") {
-      error = true;
-      emptyText = emptyMessage;
-      liEmpty.style.display = "block";
-      wrapper.style.display = "block";
-    } else {
-      error = false;
-      emptyText = "";
-      liEmpty.style.display = "none";
-    }
-
-    if (
-      liNoSpaceAsFirstChar.style.display === "block" ||
-      liRegex.style.display === "block" ||
-      liMaxLength.style.display === "block" ||
-      liEmpty.style.display === "block"
-    ) {
-      wrapper.style.display = "block";
-    } else wrapper.style.display = "none";
-
-    liNoSpaceAsFirstChar.textContent = noSpaceFirstCharText;
-    liRegex.textContent = regexText;
-    liMaxLength.textContent = maxLengthText;
-    liEmpty.textContent = emptyText;
-  };
-
-  const validateMessageValue = () => {
-    let messageInput = document.forms["contact"]["message"].value;
-    const wrapper = document.getElementById("message-error-message");
-
-    const liRegex = document.getElementById("error-message-regex");
-    const liMaxLength = document.getElementById("error-message-length");
-    const liEmpty = document.getElementById("error-message-empty");
-    const liNoSpaceAsFirstChar = document.getElementById(
-      "error-message-no-space-as-first-char"
-    );
-
-    const messageRegex = /^[a-z0-9]+([-_\s]{1}[a-z0-9]+)*$/i;
-
-    const regexMessage = "- only contain alphanumeric characters and spaces";
-    const maxLengthMessage = "- be 500 characters or less";
-    const emptyMessage = "- not be empty";
-    const noSpaceAsFirstChar = "- not start with a space";
-
-    let error;
-
-    let noSpaceFirstCharText;
-    let regexText;
-    let maxLengthText;
-    let emptyText;
-
-    if (messageInput.indexOf(" ") === 0) {
-      error = true;
-      noSpaceFirstCharText = noSpaceAsFirstChar;
-      liNoSpaceAsFirstChar.style.display = "block";
-    } else {
-      error = false;
-      noSpaceFirstCharText = "";
-      liNoSpaceAsFirstChar.style.display = "none";
-    }
-
-    if (!messageRegex.test(messageInput)) {
-      error = true;
-      regexText = regexMessage;
-      liRegex.style.display = "block";
-    } else {
-      error = false;
-      regexText = "";
-      liRegex.style.display = "none";
-    }
-
-    if (messageInput.length >= 500) {
-      error = true;
-      maxLengthText = maxLengthMessage;
-      liMaxLength.style.display = "block";
-    } else {
-      error = false;
-      maxLengthText = "";
-      liMaxLength.style.display = "none";
-    }
-
-    if (messageInput.trim() === "") {
-      error = true;
-      emptyText = emptyMessage;
-      liEmpty.style.display = "block";
-      wrapper.style.display = "block";
-    } else {
-      error = false;
-      emptyText = "";
-      liEmpty.style.display = "none";
-    }
-
-    if (
-      liNoSpaceAsFirstChar.style.display === "block" ||
-      liRegex.style.display === "block" ||
-      liMaxLength.style.display === "block" ||
-      liEmpty.style.display === "block"
-    ) {
-      wrapper.style.display = "block";
-    } else wrapper.style.display = "none";
-
-    liNoSpaceAsFirstChar.textContent = noSpaceFirstCharText;
-    liRegex.textContent = regexText;
-    liMaxLength.textContent = maxLengthText;
-    liEmpty.textContent = emptyText;
-  };
-
-  const validatePhoneValue = () => {
-    const wrapper = document.getElementById("phone-error-message");
-    let phone = document.getElementById("phone");
-    let phoneFormat = document.forms["contact"]["phone"].value.replace(
-      /(\d{3})(\d{3})(\d{4})/,
-      "($1) $2-$3"
-    );
-
-    const liMaxLength = document.getElementById("error-phone-length");
-    const LiRegex = document.getElementById("error-phone-regex");
-    const phoneRegex = /^(?=.*[0-9])[- +()0-9]+$/;
-
-    const maxLengthMessage = "- contain 10 numbers";
-    const regexMessage = "- only contain numbers";
-
-    phone.value = phoneFormat;
-
-    let maxLengthText;
-    let regexText;
-
-    if (!phoneRegex.test(phoneFormat)) {
-      error = true;
-      regexText = regexMessage;
-      LiRegex.style.display = "block";
-    } else {
-      error = false;
-      regexText = "";
-      LiRegex.style.display = "none";
-    }
-
-    if (phoneFormat.length > 14 || phoneFormat.length < 14) {
-      error = true;
-      maxLengthText = maxLengthMessage;
-      liMaxLength.style.display = "block";
-    } else {
-      error = false;
-      maxLengthText = "";
-      liMaxLength.style.display = "none";
-    }
-
-    if (
-      liMaxLength.style.display === "block" ||
-      LiRegex.style.display === "block"
-    ) {
-      wrapper.style.display = "block";
-    } else wrapper.style.display = "none";
-
-    liMaxLength.textContent = maxLengthText;
-    LiRegex.textContent = regexText;
-  };
-
-  const formFormattedUri = () => {
-    // get form field values
-    let name = document.getElementById("name").value;
-    let phone = document.getElementById("phone").value;
-    let subject = document.getElementById("subject").value;
-    let message = document.getElementById("message").value;
-
-    // Set Initial values
-    let to = "corianoharris@gmail.com";
-    let uri = "mailto:" + to;
-    let body = "";
-
-    // Build Body / Message with all Input Fields
-    body += "Name: " + name + "\xa0" + "\r\n";
-    body += "Phone Number: " + phone + "\r\n";
-    body += "\r\n\r\n" + message;
-
-    // Build final Mailto URI
-    uri += "?subject=" + encodeURIComponent(subject);
-    uri += "&body=" + encodeURIComponent(body);
-    return uri;
-  }
-
-  const postFormDataToEmailClient = (e) => {
-    e.preventDefault();
-    // Open Mailto in New Window / Tab
-    window.open(formFormattedUri(), "_blank");
-
-    //reset form
-    FORM.reset();
-  };
-
-  const copyrightYear = document.querySelector(".copyright-year");
-  copyrightYear.innerText = new Date().getFullYear();
-
-  // UTILS
-
-  const displayListOfKeywords = (array, element) => {
-    for (item of array) {
-      let li = document.createElement("li");
-      li.innerHTML = item;
-      li.classList.add("list-items");
-      element.appendChild(li);
-    }
-  };
-
-  // EVENT LISTENERS
-
-  window.addEventListener(
-    "load",
-    () => {
-      displayListOfKeywords(communities, communitiesList);
-      displayListOfKeywords(clients, clientsList);
-      displayListOfKeywords(graphicDesignKeywords, graphicDesignKeywordsList);
-      displayListOfKeywords(uxKeywords, uxKeywordsList);
-      displayListOfKeywords(uiKeywords, uiKeywordsList);
-      displayListOfKeywords(devKeywords, devKeywordsList);
-    },
-    false
-  );
-
-  // nav keyboard tabbing
-
-  firstNavLink.addEventListener("keydown", (e) => {
-    if (e.shiftKey && e.key === "Tab") {
-      lastNavLink.focus();
-    }
-  });
-
-  lastNavLink.addEventListener("keydown", (e) => {
-    if (e.key === "Tab") {
-      firstNavLink.focus();
-    }
-  });
-
-  navHamburger.addEventListener(
-    "click",
-    () => {
-      openNav();
-    },
-    false
-  );
-
-  closeNavBtn.addEventListener(
-    "click",
-    () => {
-      closeNav();
-    },
-    false
-  );
-
-  // form
-
-  // form default button state
-  window.addEventListener("DOMContentLoaded", () => {
-    submitBtn.style.backgroundColor = "#D3D3D3";
-    submitBtn.style.cursor = "none";
-  });
-
-  FORM.addEventListener(
-    "input",
-    () => {
-      if (
-        nameError.style.display === "block" ||
-        emailError.style.display === "block" ||
-        phoneError.style.display === "block" ||
-        subjectError.style.display === "block" ||
-        messageError.style.display === "block"
-      ) {
-        submitBtn.setAttribute("disabled", true);
-        submitBtn.style.backgroundColor = "#f4f0ec";
-        submitBtn.style.color = "#be3455";
-        submitBtn.style.cursor = "none";
-      } else {
-        submitBtn.removeAttribute("disabled");
-        submitBtn.style.backgroundColor = "#be3455";
-        submitBtn.style.color = "white";
-        submitBtn.style.cursor = "pointer";
+  
+    // Nav logic
+  
+    let numOfItems = 0;
+    let totalSpace = 0;
+    let breakWidths = [];
+  
+    // Get initial state
+    Array.from(mainNavlinks.children).forEach(function (child) {
+      let width = child.offsetWidth;
+      totalSpace += width;
+      numOfItems += 1;
+      breakWidths.push(totalSpace);
+    });
+  
+    let availableSpace, numOfVisibleItems, requiredSpace;
+  
+    const check = () => {
+      // Get instant state
+      availableSpace = mainNavlinks.clientWidth - 10;
+      numOfVisibleItems = mainNavlinks.children.length;
+      requiredSpace = breakWidths[Math.min(numOfVisibleItems, 5) - 1]; // Ensure we consider only up to 5 items
+  
+      // Move items to hidden links if there are more than 5 visible items
+      while (numOfVisibleItems > 5) {
+        mainNavHiddenlinks.insertBefore(
+          mainNavlinks.children[mainNavlinks.children.length - 1],
+          mainNavHiddenlinks.firstChild
+        );
+        numOfVisibleItems -= 1;
       }
-    },
-    false
-  );
-
-  submitBtn.addEventListener("click", postFormDataToEmailClient, false);
-
-  NAME_FIELD.addEventListener("keydown", validateNameValue, false);
-  NAME_FIELD.removeEventListener("blur", validateNameValue);
-
-  PHONE_FIELD.addEventListener("keydown", validatePhoneValue, false);
-  PHONE_FIELD.removeEventListener("blur", validatePhoneValue);
-
-  EMAIL_FIELD.addEventListener("keydown", validateEmailValue, false);
-  EMAIL_FIELD.removeEventListener("blur", validateEmailValue);
-
-  SUBJECT_FIELD.addEventListener("keydown", validateSubjectValue, false);
-  SUBJECT_FIELD.removeEventListener("blur", validateSubjectValue);
-
-  MESSAGE_FIELD.addEventListener("keydown", validateMessageValue, false);
-  MESSAGE_FIELD.removeEventListener("blur", validateMessageValue);
+  
+      // There is not enough space
+      if (requiredSpace > availableSpace) {
+        if (mainNavlinks.children.length > 0) {
+          mainNavHiddenlinks.insertBefore(
+            mainNavlinks.children[numOfVisibleItems - 1],
+            mainNavHiddenlinks.firstChild
+          );
+          numOfVisibleItems -= 1;
+          check();
+        }
+      } else if (availableSpace > (breakWidths[numOfVisibleItems] || 0)) {
+        if (mainNavHiddenlinks.children.length > 0) {
+          mainNavlinks.appendChild(mainNavHiddenlinks.firstChild);
+          numOfVisibleItems += 1;
+          // Make sure not to exceed 5 visible items
+          if (numOfVisibleItems > 5) {
+            numOfVisibleItems -= 1;
+            mainNavHiddenlinks.insertBefore(
+              mainNavlinks.children[mainNavlinks.children.length - 1],
+              mainNavHiddenlinks.firstChild
+            );
+          }
+        }
+      }
+      // Update the button accordingly
+      navBtn.setAttribute("count", numOfItems - numOfVisibleItems);
+      if (numOfVisibleItems === numOfItems) {
+        navBtn.classList.add("hidden");
+      } else {
+        navBtn.classList.remove("hidden");
+      }
+    };
+  
+    // Function to handle click event on navigation links
+    function handleNavLinkClick(event) {
+      // Remove the 'selected' class from all navigation links
+      allNavLinksItems.forEach((link) => link.classList.remove("selected"));
+  
+      // Add the 'selected' class to the clicked link
+      event.target.classList.add("selected");
+    }
+  
+    // Attach click event listener to each navigation link
+    allNavLinksItems.forEach((link) =>
+      link.addEventListener("click", handleNavLinkClick)
+    );
+  
+    // Card slider logic
+  
+    let currentIndex = 0;
+  
+    const showCard = (n) => {
+      cards.forEach((card, index) => {
+        card.style.display = index === n ? "block" : "none";
+      });
+  
+      prevBtn.disabled = n === 0;
+      nextBtn.disabled = n === cards.length - 1;
+    };
+  
+    // Tab cards logic
+  
+    function handleTabClick(buttons, contents) {
+      buttons.forEach((button) => {
+        button.addEventListener("click", () => {
+          const tabId = button.getAttribute("data-tab");
+  
+          buttons.forEach((btn) => btn.classList.remove("tab-button--active"));
+          contents.forEach((content) => {
+            content.classList.remove("tab-content--active");
+            content.hidden = true;
+          });
+  
+          button.classList.add("tab-button--active");
+          const activeContent = document.getElementById(tabId);
+          activeContent.classList.add("tab-content--active");
+          activeContent.hidden = false;
+        });
+      });
+    }
+  
+    handleTabClick(
+      document.querySelectorAll(".js-tabs-social .tab-button"),
+      document.querySelectorAll(".js-tabs-social .tab-content")
+    );
+  
+    handleTabClick(
+      document.querySelectorAll(".js-tabs-skills .tab-button"),
+      document.querySelectorAll(".js-tabs-skills .tab-content")
+    );
+  
+    handleTabClick(
+      document.querySelectorAll(".js-tab-samples .tab-button"),
+      document.querySelectorAll(".js-tab-samples .tab-content")
+    );
+  
+    // Back to the top button logic
+  
+    const scrollFunction = () => {
+      if (window.pageYOffset > 20) {
+        backToTopBtn.style.display = "block";
+      } else {
+        backToTopBtn.style.display = "none";
+      }
+    };
+  
+    // Show input warnings messages
+    function showWarning(input, message) {
+      const formControl = input.parentElement;
+      formControl.className = "form-control warning";
+      const small = formControl.querySelector("small");
+      small.innerText = message;
+      updateSubmitButtonState();
+    }
+  
+    // Clear warning messages
+    function clearWarning(input) {
+      const formControl = input.parentElement;
+      formControl.className = "form-control";
+      const small = formControl.querySelector("small");
+      small.innerText = "";
+    }
+  
+    // Show success color
+    function showSuccess(input) {
+      const formControl = input.parentElement;
+      formControl.className = "form-control success";
+      updateSubmitButtonState();
+    }
+  
+    // Check email is valid
+    function checkEmail(input) {
+      const re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+      const sanitizedValue = sanitizeInput(input);
+      if (re.test(sanitizedValue)) {
+        showSuccess(input);
+      } else {
+        showWarning(input, "Email is not valid");
+      }
+    }
+  
+    // Check required fields
+    function checkRequired(inputArr) {
+      inputArr.forEach(function (input) {
+        const sanitizedValue = sanitizeInput(input);
+        if (input.type !== "tel" && sanitizedValue === "") {
+          showWarning(input, `${getFieldName(input)} is required`);
+        } else {
+          showSuccess(input);
+        }
+      });
+    }
+  
+    // Check input length
+    function checkLength(input, min, max) {
+      const sanitizedValue = sanitizeInput(input);
+      if (sanitizedValue.length < min) {
+        showWarning(
+          input,
+          `${getFieldName(input)} must be at least ${min} characters`
+        );
+      } else if (sanitizedValue.length > max) {
+        showWarning(
+          input,
+          `${getFieldName(input)} must be less than ${max} characters`
+        );
+      } else {
+        showSuccess(input);
+      }
+    }
+  
+    // Get field name
+    function getFieldName(input) {
+      return input.id.charAt(0).toUpperCase() + input.id.slice(1);
+    }
+  
+    // Format phone number
+    function formatPhone(input) {
+      let cleaned = ("" + input.value).replace(/\D/g, "");
+      if (cleaned.length > 10) {
+        cleaned = cleaned.substring(0, 10);
+      }
+      const match = cleaned.match(/^(\d{3})(\d{3})(\d{4})$/);
+      if (match) {
+        input.value = "(" + match[1] + ") " + match[2] + "-" + match[3];
+        showSuccess(input);
+      } else if (cleaned.length < 10) {
+        showWarning(input, "Phone number must be 10 digits");
+      } else {
+        showWarning(input, "Invalid phone number");
+      }
+    }
+  
+    // Update submit button state
+    function updateSubmitButtonState() {
+      const warnings = document.querySelectorAll(".form-control.warning").length;
+      const requiredFields = [username, email, message];
+      const allFieldsFilled = requiredFields.every(
+        (input) => sanitizeInput(input) !== ""
+      );
+      submitButton.disabled = warnings > 0 || !allFieldsFilled;
+    }
+  
+    // Event listeners
+    window.addEventListener("resize", check);
+  
+    navBtn.addEventListener("click", function () {
+      mainNavHiddenlinks.classList.toggle("hidden");
+    });
+  
+    prevBtn.addEventListener("click", () => {
+      currentIndex--;
+      showCard(currentIndex);
+    });
+  
+    nextBtn.addEventListener("click", () => {
+      currentIndex++;
+      showCard(currentIndex);
+    });
+  
+    window.addEventListener("scroll", scrollFunction);
+  
+    backToTopBtn.addEventListener("click", () => {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    });
+  
+    username.addEventListener("input", () => {
+      checkLength(username, 3, 15);
+      checkRequired([username]);
+    });
+  
+    email.addEventListener("input", () => {
+      checkEmail(email);
+      checkRequired([email]);
+    });
+  
+    phone.addEventListener("input", () => {
+      if (phone.value === "") {
+        clearWarning(phone);
+      } else if (phone.value.replace(/\D/g, "").length === 10) {
+        formatPhone(phone);
+      } else {
+        showWarning(phone, "Phone number must be 10 digits");
+      }
+    });
+  
+    message.addEventListener("input", () => {
+      checkLength(message, 2, 400);
+      checkRequired([message]);
+    });
+  
+    form.addEventListener("submit", function (e) {
+      e.preventDefault();
+  
+      checkRequired([username, email, message]);
+      checkLength(username, 3, 15);
+      checkLength(message, 6, 400);
+      checkEmail(email);
+  
+      const warnings = document.querySelectorAll(".form-control.warning").length;
+      if (warnings === 0) {
+        console.log("Form submitted");
+      }
+    });
+  
+    // Called functions
+    check();
+    showCard(currentIndex);
+  });
+  
 })();
