@@ -375,6 +375,66 @@ main-nav__hidden-list.hidden {
 
 /* --- MODULES --- */
 
+/** -- TOOLTIP -- **/
+
+.tooltip {
+    visibility: hidden;
+    width: max-content;
+    background-color: var(--color-dark-grey);
+    color: var(--color-white);
+    text-align: left;
+    border-radius: 6px;
+    padding: 5px;
+    position: absolute;
+    z-index: 1;
+    top: 90%; /* Position the tooltip above the button */
+    right: 10px;
+    opacity: 0;
+    transition: opacity 0.6s;
+    word-break: break-all;
+    font-size: 1rem;
+    border: 2px solid white; /* Allows words to break to the next line */
+}
+
+.tooltip::after {
+  content: "";
+  position: absolute;
+  bottom: 100%; /* At the bottom of the tooltip */
+  left: 85%;
+  margin-left: -5px;
+  border-width: 10px;
+  border-style: solid;
+  border-color: var(--color-white) transparent transparent transparent;
+ transform: rotate(180deg);
+}
+
+.tooltip-link-counter {
+  margin: 3px;
+  font-size: 20px;
+  font-weight: bolder;
+  text-align: left;
+}
+
+.tooltip-link-counter::after {
+/*   display: flex;
+  align-items: center;
+  justify-content: center; */
+  content: attr(count);
+  color: var(--color-primary);
+/*   position: absolute;
+  right: -5px;
+  top: -20px; */
+  
+}
+
+.main-nav__icon-btn:hover .tooltip {
+  visibility: visible;
+  opacity: 1;
+}
+
+
+/** -- END OF TOOLTIP -- **/
+
 /** -- SECTION -- **/
 
 .decorative-section {

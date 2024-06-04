@@ -8,6 +8,9 @@
     const allNavLinksItems = nav.querySelectorAll(".js-main-nav-item a");
     const mainNavlinks = nav.querySelector(".js-main-nav__list");
     const mainNavHiddenlinks = nav.querySelector(".js-main-nav__hidden-list");
+    const tooltip = nav.querySelector(".js-tooltip");
+    const tooltipLinkCounter = nav.querySelector(".js-tooltip-link-counter");
+
   
     const cards = document.querySelectorAll(".js-card-reviews");
     const prevBtn = document.querySelector(".js-prevBtn");
@@ -86,11 +89,11 @@
         }
       }
       // Update the button accordingly
-      navBtn.setAttribute("count", numOfItems - numOfVisibleItems);
+      tooltipLinkCounter.setAttribute("count", numOfItems - numOfVisibleItems);
       if (numOfVisibleItems === numOfItems) {
-        navBtn.classList.add("hidden");
+        tooltipLinkCounter.classList.add("hidden");
       } else {
-        navBtn.classList.remove("hidden");
+        tooltipLinkCounter.classList.remove("hidden");
       }
     };
   
@@ -269,7 +272,9 @@
   
     navBtn.addEventListener("click", function () {
       mainNavHiddenlinks.classList.toggle("hidden");
+      tooltip.classList.toggle("hidden");
     });
+;
   
     prevBtn.addEventListener("click", () => {
       currentIndex--;
