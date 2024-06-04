@@ -400,7 +400,7 @@ main-nav__hidden-list.hidden {
   content: "";
   position: absolute;
   bottom: 100%; /* At the bottom of the tooltip */
-  left: 85%;
+  right: 20px;
   margin-left: -5px;
   border-width: 10px;
   border-style: solid;
