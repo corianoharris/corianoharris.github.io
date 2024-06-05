@@ -226,10 +226,8 @@ q {
   top: 0;
   background: var(--color-primary-90);
   background: linear-gradient(90deg, #ffbe99 0%, #ff9988 100%);
-  padding: 10px 20px;
   border-bottom: 3px solid #eceef3;
   z-index: 3000;
-
   -webkit-box-shadow: 0 4px 6px -6px #222;
   -moz-box-shadow: 0 4px 6px -6px #222;
   box-shadow: 0 4px 6px -6px #222;
@@ -258,6 +256,7 @@ q {
 .main-nav__logo h2 {
   display: flex;
   align-items: center;
+  justify-content: center;
   color: var(--color-white);
   padding: 0 2px;
   font-weight: bold;
@@ -272,6 +271,7 @@ q {
   font-weight: bold;
   background: transparent;
   color: var(--color-black);
+  margin-left: 10px;
 }
 
 .main-nav__icon-btn.hidden {
@@ -378,34 +378,34 @@ main-nav__hidden-list.hidden {
 /** -- TOOLTIP -- **/
 
 .tooltip {
-    visibility: hidden;
-    width: max-content;
-    background-color: var(--color-dark-grey);
-    color: var(--color-white);
-    text-align: left;
-    border-radius: 6px;
-    padding: 5px;
-    position: absolute;
-    z-index: 1;
-    top: 90%; /* Position the tooltip above the button */
-    right: 10px;
-    opacity: 0;
-    transition: opacity 0.6s;
-    word-break: break-all;
-    font-size: 1rem;
-    border: 2px solid white; /* Allows words to break to the next line */
+  visibility: hidden;
+  width: max-content;
+  background-color: var(--color-dark-grey);
+  color: var(--color-white);
+  text-align: left;
+  border-radius: 6px;
+  padding: 5px;
+  position: absolute;
+  z-index: 1;
+  top: 100%; /* Position the tooltip above the button */
+  right: 10px;
+  opacity: 0;
+  transition: opacity 0.6s;
+  word-break: break-all;
+  font-size: 1rem;
+  border: 2px solid white; /* Allows words to break to the next line */
 }
 
 .tooltip::after {
   content: "";
   position: absolute;
   bottom: 100%; /* At the bottom of the tooltip */
-  right: 20px;
+  right: 5px;
   margin-left: -5px;
   border-width: 10px;
   border-style: solid;
   border-color: var(--color-white) transparent transparent transparent;
- transform: rotate(180deg);
+  transform: rotate(180deg);
 }
 
 .tooltip-link-counter {
@@ -416,22 +416,20 @@ main-nav__hidden-list.hidden {
 }
 
 .tooltip-link-counter::after {
-/*   display: flex;
+  /*   display: flex;
   align-items: center;
   justify-content: center; */
   content: attr(count);
   color: var(--color-primary);
-/*   position: absolute;
+  /*   position: absolute;
   right: -5px;
   top: -20px; */
-  
 }
 
 .main-nav__icon-btn:hover .tooltip {
   visibility: visible;
   opacity: 1;
 }
-
 
 /** -- END OF TOOLTIP -- **/
 
@@ -527,7 +525,7 @@ main-nav__hidden-list.hidden {
   width: 64px;
   height: 64px;
   border-radius: 50%;
-  top: -60px;
+  top: -50px;
   left: -20px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   object-fit: contain;
@@ -546,6 +544,8 @@ main-nav__hidden-list.hidden {
   border-bottom: 1px solid var(--color-lightest-grey);
   padding: 5px 10px;
   color: var(--color-primary-80);
+  font-style: italic;
+  font-weight: bolder;
 }
 
 .card__copy {
@@ -604,13 +604,14 @@ main-nav__hidden-list.hidden {
 
 .card--small__image-container {
   height: 100%;
-  width: 80px;
+  width: 72px;
   display: flex;
   align-items: center;
   justify-content: center;
   border-top-left-radius: 10px;
   border-bottom-left-radius: 10px;
   object-fit: contain;
+  border: 5px solid var(--color-grey);
   /*   border: 2px solid var(--color-primary); */
   /*   background: var(--color-primary); */
   /*   padding: 2px; */
@@ -848,8 +849,8 @@ label {
   padding: 10px;
   position: relative;
   left: 0;
-  bottom: -10px;
-  height: 100px;
+  bottom: 0;
+  height: 70px;
   width: 100%;
   background: var(--color-primary-90);
   background: linear-gradient(90deg, #ffbe99 0%, #ff9988 100%);
@@ -863,6 +864,9 @@ label {
 }
 
 .footer-email {
+  display: flex;
+  align-items: center;
+  gap: 5px;
   font-size: 14px;
   color: var(--color-dark-grey);
 }
@@ -970,28 +974,12 @@ label {
 /* --- PAGES --- */
 
 main {
-  width: auto;
-  padding: 0 30px;
+  width: 100vw;
+  padding: 0 10px;
   margin: 0 auto;
   position: relative;
   color: var(--color-white);
 }
-
-@media only screen and (min-width: 200px) and (max-width: 767px) {
-  main {
-    margin: 0 auto;
-    width: 100vw;
-    padding: 10px 20px;
-  }
-}
-
-@media only screen and (min-width: 768px) and (max-width: 1024px) {
-  main {
-    margin: 0 auto;
-    width: 80vw;
-  }
-}
-
 /* --- END OF PAGES --- */
 
 /* --- THEMES --- */
