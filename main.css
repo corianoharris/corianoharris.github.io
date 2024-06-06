@@ -264,6 +264,8 @@ q {
 }
 
 .main-nav__icon-btn {
+  position: static;
+  right: 5px;
   transition: all 0.4s ease-out;
   outline: 0;
   border: 0;
