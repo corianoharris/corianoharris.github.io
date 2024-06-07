@@ -393,7 +393,7 @@ main-nav__hidden-list.hidden {
   z-index: 1;
   top: 100%; /* Position the tooltip above the button */
   right: 10px;
-  opacity: 1;
+  opacity: 0;
   transition: opacity 0.6s;
   word-break: break-all;
   font-size: 1rem;
@@ -435,7 +435,7 @@ main-nav__hidden-list.hidden {
   opacity: 1;
 } */
 
-.main-nav__icon-btn:hover .tooltip:not(.hidden) {
+.main-nav__icon-btn:hover .tooltip {
   visibility: visible;
   opacity: 1;
 }
