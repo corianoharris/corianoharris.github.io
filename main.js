@@ -1,5 +1,5 @@
 (function runCode() {
-  document.addEventListener("DOMContentLoaded", function () {
+  document.addEventListener("DOMContentLoaded", async function () {
     // Executes after all DOM elements are loaded
   
     // DOM elements
