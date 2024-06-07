@@ -298,6 +298,24 @@
     }
 });
 
+// mobile hover experience
+navBtn.forEach(function(btn) {
+  btn.addEventListener('touchstart', function() {
+      const tooltip = btn.querySelector('.tooltip:not(.hidden)');
+      if (tooltip) {
+          tooltip.style.visibility = 'visible';
+          tooltip.style.opacity = '1';
+      }
+  });
+  btn.addEventListener('touchend', function() {
+      const tooltip = btn.querySelector('.tooltip:not(.hidden)');
+      if (tooltip) {
+          tooltip.style.visibility = 'hidden';
+          tooltip.style.opacity = '0';
+      }
+  });
+});
+
     prevBtn.addEventListener("click", () => {
       currentIndex--;
       showCard(currentIndex);
