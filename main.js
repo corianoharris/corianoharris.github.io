@@ -286,7 +286,11 @@
   
     navBtn.addEventListener("click", function () {
       mainNavHiddenlinks.classList.toggle("hidden");
-      tooltip.classList.toggle("hidden");
+      if (!tooltip.classList.contains("hidden")) {
+        tooltip.classList.add("hidden");
+      } else {
+        tooltip.classList.remove("hidden");
+      }
 
       const icon = this.querySelector('i');
     if (icon.classList.contains('fa-bars')) {

@@ -2,6 +2,8 @@
 
 /** -- VARIABLES -- **/
 
+/*--color-peachFuzz: #FFBE98; */
+
 :root {
   --color-primary-h: 20; /* Hue */
   --color-primary-s: 100%; /* Saturation */
@@ -443,7 +445,7 @@ main-nav__hidden-list.hidden {
 /** -- SECTION -- **/
 
 .decorative-section {
-  padding: 10px;
+  padding: 0 10px;
   margin: 0;
   text-align: center;
   max-width: 100%;
@@ -860,7 +862,7 @@ label {
   display: flex;
   align-items: center;
   gap: 5px;
-  font-size: 14px;
+  font-size: 13px;
   color: var(--color-dark-grey);
 }
 
