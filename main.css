@@ -1,5 +1,12 @@
 /* --- BASE --- */
 
+
+/** -- IMPORT -- **/
+
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,700;1,400;1,700&family=Roboto:wght@400;700&display=swap");
+
+/** -- END OF IMPORT -- **/
+
 /** -- VARIABLES -- **/
 
 /*--color-peachFuzz: #FFBE98; */
@@ -95,16 +102,6 @@
 
 /** -- END OF VARIABLES -- **/
 
-/** -- IMPORT -- **/
-
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,700;1,400;1,700&family=Roboto:wght@400;700&display=swap");
-
-@import url("https://fonts.googleapis.com/css2?family=Pacifico&display=swap");
-
-
-
-
-/** -- END OF IMPORT -- **/
 
 /** -- RESETS -- **/
 
