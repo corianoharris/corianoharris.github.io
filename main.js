@@ -96,12 +96,6 @@
         tooltipLinkCounter.classList.remove("hidden");
       }
 
-      if ( numOfVisibleItems === 0) {
-       tooltip.classList.add("hidden");
-      } else {
-        tooltip.classList.remove("hidden");
-      }
-
       // Update the button accordingly
       tooltipLinkCounter.setAttribute("count", numOfItems - numOfVisibleItems);
       if (numOfVisibleItems === numOfItems) {
@@ -110,6 +104,12 @@
         tooltipLinkCounter.classList.remove("hidden");
       }
     };
+
+    if ( numOfVisibleItems === 0) {
+      tooltip.classList.add("hidden");
+     } else {
+       tooltip.classList.remove("hidden");
+     }
   
     // Function to handle click event on navigation links
     function handleNavLinkClick(event) {
@@ -286,11 +286,7 @@
   
     navBtn.addEventListener("click", function () {
       mainNavHiddenlinks.classList.toggle("hidden");
-      if (!tooltip.classList.contains("hidden")) {
-        tooltip.classList.add("hidden");
-      } else {
-        tooltip.classList.remove("hidden");
-      }
+      tooltip.classList.toggle("hidden");
 
       const icon = this.querySelector('i');
     if (icon.classList.contains('fa-bars')) {
@@ -302,8 +298,6 @@
     }
 });
 
-
-  
     prevBtn.addEventListener("click", () => {
       currentIndex--;
       showCard(currentIndex);
