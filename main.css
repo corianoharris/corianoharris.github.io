@@ -333,6 +333,7 @@ q {
   padding: 10px;
   flex: 1;
   overflow: hidden;
+  margin-right: 30px;
 }
 
 .main-nav__list a,
