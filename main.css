@@ -390,7 +390,7 @@ main-nav__hidden-list.hidden {
   z-index: 1;
   top: 100%; /* Position the tooltip above the button */
   right: 10px;
-  opacity: 0;
+  opacity: 1;
   transition: opacity 0.6s;
   word-break: break-all;
   font-size: 1rem;
@@ -427,10 +427,15 @@ main-nav__hidden-list.hidden {
   top: -20px; */
 }
 
-.main-nav__icon-btn:hover .tooltip {
+.visible{
   visibility: visible;
   opacity: 1;
 }
+
+ .main-nav__icon-btn:not(.hidden):hover .tooltip {
+  visibility: visible;
+  opacity: 1;
+} 
 
 /** -- END OF TOOLTIP -- **/
 
@@ -449,7 +454,7 @@ main-nav__hidden-list.hidden {
 }
 
 .decorative-section svg path {
-  fill: var(--color-primary-60);
+  /* fill: var(--color-primary-60); */
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
 }
 
@@ -557,30 +562,21 @@ main-nav__hidden-list.hidden {
 }
 
 .card__copy ul {
-  text-align: left;
   width: 100%;
-  padding: 0;
-  list-style-type: none;
+  list-style-position: outside;
+  padding-left: 20px;
 }
 
 .card__copy ul li {
-  position: relative;
-  display: list-item;
+  list-style: disc;
   /*   background: var(--color-highlight); */
   color: var(--color-primary);
   word-wrap: break-word;
-  line-height: 0.9;
+  margin-bottom: 20px;
+  padding-left: 20px;
 }
 
-.card__copy ul li::before {
-  position: relative;
-  left: 0;
-  top: 15px;
-  content: "•";
-  color: var(--color-primary); /* You can change the color if you want */
-  font-size: 60px;
-  margin-right: 0.5em; /* Adjust the size of the circle */
-}
+
 
 .card__copy ul li a {
   color: var(--color-primary);
@@ -848,7 +844,7 @@ label {
   position: relative;
   left: 0;
   bottom: 0;
-  height: 70px;
+  height: 80px;
   width: 100%;
   background: var(--color-primary-90);
   background: linear-gradient(90deg, #ffbe99 0%, #ff9988 100%);

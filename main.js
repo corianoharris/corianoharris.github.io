@@ -95,6 +95,20 @@
       } else {
         tooltipLinkCounter.classList.remove("hidden");
       }
+
+      if ( numOfVisibleItems === 0) {
+       tooltip.classList.add("hidden");
+      } else {
+        tooltip.classList.remove("hidden");
+      }
+
+      // Update the button accordingly
+      tooltipLinkCounter.setAttribute("count", numOfItems - numOfVisibleItems);
+      if (numOfVisibleItems === numOfItems) {
+        tooltipLinkCounter.classList.add("hidden");
+      } else {
+        tooltipLinkCounter.classList.remove("hidden");
+      }
     };
   
     // Function to handle click event on navigation links
@@ -270,11 +284,18 @@
     // Event listeners
     window.addEventListener("resize", check);
   
+  
+ 
+  
     navBtn.addEventListener("click", function () {
       mainNavHiddenlinks.classList.toggle("hidden");
       tooltip.classList.toggle("hidden");
     });
-;
+
+   
+
+    
+
   
     prevBtn.addEventListener("click", () => {
       currentIndex--;
