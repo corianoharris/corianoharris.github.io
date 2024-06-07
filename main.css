@@ -264,7 +264,8 @@ q {
 }
 
 .main-nav__icon-btn {
-
+  position: relative;
+  right: 5px;
   transition: all 0.4s ease-out;
   outline: 0;
   border: 0;
@@ -426,23 +427,23 @@ main-nav__hidden-list.hidden {
   right: -5px;
   top: -20px; */
 }
-
+/* 
 .visible{
   visibility: visible;
   opacity: 1;
-}
+} */
 
- .main-nav__icon-btn:not(.hidden):hover .tooltip {
+.main-nav__icon-btn:hover .tooltip:not(.hidden) {
   visibility: visible;
   opacity: 1;
-} 
+}
 
 /** -- END OF TOOLTIP -- **/
 
 /** -- SECTION -- **/
 
 .decorative-section {
-  padding: 0;
+  padding: 10px;
   margin: 0;
   text-align: center;
   max-width: 100%;
@@ -493,20 +494,20 @@ main-nav__hidden-list.hidden {
 }
 
 .decorative-section__content-body {
-  padding: 10px;
+  /* padding: 10px; */
   margin: 0 auto;
-  max-width: 550px;
+  max-width: max-content;
   height: max-content;
 }
 
 /* decorative div touching footer */
-#samples {
+/* #samples {
   margin-bottom: -60px;
 }
 
 #contact {
   margin-bottom: -60px;
-}
+} */
 
 /** -- END OF DECORATIVE SECTION -- **/
 
@@ -575,8 +576,6 @@ main-nav__hidden-list.hidden {
   margin-bottom: 20px;
   padding-left: 20px;
 }
-
-
 
 .card__copy ul li a {
   color: var(--color-primary);
@@ -666,7 +665,7 @@ main-nav__hidden-list.hidden {
 /** -- SLIDER -- **/
 
 .slider {
-  max-width: 500px;
+  max-width: max-content;
   position: relative;
   margin: auto;
 }
@@ -676,7 +675,7 @@ main-nav__hidden-list.hidden {
   justify-content: center;
   padding: 10px;
   margin: 0 auto;
-  max-width: 550px;
+  max-width: max-content;
   height: max-content;
 }
 
