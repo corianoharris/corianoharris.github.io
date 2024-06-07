@@ -299,22 +299,21 @@
 });
 
 // mobile hover experience
-navBtn.forEach(function(btn) {
-  btn.addEventListener('touchstart', function() {
+
+  navBtn.addEventListener('touchstart', function() {
     tooltip.classList.remove("hidden");
       if (tooltip) {
           tooltip.style.visibility = 'visible';
           tooltip.style.opacity = '1';
       }
   });
-  btn.addEventListener('touchend', function() {
+  navBtn.addEventListener('touchend', function() {
     tooltip.classList.add("hidden");
       if (tooltip) {
           tooltip.style.visibility = 'hidden';
           tooltip.style.opacity = '0';
       }
   });
-});
 
     prevBtn.addEventListener("click", () => {
       currentIndex--;
