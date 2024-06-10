@@ -132,6 +132,9 @@ body {
   
   font-family: "Roboto", sans-serif;
   background:  #fff5ee;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
   /*   font-size: calc(16px + (24-16) * (100vw - 400px) / (800px - 400px)); */
 }
 /*
@@ -711,7 +714,7 @@ main-nav__hidden-list.hidden {
   position: relative;
   transition: all 0.3s ease;
   border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
   padding: 0 10px;
   background-color: var(--color-grey);
 }
@@ -1105,6 +1108,7 @@ label {
 /* --- PAGES --- */
 
 main {
+  flex: 1;
   display: flex;
   flex-direction: column;
   align-items: center;
