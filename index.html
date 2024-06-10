@@ -79,10 +79,10 @@
     <ul class="main-nav__hidden-list fade hidden js-main-nav__hidden-list" aria-orientation="vertical"></ul>
   </nav>
   <main>
-    <div id="me" class="decorative-section">
+    <div id="me" class="decorative-section custom-margin-me">
     
       <svg  class="top-svg" viewBox="0 0 500 100" preserveAspectRatio="none" width="100%" height="100%">
-        <path d="M0 30 Q 50 60, 100 30 T 200 30 T 300 30 T 400 30 T 500 30" fill="transparent" stroke="#FFBE98" stroke-width="5"/>
+        <path d="M0 30 Q 50 60, 100 30 T 200 30 T 300 30 T 400 30 T 500 30" fill="transparent" stroke="#fdbb6" stroke-width="5"/>
     </svg>
   
       <section class="decorative-section__content" aria-labelledby="decorative-section__content-title-me">
@@ -90,16 +90,19 @@
         <div class="decorative-section__content-body flex">
   
           <div class="card remove-bkg remove-b-shadow">
-            <div class="card__image-container b-shadow">
-              <img src="public/images/profile/coriano-profile.png" alt="Coriano Harris smiling" class="card__image">
-            </div>
-            <div class="card__body p-10">
-              <h3 class="card__title ">
-                Design Technologist
-              </h3>
-              <div class="card__copy">
-                <blockquote role="quote">As a design technologist, I get to blend creativity with tech to bring awesome ideas to life. Working with designers, developers, and stakeholders, I make sure our products not only look great but work seamlessly. From prototyping and user testing to crafting interactive designs, I focus on creating experiences that users love. Keeping companies ahead of the curve by pushing the limits of digital innovation and making sure we deliver top-notch, engaging products.</blockquote>
+            <div class="quote-container">
+              <div class="quote">
+                <div class="quote__img-container">
+                <img src="public/images/profile/coriano-profile.png" alt="Coriano Harris smiling" class="quote__img">
               </div>
+                <blockquote class="quote__body">
+                  <h4 class="quote__name"> Design Technologist</h4>
+            
+                  <p class="quote__copy" role="quote">" As a design technologist, I get to blend creativity with tech to bring awesome ideas to life. Working with designers, developers, and stakeholders, I make sure our products not only look great but work seamlessly. From prototyping and user testing to crafting interactive designs, I focus on creating experiences that users love. Keeping companies ahead of the curve by pushing the limits of digital innovation and making sure we deliver top-notch, engaging products. "
+                  </p>
+                </blockquote>
+              </div>
+            
             </div>
   
           </div>
@@ -118,9 +121,9 @@
         <div class="card stack-items-center remove-bkg remove-b-shadow">
           <div class="card__body p-10">
             <div class="tabs" role="tablist">
-              <button class="tab-button tab-button--active" data-tab="tab-social-1" aria-controls="tab-social-1" aria-selected="true">tribes.</button>
-              <button class="tab-button" data-tab="tab-social-2" aria-controls="tab-social-2" aria-selected="false">workshops.</button>
-              <button class="tab-button" data-tab="tab-social-3" aria-controls="tab-social-3" aria-selected="false">talks.</button>
+              <button class="tab-button tab-button--active" data-tab="tab-social-1" aria-controls="tab-social-1" aria-selected="true">tribes</button>
+              <button class="tab-button" data-tab="tab-social-2" aria-controls="tab-social-2" aria-selected="false">workshops</button>
+              <button class="tab-button" data-tab="tab-social-3" aria-controls="tab-social-3" aria-selected="false">talks</button>
             </div>
             <div class="tab-content tab-content--active" id="tab-social-1" role="tabpanel" aria-labelledby="tab-social-1">
               <div class="card__copy">
@@ -164,7 +167,7 @@
       <section class="decorative-section__content" aria-labelledby="decorative-section__content-title-clients">
         <h3 id="decorative-section__content-title-clients" class="decorative-section__content-title">clients<span>.</span></h3>
         <div class="card stack-items-center remove-bkg remove-b-shadow">
-          <div class="card__body p-10">
+          <div class="card__body flex p-10">
             <div class="items-flex-container">
               <div class="card--small" role="group" aria-labelledby="card--small__title" aria-describedby="card-subtitle">
                 <div class="card--small__image-container">
@@ -234,58 +237,66 @@
         <div class="slider">
           <div class="slider__body">
             <div class="card remove-bkg remove-b-shadow js-card-reviews">
-              <div class="card__image-container b-shadow">
-                <img src="public/images/clients/michael-st-john.png" alt="Michael St. John at the Oscars" class="card__image">
-              </div>
-              <div class="card__body p-10">
-                <div class="card__title ">
-                  Michael St. John
+              <div class="quote-container">
+                <div class="quote">
+                  <div class="quote__img-container">
+                    <img src="public/images/clients/michael-st-john.png" alt="Michael St. John at the Oscars" class="quote__img">
                 </div>
-                <div class="card__copy">
-                  <blockquote role="quote"> " I had been searching for the perfect designer to bring my promotional poster idea to life and luckily, I found Coriano! It's clear that he's not only talented but also has a real knack for bringing his clients' ideas to fruition. Thank you so much, Coriano! "</blockquote>
-                </div>
-              </div>
-  
-            </div>
-            <div class="card remove-bkg remove-b-shadow js-card-reviews">
-              <div class="card__image-container b-shadow">
-                <img src="public/images/clients/lauren-brynes.png" alt="Lauren Brynes smiling" class="card__image">
-              </div>
-              <div class="card__body p-10">
-                <div class="card__title ">
-                  Lauren Brynes
-                </div>
-                <div class="card__copy">
-                  <blockquote role="quote"> " I am truly blown away by Coriano Harris's talent! He created some amazing posters, news flyers, and teasers that really caught my eye. It's clear that he's a master at what he does and he puts so much care and effort into his work. "</blockquote>
+                  <blockquote class="quote__body">
+                    <h4 class="quote__name"> Michael St. John</h4>
+              
+                    <p class="quote__copy" role="quote">" I had been searching for the perfect designer to bring my promotional poster idea to life and luckily, I found Coriano! It's clear that he's not only talented but also has a real knack for bringing his clients' ideas to fruition. Thank you so much, Coriano! "
+                    </p>
+                  </blockquote>
                 </div>
               </div>
   
             </div>
             <div class="card remove-bkg remove-b-shadow js-card-reviews">
-              <div class="card__image-container b-shadow">
-                <img src="public/images/clients/laura-linder.jpg" alt="Laura Linder smiling" class="card__image">
-              </div>
-              <div class="card__body p-10">
-                <div class="card__title ">
-                  Laura Linder
+              <div class="quote-container">
+                <div class="quote">
+                  <div class="quote__img-container">
+                    <img src="public/images/clients/lauren-brynes.png" alt="Lauren Brynes smiling" class="quote__img">
                 </div>
-                <div class="card__copy">
-                  <blockquote role="quote"> " I was the keynote presenter at the Charleston Jewish Federation Lion of Judah event, presenting the program. They loved it! AND, 31 other communities have already ordered 2,500 kits so we are well on our way! "</blockquote>
+                  <blockquote class="quote__body">
+                    <h4 class="quote__name"> Lauren Brynes</h4>
+              
+                    <p class="quote__copy" role="quote">" I am truly blown away by Coriano Harris's talent! He created some amazing posters, news flyers, and teasers that really caught my eye. It's clear that he's a master at what he does and he puts so much care and effort into his work. "
+                    </p>
+                  </blockquote>
                 </div>
               </div>
   
             </div>
+            <div class="card remove-bkg remove-b-shadow js-card-reviews">
+              <div class="quote-container">
+                <div class="quote">
+                  <div class="quote__img-container">
+                    <img src="public/images/clients/laura-linder.jpg" alt="Laura Linder smiling" class="quote__img">
+                </div>
+                  <blockquote class="quote__body">
+                    <h4 class="quote__name"> Laura Linder</h4>
+              
+                    <p class="quote__copy" role="quote">" I was the keynote presenter at the Charleston Jewish Federation Lion of Judah event, presenting the program. They loved it! AND, 31 other communities have already ordered 2,500 kits so we are well on our way! "
+                    </p>
+                  </blockquote>
+                </div>
+              </div>
   
+            </div>
+
           </div>
-  
-          <div class="button-container">
-            <button id="prevBtn" class="buttons w-100 js-prevBtn" disabled>Previous</button>
-            <button id="nextBtn" class="buttons w-100 js-nextBtn">Next</button>
-          </div>
+          
+          
         </div>
+
+
   
       </section>
-
+      <div class="button-container slider__buttons">
+        <button id="prevBtn" class="buttons w-100 js-prevBtn" disabled>Previous</button>
+        <button id="nextBtn" class="buttons w-100 js-nextBtn">Next</button>
+      </div>
     </div>
   
     <div id="services" class="decorative-section">
@@ -325,9 +336,9 @@
         <div class="card stack-items-center remove-bkg remove-b-shadow">
           <div class="card__body p-10">
             <div class="tabs" role="tablist">
-              <button class="tab-button tab-button--active" data-tab="tab-tools-1" aria-controls="tab-tools-1" aria-selected="true">research.</button>
-              <button class="tab-button" data-tab="tab-tools-2" aria-controls="tab-tools-2" aria-selected="false">design.</button>
-              <button class="tab-button" data-tab="tab-tools-3" aria-controls="tab-tools-3" aria-selected="false">coding.</button>
+              <button class="tab-button tab-button--active" data-tab="tab-tools-1" aria-controls="tab-tools-1" aria-selected="true">research</button>
+              <button class="tab-button" data-tab="tab-tools-2" aria-controls="tab-tools-2" aria-selected="false">design</button>
+              <button class="tab-button" data-tab="tab-tools-3" aria-controls="tab-tools-3" aria-selected="false">coding</button>
             </div>
             <div class="tab-content tab-content--active" id="tab-tools-1" role="tabpanel" aria-labelledby="tab-tools-1">
               <div class="pills">
@@ -377,7 +388,7 @@
 
       <section class="decorative-section__content js-tab-samples" aria-labelledby="decorative-section__content-title-samples">
         <h3 id="decorative-section__content-title-samples" class="decorative-section__content-title">samples<span>.</span></h3>
-        <div class="card stack-items-center remove-bkg remove-b-shadow">
+        <div class="card remove-bkg remove-b-shadow">
           <div class="card__body p-10">
             <div class="tabs" role="tablist">
               <button class="tab-button tab-button--active" data-tab="tab-samples-1" aria-controls="tab-samples-1" aria-selected="true">ux/ui</button>
@@ -396,7 +407,7 @@
                     <a class="card--small__link" href="public/images/projects/ecobon-case-study.pdf" target="_blank">view</a>
                   </div>
                 </div>
-                <div class="card--small" role="group" aria-labelledby="card-title" aria-describedby="card-subtitle">
+                <div class="card--small " role="group" aria-labelledby="card-title" aria-describedby="card-subtitle">
                   <div class="card--small__image-container">
                     <img src="public/images/projects/play-run-logo.png" alt="play run logo" class="card--small__image">
                   </div>
@@ -433,7 +444,7 @@
                   </div>
                 </div>
   
-                <div class="card--small" role="group" aria-labelledby="card--small__title" aria-describedby="card-subtitle">
+                <div class="card--small " role="group" aria-labelledby="card--small__title" aria-describedby="card-subtitle">
                   <div class="card--small__image-container">
                     <img src="public/images/projects/prediabetes.png" alt="screenshot of prediabetes risk test" class="card--small__image">
                   </div>
