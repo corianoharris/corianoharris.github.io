@@ -19,12 +19,16 @@
       if (tooltip.style.visibility === "hidden" || !tooltip.style.visibility) {
         tooltip.style.visibility = "visible";
         button.textContent = "Close";
+        tooltip.classList.add("fade-in");
+        tooltip.classList.remove("fade-out");
       } else {
         tooltip.style.visibility = "hidden";
         button.textContent = "Menu";
+        tooltip.classList.remove("fade-in");
+        tooltip.classList.add("fade-out");
       }
 
-      tooltip.classList.toggle("fade-in");
+      // tooltip.classList.toggle("fade-in");
     }
 
     // Function to toggle the dropdown
@@ -120,9 +124,13 @@
       });
     }
 
-    // event listeners
+    // add event listeners
 
     button.addEventListener("click", function () {
+      toggleTooltip();
+    });
+
+    button.addEventListener("touchstart", function () {
       toggleTooltip();
     });
 
@@ -130,26 +138,37 @@
       toggleTooltip();
     });
 
-    button.removeEventListener("click", function () {
-      toggleTooltip();
-    });
-
-    button.removeEventListener("touchend", function () {
-      toggleTooltip();
-    });
-
     dropdownToggle.addEventListener("click", function () {
       toggleDropdown();
     });
 
+    dropdownToggle.addEventListener("touchstart", function () {
+      toggleDropdown();
+    });
     dropdownToggle.addEventListener("touchend", function () {
       toggleDropdown();
+    });
+
+    // remove event listeners
+
+    button.removeEventListener("click", function () {
+      toggleTooltip();
+    });
+
+    button.removeEventListener("touchstart", function () {
+      toggleTooltip();
+    });
+    button.removeEventListener("touchend", function () {
+      toggleTooltip();
     });
 
     dropdownToggle.removeEventListener("click", function () {
       toggleDropdown();
     });
 
+    dropdownToggle.removeEventListener("touchstart", function () {
+      toggleDropdown();
+    });
     dropdownToggle.removeEventListener("touchend", function () {
       toggleDropdown();
     });
