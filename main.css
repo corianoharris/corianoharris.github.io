@@ -134,23 +134,22 @@ button {
   padding: 10px 15px;
   margin: 0;
   text-decoration: none;
-  color: var(--color-primary);
+  color: var(--color-black);
   font-family: sans-serif;
   font-size: 1rem;
   line-height: 1;
   cursor: pointer;
   text-align: center;
-  background: var(--color-black);
+  background: var(--color-primary);
   transition: background 250ms ease-in-out, transform 150ms ease;
   -webkit-appearance: none;
   -moz-appearance: none;
-  outline: 1px dashed var(--color-primary);
+  outline: 1px solid var(--color-secondary);
 }
 
 button:hover,
 button:focus {
-  background: var(--color-primary);
-  color: var(--color-white);
+  background: var(--color-white);
 }
 
 button:active {
@@ -314,6 +313,7 @@ blockquote {
   background: transparent;
   color: black;
   border-radius: 0;
+  outline: 0;
 }
 
 .dropdown-content {
