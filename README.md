@@ -1,79 +1,29 @@
-# Title / Repository Name
+# Coriano Harris's Personal Website
 
-## About / Synopsis
+## Overview
 
-My company website.
+Coriano Harris's personal website, showcasing his skills and experience as a design technologist.
 
-## Table of contents
+## Structure
 
-> - [Title / Repository Name](#title--repository-name)
->   - [Synopsis](#synopsis)
->   - [Table of contents](#table-of-contents)
->   - [Technologies](#technologies)
->   - [Product Management](#project-management)
->   - [Styleguides](#styleguides)
->   - [Motivations](#motivations)
->   - [Takeaways](#takeaways)
->   - [Usage](#usage)
->     - [Features](#features)
->   - [User Experiences](#user-experiences)
->   - [Testing](#testing)
->   - [Contributing / Reporting issues](#contributing--reporting-issues)
->   - [License](#license)
->   - [Authors](#authors)
+- **Top Header**: Displays Coriano Harris's name and contact icons (email, LinkedIn, resume, GitHub).
+- **Tooltip**: Provides a dropdown menu for navigation.
+- **Main Content**:
+  - **Hero Section**: Introduces Coriano Harris's expertise and approach.
+  - **What I Can Do for You**: Lists services offered as a design technologist.
+  - **What is a Design Technologist?**: Defines the role of a design technologist.
+  - **My Imprint on the World**: Describes Coriano Harris's contributions to nonprofits.
+  - **Enjoying My Work**: Highlights Coriano Harris's passion and projects.
+  - **Tools That Help Me Get the Work Done**: Lists tools and technologies used.
+  - **What Do I Enjoy About This Role?**: Explores Coriano Harris's motivations.
+- **Footer**: Includes contact icons (email, LinkedIn, resume, GitHub) and copyright information.
+- **Additional**: Includes simple animations and a skeleton loader on scroll to next section. 
 
-## Technologies
+## Technologies Used
 
-- HTML5
+- HTML
 - CSS3
-- ES6
-- Google Analysis
+- JavaScript (for interactivity)
+- Font Awesome icons
+- Google Analytics
 
-## Project Management
-
-- Trello
-
-## Styleguides
-
-- [AirBnb](https://github.com/airbnb/javascript)
-- [BEMIT](https://csswizardry.com/2015/08/bemit-taking-the-bem-naming-convention-a-step-further/)
-
-## Motivations
-
-A site to display my professional work.
-
-## Takeaways
-
-Contine to find JavaScript challeneging yet fasincating!
-
-## Usage
-
-### Features
-
-- Interactive card
-- Form with validation
-
-## User Experiences
-
-- 5 users.
-
-* 3 unmoderated users.
-* 2 moderated users.
-
-## Testing
-
-N/A
-
-## Authors
-
-Coriano Harris
-
-## Acknowledgements
-
-## Contributing / Reporting issues
-
-Let people know how they can dive into the project, include important links to things like issue trackers, irc, twitter accounts if applicable.
-
-## License
-
-A short snippet describing the license (MIT, Apache, etc.)
