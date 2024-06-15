@@ -258,6 +258,7 @@ blockquote {
   border-bottom-left-radius: 10px;
   letter-spacing: 1px;
   font-weight: bolder;
+  width: 100px;
 }
 
 .tooltip .tooltiptext {
@@ -280,6 +281,7 @@ blockquote {
   z-index: 1;
   opacity: 0;
   visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0s linear 0.3s;
 }
 
 .tooltiptext ul {
@@ -704,6 +706,19 @@ gap: 5px;
   }
   to {
     opacity: 1;
+  }
+}
+
+.fade-out {
+  animation: fadeOut 1s ease-out forwards;
+}
+
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
   }
 }
 
