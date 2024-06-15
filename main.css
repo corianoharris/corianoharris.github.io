@@ -605,7 +605,7 @@ gap: 5px;
 .skeleton-loader {
   background: linear-gradient(90deg, #4d5d64 25%, #425056 50%, #2c3539 75%, #425056 100%);
   background-size: 200% 100%; /* Double the width */
-  animation: skeleton-animation 2.5s infinite linear; /* Adjust animation duration */
+  animation: skeleton-animation 1s infinite linear; /* Adjust animation duration */
   max-width: 600px;
   border-radius: 10px;
   color: transparent !important;

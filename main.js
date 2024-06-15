@@ -1,120 +1,117 @@
+(async function () {
+  // Function to toggle the tooltip
+  function toggleTooltip() {
+    const tooltip = document.querySelector(".tooltiptext");
+    const button = document.querySelector(".button");
 
-// Get the button
-const button = document.querySelector(".button");
+    if (tooltip.style.visibility === "hidden" || !tooltip.style.visibility) {
+      tooltip.style.visibility = "visible";
+      button.textContent = "Close";
+    } else {
+      tooltip.style.visibility = "hidden";
+      button.textContent = "Menu";
+    }
 
-const copyrightYear = document.querySelector(".copyright-year");
-
-copyrightYear.innerHTML = new Date().getFullYear();
-
-const sections = document.querySelectorAll('.responsive-section');
-
-
-function toggleTooltip() {
-  const tooltip = document.querySelector(".tooltiptext");
-  const button = document.querySelector(".button");
-
-  if (tooltip.style.visibility === "hidden" || !tooltip.style.visibility) {
-    tooltip.style.visibility = "visible";
-    button.textContent = "Close";
-  } else {
-    tooltip.style.visibility = "hidden";
-    button.textContent = "Menu";
+    tooltip.classList.toggle("fade-in");
   }
 
-  tooltip.classList.toggle("fade-in");
-}
+  // Function to toggle the dropdown
+  function toggleDropdown() {
+    const dropdownContent = document.querySelector(".dropdown-content");
+    const caret = document.querySelector(".caret");
 
-function toggleDropdown() {
-  const dropdownContent = document.querySelector(".dropdown-content");
-  const caret = document.querySelector(".caret");
-
-  if (
-    dropdownContent.style.display === "none" ||
-    !dropdownContent.style.display
-  ) {
-    dropdownContent.style.display = "block";
-    caret.classList.remove("fa-caret-down");
-    caret.classList.add("fa-caret-up");
-  } else {
-    dropdownContent.style.display = "none";
-    caret.classList.remove("fa-caret-up");
-    caret.classList.add("fa-caret-down");
+    if (dropdownContent.style.display === "none" || !dropdownContent.style.display) {
+      dropdownContent.style.display = "block";
+      caret.classList.replace("fa-caret-down", "fa-caret-up");
+    } else {
+      dropdownContent.style.display = "none";
+      caret.classList.replace("fa-caret-up", "fa-caret-down");
+    }
   }
-}
 
-document.addEventListener("DOMContentLoaded", function () {
-  const tooltip = document.querySelector(".tooltiptext");
-  tooltip.style.visibility = "hidden";
+  // Function to start skeleton loader animation for a section
+  function startSkeletonLoader(section) {
+    const children = section.querySelectorAll("*");
 
-  const dropdownContent = document.querySelector(".dropdown-content");
-  dropdownContent.style.display = "none";
-});
+    children.forEach((child) => {
+      const hadHighlightClass = child.classList.contains("highlight");
+      const isListItem = child.tagName.toLowerCase() === "li";
 
-window.addEventListener('scroll', function() {
-  sections.forEach(title => {
-    const children = title.querySelectorAll('*');
-    children.forEach(child => {
-      const top = child.getBoundingClientRect().top;
-      if (top >= 0 && top <= window.innerHeight) {
-        // Check if the current child has the highlight class
-        const hadHighlightClass = child.classList.contains('highlight');
+      // Add skeleton loader
+      child.classList.add("skeleton-loader");
 
-        // Check if the child element is a list item
-        const isListItem = child.tagName.toLowerCase() === 'li';
+      if (isListItem) child.style.visibility = "hidden";
 
-        // Add skeleton loader
-        child.classList.add('skeleton-loader');
+      setTimeout(() => {
+        child.style.transition = "opacity 0.5s ease-in-out";
+        child.style.opacity = "0";
 
-        // Conditional handling for list items
-        if (isListItem) {
-          child.style.visibility = 'hidden'; // Hide the list item
-        }
-
-        // Delayed action to remove skeleton loader and potentially add highlight class
         setTimeout(() => {
-          // Smoothly fade in content
-          child.style.transition = 'opacity 0.5s ease-in-out';
-          child.style.opacity = '0'; // Start with opacity 0
+          child.classList.remove("skeleton-loader");
+          child.style.opacity = "";
 
-          // Remove skeleton loader after delay
-          setTimeout(() => {
-            child.classList.remove('skeleton-loader');
-            child.style.opacity = ''; // Reset opacity
+          if (hadHighlightClass) child.classList.add("highlight");
+          setTimeout(() => { child.style.opacity = "1"; }, 50);
 
-            // Only add highlight class back if it initially had it
-            if (hadHighlightClass) {
-              child.classList.add('highlight');
-            }
+          if (isListItem) child.style.visibility = "";
+        }, 500);
+      }, 2500);
 
-            // Smoothly fade in content
-            setTimeout(() => {
-              child.style.opacity = '1'; // Fade in by setting opacity to 1
-            }, 50); // Add a small delay for smoother transition
+      const siblings = Array.from(child.parentElement.children);
+      siblings.forEach((sibling) => {
+        if (sibling !== child && sibling.classList.contains("highlight")) {
+          sibling.classList.remove("highlight");
+        }
+      });
+    });
+  }
 
-            // Conditional handling for list items
-            if (isListItem) {
-              child.style.visibility = ''; // Show the list item
-            }
-          }, 500); // Adjust timing to match your skeleton loader animation duration
-        }, 2500);
+  // Function to reset skeleton loader animation
+  function resetSkeletonLoader(section) {
+    const children = section.querySelectorAll("*");
 
-        // Remove highlight class from siblings that had it
-        const siblings = Array.from(child.parentElement.children);
-        siblings.forEach(sibling => {
-          if (sibling !== child && sibling.classList.contains('highlight')) {
-            sibling.classList.remove('highlight');
-          }
-        });
+    children.forEach((child) => {
+      if (child.classList.contains("skeleton-loader")) {
+        child.classList.remove("skeleton-loader");
+        child.style.opacity = "";
+        child.style.transition = "";
       }
     });
+  }
+
+  // Function to start skeleton loader when elements are about to come into viewport
+  function startSkeletonLoaderWhenApproaching(elements) {
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        const section = entry.target;
+        if (entry.isIntersecting) {
+          startSkeletonLoader(section);
+        } else {
+          resetSkeletonLoader(section);
+        }
+      });
+    }, {
+      rootMargin: '0px 0px -50px 0px', // Adjust as needed
+      threshold: 0
+    });
+
+    elements.forEach((element) => {
+      observer.observe(element);
+    });
+  }
+
+  document.addEventListener("DOMContentLoaded", function () {
+    const tooltip = document.querySelector(".tooltiptext");
+    tooltip.style.visibility = "hidden";
+
+    const dropdownContent = document.querySelector(".dropdown-content");
+    dropdownContent.style.display = "none";
+
+    const button = document.querySelector(".button");
+    const copyrightYear = document.querySelector(".copyright-year");
+    copyrightYear.innerHTML = new Date().getFullYear();
+
+    const sections = document.querySelectorAll(".responsive-section");
+    startSkeletonLoaderWhenApproaching(sections);
   });
-});
-
-
-
-
-
-
-
-
-
+})();
