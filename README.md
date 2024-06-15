@@ -27,3 +27,9 @@ Coriano Harris's personal website, showcasing his skills and experience as a des
 - Font Awesome icons
 - Google Analytics
 
+## Acknowledgements
+
+- Code Connector community
+- Amanda for user testing
+- Josh for helping learn about what's important to user and how to make a better product
+
