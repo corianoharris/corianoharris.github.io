@@ -508,7 +508,7 @@ blockquote {
 .impact-list-items::before {
   position: absolute;
   top: 0;
-  left: -25px;
+  left: -30px;
   content: "💭";
   font-size: 20px;
 }
@@ -516,7 +516,7 @@ blockquote {
 .offerings-list-items::before {
   position: absolute;
   top: 0;
-  left: -25px;
+  left: -30px;
   content: "📌";
   font-size: 20px;
 }
