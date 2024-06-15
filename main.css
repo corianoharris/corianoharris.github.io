@@ -18,7 +18,8 @@
 html {
   overflow-y: scroll;
   overflow-x: hidden;
-  -webkit-overflow-y: scroll;
+  --webkit-overflow-y: scroll;
+  width: 100vw;
 }
 
 body {
@@ -27,7 +28,7 @@ body {
   justify-content: center;
   align-items: center;
   line-height: 1.5rem;
-  width: 100%;
+  width: 100vw;
   background: var(--color-background);
   color: var(--color-white);
 }
@@ -36,9 +37,12 @@ main {
   flex: 1;
   width: 95%;
   background: transparent;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
-html,
 body,
 div,
 span,
@@ -197,6 +201,7 @@ section {
 }
 body {
   line-height: 1;
+  width: 100vw;
 }
 ol,
 ul {
@@ -227,7 +232,7 @@ blockquote {
 
 .website-name {
   line-height: 1.2;
-  font-size: calc(20px + (24 - 16) * (100vw - 400px) / (800 - 400));
+  font-size: calc(22px + (24 - 16) * (100vw - 400px) / (800 - 400));
 }
 
 .top-header {
@@ -397,8 +402,8 @@ blockquote {
 
 .responsive-section h2 {
   margin: 20px 0;
-  text-align: start;
-  font-size: calc(20px + (24 - 16) * (100vw - 400px) / (800 - 400));
+  text-align: center;
+  font-size: calc(28px + (24 - 16) * (100vw - 400px) / (800 - 400));
   /* background: -webkit-linear-gradient(#cbeece, #1A1A1A);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent; */
@@ -444,7 +449,6 @@ blockquote {
   position: relative;
   display: flex;
   flex-direction: column;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   max-width: 700px;
   max-height: 600px;
 }
@@ -453,6 +457,7 @@ blockquote {
   width: stretch;
   height: stretch;
   border-radius: 10px;
+  box-shadow: 0px 3px 15px rgba(0,0,0,0.2);
 }
 
 .hero-card-image {
@@ -464,14 +469,15 @@ blockquote {
 
 .hero-card-body {
   position: absolute;
-  top: 60%;
+  top: 70%;
   left: 10px;
-  padding: 20px;
+  padding: 5px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   width: 100%;
-  font-size: calc(20px + (24 - 16) * (100vw - 400px) / (800 - 400));
+  font-size: calc(22px + (24 - 16) * (100vw - 400px) / (800 - 400));
+  line-height: .5;
 }
 
 .hero-card-copy {
@@ -527,18 +533,21 @@ blockquote {
   align-items: center;
   flex-wrap: wrap;
   text-align: center;
-  gap: 5px;
   text-transform: lowercase;
 }
 
 .tools-list-items {
   border-radius: 6px;
-  width: max-content;
-  padding: 5px 10px;
-  height: 20px;
+  max-width: 200px;
+  padding: 5px;
+  height: max-content;
+  font-size: 12px;
   font-weight: 600;
+  text-transform: uppercase;
   background: var(--color-primary);
   color: var(--color-black);
+  word-wrap: break-word;
+  margin: 5px;
 }
 
 /* footer */
@@ -749,6 +758,13 @@ gap: 5px;
 
   main {
     width: 75%;
+  }
+
+  .top-header {
+    flex-direction: row;
+    justify-content: center;
+    gap: 2rem;
+    align-items: center;
   }
 }
 
