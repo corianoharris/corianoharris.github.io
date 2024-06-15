@@ -379,7 +379,7 @@ blockquote {
 
 /* section */
 
-.responsive-section {
+.responsive-section, .hero-section {
   position: relative;
   display: flex;
   flex-direction: column;
@@ -529,7 +529,6 @@ blockquote {
 }
 
 .tools-list-items {
-  border: 1px solid black;
   border-radius: 6px;
   width: max-content;
   padding: 5px 10px;
@@ -600,6 +599,27 @@ gap: 5px;
   font-size: 24px;
   margin-right: 8px;
 }
+
+/* skeleton loader */
+
+.skeleton-loader {
+  background: linear-gradient(90deg, #4d5d64 25%, #425056 50%, #2c3539 75%, #425056 100%);
+  background-size: 200% 100%; /* Double the width */
+  animation: skeleton-animation 2.5s infinite linear; /* Adjust animation duration */
+  max-width: 600px;
+  border-radius: 10px;
+  color: transparent !important;
+}
+
+@keyframes skeleton-animation {
+  0% {
+    background-position: -100% 0;
+  }
+  100% {
+    background-position: 100% 0;
+  }
+}
+
 
 /* utils */
 
