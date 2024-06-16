@@ -703,7 +703,7 @@ gap: 5px;
 
 .quote-text::before {
   content: " '' ";
-  font-size: 28px;
+  font-size: 22px;
 }
 
 .fs-italic {
