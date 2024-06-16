@@ -130,10 +130,6 @@
       toggleTooltip();
     });
 
-    button.addEventListener("touchstart", function () {
-      toggleTooltip();
-    });
-
     button.addEventListener("touchend", function () {
       toggleTooltip();
     });
@@ -142,9 +138,6 @@
       toggleDropdown();
     });
 
-    dropdownToggle.addEventListener("touchstart", function () {
-      toggleDropdown();
-    });
     dropdownToggle.addEventListener("touchend", function () {
       toggleDropdown();
     });
@@ -155,9 +148,6 @@
       toggleTooltip();
     });
 
-    button.removeEventListener("touchstart", function () {
-      toggleTooltip();
-    });
     button.removeEventListener("touchend", function () {
       toggleTooltip();
     });
@@ -166,9 +156,6 @@
       toggleDropdown();
     });
 
-    dropdownToggle.removeEventListener("touchstart", function () {
-      toggleDropdown();
-    });
     dropdownToggle.removeEventListener("touchend", function () {
       toggleDropdown();
     });
