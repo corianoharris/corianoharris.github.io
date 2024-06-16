@@ -2,51 +2,11 @@
   // Function to toggle the tooltip
 
   document.addEventListener("DOMContentLoaded", function () {
-    const tooltip = document.querySelector(".tooltiptext");
-    const dropdownToggle = document.querySelector(".dropdown-toggle");
-
-    const button = document.querySelector(".button");
     const copyrightYear = document.querySelector(".copyright-year");
     copyrightYear.innerHTML = new Date().getFullYear();
 
     const sections = document.querySelectorAll(".responsive-section");
     startSkeletonLoaderWhenApproaching(sections);
-
-    function toggleTooltip() {
-      // const tooltip = document.querySelector(".tooltiptext");
-      // const button = document.querySelector(".button");
-
-      if (tooltip.style.visibility === "hidden" || !tooltip.style.visibility) {
-        tooltip.style.visibility = "visible";
-        button.textContent = "Close";
-        tooltip.classList.add("fade-in");
-        tooltip.classList.remove("fade-out");
-      } else {
-        tooltip.style.visibility = "hidden";
-        button.textContent = "Menu";
-        tooltip.classList.remove("fade-in");
-        tooltip.classList.add("fade-out");
-      }
-
-      // tooltip.classList.toggle("fade-in");
-    }
-
-    // Function to toggle the dropdown
-    function toggleDropdown() {
-      const dropdownContent = document.querySelector(".dropdown-content");
-      const caret = document.querySelector(".caret");
-
-      if (
-        dropdownContent.style.display === "none" ||
-        !dropdownContent.style.display
-      ) {
-        dropdownContent.style.display = "block";
-        caret.classList.replace("fa-caret-down", "fa-caret-up");
-      } else {
-        dropdownContent.style.display = "none";
-        caret.classList.replace("fa-caret-up", "fa-caret-down");
-      }
-    }
 
     // Function to start skeleton loader animation for a section
     function startSkeletonLoader(section) {
@@ -124,40 +84,39 @@
       });
     }
 
-    // add event listeners
-
-    button.addEventListener("click", function () {
-      toggleTooltip();
-    });
-
-    button.addEventListener("touchend", function () {
-      toggleTooltip();
-    });
-
-    dropdownToggle.addEventListener("click", function () {
-      toggleDropdown();
-    });
-
-    dropdownToggle.addEventListener("touchend", function () {
-      toggleDropdown();
-    });
-
-    // remove event listeners
-
-    button.removeEventListener("click", function () {
-      toggleTooltip();
-    });
-
-    button.removeEventListener("touchend", function () {
-      toggleTooltip();
-    });
-
-    dropdownToggle.removeEventListener("click", function () {
-      toggleDropdown();
-    });
-
-    dropdownToggle.removeEventListener("touchend", function () {
-      toggleDropdown();
-    });
   });
 })();
+
+function toggleTooltip() {
+  const tooltip = document.querySelector(".tooltiptext");
+  const button = document.querySelector(".button");
+
+  if (tooltip.style.visibility === "hidden" || !tooltip.style.visibility) {
+    tooltip.style.visibility = "visible";
+    button.textContent = "Close";
+    tooltip.classList.add("fade-in");
+    tooltip.classList.remove("fade-out");
+  } else {
+    tooltip.style.visibility = "hidden";
+    button.textContent = "Menu";
+    tooltip.classList.remove("fade-in");
+    tooltip.classList.add("fade-out");
+  }
+}
+
+// Function to toggle the dropdown
+function toggleDropdown() {
+  const dropdownContent = document.querySelector(".dropdown-content");
+  const caret = document.querySelector(".caret");
+
+  if (
+    dropdownContent.style.display === "none" ||
+    !dropdownContent.style.display
+  ) {
+    dropdownContent.style.display = "block";
+    caret.classList.replace("fa-caret-down", "fa-caret-up");
+  } else {
+    dropdownContent.style.display = "none";
+    caret.classList.replace("fa-caret-up", "fa-caret-down");
+  }
+}
