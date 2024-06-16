@@ -76,7 +76,7 @@
 
             if (isListItem) child.style.visibility = "";
           }, 500);
-        }, 2500);
+        }, 1000);
 
         const siblings = Array.from(child.parentElement.children);
         siblings.forEach((sibling) => {
