@@ -14,12 +14,18 @@
 
       children.forEach((child) => {
         const hadHighlightClass = child.classList.contains("highlight");
-        const isListItem = child.tagName.toLowerCase() === "li";
+        const tagName = child.tagName.toLowerCase();
+        const isListItem = tagName === "li";
+        const isButton = tagName === "button";
+        const isAnchor = tagName === "a";
+        const isSvg = tagName === "svg";
 
         // Add skeleton loader
         child.classList.add("skeleton-loader");
 
-        if (isListItem) child.style.visibility = "hidden";
+        if (isListItem || isButton || isAnchor || isSvg) {
+          child.style.visibility = "hidden";
+        }
 
         setTimeout(() => {
           child.style.transition = "opacity 0.5s ease-in-out";
@@ -34,16 +40,11 @@
               child.style.opacity = "1";
             }, 50);
 
-            if (isListItem) child.style.visibility = "";
+            if (isListItem || isButton || isAnchor || isSvg) {
+              child.style.visibility = "";
+            }
           }, 500);
         }, 1000);
-
-        const siblings = Array.from(child.parentElement.children);
-        siblings.forEach((sibling) => {
-          if (sibling !== child && sibling.classList.contains("highlight")) {
-            sibling.classList.remove("highlight");
-          }
-        });
       });
     }
 
@@ -83,7 +84,6 @@
         observer.observe(element);
       });
     }
-
   });
 })();
 
