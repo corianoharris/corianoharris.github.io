@@ -53,7 +53,9 @@
   <!-- End Google Tag Manager (noscript) -->
 
   <div class="top-header" role="banner">
-    <h2 class="website-name work-sans-header">Coriano harris</h2>
+    <div class="website-name work-sans-header">
+    <h2 class="first-name name">Coriano</h2><h2 class="last-name name">harris</h2>
+  </div>
     <div class="contact-icon-container work-sans-links">
       <a href="mailto:corianoharrispro@gmail.com" class="contact-icon" rel="noopener noreferrer" aria-label="Email">
         <i class="fas fa-envelope" aria-hidden="true"></i>
@@ -81,13 +83,20 @@
         <li role="menuitem"><a href="#imprint">Imprint on the world</a></li>
         <li role="menuitem"><a href="#enjoy">Enjoy my work</a></li>
         <li role="menuitem"><a href="#tools">Tools</a></li>
-        <li role="menuitem"><a href="public/documents/resume.pdf">Resume</a></li>
-        <li role="menuitem"><a href="mailto:corianoharrispro@gmail.com" target="_blank" rel="noopener noreferrer">Email</a></li>
-        <li role="menuitem"><a href="https://www.linkedin.com/in/corianoharris/" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
-        <li role="menuitem"><a href="https://github.com/corianoharris" target="_blank" rel="noopener noreferrer">Github</a></li>
         <span class="dropdown work-sans-links" role="menuitem">
-          <button class="dropdown-toggle work-sans-links" onclick="toggleDropdown()" aria-controls="dropdown-content">Work Samples <i class="fa fa-caret-down caret"></i></button>
-          <ul id="dropdown-content" class="dropdown-content work-sans-links" role="menu">
+          <button class="dropdown-toggle work-sans-links" onclick="toggleContactDropdown()" aria-controls="dropdown-contact-content">Contact <i class="fa fa-caret-down contact-caret"></i></button>
+          <ul id="dropdown-contact-content" class="dropdown-content work-sans-links" role="menu">
+            <li role="menuitem"><a href="mailto:corianoharrispro@gmail.com" target="_blank" rel="noopener noreferrer">Email</a></li>
+            <li role="menuitem"><a href="https://www.linkedin.com/in/corianoharris/" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
+          </ul>
+        </span>
+        <li role="menuitem"><a href="public/documents/coriano-harris-resume.pdf" target="_blank">Resume</a></li>
+      
+        <li role="menuitem"><a href="https://github.com/corianoharris" target="_blank" rel="noopener noreferrer">Github</a></li>
+       
+        <span class="dropdown work-sans-links" role="menuitem">
+          <button class="dropdown-toggle work-sans-links" onclick="toggleWorkDropdown()" aria-controls="dropdown-work-content">Work Samples <i class="fa fa-caret-down work-caret"></i></button>
+          <ul id="dropdown-work-content" class="dropdown-content work-sans-links" role="menu">
             <li role="menuitem"><a href="https://www.figma.com/proto/JZpFcManwUYTEe9pJ2VOIu/Zoo-Donator?node-id=35-145&t=G5JAX5fecGUUuhLw-1&scaling=scale-down&page-id=0%3A1&starting-point-node-id=35%3A145" target="_blank">Mobile Prototype</a></li>
             <li role="menuitem"><a href="public/images/projects/ecobon-case-study.pdf" target="_blank">UX case study</a></li>
             <li role="menuitem"><a href="https://notezyapp.netlify.app/" target="_blank">Notezy</a></li>

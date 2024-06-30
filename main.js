@@ -105,9 +105,25 @@ function toggleTooltip() {
 }
 
 // Function to toggle the dropdown
-function toggleDropdown() {
-  const dropdownContent = document.querySelector(".dropdown-content");
-  const caret = document.querySelector(".caret");
+function toggleWorkDropdown() {
+  const dropdownContent = document.querySelector("#dropdown-work-content");
+  const caret = document.querySelector(".work-caret");
+
+  if (
+    dropdownContent.style.display === "none" ||
+    !dropdownContent.style.display
+  ) {
+    dropdownContent.style.display = "block";
+    caret.classList.replace("fa-caret-down", "fa-caret-up");
+  } else {
+    dropdownContent.style.display = "none";
+    caret.classList.replace("fa-caret-up", "fa-caret-down");
+  }
+}
+
+function toggleContactDropdown() {
+  const dropdownContent = document.querySelector("#dropdown-contact-content");
+  const caret = document.querySelector(".contact-caret");
 
   if (
     dropdownContent.style.display === "none" ||
