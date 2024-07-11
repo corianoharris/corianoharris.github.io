@@ -37,10 +37,20 @@
   <meta name="title" content="Coriano Harris">
   <meta name="description" content="Coriano Harris website.">
   <title>Coriano Harris</title>
+  <!-- Favicon -->
   <link rel="icon" href="public/images/wave-hand.svg" sizes="any" type="image/x-icon">
+  
+  <!-- Swiper CSS -->
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+
+  <!-- Font Awesome -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,700;1,400;1,700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="main.css" />
+
+  <!-- Your Custom CSS -->
+  <link rel="stylesheet" href="main.css">
 </head>
 
 <body>
@@ -51,216 +61,322 @@
       style="display: none; visibility: hidden"></iframe>
   </noscript>
   <!-- End Google Tag Manager (noscript) -->
+  <main class="parent-container">
 
-  <div class="top-header" role="banner">
-    <div class="website-name work-sans-header">
-    <h2 class="first-name name">Coriano</h2><h2 class="last-name name">harris</h2>
-  </div>
-    <div class="contact-icon-container work-sans-links">
-      <a href="mailto:corianoharrispro@gmail.com" class="contact-icon" rel="noopener noreferrer" aria-label="Email">
-        <i class="fas fa-envelope" aria-hidden="true"></i>
-        <span>Email</span>
-      </a>
-      <a href="https://www.linkedin.com/in/corianoharris/" class="contact-icon" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
-        <i class="fab fa-linkedin" aria-hidden="true"></i>
-        <span>LinkedIn</span>
-      </a>
-      <a href="https://github.com/corianoharris" class="contact-icon" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
-        <i class="fab fa-github" rel="noopener noreferrer" aria-hidden="true"></i>
-        <span>GitHub</span>
-      </a>
-    </div>
-  </div>
-  
-  <div class="tooltip" role="navigation" aria-label="Main menu">
-    <button class="button" onclick="toggleTooltip()" aria-haspopup="true" aria-expanded="false" aria-controls="tooltip-content">Menu</button>
-    <div id="tooltip-content" class="tooltiptext" role="menu">
-      <ul class="work-sans-links">
-        <li role="menuitem"><a href="#hero">Back To Top</a></li>
-        <li role="menuitem"><a href="#do-for-you">What I can do for you</a>
-        </li>
-        <li role="menuitem"><a href="#dst">Design technologist</a></li>
-        <li role="menuitem"><a href="#imprint">Imprint on the world</a></li>
-        <li role="menuitem"><a href="#enjoy">Enjoy my work</a></li>
-        <li role="menuitem"><a href="#tools">Tools</a></li>
-        <span class="dropdown work-sans-links" role="menuitem">
-          <button class="dropdown-toggle work-sans-links" onclick="toggleContactDropdown()" aria-controls="dropdown-contact-content">Contact <i class="fa fa-caret-down contact-caret"></i></button>
-          <ul id="dropdown-contact-content" class="dropdown-content work-sans-links" role="menu">
-            <li role="menuitem"><a href="mailto:corianoharrispro@gmail.com" target="_blank" rel="noopener noreferrer">Email</a></li>
-            <li role="menuitem"><a href="https://www.linkedin.com/in/corianoharris/" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
-          </ul>
-        </span>
-        <li role="menuitem"><a href="public/documents/coriano-harris-resume.pdf" target="_blank">Resume</a></li>
-      
-        <li role="menuitem"><a href="https://github.com/corianoharris" target="_blank" rel="noopener noreferrer">Github</a></li>
+    <!-- top header -->
+    <header>
+      <nav class="nav">
+        <i class="navOpenBtn fa-solid fa-bars"></i>
+        <div class="logo">
+          <a href="#" class="logo-link">
+            <h2 class="ff-mynerve-regular">coriano</h2>
+            <h2 class="ff-major-mono-display">harris</h2>
+          </a>
+        </div>
        
-        <span class="dropdown work-sans-links" role="menuitem">
-          <button class="dropdown-toggle work-sans-links" onclick="toggleWorkDropdown()" aria-controls="dropdown-work-content">Work Samples <i class="fa fa-caret-down work-caret"></i></button>
-          <ul id="dropdown-work-content" class="dropdown-content work-sans-links" role="menu">
-            <li role="menuitem"><a href="https://www.figma.com/proto/JZpFcManwUYTEe9pJ2VOIu/Zoo-Donator?node-id=35-145&t=G5JAX5fecGUUuhLw-1&scaling=scale-down&page-id=0%3A1&starting-point-node-id=35%3A145" target="_blank">Mobile Prototype</a></li>
-            <li role="menuitem"><a href="public/images/projects/ecobon-case-study.pdf" target="_blank">UX case study</a></li>
-            <li role="menuitem"><a href="https://notezyapp.netlify.app/" target="_blank">Notezy</a></li>
-            <li role="menuitem"><a  href="https://prediabetes-risk-test.netlify.app/" target="_blank">Prediabetes Test</a></li>
+  
+        <ul class="nav-links">
+          <i class="navCloseBtn fa-solid fa-xmark"></i>
+          <li><a href="#">What I can do for you</a></li>
+           <li class="dropdown">
+          <a href="#">Let's chat <i class="fas fa-chevron-down dropdown-icon"></i></a>
+          <ul class="dropdown-menu">
+            <li><a href="#">email</a></li>
+            <li><a href="#">Linkedin</a></li>
           </ul>
-        </span>
-      </ul>
-    </div>
-  </div>
+        </li>
+          <li><a href="#">Community Involvement</a></li>
+          <li><a href="#">Projects</a></li>
+          <li><a href="#">Tools for success</a></li>
+          <li class="dropdown">
+            <a href="#">Resources <i class="fas fa-chevron-down dropdown-icon"></i></a>
+            <ul class="dropdown-menu">
+              <li><a href="#">resume</a></li>
+              <li><a href="#">Github</a></li>
+            </ul>
+          </li>
+          <li><a href="#">back to top</a></li>
+         
+        </ul>
+      </nav>
+    </header>
   
-  <main class="main-content" role="main">
+    <!-- hero section -->
+  
+    <section class="section hero-section mt-80 ff-mynerve-regular">
+  
+      <div class="hero-content">
+        <div class="hero-img">
+          <img src="./public/images/profile/mentoring-pic.jpeg" alt="whiteboardinng a problem with coworkers">
+        </div>
+        <div class="overlay-text">" addressing pain points, simplifying workflows, and coding high-performant user interfaces to drive revenue"
+      </div>
+      </div>
+    </section>
+  
+    <!--  what i can do for you  -->
+  
+    <section class="section mt-50">
+      <h2 class="section-title holtwood-one-sc-regular">What I can do for you?</h2>
+      <div class="section-content">
+        <ol class="whatICanDoForYou" start="1">
+          <li>
+            <span>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quo, nostrum. Pariatur, molestiae a, officiis deleniti odit reiciendis eligendi atque illo modi impedit harum placeat repudiandae ipsa fuga! Dicta, rerum dolorum!</span>
+          </li>
+          <li>
+            <span>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quo, nostrum. Pariatur, molestiae a, officiis deleniti odit reiciendis eligendi atque illo modi impedit harum placeat repudiandae ipsa fuga! Dicta, rerum dolorum!</span>
+          </li>
+        </ol>
+  
+      </div>
+    </section>
+  
+  <section class="section">
+      <h2 class="section-title holtwood-one-sc-regular">Community Engagements</h2>
+      <div class="section-content">
+        <ol class="communityEvents" start="1">
+          <h3>Upcoming events:</h3>
+          <li class="event-list-item">
+            <div class="event">
+              <div class="event-content event-type-content">
+                <h5 class="event-type">Talk:</h5><h4 class="event-title">Why Developers Get Cold Feet When Approaching Accessibility</h4>
+              </div>
+              <div class="event-content event-org-content">
+                <h5 class="event-org">Organization:</h5><h4 class="event-org-name">San Diego Accessibility And Inclusive Design</h4>
+              </div>
+              <a class="event-org-link" href="#">learn more or get involved</a>
+            </div>
+          </li>
+          <li class="event-list-item">
+            <div class="event">
+              <div class="event-content event-type-content">
+                <h5 class="event-type">Talk:</h5><h4 class="event-title">Why Developers Get Cold Feet When Approaching Accessibility</h4>
+              </div>
+              <div class="event-content event-org-content">
+                <h5 class="event-org">Organization:</h5><h4 class="event-org-name">San Diego Accessibility And Inclusive Design</h4>
+              </div>
+              <a class="event-org-link" href="#">learn more or get involved</a>
+            </div>
+          </li>
+        </ol>
+  
+      </div>
+    </section>
+  
+    <!-- projects -->
+    <section class="section">
+      <h2 class="section-title holtwood-one-sc-regular">Projects</h2>
+      <div class="section-content">
+        <div class="slide-container swiper">
+          <div class="slide-content">
+            <div class="card-wrapper swiper-wrapper">
+              <div class="card swiper-slide">
+                <div class="image-content">
+                  <span class="overlay"></span>
+  
+                  <div class="card-image">
+                    <img src="https://tinypic.host/images/2022/12/19/img_avatar.png" alt="" class="card-img">
+                  </div>
+                </div>
+  
+                <div class="card-content">
+                  <h2 class="name">Mohamed Yousef
+                  </h2>
+                  <div class="card-content-section">
+                    <h4>Tech used:</h4>
+                    <p class="description">The lorem text the section that contains header with having open functionality. Lorem dolor sit amet consectetur adipisicing elit.</p>
+                  </div>
+                  
 
-    <section id="hero" class="hero-section hero-padding" aria-labelledby="hero-heading">
-      <div class="hero-card">
-        <div class="hero-card-image-container">
-          <img src="public/images/profile/mentoring-pic.jpeg" alt="Placeholder Image" class="hero-card-image">
-        </div>
-        <div class="hero-card-body">
-          <blockquote class="hero-card-copy work-sans-hero"><svg class="quote-icon" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" clip-rule="evenodd" fill-rule="evenodd" stroke-linejoin="round" stroke-miterlimit="2" viewBox="0 0 24 30" x="0px" y="0px"><path d="m21.301 4c.411 0 .699.313.699.663 0 .248-.145.515-.497.702-1.788.948-3.858 4.226-3.858 6.248 3.016-.092 4.326 2.582 4.326 4.258 0 2.007-1.738 4.129-4.308 4.129-3.24 0-4.83-2.547-4.83-5.307 0-5.98 6.834-10.693 8.468-10.693zm-10.833 0c.41 0 .699.313.699.663 0 .248-.145.515-.497.702-1.788.948-3.858 4.226-3.858 6.248 3.016-.092 4.326 2.582 4.326 4.258 0 2.007-1.739 4.129-4.308 4.129-3.241 0-4.83-2.547-4.83-5.307 0-5.98 6.833-10.693 8.468-10.693z" fill-rule="nonzero" fill="   #fff" stroke="#381141"/></svg>spotting pain points, simplifying workflows to save time, and coding inclusive products.</blockquote>
-        </div>
-      </div>
-    </section>
+                  <div class="card-content-section">
+                    <h4>Key takeaways:</h4>
+                    <p class="description">The lorem text the section that contains header with having open functionality. Lorem dolor sit amet consectetur adipisicing elit.</p>
+                  </div>
   
-    <section id="do-for-you" class="responsive-section" aria-labelledby="do-for-you-heading">
-      <h2 id="do-for-you-heading" class="work-sans-header">What I can do for you.</h2>
-      <div class="card">
-        <div class="card-body work-sans-body">
-          <p class="card-copy mb-0">As a design technologist, I bridge the gap between design and coding, collaborating with teams of all sizes, from small businesses to large corporations:</p>
-          <ul class="card-copy card-copy-list">
-            <li class="card-copy-list-items offerings-list-items"><span class="highlight">Catching potential problems early and clarifying design intent</span></li>
-            <li class="card-copy-list-items offerings-list-items">Streamlining the development process</li>
-            <li class="card-copy-list-items offerings-list-items"><span class="highlight">Helping researchers, designers, and developers troubleshoot and complete tasks</span></li>
-            <li class="card-copy-list-items offerings-list-items">Strategize and improve design solutions</li>
-            <li class="card-copy-list-items offerings-list-items">Build prototypes to test and refine ideas with code and figma</li>
-            <li class="card-copy-list-items offerings-list-items">Analyze and provide insights</li>
-          </ul>
-        </div>
-      </div>
-      <p class="cta-text">
-        Let's bring your ideas to life—reach out to <a href="mailto:corianoharrispro@gmail.com" class="inline-text work-sans-hero" rel="noopener noreferrer" aria-label="Email">me</a> for innovative design and development solutions! 🤝
-      </p>
-    </section>
+                  <button class="button">Try</button>
+                </div>
+                <div class="card-overlay">
+                  <button class="close-overlay" aria-label="Close overlay">&times;</button>
+                  <h2 class="overlay-title">Title</h2>
+                  <iframe class="overlay-iframe" src="https://example.com" frameborder="0" allowfullscreen></iframe>
+                </div>
+              </div>
+              
+             
+              <div class="card swiper-slide">
+                <div class="image-content">
+                  <span class="overlay"></span>
   
-    <section id="dst" class="responsive-section" aria-labelledby="design-technologist-heading">
-      <h2 id="design-technologist-heading" class="work-sans-header">What is a design technologist?</h2>
-      <div class="card">
+                  <div class="card-image">
+                    <img src="https://tinypic.host/images/2022/12/19/img_avatar.png" alt="" class="card-img">
+                  </div>
+                </div>
   
-        <div class="card-body">
-          <blockquote class="card-copy quote quote-text work-sans-quotes"><svg class="quote-icon" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" clip-rule="evenodd" fill-rule="evenodd" stroke-linejoin="round" stroke-miterlimit="2" viewBox="0 0 24 30" x="0px" y="0px"><path d="m21.301 4c.411 0 .699.313.699.663 0 .248-.145.515-.497.702-1.788.948-3.858 4.226-3.858 6.248 3.016-.092 4.326 2.582 4.326 4.258 0 2.007-1.738 4.129-4.308 4.129-3.24 0-4.83-2.547-4.83-5.307 0-5.98 6.834-10.693 8.468-10.693zm-10.833 0c.41 0 .699.313.699.663 0 .248-.145.515-.497.702-1.788.948-3.858 4.226-3.858 6.248 3.016-.092 4.326 2.582 4.326 4.258 0 2.007-1.739 4.129-4.308 4.129-3.241 0-4.83-2.547-4.83-5.307 0-5.98 6.833-10.693 8.468-10.693z" fill-rule="nonzero" fill="   #fff" stroke="#381141"/></svg>Think of a design technologist as a vital link between user experience, creativity and technology. Leveraging <span class="highlight">research, human centered interaction, design, HTML, CSS, and JavaScript</span> to bring visions to life on the web.</blockquote>
-        </div>
-      </div>
-    </section>
-  
-    <section id="imprint" class="responsive-section" aria-labelledby="imprint-heading">
-      <h2 id="imprint-heading" class="work-sans-header">My imprint on the world.</h2>
-      <div class="card">
-  
-        <div class="card-body work-sans-body">
-  
-          <p class="card-copy">
-            In my spare time, I contribute to non-profits by <span class="highlight">teaching coding and design, mentoring, code reviewing, and hosting a UX/UI meetup</span>. My goal is to simplify their workflows, implement modern techniques, and empower both the organizations and the next generation of designers and developers.</p>
-        </div>
-      </div>
-      <p class="cta-text"> 
-        Connect with <a href="https://codeconnector.io/" target="_blank" rel="noopener noreferrer">me</a> at <span class="codeconnector">code connector</span> and share how you're making a difference today! 🤝
-      </p>
-    </section>
-  
-    <section id="enjoy" class="responsive-section" aria-labelledby="enjoy-heading">
-      <h2 id="enjoy-heading" class="work-sans-header">Enjoying my work.
-      </h2>
-      <div class="card">
-  
-        <div class="card-body work-sans-body">
-          <p class="card-copy">Developed reusable UI Component library using Angular for a major e-commerce platform. Drove <span class="highlight">cross-team adoption through evangelism, integrating with Figma Design System</span>. Enabled consistent design intent, gradual upgrades, demonstrating value to leadership. Constant immersion in research, design, and development. Every project presents unique challenges, pushing skill expansion and out-of-the-box thinking. Exploring new coding languages and design trends ensures an exciting horizon. Here are some of the questions I try to solve.
-          </p>
-          <ul class="card-copy card-copy-list">
-            <li class="card-copy-list-items impact-list-items">How can developers be more comfortable using the current Figma Design System?</li>
-            <li class="card-copy-list-items impact-list-items">How do we educate the designers on the UI Component Library?</li>
-            <li class="card-copy-list-items impact-list-items">How could we apply design intent across various technology stacks?</li>
-            <li class="card-copy-list-items impact-list-items">How could we enhance the system without disrupting teams who couldn't always upgrade to the latest version?</li>
-            <li class="card-copy-list-items impact-list-items">How could we show our leadership team that the design system was worth the investment?</li>
-          </ul>
-        </div>
-      </div>
-      <p class="cta-text">
-        Click the menu to see other enjoyable work samples.
-      </p>
-    </section>
+                <div class="card-content">
+                  <h2 class="name">Mohamed Yousef
+                  </h2>
+                  <div class="card-content-section">
+                    <h4>Tech used:</h4>
+                    <p class="description">The lorem text the section that contains header with having open functionality. Lorem dolor sit amet consectetur adipisicing elit.</p>
+                  </div>
+                  
 
-
-    <section id="tools" class="responsive-section" aria-labelledby="tools-heading">
-      <h2 id="tools-heading" class="work-sans-header">Tools for success
-      </h2>
-      <div class="card">
+                  <div class="card-content-section">
+                    <h4>Key takeaways:</h4>
+                    <p class="description">The lorem text the section that contains header with having open functionality. Lorem dolor sit amet consectetur adipisicing elit.</p>
+                  </div>
   
-        <div class="card-body work-sans-body">
-          <p class="card-copy">
-            As a front-end developer, built a dynamic web app using <span class="highlight">Angular, Sass, Webpack, Storybook, ESLint, Prettier, Jasmine, Cypress, and Google Analytics</span>. Leveraged a <span class="highlight">component-driven design</span> approach with this tech stack.</p>
+                  <button class="button">Try</button>
+                </div>
+                <div class="card-overlay">
+                  <button class="close-overlay" aria-label="Close overlay">&times;</button>
+                  <h2 class="overlay-title">Title</h2>
+                  <iframe class="overlay-iframe" src="https://example.com" frameborder="0" allowfullscreen></iframe>
+                </div>
+              </div>
 
-            <p class="card-copy">
-              Employed design thinking to create an e-commerce interactive prototype using<span class="highlight"> <span class="highlight">human-centered</span> approach with Figma, UserTesting, Design System, and Zeplin</span>.</p>
+              <div class="card swiper-slide">
+                <div class="image-content">
+                  <span class="overlay"></span>
+  
+                  <div class="card-image">
+                    <img src="https://tinypic.host/images/2022/12/19/img_avatar.png" alt="" class="card-img">
+                  </div>
+                </div>
+  
+                <div class="card-content">
+                  <h2 class="name">Mohamed Yousef
+                  </h2>
+                  <div class="card-content-section">
+                    <h4>Tech used:</h4>
+                    <p class="description">The lorem text the section that contains header with having open functionality. Lorem dolor sit amet consectetur adipisicing elit.</p>
+                  </div>
+                  
 
-              <p>Additional tools and mindsets:</p>
-              <ul class="card-copy card-copy-list tools-list">
-                <li class="card-copy-list-items tools-list-items">empathy</li>
-                <li class="card-copy-list-items tools-list-items">embrace challenges</li>
-                <li class="card-copy-list-items tools-list-items">tailor communication to audience</li>
-                <li class="card-copy-list-items tools-list-items">Qualitative Research</li>
-                <li class="card-copy-list-items tools-list-items">Quantitative Research</li>
-                
-                <li class="card-copy-list-items tools-list-items">Fullstory</li>
-                <li class="card-copy-list-items tools-list-items">Miro</li>
-                <li class="card-copy-list-items tools-list-items">Figma Design Tokens</li>
-                <li class="card-copy-list-items tools-list-items">Figma Dev Plugin</li>
-                <li class="card-copy-list-items tools-list-items">Design Thinking</li>
-                <li class="card-copy-list-items tools-list-items">Design System</li>
-                <li class="card-copy-list-items tools-list-items">coloristics</li>
-                <li class="card-copy-list-items tools-list-items">RestFul APIs</li>
-                <li class="card-copy-list-items tools-list-items">Tailwind</li>
-                <li class="card-copy-list-items tools-list-items">Node</li>
-                <li class="card-copy-list-items tools-list-items">Next.js</li>
-                <li class="card-copy-list-items tools-list-items">React.js</li>
-                <li class="card-copy-list-items tools-list-items">Redux</li>
-                <li class="card-copy-list-items tools-list-items">Jest</li>
-                <li class="card-copy-list-items tools-list-items">Airtable</li>
-                <li class="card-copy-list-items tools-list-items">AuthO</li>
-                <li class="card-copy-list-items tools-list-items">Jira</li>
-                <li class="card-copy-list-items tools-list-items">Confluence</li>
-                <li class="card-copy-list-items tools-list-items">Axe Deque</li>
-                <li class="card-copy-list-items tools-list-items">LightHouse</li>
-                <li class="card-copy-list-items tools-list-items">Bitbucket</li>
-                <li class="card-copy-list-items tools-list-items">Npm Package Registry</li>
-    
-              </ul>
+                  <div class="card-content-section">
+                    <h4>Key takeaways:</h4>
+                    <p class="description">The lorem text the section that contains header with having open functionality. Lorem dolor sit amet consectetur adipisicing elit.</p>
+                  </div>
+  
+                  <button class="button">Try</button>
+                </div>
+                <div class="card-overlay">
+                  <button class="close-overlay" aria-label="Close overlay">&times;</button>
+                  <h2 class="overlay-title">Title</h2>
+                  <iframe class="overlay-iframe" src="https://example.com" frameborder="0" allowfullscreen></iframe>
+                </div>
+              </div>
+              
+              
+              <div class="card swiper-slide">
+                <div class="image-content">
+                  <span class="overlay"></span>
+  
+                  <div class="card-image">
+                    <img src="https://tinypic.host/images/2022/12/19/img_avatar.png" alt="" class="card-img">
+                  </div>
+                </div>
+  
+                <div class="card-content">
+                  <h2 class="name">Mohamed Yousef
+                  </h2>
+                  <div class="card-content-section">
+                    <h4>Tech used:</h4>
+                    <p class="description">The lorem text the section that contains header with having open functionality. Lorem dolor sit amet consectetur adipisicing elit.</p>
+                  </div>
+                  
+
+                  <div class="card-content-section">
+                    <h4>Key takeaways:</h4>
+                    <p class="description">The lorem text the section that contains header with having open functionality. Lorem dolor sit amet consectetur adipisicing elit.</p>
+                  </div>
+  
+                  <button class="button">Try</button>
+                </div>
+                <div class="card-overlay">
+                  <button class="close-overlay" aria-label="Close overlay">&times;</button>
+                  <h2 class="overlay-title">Title</h2>
+                  <iframe class="overlay-iframe" src="https://example.com" frameborder="0" allowfullscreen></iframe>
+                </div>
+              </div>
+            </div>
+          </div>
+  
+          <div class="swiper-button-next swiper-navBtn"></div>
+          <div class="swiper-button-prev swiper-navBtn"></div>
+  
         </div>
+        <div class="swiper-pagination"></div>
       </div>
     </section>
+  
+  <!-- tools -->
+    <section class="section mt-35">
+      <h2 class="section-title holtwood-one-sc-regular">Tools for success</h2>
+      
+      <div class="section-content tools-content">
+        <div class="mindset">
+          <h3>Mindset</h3>
+          <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Molestiae cumque fugiat, distinctio porro nemo corporis quasi nobis? Reprehenderit quasi porro aliquam mollitia itaque. Debitis maxime dolor expedita ab pariatur quaerat.</p>
+        </div>
+        <ul class="toolsForSuccess">
+          <h4>Soft skills</h4>
+          <div class="pills-wrapper">
+         
+          <li class="pill-item">
+            lorem
+          </li>
+          <li class="pill-item">
+            lorem
+          </li>
+          <li class="pill-item">
+            lorem
+          </li>
+          <li class="pill-item">
+            lorem
+          </li>
+
+         <li class="pill-item">
+            lorem
+          </li>
+          <li class="pill-item">
+            lorem
+          </li>
+        </div>
+        </ul>
+         <ul class="toolsForSuccess">
+         <h4>Soft skills</h4>
+          <li class="pill-item">
+            lorem
+          </li>
+          <li class="pill-item">
+            lorem
+          </li>
+        </ul>
+         <ul class="toolsForSuccess">
+          <h4>Soft skills</h4>
+          <li class="pill-item">
+            lorem
+          </li>
+          <li class="pill-item">
+            lorem
+          </li>
+        </ul>
+      </div>
+    </section>
+  
+    <!-- bottom header -->
+    <footer class="header bottom-header">
+      <h2 class="copyrights">Lorem</h2>
+    </footer>
   </main>
   
-  <footer class="footer" role="contentinfo">
-    <div class="contact-icon-container work-sans-links">
-      <a href="mailto:corianoharrispro@gmail.com" class="contact-icon" rel="noopener noreferrer" aria-label="Email">
-        <i class="fas fa-envelope" aria-hidden="true"></i>
-        <span>Email</span>
-      </a>
-      <a href="https://www.linkedin.com/in/corianoharris/" class="contact-icon" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
-        <i class="fab fa-linkedin" aria-hidden="true"></i>
-        <span>LinkedIn</span>
-      </a>
-      <a href="https://github.com/corianoharris" class="contact-icon" target="_blank" aria-label="GitHub">
-        <i class="fab fa-github" rel="noopener noreferrer" aria-hidden="true"></i>
-        <span>GitHub</span>
-      </a>
-    </div>
-    <div class="copyright-container work-sans-body">
-      <h6 class="copyright">&#169;<span class="copyright-year"></span> Powered by Coriano Harris.</h6>
-      <h6> All rights reserved.</h6>
-    </div>
-    
-  </footer>
-  
-
+ <!-- Swiper JS -->
+ <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+ 
   <script src="main.js"></script>
+
+
 
 </body>
 

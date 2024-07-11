@@ -1,138 +1,139 @@
-(async function () {
-  // Function to toggle the tooltip
+document.addEventListener("DOMContentLoaded", (event) => {
+  const nav = document.querySelector(".nav"),
+    navOpenBtn = document.querySelector(".navOpenBtn"),
+    navCloseBtn = document.querySelector(".navCloseBtn");
 
-  document.addEventListener("DOMContentLoaded", function () {
-    const copyrightYear = document.querySelector(".copyright-year");
-    copyrightYear.innerHTML = new Date().getFullYear();
+  navOpenBtn.addEventListener("click", () => {
+    nav.classList.add("openNav");
+  });
+  navCloseBtn.addEventListener("click", () => {
+    nav.classList.remove("openNav");
+  });
 
-    const sections = document.querySelectorAll(".responsive-section");
-    startSkeletonLoaderWhenApproaching(sections);
+  var swiper = new Swiper(".slide-content", {
+    slidesPerView: 3,
+    spaceBetween: 25,
+    direction: "horizontal",
+    // loop: true,
+    centerSlide: "true",
+    fade: "true",
+    grabCursor: "true",
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true,
+      dynamicBullets: true,
+    },
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+    },
 
-    // Function to start skeleton loader animation for a section
-    function startSkeletonLoader(section) {
-      const children = section.querySelectorAll("*");
+    breakpoints: {
+      0: {
+        slidesPerView: 1,
+      },
+      520: {
+        slidesPerView: 2,
+      },
+      950: {
+        slidesPerView: 3,
+      },
+    },
+    on: {
+      init: function () {
+        const nextButton = this.navigation.nextEl;
+        const prevButton = this.navigation.prevEl;
 
-      children.forEach((child) => {
-        const hadHighlightClass = child.classList.contains("highlight");
-        const tagName = child.tagName.toLowerCase();
-        const isListItem = tagName === "li";
-        const isButton = tagName === "button";
-        const isAnchor = tagName === "a";
-        const isSvg = tagName === "svg";
-
-        // Add skeleton loader
-        child.classList.add("skeleton-loader");
-
-        if (isListItem || isButton || isAnchor || isSvg) {
-          child.style.visibility = "hidden";
+        if (nextButton) {
+          nextButton.innerHTML = '<i class="fas fa-arrow-right"></i>';
         }
-
-        setTimeout(() => {
-          child.style.transition = "opacity 0.5s ease-in-out";
-          child.style.opacity = "0";
-
-          setTimeout(() => {
-            child.classList.remove("skeleton-loader");
-            child.style.opacity = "";
-
-            if (hadHighlightClass) child.classList.add("highlight");
-            setTimeout(() => {
-              child.style.opacity = "1";
-            }, 50);
-
-            if (isListItem || isButton || isAnchor || isSvg) {
-              child.style.visibility = "";
-            }
-          }, 500);
-        }, 1000);
-      });
-    }
-
-    // Function to reset skeleton loader animation
-    function resetSkeletonLoader(section) {
-      const children = section.querySelectorAll("*");
-
-      children.forEach((child) => {
-        if (child.classList.contains("skeleton-loader")) {
-          child.classList.remove("skeleton-loader");
-          child.style.opacity = "";
-          child.style.transition = "";
+        if (prevButton) {
+          prevButton.innerHTML = '<i class="fas fa-arrow-left"></i>';
         }
-      });
-    }
+      },
+    },
+  });
 
-    // Function to start skeleton loader when elements are about to come into viewport
-    function startSkeletonLoaderWhenApproaching(elements) {
-      const observer = new IntersectionObserver(
-        (entries) => {
-          entries.forEach((entry) => {
-            const section = entry.target;
-            if (entry.isIntersecting) {
-              startSkeletonLoader(section);
-            } else {
-              resetSkeletonLoader(section);
-            }
-          });
-        },
-        {
-          rootMargin: "0px 0px -50px 0px", // Adjust as needed
-          threshold: 0,
-        }
-      );
+  // nav toggle
 
-      elements.forEach((element) => {
-        observer.observe(element);
-      });
+  // Dropdown functionality
+  const dropdown = document.querySelector(".dropdown");
+  dropdown.addEventListener("click", (event) => {
+    event.stopPropagation();
+    const dropdownMenu = dropdown.querySelector(".dropdown-menu");
+    const dropdownIcon = dropdown.querySelector(".dropdown-icon");
+    dropdownMenu.classList.toggle("show");
+    if (dropdownMenu.classList.contains("show")) {
+      dropdownIcon.classList.replace("fa-chevron-down", "fa-chevron-up");
+    } else {
+      dropdownIcon.classList.replace("fa-chevron-up", "fa-chevron-down");
     }
   });
-})();
 
-function toggleTooltip() {
-  const tooltip = document.querySelector(".tooltiptext");
-  const button = document.querySelector(".button");
+  // Close dropdown if clicking outside
+  document.addEventListener("click", () => {
+    const dropdownMenu = dropdown.querySelector(".dropdown-menu");
+    const dropdownIcon = dropdown.querySelector(".dropdown-icon");
+    if (dropdownMenu.classList.contains("show")) {
+      dropdownMenu.classList.remove("show");
+      dropdownIcon.classList.replace("fa-chevron-up", "fa-chevron-down");
+    }
+  });
+});
 
-  if (tooltip.style.visibility === "hidden" || !tooltip.style.visibility) {
-    tooltip.style.visibility = "visible";
-    button.textContent = "Close";
-    tooltip.classList.add("fade-in");
-    tooltip.classList.remove("fade-out");
-  } else {
-    tooltip.style.visibility = "hidden";
-    button.textContent = "Menu";
-    tooltip.classList.remove("fade-in");
-    tooltip.classList.add("fade-out");
-  }
-}
+document.addEventListener("DOMContentLoaded", function () {
+  const cards = document.querySelectorAll(".card");
 
-// Function to toggle the dropdown
-function toggleWorkDropdown() {
-  const dropdownContent = document.querySelector("#dropdown-work-content");
-  const caret = document.querySelector(".work-caret");
+  const swiperContainer = document.querySelector(".swiper");
 
-  if (
-    dropdownContent.style.display === "none" ||
-    !dropdownContent.style.display
-  ) {
-    dropdownContent.style.display = "block";
-    caret.classList.replace("fa-caret-down", "fa-caret-up");
-  } else {
-    dropdownContent.style.display = "none";
-    caret.classList.replace("fa-caret-up", "fa-caret-down");
-  }
-}
+  cards.forEach((card) => {
+    const button = card.querySelector(".button");
+    const cardOverlay = card.querySelector(".card-overlay");
+    const closeOverlay = card.querySelector(".close-overlay");
+    const overlayTitle = card.querySelector(".overlay-title");
+    const overlayIframe = card.querySelector(".overlay-iframe");
+    const nameElement = card.querySelector(".name");
 
-function toggleContactDropdown() {
-  const dropdownContent = document.querySelector("#dropdown-contact-content");
-  const caret = document.querySelector(".contact-caret");
+    // Check if all required elements exist
+    if (!button || !cardOverlay) {
+      console.error("Button or card overlay is missing in a card");
+      return;
+    }
 
-  if (
-    dropdownContent.style.display === "none" ||
-    !dropdownContent.style.display
-  ) {
-    dropdownContent.style.display = "block";
-    caret.classList.replace("fa-caret-down", "fa-caret-up");
-  } else {
-    dropdownContent.style.display = "none";
-    caret.classList.replace("fa-caret-up", "fa-caret-down");
-  }
-}
+    const name = nameElement?.textContent || "Untitled";
+
+    button.addEventListener(
+      "click",
+      function (event) {
+        event.preventDefault();
+        cardOverlay.classList.add("active");
+      },
+      { passive: false }
+    );
+
+    closeOverlay?.addEventListener("click", handleClose, { passive: false });
+    closeOverlay?.addEventListener("touchend", handleClose, { passive: false });
+
+    cardOverlay.addEventListener("click", handleOverlayClick, {
+      passive: false,
+    });
+    cardOverlay.addEventListener("touchend", handleOverlayClick, {
+      passive: false,
+    });
+
+    function handleClose(event) {
+      event.preventDefault();
+      closeOverlayFunc();
+    }
+
+    function handleOverlayClick(event) {
+      if (event.target === cardOverlay) {
+        closeOverlayFunc();
+      }
+    }
+
+    function closeOverlayFunc() {
+      cardOverlay.classList.remove("active");
+    }
+  });
+});
