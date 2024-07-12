@@ -267,6 +267,7 @@ a {
 .nav .navOpenBtn,
 .nav .navCloseBtn {
   display: none;
+  font-size: 36px;
 }
 
 .dropdown-menu {
@@ -327,15 +328,13 @@ a {
   }
   .nav .navOpenBtn {
     color: turquoise;
-    font-size: 20px;
     cursor: pointer;
   }
   .nav .navCloseBtn {
     position: absolute;
-    top: 20px;
+    top: 30px;
     right: 20px;
     color: turquoise;
-    font-size: 20px;
     cursor: pointer;
   }
 }
