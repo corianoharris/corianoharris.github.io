@@ -136,4 +136,7 @@ document.addEventListener("DOMContentLoaded", function () {
       cardOverlay.classList.remove("active");
     }
   });
+
+  const copyrightYear = document.querySelector(".copyright-year");
+  copyrightYear.innerHTML = new Date().getFullYear();
 });
