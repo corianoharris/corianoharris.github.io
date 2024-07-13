@@ -2,12 +2,19 @@ document.addEventListener("DOMContentLoaded", (event) => {
   const nav = document.querySelector(".nav"),
     navOpenBtn = document.querySelector(".navOpenBtn"),
     navCloseBtn = document.querySelector(".navCloseBtn");
+  navLinks = document.querySelectorAll(".nav-links");
 
   navOpenBtn.addEventListener("click", () => {
     nav.classList.add("openNav");
   });
   navCloseBtn.addEventListener("click", () => {
     nav.classList.remove("openNav");
+  });
+
+  navLinks.forEach((link) => {
+    link.addEventListener("click", function () {
+      nav.classList.remove("openNav");
+    });
   });
 
   var swiper = new Swiper(".slide-content", {
@@ -94,30 +101,28 @@ document.addEventListener("DOMContentLoaded", function () {
     const overlayIframe = card.querySelector(".overlay-iframe");
     const nameElement = card.querySelector(".name");
 
-    // Check if all required elements exist
-    if (!button || !cardOverlay) {
-      console.error("Button or card overlay is missing in a card");
-      return;
-    }
-
     const name = nameElement?.textContent || "Untitled";
 
-    button.addEventListener(
-      "click",
-      function (event) {
-        event.preventDefault();
-        cardOverlay.classList.add("active");
-      },
-      { passive: false }
-    );
+    if (button) {
+      button?.addEventListener(
+        "click",
+        function (event) {
+          event.preventDefault();
+          if (cardOverlay) {
+            cardOverlay?.classList.add("active");
+          }
+        },
+        { passive: false }
+      );
+    }
 
     closeOverlay?.addEventListener("click", handleClose, { passive: false });
     closeOverlay?.addEventListener("touchend", handleClose, { passive: false });
 
-    cardOverlay.addEventListener("click", handleOverlayClick, {
+    cardOverlay?.addEventListener("click", handleOverlayClick, {
       passive: false,
     });
-    cardOverlay.addEventListener("touchend", handleOverlayClick, {
+    cardOverlay?.addEventListener("touchend", handleOverlayClick, {
       passive: false,
     });
 

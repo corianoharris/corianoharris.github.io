@@ -1,408 +1,575 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=UA-180416572-1"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
 
-<head>
-  <!-- Global site tag (gtag.js) - Google Analytics -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-180416572-1"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag() {
-      dataLayer.push(arguments);
-    }
-    gtag('js', new Date());
+      gtag("config", "UA-180416572-1");
+    </script>
+    <!-- Google Tag Manager -->
+    <script>
+      (function (w, d, s, l, i) {
+        w[l] = w[l] || [];
+        w[l].push({
+          "gtm.start": new Date().getTime(),
+          event: "gtm.js",
+        });
+        var f = d.getElementsByTagName(s)[0],
+          j = d.createElement(s),
+          dl = l != "dataLayer" ? "&l=" + l : "";
+        j.async = true;
+        j.src = "https://www.googletagmanager.com/gtm.js?id=" + i + dl;
+        f.parentNode.insertBefore(j, f);
+      })(window, document, "script", "dataLayer", "GTM-MBMJ8L7");
+    </script>
+    <!-- End Google Tag Manager -->
 
-    gtag('config', 'UA-180416572-1');
-  </script>
-  <!-- Google Tag Manager -->
-  <script>
-    (function (w, d, s, l, i) {
-      w[l] = w[l] || [];
-      w[l].push({
-        'gtm.start': new Date().getTime(),
-        event: 'gtm.js',
-      });
-      var f = d.getElementsByTagName(s)[0],
-        j = d.createElement(s),
-        dl = l != 'dataLayer' ? '&l=' + l : '';
-      j.async = true;
-      j.src = 'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
-      f.parentNode.insertBefore(j, f);
-    })(window, document, 'script', 'dataLayer', 'GTM-MBMJ8L7');
-  </script>
-  <!-- End Google Tag Manager -->
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="title" content="Coriano Harris" />
+    <meta name="description" content="Coriano Harris website." />
+    <title>Coriano Harris</title>
+    <!-- Favicon -->
+    <link
+      rel="icon"
+      href="public/images/wave-hand.svg"
+      sizes="any"
+      type="image/x-icon"
+    />
 
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="title" content="Coriano Harris">
-  <meta name="description" content="Coriano Harris website.">
-  <title>Coriano Harris</title>
-  <!-- Favicon -->
-  <link rel="icon" href="public/images/wave-hand.svg" sizes="any" type="image/x-icon">
-  
-  <!-- Swiper CSS -->
-  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+    <!-- Swiper CSS -->
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper/swiper-bundle.min.css"
+    />
 
-  <!-- Font Awesome -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
 
-  <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,700;1,400;1,700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <!-- Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,700;1,400;1,700&family=Roboto:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
 
-  <!-- Your Custom CSS -->
-  <link rel="stylesheet" href="main.css">
-</head>
+    <!-- Your Custom CSS -->
+    <link rel="stylesheet" href="main.css" />
+  </head>
 
-<body>
-
-  <!-- Google Tag Manager (noscript) -->
-  <noscript>
-    <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MBMJ8L7" height="0" width="0"
-      style="display: none; visibility: hidden"></iframe>
-  </noscript>
-  <!-- End Google Tag Manager (noscript) -->
-  <main class="parent-container">
-
-    <!-- top header -->
-    <header>
-      <nav class="nav">
-        <i class="navOpenBtn fa-solid fa-bars"></i>
-        <div class="logo">
-          <a href="#" class="logo-link">
-            <h2 class="ff-mynerve-regular first-name">coriano</h2>
-            <h2 class="ff-major-mono-display last-name">harris</h2>
-          </a>
-        </div>
-       
-  
-        <ul class="nav-links">
-          <i class="navCloseBtn fa-solid fa-xmark fa-lg"></i>
-          <li><a href="#">What I can do for you</a></li>
-          <li><a href="#">Linkedin</a></li>
-          <li><a href="#">Email</a></li>
-          <li class="dropdown">
-            Resources <i class="fas fa-chevron-down dropdown-icon"></i>
-            <ul class="dropdown-menu">
-              <li><a href="#">resume</a></li>
-              <li><a href="#">Github</a></li>
-            </ul>
-          </li>
-          <li><a href="#">Community</a></li>
-          <li><a href="#">Projects</a></li>
-          <li><a href="#">Tools For Success</a></li>
-          <li><a href="#" class="top-link">
-            <i class="fas fa-arrow-up fa-xl "></i>
-            <p>Go the Top</p>
-          </a>
-          </li>
-        </ul>
-      </nav>
-    </header>
-  
-    <!-- hero section -->
-  
-    <section class="section hero-section mt-80 ff-mynerve-regular">
-  
-      <div class="hero-content">
-        <div class="hero-img">
-          <img src="./public/images/profile/mentoring-pic.jpeg" alt="whiteboardinng a problem with coworkers">
-        </div>
-        <div class="overlay-text">"addressing pain points, simplifying workflows, and coding high-performant user interfaces to drive revenue"
-      </div>
-      </div>
-    </section>
-  
-    <!--  what i can do for you  -->
-  
-    <section class="section mt-50">
-      <h2 class="section-title holtwood-one-sc-regular">What I can do for you?
-        <svg class="section-title-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-          <path d="M20 8v5a1 1 0 0 1-1 1H7.414l1.293 1.293a1 1 0 0 1-1.414 1.414l-3-3a1 1 0 0 1 0-1.416l3-3a1 1 0 0 1 1.414 1.414L7.414 12H18V8a1 1 0 0 1 2 0z" style="fill: #000" /></svg>
-      </h2>
-      <div class="section-content">
-        <ol class="whatICanDoForYou" start="1">
-          <li>
-            <span>Operating on a tight budget but need to understand your users, captivate their attention visually, and swiftly bring your product to market? <p class="highlighter">Let's collaborate to achieve all three goals efficiently and effectively.</p></span>
-          </li>
-          <li>
-            <span>Facing challenges in building responsive websites or web apps that meet both aesthetic and functional requirements? <p class="highlighter">Explore how my skills in React, Angular, Ember.js, and more can simplify your development journey.</p></span>
-          </li>
-          <li>
-            <span>Interested in developing a UI Components Library or Design System that not only saves time but also ensures consistency across your projects? <p class="highlighter">I can guide you through creating reusable accessible components with Figma or Storybook that build confidence and save designers and developers time.</p></span>
-          </li>
-          <li>
-            <span>Do you have an idea and need quick mockups and interactive MVPs?  <p class="highlighter">Let me help you swiftly bring it to your users or stakeholders.</p></span>
-          </li>
-          <li>
-            <span>Need to bridge the gap between stakeholders, researchers, designers, and developers to ensure transparent collaboration and unified project vision?<p class="highlighter">Let's discuss how my expertise can facilitate seamless communication and alignment across all project phases.</p></span>
-          </li>
-          <li>
-            <span>Finding it challenging to create delightful user experiences that resonate with your clients' audiences? <p class="highlighter"> Let's discuss how my UX/UI design expertise can help you craft interfaces that users love.</p></span>
-          </li>
-        </ol>
-  
-      </div>
-    </section>
-  
-  <section class="section">
-      <h2 class="section-title holtwood-one-sc-regular">Community
-        <svg class="section-title-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-          <path d="M20 8v5a1 1 0 0 1-1 1H7.414l1.293 1.293a1 1 0 0 1-1.414 1.414l-3-3a1 1 0 0 1 0-1.416l3-3a1 1 0 0 1 1.414 1.414L7.414 12H18V8a1 1 0 0 1 2 0z" style="fill:#000" /></svg>
-      </h2>
-      <div class="section-content">
-        <ol class="communityEvents" start="1">
-          <h3>Upcoming events:</h3>
-          <li class="event-list-item">
-            <div class="event">
-              <div class="event-content event-type-content">
-                <h5 class="event-type">Talk:</h5><h4 class="event-title">Why Developers Get Cold Feet When Approaching Accessibility</h4>
-              </div>
-              <div class="event-content event-org-content">
-                <h5 class="event-org">Organization:</h5><h4 class="event-org-name">San Diego Accessibility And Inclusive Design</h4>
-              </div>
-              <a class="event-org-link" href="#">learn more or get involved</a>
-            </div>
-          </li>
-          <li class="event-list-item">
-            <div class="event">
-              <div class="event-content event-type-content">
-                <h5 class="event-type">Monthly Meetup:</h5><h4 class="event-title">UX/UI Bytes</h4>
-              </div>
-              <div class="event-content event-org-content">
-                <h5 class="event-org">Organization:</h5><h4 class="event-org-name">Code Connector</h4>
-              </div>
-              <a class="event-org-link" href="https://codeconnector.io/">learn more or get involved</a>
-            </div>
-          </li>
-        </ol>
-  
-      </div>
-    </section>
-  
-    <!-- projects -->
-    <section class="section">
-      <h2 class="section-title holtwood-one-sc-regular">Projects
-        <svg class="section-title-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-          <path d="M20 8v5a1 1 0 0 1-1 1H7.414l1.293 1.293a1 1 0 0 1-1.414 1.414l-3-3a1 1 0 0 1 0-1.416l3-3a1 1 0 0 1 1.414 1.414L7.414 12H18V8a1 1 0 0 1 2 0z" style="fill:#000" /></svg>
-      </h2>
-      <div class="section-content">
-        <div class="slide-container swiper">
-          <div class="slide-content">
-            <div class="card-wrapper swiper-wrapper">
-              <div class="card swiper-slide">
-                <div class="image-content">
-                  <span class="overlay"></span>
-  
-                  <div class="card-image">
-                    <img src="https://tinypic.host/images/2022/12/19/img_avatar.png" alt="" class="card-img">
-                  </div>
-                </div>
-  
-                <div class="card-content">
-                  <h2 class="name">Mohamed Yousef
-                  </h2>
-                  <div class="card-content-section">
-                    <h4>Tech used:</h4>
-                    <p class="description">The lorem text the section that contains header with having open functionality. Lorem dolor sit amet consectetur adipisicing elit.</p>
-                  </div>
-                  
-
-                  <div class="card-content-section">
-                    <h4>Key takeaways:</h4>
-                    <p class="description">The lorem text the section that contains header with having open functionality. Lorem dolor sit amet consectetur adipisicing elit.</p>
-                  </div>
-  
-                  <button class="button">Try</button>
-                </div>
-                <div class="card-overlay">
-                  <button class="close-overlay" aria-label="Close overlay">&times;</button>
-                  <h2 class="overlay-title">Title</h2>
-                  <iframe class="overlay-iframe" src="https://example.com" frameborder="0" allowfullscreen></iframe>
-                </div>
-              </div>
-              
-             
-              <div class="card swiper-slide">
-                <div class="image-content">
-                  <span class="overlay"></span>
-  
-                  <div class="card-image">
-                    <img src="https://tinypic.host/images/2022/12/19/img_avatar.png" alt="" class="card-img">
-                  </div>
-                </div>
-  
-                <div class="card-content">
-                  <h2 class="name">Mohamed Yousef
-                  </h2>
-                  <div class="card-content-section">
-                    <h4>Tech used:</h4>
-                    <p class="description">The lorem text the section that contains header with having open functionality. Lorem dolor sit amet consectetur adipisicing elit.</p>
-                  </div>
-                  
-
-                  <div class="card-content-section">
-                    <h4>Key takeaways:</h4>
-                    <p class="description">The lorem text the section that contains header with having open functionality. Lorem dolor sit amet consectetur adipisicing elit.</p>
-                  </div>
-  
-                  <button class="button">Try</button>
-                </div>
-                <div class="card-overlay">
-                  <button class="close-overlay" aria-label="Close overlay">&times;</button>
-                  <h2 class="overlay-title">Title</h2>
-                  <iframe class="overlay-iframe" src="https://example.com" frameborder="0" allowfullscreen></iframe>
-                </div>
-              </div>
-
-              <div class="card swiper-slide">
-                <div class="image-content">
-                  <span class="overlay"></span>
-  
-                  <div class="card-image">
-                    <img src="https://tinypic.host/images/2022/12/19/img_avatar.png" alt="" class="card-img">
-                  </div>
-                </div>
-  
-                <div class="card-content">
-                  <h2 class="name">Mohamed Yousef
-                  </h2>
-                  <div class="card-content-section">
-                    <h4>Tech used:</h4>
-                    <p class="description">The lorem text the section that contains header with having open functionality. Lorem dolor sit amet consectetur adipisicing elit.</p>
-                  </div>
-                  
-
-                  <div class="card-content-section">
-                    <h4>Key takeaways:</h4>
-                    <p class="description">The lorem text the section that contains header with having open functionality. Lorem dolor sit amet consectetur adipisicing elit.</p>
-                  </div>
-  
-                  <button class="button">Try</button>
-                </div>
-                <div class="card-overlay">
-                  <button class="close-overlay" aria-label="Close overlay">&times;</button>
-                  <h2 class="overlay-title">Title</h2>
-                  <iframe class="overlay-iframe" src="https://example.com" frameborder="0" allowfullscreen></iframe>
-                </div>
-              </div>
-              
-              
-              <div class="card swiper-slide">
-                <div class="image-content">
-                  <span class="overlay"></span>
-  
-                  <div class="card-image">
-                    <img src="https://tinypic.host/images/2022/12/19/img_avatar.png" alt="" class="card-img">
-                  </div>
-                </div>
-  
-                <div class="card-content">
-                  <h2 class="name">Mohamed Yousef
-                  </h2>
-                  <div class="card-content-section">
-                    <h4>Tech used:</h4>
-                    <p class="description">The lorem text the section that contains header with having open functionality. Lorem dolor sit amet consectetur adipisicing elit.</p>
-                  </div>
-                  
-
-                  <div class="card-content-section">
-                    <h4>Key takeaways:</h4>
-                    <p class="description">The lorem text the section that contains header with having open functionality. Lorem dolor sit amet consectetur adipisicing elit.</p>
-                  </div>
-  
-                  <button class="button">Try</button>
-                </div>
-                <div class="card-overlay">
-                  <button class="close-overlay" aria-label="Close overlay">&times;</button>
-                  <h2 class="overlay-title">Title</h2>
-                  <iframe class="overlay-iframe" src="https://example.com" frameborder="0" allowfullscreen></iframe>
-                </div>
-              </div>
-            </div>
+  <body>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript>
+      <iframe
+        src="https://www.googletagmanager.com/ns.html?id=GTM-MBMJ8L7"
+        height="0"
+        width="0"
+        style="display: none; visibility: hidden"
+      ></iframe>
+    </noscript>
+    <!-- End Google Tag Manager (noscript) -->
+    <main class="parent-container" role="main">
+      <!-- top header -->
+      <header>
+        <nav class="nav">
+          <i class="navOpenBtn fa-solid fa-bars"></i>
+          <div class="logo">
+            <a href="#" class="logo-link">
+              <h2 class="ff-mynerve-regular first-name">coriano</h2>
+              <h2 class="ff-major-mono-display last-name">harris</h2>
+            </a>
           </div>
-  
-          <div class="swiper-button-next swiper-navBtn"></div>
-          <div class="swiper-button-prev swiper-navBtn"></div>
-  
+
+          <ul class="nav-links">
+            <i class="navCloseBtn fa-solid fa-xmark fa-lg"></i>
+            <li><a href="#services">What I can do for you</a></li>
+            <li><a href="https://www.linkedin.com/in/corianoharris/" target="_blank" rel="noopener noreferrer" >Linkedin</a></li>
+            <li><a href="mailto:corianoharrispro@gmail.com" target="_blank" rel="noopener noreferrer" >Email</a></li>
+            <li class="dropdown">
+              Resources <i class="fas fa-chevron-down dropdown-icon"></i>
+              <ul class="dropdown-menu">
+                <li><a href="public/documents/resume/decorative.pdf" target="_blank" rel="noopener noreferrer" >resume</a></li>
+                <li><a href="https://github.com/corianoharris" target="_blank" rel="noopener noreferrer" >Github</a></li>
+              </ul>
+            </li>
+            <li><a href="#community">Community</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#tools">Tools For Success</a></li>
+            <li>
+              <a href="#teaser" class="top-link">
+                <i class="fas fa-arrow-up fa-xl"></i>
+                <p>Go the Top</p>
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </header>
+
+      <!-- hero section -->
+
+      <section id="teaser" class="section hero-section mt-115 ff-mynerve-regular section-to-navigate">
+        <div class="hero-content">
+          <div class="hero-img">
+            <img
+              src="./public/images/profile/mentoring-pic.jpeg"
+              alt="whiteboarding a problem with coworkers"
+            />
+          </div>
+          <div class="overlay-text">
+            "addressing pain points, simplifying workflows, and coding
+            high-performant user interfaces to drive revenue"
+          </div>
         </div>
-        <div class="swiper-pagination"></div>
-      </div>
-    </section>
-  
-  <!-- tools -->
-    <section class="section mt-35">
-      <h2 class="section-title holtwood-one-sc-regular">Tools for success
-        <svg class="section-title-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-          <path d="M20 8v5a1 1 0 0 1-1 1H7.414l1.293 1.293a1 1 0 0 1-1.414 1.414l-3-3a1 1 0 0 1 0-1.416l3-3a1 1 0 0 1 1.414 1.414L7.414 12H18V8a1 1 0 0 1 2 0z" style="fill:#000" /></svg>
-      </h2>
-      
-      <div class="section-content tools-content">
-        <div class="mindset">
-          <h3>Mindset</h3>
-          <p class="highlighter">When I tackle a task or problem, I start by digging into the details to really understand what needs to be done. I break it down into smaller, manageable steps and set clear goals along the way. I prioritize what's most important and feasible, using tools like user research and design systems to guide me. Throughout the process, I keep everyone in the loop and gather feedback to refine my work. After implementing solutions, I thoroughly test everything to make sure it works well. It's all about finding creative solutions and improving as I go!</p>
+      </section>
+
+      <!--  what i can do for you  -->
+
+      <section id="services" class="section mt-50 section-to-navigate">
+        <h2 class="section-title holtwood-one-sc-regular">
+          What I can do for you?
+          <svg
+            class="section-title-icon"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24"
+          >
+            <path
+              d="M20 8v5a1 1 0 0 1-1 1H7.414l1.293 1.293a1 1 0 0 1-1.414 1.414l-3-3a1 1 0 0 1 0-1.416l3-3a1 1 0 0 1 1.414 1.414L7.414 12H18V8a1 1 0 0 1 2 0z"
+              style="fill: #000"
+            />
+          </svg>
+        </h2>
+        <div class="section-content">
+          <ol class="whatICanDoForYou" start="1">
+            <li>
+              <span
+                >Operating on a tight budget but need to understand your users,
+                captivate their attention visually, and swiftly bring your
+                product to market?
+                <p class="highlighter">
+                  Let's collaborate to achieve all three goals efficiently and
+                  effectively.
+                </p></span
+              >
+            </li>
+            <li>
+              <span
+                >Facing challenges in building responsive websites or web apps
+                that meet both aesthetic and functional requirements?
+                <p class="highlighter">
+                  Explore how my skills in React, Angular, Ember.js, and more
+                  can simplify your development journey.
+                </p></span
+              >
+            </li>
+            <li>
+              <span
+                >Interested in developing a UI Components Library or Design
+                System that not only saves time but also ensures consistency
+                across your projects?
+                <p class="highlighter">
+                  I can guide you through creating reusable accessible
+                  components with Figma or Storybook that build confidence and
+                  save designers and developers time.
+                </p></span
+              >
+            </li>
+            <li>
+              <span
+                >Do you have an idea and need quick mockups and interactive
+                MVPs?
+                <p class="highlighter">
+                  Let me help you swiftly bring it to your users or
+                  stakeholders.
+                </p></span
+              >
+            </li>
+            <li>
+              <span
+                >Need to bridge the gap between stakeholders, researchers,
+                designers, and developers to ensure transparent collaboration
+                and unified project vision?
+                <p class="highlighter">
+                  Let's discuss how my expertise can facilitate seamless
+                  communication and alignment across all project phases.
+                </p></span
+              >
+            </li>
+            <li>
+              <span
+                >Finding it challenging to create delightful user experiences
+                that resonate with your clients' audiences?
+                <p class="highlighter">
+                  Let's discuss how my UX/UI design expertise can help you craft
+                  interfaces that users love.
+                </p></span
+              >
+            </li>
+          </ol>
         </div>
-        <ul class="toolsForSuccess">
-          <h4>Soft skills</h4>
-          <div class="pills-wrapper">
-         
-          <li class="pill-item">
-            lorem
-          </li>
-          <li class="pill-item">
-            lorem
-          </li>
-          <li class="pill-item">
-            lorem
-          </li>
-          <li class="pill-item">
-            lorem
-          </li>
+      </section>
 
-         <li class="pill-item">
-            lorem
-          </li>
-          <li class="pill-item">
-            lorem
-          </li>
+      <section id="community" class="section section-to-navigate">
+        <h2 class="section-title holtwood-one-sc-regular">
+          Community
+          <svg
+            class="section-title-icon"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24"
+          >
+            <path
+              d="M20 8v5a1 1 0 0 1-1 1H7.414l1.293 1.293a1 1 0 0 1-1.414 1.414l-3-3a1 1 0 0 1 0-1.416l3-3a1 1 0 0 1 1.414 1.414L7.414 12H18V8a1 1 0 0 1 2 0z"
+              style="fill: #000"
+            />
+          </svg>
+        </h2>
+        <div class="section-content">
+          <ol class="communityEvents" start="1">
+            <h3>Upcoming events:</h3>
+            <li class="event-list-item">
+              <div class="event">
+                <div class="event-content event-type-content">
+                  <h5 class="event-type">Talk:</h5>
+                  <h4 class="event-title">
+                    Why Developers Get Cold Feet When Approaching Accessibility
+                  </h4>
+                </div>
+                <div class="event-content event-org-content">
+                  <h5 class="event-org">Organization:</h5>
+                  <h4 class="event-org-name">
+                    San Diego Accessibility And Inclusive Design
+                  </h4>
+                </div>
+                <a class="event-org-link" href="#"
+                  >learn more or get involved</a
+                >
+              </div>
+            </li>
+            <li class="event-list-item">
+              <div class="event">
+                <div class="event-content event-type-content">
+                  <h5 class="event-type">Monthly Meetup:</h5>
+                  <h4 class="event-title">UX/UI Bytes</h4>
+                </div>
+                <div class="event-content event-org-content">
+                  <h5 class="event-org">Organization:</h5>
+                  <h4 class="event-org-name">Code Connector</h4>
+                </div>
+                <a class="event-org-link" href="https://codeconnector.io/"
+                  >learn more or get involved</a
+                >
+              </div>
+            </li>
+          </ol>
         </div>
-        </ul>
-         <ul class="toolsForSuccess">
-         <h4>Soft skills</h4>
-          <li class="pill-item">
-            lorem
-          </li>
-          <li class="pill-item">
-            lorem
-          </li>
-        </ul>
-         <ul class="toolsForSuccess">
-          <h4>Soft skills</h4>
-          <li class="pill-item">
-            lorem
-          </li>
-          <li class="pill-item">
-            lorem
-          </li>
-        </ul>
-      </div>
-    </section>
-  
-    <!-- bottom header -->
-    <footer class="header bottom-header">
-      <div class="copyright-container">
-        <h6 class="copyright">©<span class="copyright-year"></span> Powered by Coriano Harris.</h6>
-        <h6> All rights reserved.</h6>
-      </div>
-    </footer>
-  </main>
-  
- <!-- Swiper JS -->
- <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
- 
-  <script src="main.js"></script>
+      </section>
 
+      <!-- projects -->
+      <section id="projects" class="section section-to-navigate">
+        <h2 class="section-title holtwood-one-sc-regular">
+          Projects
+          <svg
+            class="section-title-icon"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24"
+          >
+            <path
+              d="M20 8v5a1 1 0 0 1-1 1H7.414l1.293 1.293a1 1 0 0 1-1.414 1.414l-3-3a1 1 0 0 1 0-1.416l3-3a1 1 0 0 1 1.414 1.414L7.414 12H18V8a1 1 0 0 1 2 0z"
+              style="fill: #000"
+            />
+          </svg>
+        </h2>
+        <div class="section-content">
+          <div class="slide-container swiper">
+            <div class="slide-content">
+              <div class="card-wrapper swiper-wrapper">    
+                <div class="card swiper-slide">
+                  <div class="image-content">
+                    <span class="overlay"></span>
 
+                    <div class="card-image">
+                      <img
+                        src="public/images/projects/zoodonator.png"
+                        alt=""
+                        class="card-img"
+                      />
+                    </div>
+                  </div>
 
-</body>
+                  <div class="card-content">
+                    <h2 class="name">Zoo Donator</h2>
+                    <div class="card-content-section">
+                      <h4>Tech used:</h4>
+                      <p class="description">
+                        Figma
+                      </p>
+                    </div>
 
+                    <div class="card-content-section">
+                      <h4>Key takeaways:</h4>
+                      <p class="description">
+                        Implemented a user donation workflow with an animated processing experience triggered upon user submission of payment. 
+                      </p>
+                    </div>
+
+                    <a href="https://www.figma.com/proto/JZpFcManwUYTEe9pJ2VOIu/Zoo-Donator?node-id=35-145&t=G5JAX5fecGUUuhLw-1&scaling=scale-down&page-id=0%3A1&starting-point-node-id=35%3A145" class="button-link" target="_blank" rel="noopener noreferrer" >Try</a>
+                    <!-- <button class="button" style="visibility: hidden ;">Try</button> -->
+                  </div>
+                </div>
+
+                <div class="card swiper-slide">
+                  <div class="image-content">
+                    <span class="overlay"></span>
+
+                    <div class="card-image">
+                      <img
+                        src="public/images/projects/prediabetes.png"
+                        alt=""
+                        class="card-img"
+                      />
+                    </div>
+                  </div>
+
+                  <div class="card-content">
+                    <h2 class="name">Prediabetes Risk Test</h2>
+                    <div class="card-content-section">
+                      <h4>Tech used:</h4>
+                      <p class="description">
+                        Next.js and React.js
+                      </p>
+                    </div>
+
+                    <div class="card-content-section">
+                      <h4>Key takeaways:</h4>
+                      <p class="description">
+                        Created a single-form experience to streamline the process compared to CDC's multi-form approach, aimed at saving time. The application provides help information based on the user's score and includes clickable table cells for height and weight selection. 
+                      </p>
+                    </div>
+
+                    <button class="button">Try</button>
+                  </div>
+                  <div class="card-overlay">
+                    <button class="close-overlay" aria-label="Close overlay">
+                      &times;
+                    </button>
+                    <h2 class="overlay-title">Prediabetes Risk Test</h2>
+                    <iframe
+                      class="overlay-iframe"
+                      src="https://prediabetes-risk-test.netlify.app/"
+                      frameborder="0"
+                      allowfullscreen
+                    ></iframe>
+                  </div>
+                </div>
+
+                <div class="card swiper-slide">
+                  <div class="image-content">
+                    <span class="overlay"></span>
+
+                    <div class="card-image">
+                      <img
+                        src="public/images/projects/ecobon.png"
+                        alt=""
+                        class="card-img"
+                      />
+                    </div>
+                  </div>
+
+                  <div class="card-content">
+                    <h2 class="name">Ecobon Case Study</h2>
+                    <div class="card-content-section">
+                      <h4>Tech used:</h4>
+                      <p class="description">
+                        Figma, Google Survey, Conducted In-person Interviews, and Observations.
+                      </p>
+                    </div>
+
+                    <div class="card-content-section">
+                      <h4>Key takeaways:</h4>
+                      <p class="description">
+                        The Ecobon app could offer a personalized approach to raising awareness and reducing carbon emissions, empowering users to make sustainable choices. Enhancements such as expanding sustainable options, introducing personalized plans and tracking features, and integrating gamification elements would enhance user engagement and effectiveness.
+                      </p>
+                    </div>
+
+                    <button class="button">Try</button>
+                  </div>
+                  <div class="card-overlay">
+                    <button class="close-overlay" aria-label="Close overlay">
+                      &times;
+                    </button>
+                    <h2 class="overlay-title">Ecobon Case Study</h2>
+                    <iframe
+                      class="overlay-iframe"
+                      src="public/documents/ecobon-case-study.pdf"
+                      frameborder="0"
+                      allowfullscreen
+                    ></iframe>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="swiper-button-next swiper-navBtn"></div>
+            <div class="swiper-button-prev swiper-navBtn"></div>
+          </div>
+          <div class="swiper-pagination"></div>
+        </div>
+      </section>
+
+      <!-- tools -->
+      <section id="tools" class="section mt-35 section-to-navigate">
+        <h2 class="section-title holtwood-one-sc-regular">
+          Tools for success
+          <svg
+            class="section-title-icon"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24"
+          >
+            <path
+              d="M20 8v5a1 1 0 0 1-1 1H7.414l1.293 1.293a1 1 0 0 1-1.414 1.414l-3-3a1 1 0 0 1 0-1.416l3-3a1 1 0 0 1 1.414 1.414L7.414 12H18V8a1 1 0 0 1 2 0z"
+              style="fill: #000"
+            />
+          </svg>
+        </h2>
+
+        <div class="section-content tools-content">
+          <div class="mindset">
+            <h3>Mindset</h3>
+            <p class="highlighter">
+              When I tackle a task or problem, I start by digging into the
+              details to really understand what needs to be done. I break it
+              down into smaller, manageable steps and set clear goals along the
+              way. I prioritize what's most important and feasible, using tools
+              like user research and design systems to guide me. Throughout the
+              process, I keep everyone in the loop and gather feedback to refine
+              my work. After implementing solutions, I thoroughly test
+              everything to make sure it works well. It's all about finding
+              creative solutions and improving as I go!
+            </p>
+          </div>
+          <ul class="toolsForSuccess soft-skills-list">
+            <h4>Soft skills</h4>
+            <div class="pills-wrapper">
+              <li class="pill-item">
+                Clearly explaining a technical concept to a non-technical
+                stakeholder.
+              </li>
+              <li class="pill-item">
+                identifying a bug in code, user pain points, isolating the
+                issue, and implementing a fix that improves performance without
+                causing new issues.
+              </li>
+              <li class="pill-item">
+                Collaborating effectively with designers, developers, and
+                project managers.
+              </li>
+              <li class="pill-item">
+                Providing responsive and supportive customer service to resolve
+                technical issues, ensuring a positive experience and building
+                user trust.
+              </li>
+
+              <li class="pill-item">
+                Overcoming setbacks during a complex integration project,
+                persisting through challenges to successfully launch the product
+                on time and within budget.
+              </li>
+              <li class="pill-item">
+                Learning a new programming language or framework to meet the
+                evolving needs of a project, like switching from React to
+                Angular or Adobe XD to Figma based on project requirements.
+              </li>
+              <li class="pill-item">
+                Taking initiative to mentor junior developers, sharing best
+                practices and guiding them through a challenging project to
+                foster their professional growth.
+              </li>
+            </div>
+          </ul>
+          <ul class="toolsForSuccess">
+            <h4>Research skills</h4>
+            <div class="skills-list">
+            <li class="pill-item">Interviewing</li>
+            <li class="pill-item">qualitative Research</li>
+            <li class="pill-item">quantitative Research</li>
+            <li class="pill-item">Contextual Inquiry</li>
+            <li class="pill-item">Interviewing</li>
+            <li class="pill-item">User Case Studies</li>
+            <li class="pill-item">FullStory</li>
+            <li class="pill-item">UserTesting.com</li>
+          </div>
+          </ul>
+
+          <ul class="toolsForSuccess ">
+            <h4>Design skills</h4>
+            <div class="skills-list">
+            <li class="pill-item">coloristic</li>
+            <li class="pill-item">Human Center Interaction</li>
+            <li class="pill-item">Figma</li>
+            <li class="pill-item">Design Tokens</li>
+            <li class="pill-item">Design Systems</li>
+            <li class="pill-item">Accessibility best practices</li>
+            <li class="pill-item">Wireframing and Prototyping</li>
+            <li class="pill-item">
+              Ability to structure and organize content within an interface
+            </li>
+          </div>
+          </ul>
+          <ul class="toolsForSuccess skills-list">
+            <h4>Coding skills</h4>
+            <div class="skills-list">
+            <li class="pill-item">Component Driven Design</li>
+            <li class="pill-item">TDD</li>
+            <li class="pill-item">HTML5</li>
+            <li class="pill-item">CSS3</li>
+            <li class="pill-item">JavaScript</li>
+            <li class="pill-item">React</li>
+            <li class="pill-item">Next.js</li>
+            <li class="pill-item">Angular</li>
+            <li class="pill-item">Storybook</li>
+            <li class="pill-item">Cypress</li>
+            <li class="pill-item">Jest</li>
+            <li class="pill-item">Jasmine</li>
+            <li class="pill-item">Git and Github</li>
+            <li class="pill-item">Jira</li>
+            <li class="pill-item">RESTFUL APIS</li>
+            <li class="pill-item">Tailwind CSS</li>
+            <li class="pill-item">node</li>
+            <li class="pill-item">LIGHTHOUSE</li>
+            <li class="pill-item">AXE DEQUE</li>
+            <li class="pill-item">NPM PACKAGE REGISTRY</li>
+            <li class="pill-item">figma dev plugin</li>
+            <li class="pill-item">VSCode</li>
+          </div>
+          </ul>
+        </div>
+      </section>
+
+      <!-- bottom header -->
+      <footer class="header bottom-header">
+        <div class="copyright-container">
+          <h6 class="copyright">
+            ©<span class="copyright-year"></span> Powered by Coriano Harris.
+          </h6>
+          <h6>All rights reserved.</h6>
+        </div>
+      </footer>
+    </main>
+
+    <!-- Swiper JS -->
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+    <script src="main.js"></script>
+  </body>
 </html>
