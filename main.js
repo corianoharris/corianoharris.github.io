@@ -18,9 +18,10 @@ document.addEventListener("DOMContentLoaded", (event) => {
   });
 
   var swiper = new Swiper(".slide-content", {
-    slidesPerView: 3,
+    slidesPerView: 1,
     spaceBetween: 25,
     direction: "horizontal",
+    slides: 4,
     // loop: true,
     centerSlide: "true",
     fade: "true",
@@ -60,6 +61,19 @@ document.addEventListener("DOMContentLoaded", (event) => {
       },
     },
   });
+
+  // Update counter
+function updateCounter() {
+  const currentSlide = swiper.realIndex + 1;
+  const totalSlides = 2;
+  document.querySelector('.swiper-counter').textContent = `${currentSlide} / ${totalSlides}`;
+}
+
+// Initial counter update
+updateCounter();
+
+// Update counter on slide change
+swiper.on('slideChange', updateCounter);
 
   // nav toggle
 
@@ -101,15 +115,16 @@ document.addEventListener("DOMContentLoaded", function () {
     const overlayIframe = card.querySelector(".overlay-iframe");
     const nameElement = card.querySelector(".name");
 
+
     const name = nameElement?.textContent || "Untitled";
 
     if (button) {
-      button?.addEventListener(
+      button.addEventListener(
         "click",
         function (event) {
           event.preventDefault();
           if (cardOverlay) {
-            cardOverlay?.classList.add("active");
+            cardOverlay.classList.add("active");
           }
         },
         { passive: false }
