@@ -1080,6 +1080,15 @@ letter-spacing: 2px;}
 
 @media only screen and (max-width: 550px) {
   .mt-50 {
-    margin-top: 125px;
+    margin-top: 140px;
   }
 }
+
+@media only screen and (min-width: 945px) {
+  .swiper-counter {
+    display: none;
+  }
+}
+
+
+
