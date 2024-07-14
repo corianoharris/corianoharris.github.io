@@ -1,267 +1,584 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=UA-180416572-1"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
 
-<head>
-  <!-- Global site tag (gtag.js) - Google Analytics -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-180416572-1"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag() {
-      dataLayer.push(arguments);
-    }
-    gtag('js', new Date());
+      gtag("config", "UA-180416572-1");
+    </script>
+    <!-- Google Tag Manager -->
+    <script>
+      (function (w, d, s, l, i) {
+        w[l] = w[l] || [];
+        w[l].push({
+          "gtm.start": new Date().getTime(),
+          event: "gtm.js",
+        });
+        var f = d.getElementsByTagName(s)[0],
+          j = d.createElement(s),
+          dl = l != "dataLayer" ? "&l=" + l : "";
+        j.async = true;
+        j.src = "https://www.googletagmanager.com/gtm.js?id=" + i + dl;
+        f.parentNode.insertBefore(j, f);
+      })(window, document, "script", "dataLayer", "GTM-MBMJ8L7");
+    </script>
+    <!-- End Google Tag Manager -->
 
-    gtag('config', 'UA-180416572-1');
-  </script>
-  <!-- Google Tag Manager -->
-  <script>
-    (function (w, d, s, l, i) {
-      w[l] = w[l] || [];
-      w[l].push({
-        'gtm.start': new Date().getTime(),
-        event: 'gtm.js',
-      });
-      var f = d.getElementsByTagName(s)[0],
-        j = d.createElement(s),
-        dl = l != 'dataLayer' ? '&l=' + l : '';
-      j.async = true;
-      j.src = 'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
-      f.parentNode.insertBefore(j, f);
-    })(window, document, 'script', 'dataLayer', 'GTM-MBMJ8L7');
-  </script>
-  <!-- End Google Tag Manager -->
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="title" content="Coriano Harris" />
+    <meta name="description" content="Coriano Harris website." />
+    <title>Coriano Harris</title>
+    <!-- Favicon -->
+    <link
+      rel="icon"
+      href="public/images/wave-hand.svg"
+      sizes="any"
+      type="image/x-icon"
+    />
 
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="title" content="Coriano Harris">
-  <meta name="description" content="Coriano Harris website.">
-  <title>Coriano Harris</title>
-  <link rel="icon" href="public/images/wave-hand.svg" sizes="any" type="image/x-icon">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,700;1,400;1,700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="main.css" />
-</head>
+    <!-- Swiper CSS -->
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper/swiper-bundle.min.css"
+    />
 
-<body>
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
 
-  <!-- Google Tag Manager (noscript) -->
-  <noscript>
-    <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MBMJ8L7" height="0" width="0"
-      style="display: none; visibility: hidden"></iframe>
-  </noscript>
-  <!-- End Google Tag Manager (noscript) -->
+    <!-- Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,700;1,400;1,700&family=Roboto:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
 
-  <div class="top-header" role="banner">
-    <div class="website-name work-sans-header">
-    <h2 class="first-name name">Coriano</h2><h2 class="last-name name">harris</h2>
-  </div>
-    <div class="contact-icon-container work-sans-links">
-      <a href="mailto:corianoharrispro@gmail.com" class="contact-icon" rel="noopener noreferrer" aria-label="Email">
-        <i class="fas fa-envelope" aria-hidden="true"></i>
-        <span>Email</span>
-      </a>
-      <a href="https://www.linkedin.com/in/corianoharris/" class="contact-icon" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
-        <i class="fab fa-linkedin" aria-hidden="true"></i>
-        <span>LinkedIn</span>
-      </a>
-      <a href="https://github.com/corianoharris" class="contact-icon" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
-        <i class="fab fa-github" rel="noopener noreferrer" aria-hidden="true"></i>
-        <span>GitHub</span>
-      </a>
-    </div>
-  </div>
-  
-  <div class="tooltip" role="navigation" aria-label="Main menu">
-    <button class="button" onclick="toggleTooltip()" aria-haspopup="true" aria-expanded="false" aria-controls="tooltip-content">Menu</button>
-    <div id="tooltip-content" class="tooltiptext" role="menu">
-      <ul class="work-sans-links">
-        <li role="menuitem"><a href="#hero">Back To Top</a></li>
-        <li role="menuitem"><a href="#do-for-you">What I can do for you</a>
-        </li>
-        <li role="menuitem"><a href="#dst">Design technologist</a></li>
-        <li role="menuitem"><a href="#imprint">Imprint on the world</a></li>
-        <li role="menuitem"><a href="#enjoy">Enjoy my work</a></li>
-        <li role="menuitem"><a href="#tools">Tools</a></li>
-        <span class="dropdown work-sans-links" role="menuitem">
-          <button class="dropdown-toggle work-sans-links" onclick="toggleContactDropdown()" aria-controls="dropdown-contact-content">Contact <i class="fa fa-caret-down contact-caret"></i></button>
-          <ul id="dropdown-contact-content" class="dropdown-content work-sans-links" role="menu">
-            <li role="menuitem"><a href="mailto:corianoharrispro@gmail.com" target="_blank" rel="noopener noreferrer">Email</a></li>
-            <li role="menuitem"><a href="https://www.linkedin.com/in/corianoharris/" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
-          </ul>
-        </span>
-        <li role="menuitem"><a href="public/documents/coriano-harris-resume.pdf" target="_blank">Resume</a></li>
-      
-        <li role="menuitem"><a href="https://github.com/corianoharris" target="_blank" rel="noopener noreferrer">Github</a></li>
-       
-        <span class="dropdown work-sans-links" role="menuitem">
-          <button class="dropdown-toggle work-sans-links" onclick="toggleWorkDropdown()" aria-controls="dropdown-work-content">Work Samples <i class="fa fa-caret-down work-caret"></i></button>
-          <ul id="dropdown-work-content" class="dropdown-content work-sans-links" role="menu">
-            <li role="menuitem"><a href="https://www.figma.com/proto/JZpFcManwUYTEe9pJ2VOIu/Zoo-Donator?node-id=35-145&t=G5JAX5fecGUUuhLw-1&scaling=scale-down&page-id=0%3A1&starting-point-node-id=35%3A145" target="_blank">Mobile Prototype</a></li>
-            <li role="menuitem"><a href="public/images/projects/ecobon-case-study.pdf" target="_blank">UX case study</a></li>
-            <li role="menuitem"><a href="https://notezyapp.netlify.app/" target="_blank">Notezy</a></li>
-            <li role="menuitem"><a  href="https://prediabetes-risk-test.netlify.app/" target="_blank">Prediabetes Test</a></li>
-          </ul>
-        </span>
-      </ul>
-    </div>
-  </div>
-  
-  <main class="main-content" role="main">
+    <!-- Your Custom CSS -->
+    <link rel="stylesheet" href="main.css" />
+  </head>
 
-    <section id="hero" class="hero-section hero-padding" aria-labelledby="hero-heading">
-      <div class="hero-card">
-        <div class="hero-card-image-container">
-          <img src="public/images/profile/mentoring-pic.jpeg" alt="Placeholder Image" class="hero-card-image">
-        </div>
-        <div class="hero-card-body">
-          <blockquote class="hero-card-copy work-sans-hero"><svg class="quote-icon" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" clip-rule="evenodd" fill-rule="evenodd" stroke-linejoin="round" stroke-miterlimit="2" viewBox="0 0 24 30" x="0px" y="0px"><path d="m21.301 4c.411 0 .699.313.699.663 0 .248-.145.515-.497.702-1.788.948-3.858 4.226-3.858 6.248 3.016-.092 4.326 2.582 4.326 4.258 0 2.007-1.738 4.129-4.308 4.129-3.24 0-4.83-2.547-4.83-5.307 0-5.98 6.834-10.693 8.468-10.693zm-10.833 0c.41 0 .699.313.699.663 0 .248-.145.515-.497.702-1.788.948-3.858 4.226-3.858 6.248 3.016-.092 4.326 2.582 4.326 4.258 0 2.007-1.739 4.129-4.308 4.129-3.241 0-4.83-2.547-4.83-5.307 0-5.98 6.833-10.693 8.468-10.693z" fill-rule="nonzero" fill="   #fff" stroke="#381141"/></svg>spotting pain points, simplifying workflows to save time, and coding inclusive products.</blockquote>
-        </div>
-      </div>
-    </section>
-  
-    <section id="do-for-you" class="responsive-section" aria-labelledby="do-for-you-heading">
-      <h2 id="do-for-you-heading" class="work-sans-header">What I can do for you.</h2>
-      <div class="card">
-        <div class="card-body work-sans-body">
-          <p class="card-copy mb-0">As a design technologist, I bridge the gap between design and coding, collaborating with teams of all sizes, from small businesses to large corporations:</p>
-          <ul class="card-copy card-copy-list">
-            <li class="card-copy-list-items offerings-list-items"><span class="highlight">Catching potential problems early and clarifying design intent</span></li>
-            <li class="card-copy-list-items offerings-list-items">Streamlining the development process</li>
-            <li class="card-copy-list-items offerings-list-items"><span class="highlight">Helping researchers, designers, and developers troubleshoot and complete tasks</span></li>
-            <li class="card-copy-list-items offerings-list-items">Strategize and improve design solutions</li>
-            <li class="card-copy-list-items offerings-list-items">Build prototypes to test and refine ideas with code and figma</li>
-            <li class="card-copy-list-items offerings-list-items">Analyze and provide insights</li>
-          </ul>
-        </div>
-      </div>
-      <p class="cta-text">
-        Let's bring your ideas to life—reach out to <a href="mailto:corianoharrispro@gmail.com" class="inline-text work-sans-hero" rel="noopener noreferrer" aria-label="Email">me</a> for innovative design and development solutions! 🤝
-      </p>
-    </section>
-  
-    <section id="dst" class="responsive-section" aria-labelledby="design-technologist-heading">
-      <h2 id="design-technologist-heading" class="work-sans-header">What is a design technologist?</h2>
-      <div class="card">
-  
-        <div class="card-body">
-          <blockquote class="card-copy quote quote-text work-sans-quotes"><svg class="quote-icon" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" clip-rule="evenodd" fill-rule="evenodd" stroke-linejoin="round" stroke-miterlimit="2" viewBox="0 0 24 30" x="0px" y="0px"><path d="m21.301 4c.411 0 .699.313.699.663 0 .248-.145.515-.497.702-1.788.948-3.858 4.226-3.858 6.248 3.016-.092 4.326 2.582 4.326 4.258 0 2.007-1.738 4.129-4.308 4.129-3.24 0-4.83-2.547-4.83-5.307 0-5.98 6.834-10.693 8.468-10.693zm-10.833 0c.41 0 .699.313.699.663 0 .248-.145.515-.497.702-1.788.948-3.858 4.226-3.858 6.248 3.016-.092 4.326 2.582 4.326 4.258 0 2.007-1.739 4.129-4.308 4.129-3.241 0-4.83-2.547-4.83-5.307 0-5.98 6.833-10.693 8.468-10.693z" fill-rule="nonzero" fill="   #fff" stroke="#381141"/></svg>Think of a design technologist as a vital link between user experience, creativity and technology. Leveraging <span class="highlight">research, human centered interaction, design, HTML, CSS, and JavaScript</span> to bring visions to life on the web.</blockquote>
-        </div>
-      </div>
-    </section>
-  
-    <section id="imprint" class="responsive-section" aria-labelledby="imprint-heading">
-      <h2 id="imprint-heading" class="work-sans-header">My imprint on the world.</h2>
-      <div class="card">
-  
-        <div class="card-body work-sans-body">
-  
-          <p class="card-copy">
-            In my spare time, I contribute to non-profits by <span class="highlight">teaching coding and design, mentoring, code reviewing, and hosting a UX/UI meetup</span>. My goal is to simplify their workflows, implement modern techniques, and empower both the organizations and the next generation of designers and developers.</p>
-        </div>
-      </div>
-      <p class="cta-text"> 
-        Connect with <a href="https://codeconnector.io/" target="_blank" rel="noopener noreferrer">me</a> at <span class="codeconnector">code connector</span> and share how you're making a difference today! 🤝
-      </p>
-    </section>
-  
-    <section id="enjoy" class="responsive-section" aria-labelledby="enjoy-heading">
-      <h2 id="enjoy-heading" class="work-sans-header">Enjoying my work.
-      </h2>
-      <div class="card">
-  
-        <div class="card-body work-sans-body">
-          <p class="card-copy">Developed reusable UI Component library using Angular for a major e-commerce platform. Drove <span class="highlight">cross-team adoption through evangelism, integrating with Figma Design System</span>. Enabled consistent design intent, gradual upgrades, demonstrating value to leadership. Constant immersion in research, design, and development. Every project presents unique challenges, pushing skill expansion and out-of-the-box thinking. Exploring new coding languages and design trends ensures an exciting horizon. Here are some of the questions I try to solve.
-          </p>
-          <ul class="card-copy card-copy-list">
-            <li class="card-copy-list-items impact-list-items">How can developers be more comfortable using the current Figma Design System?</li>
-            <li class="card-copy-list-items impact-list-items">How do we educate the designers on the UI Component Library?</li>
-            <li class="card-copy-list-items impact-list-items">How could we apply design intent across various technology stacks?</li>
-            <li class="card-copy-list-items impact-list-items">How could we enhance the system without disrupting teams who couldn't always upgrade to the latest version?</li>
-            <li class="card-copy-list-items impact-list-items">How could we show our leadership team that the design system was worth the investment?</li>
-          </ul>
-        </div>
-      </div>
-      <p class="cta-text">
-        Click the menu to see other enjoyable work samples.
-      </p>
-    </section>
+  <body>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript>
+      <iframe
+        src="https://www.googletagmanager.com/ns.html?id=GTM-MBMJ8L7"
+        height="0"
+        width="0"
+        style="display: none; visibility: hidden"
+      ></iframe>
+    </noscript>
+    <!-- End Google Tag Manager (noscript) -->
+    <main class="parent-container" role="main">
+      <!-- top header -->
+      <header>
+        <nav class="nav">
+          <i class="navOpenBtn fa-solid fa-bars"></i>
+          <div class="logo">
+            <a href="#" class="logo-link">
+              <h2 class="ff-mynerve-regular first-name">coriano</h2>
+              <h2 class="ff-major-mono-display last-name">harris</h2>
+            </a>
+          </div>
 
-
-    <section id="tools" class="responsive-section" aria-labelledby="tools-heading">
-      <h2 id="tools-heading" class="work-sans-header">Tools for success
-      </h2>
-      <div class="card">
-  
-        <div class="card-body work-sans-body">
-          <p class="card-copy">
-            As a front-end developer, built a dynamic web app using <span class="highlight">Angular, Sass, Webpack, Storybook, ESLint, Prettier, Jasmine, Cypress, and Google Analytics</span>. Leveraged a <span class="highlight">component-driven design</span> approach with this tech stack.</p>
-
-            <p class="card-copy">
-              Employed design thinking to create an e-commerce interactive prototype using<span class="highlight"> <span class="highlight">human-centered</span> approach with Figma, UserTesting, Design System, and Zeplin</span>.</p>
-
-              <p>Additional tools and mindsets:</p>
-              <ul class="card-copy card-copy-list tools-list">
-                <li class="card-copy-list-items tools-list-items">empathy</li>
-                <li class="card-copy-list-items tools-list-items">embrace challenges</li>
-                <li class="card-copy-list-items tools-list-items">tailor communication to audience</li>
-                <li class="card-copy-list-items tools-list-items">Qualitative Research</li>
-                <li class="card-copy-list-items tools-list-items">Quantitative Research</li>
-                
-                <li class="card-copy-list-items tools-list-items">Fullstory</li>
-                <li class="card-copy-list-items tools-list-items">Miro</li>
-                <li class="card-copy-list-items tools-list-items">Figma Design Tokens</li>
-                <li class="card-copy-list-items tools-list-items">Figma Dev Plugin</li>
-                <li class="card-copy-list-items tools-list-items">Design Thinking</li>
-                <li class="card-copy-list-items tools-list-items">Design System</li>
-                <li class="card-copy-list-items tools-list-items">coloristics</li>
-                <li class="card-copy-list-items tools-list-items">RestFul APIs</li>
-                <li class="card-copy-list-items tools-list-items">Tailwind</li>
-                <li class="card-copy-list-items tools-list-items">Node</li>
-                <li class="card-copy-list-items tools-list-items">Next.js</li>
-                <li class="card-copy-list-items tools-list-items">React.js</li>
-                <li class="card-copy-list-items tools-list-items">Redux</li>
-                <li class="card-copy-list-items tools-list-items">Jest</li>
-                <li class="card-copy-list-items tools-list-items">Airtable</li>
-                <li class="card-copy-list-items tools-list-items">AuthO</li>
-                <li class="card-copy-list-items tools-list-items">Jira</li>
-                <li class="card-copy-list-items tools-list-items">Confluence</li>
-                <li class="card-copy-list-items tools-list-items">Axe Deque</li>
-                <li class="card-copy-list-items tools-list-items">LightHouse</li>
-                <li class="card-copy-list-items tools-list-items">Bitbucket</li>
-                <li class="card-copy-list-items tools-list-items">Npm Package Registry</li>
-    
+          <ul class="nav-links">
+            <i class="navCloseBtn fa-solid fa-xmark fa-lg"></i>
+            <li><a href="#services">What I can do for you</a></li>
+            <li><a href="https://www.linkedin.com/in/corianoharris/" target="_blank" rel="noopener noreferrer" >Linkedin</a></li>
+            <li><a href="mailto:corianoharrispro@gmail.com" target="_blank" rel="noopener noreferrer" >Email</a></li>
+            <li class="dropdown">
+              Resources <i class="fas fa-chevron-down dropdown-icon"></i>
+              <ul class="dropdown-menu">
+                <li><a href="public/documents/resume/decorative.pdf" target="_blank" rel="noopener noreferrer" >resume</a></li>
+                <li><a href="https://github.com/corianoharris" target="_blank" rel="noopener noreferrer" >Github</a></li>
               </ul>
+            </li>
+            <li><a href="#community">Community</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#tools">Tools For Success</a></li>
+            <li>
+              <a href="#teaser" class="top-link">
+                <i class="fas fa-arrow-up fa-xl"></i>
+                <p>Top</p>
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </header>
+
+      <!-- hero section -->
+
+      <section id="teaser" class="section hero-section">
+        <div class="hero-content">
+          <div class="hero-img">
+            <img
+              src="./public/images/profile/mentoring-pic.jpeg"
+              alt="whiteboarding a problem with coworkers"
+            />
+          </div>
+          <div class="overlay-text holtwood-one-sc-regular">
+            " addressing <span class="cta-word ff-mynerve-regular">pain points,</span> simplifying workflows, and coding
+            high-performant user interfaces to <span class="cta-word ff-mynerve-regular">drive revenue </span>"
+          </div>
         </div>
-      </div>
-    </section>
-  </main>
-  
-  <footer class="footer" role="contentinfo">
-    <div class="contact-icon-container work-sans-links">
-      <a href="mailto:corianoharrispro@gmail.com" class="contact-icon" rel="noopener noreferrer" aria-label="Email">
-        <i class="fas fa-envelope" aria-hidden="true"></i>
-        <span>Email</span>
-      </a>
-      <a href="https://www.linkedin.com/in/corianoharris/" class="contact-icon" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
-        <i class="fab fa-linkedin" aria-hidden="true"></i>
-        <span>LinkedIn</span>
-      </a>
-      <a href="https://github.com/corianoharris" class="contact-icon" target="_blank" aria-label="GitHub">
-        <i class="fab fa-github" rel="noopener noreferrer" aria-hidden="true"></i>
-        <span>GitHub</span>
-      </a>
-    </div>
-    <div class="copyright-container work-sans-body">
-      <h6 class="copyright">&#169;<span class="copyright-year"></span> Powered by Coriano Harris.</h6>
-      <h6> All rights reserved.</h6>
-    </div>
-    
-  </footer>
-  
+      </section>
 
-  <script src="main.js"></script>
+      <!--  what i can do for you  -->
 
-</body>
+      <section id="services" class="section mt-50 section-to-navigate ">
+        <h2 class="section-title holtwood-one-sc-regular fade-in-out">
+          What I can do for you?
+          <svg
+            class="section-title-icon"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24"
+          >
+            <path
+              d="M20 8v5a1 1 0 0 1-1 1H7.414l1.293 1.293a1 1 0 0 1-1.414 1.414l-3-3a1 1 0 0 1 0-1.416l3-3a1 1 0 0 1 1.414 1.414L7.414 12H18V8a1 1 0 0 1 2 0z"
+              style="fill: #000"
+            />
+          </svg>
+        </h2>
+        <div class="section-content ">
+          <ol class="whatICanDoForYou" start="1">
+            <li class="fade-in-out">
+              <span
+                >Operating on a tight budget but need to understand your users,
+                captivate their attention visually, and swiftly bring your
+                product to market?
+                <p class="highlighter fs-italic">
+                  Let's collaborate to achieve all three goals efficiently and
+                  effectively.
+                </p></span
+              >
+            </li>
+            <li class="fade-in-out">
+              <span
+                >Facing challenges in building responsive websites or web apps
+                that meet both aesthetic and functional requirements?
+                <p class="highlighter fs-italic">
+                  Explore how my proficiency in UI frameworks, CSS, and UI libraries can simplify and enhance your development workflow.
+                </p></span
+              >
+            </li>
+            <li class="fade-in-out">
+              <span
+                >Interested in developing a UI Components Library or Design
+                System that not only saves time but also ensures consistency
+                across your projects?
+                <p class="highlighter fs-italic">
+                  I can guide you through creating reusable accessible
+                  components with Figma or Storybook that build confidence and
+                  save designers and developers time.
+                </p></span
+              >
+            </li>
+            <li class="fade-in-out">
+              <span
+                >Do you have an idea and need quick mockups and interactive
+                MVPs?
+                <p class="highlighter fs-italic">
+                  Let me help you swiftly bring it to your users or
+                  stakeholders.
+                </p></span
+              >
+            </li>
+            <li class="fade-in-out">
+              <span
+                >Need to bridge the gap between stakeholders, researchers,
+                designers, and developers to ensure transparent collaboration
+                and unified project vision?
+                <p class="highlighter fs-italic">
+                  Let's discuss how my expertise can facilitate seamless
+                  communication and alignment across all project phases.
+                </p></span
+              >
+            </li>
+            <li class="fade-in-out">
+              <span
+                >Finding it challenging to create delightful user experiences
+                that resonate with your clients' audiences?
+                <p class="highlighter fs-italic">
+                  Let's discuss how my UX/UI design expertise can help you craft
+                  interfaces that users love.
+                </p></span
+              >
+            </li>
+          </ol>
+        </div>
+      </section>
 
+      <section id="community" class="section section-to-navigate">
+        <h2 class="section-title holtwood-one-sc-regular fade-in-out">
+          Community
+          <svg
+            class="section-title-icon"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24"
+          >
+            <path
+              d="M20 8v5a1 1 0 0 1-1 1H7.414l1.293 1.293a1 1 0 0 1-1.414 1.414l-3-3a1 1 0 0 1 0-1.416l3-3a1 1 0 0 1 1.414 1.414L7.414 12H18V8a1 1 0 0 1 2 0z"
+              style="fill: #000"
+            />
+          </svg>
+        </h2>
+        <div class="section-content">
+          <ol class="communityEvents" start="1">
+            <h3 class="fade-in-out">Upcoming events:</h3>
+            <li class="event-list-item fade-in-out">
+              <div class="event">
+                <div class="event-content event-type-content">
+                  <h5 class="event-type">Talk:</h5>
+                  <h4 class="event-title">
+                    Why Developers Get Cold Feet When Approaching Accessibility
+                  </h4>
+                </div>
+                <div class="event-content event-org-content">
+                  <h5 class="event-org">Organization:</h5>
+                  <h4 class="event-org-name">
+                    San Diego Accessibility And Inclusive Design
+                  </h4>
+                </div>
+                <a class="event-org-link" href="#"
+                  >learn more or get involved</a
+                >
+              </div>
+            </li>
+            <li class="event-list-item fade-in-out">
+              <div class="event">
+                <div class="event-content event-type-content">
+                  <h5 class="event-type">Monthly Meetup:</h5>
+                  <h4 class="event-title">UX/UI Bytes</h4>
+                </div>
+                <div class="event-content event-org-content">
+                  <h5 class="event-org">Organization:</h5>
+                  <h4 class="event-org-name">Code Connector</h4>
+                </div>
+                <a class="event-org-link" href="https://codeconnector.io/"
+                  >learn more or get involved</a
+                >
+              </div>
+            </li>
+          </ol>
+        </div>
+      </section>
+
+      <!-- projects -->
+      <section id="projects" class="section section-to-navigate">
+        <h2 class="section-title holtwood-one-sc-regular fade-in-out">
+          Projects
+          <svg
+            class="section-title-icon"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24"
+          >
+            <path
+              d="M20 8v5a1 1 0 0 1-1 1H7.414l1.293 1.293a1 1 0 0 1-1.414 1.414l-3-3a1 1 0 0 1 0-1.416l3-3a1 1 0 0 1 1.414 1.414L7.414 12H18V8a1 1 0 0 1 2 0z"
+              style="fill: #000"
+            />
+          </svg>
+        </h2>
+        <div class="section-content">
+         
+          <div class="slide-container swiper fade-in-out">
+           
+            <div class="slide-content">
+              <div class="card-wrapper swiper-wrapper">
+
+                <div class="card swiper-slide">
+                  <div class="image-content">
+                    <span class="overlay"></span>
+
+                    <div class="card-image">
+                      <img
+                        src="public/images/projects/soccer-shoe.png"
+                        alt=""
+                        class="card-img"
+                      />
+                    </div>
+                  </div>
+
+                  <div class="card-content">
+                    <h2 class="name">Soccerio: Interactive Prototype</h2>
+                    <div class="card-content-section">
+                      <h4>Tech used:</h4>
+                      <p class="description">
+                        Figma
+                      </p>
+                    </div>
+
+                    <div class="card-content-section">
+                      <h4>Key takeaways:</h4>
+                      <p class="description">
+                        Implemented a user checkout flow featuring an animated processing experience that activates upon payment submission. 
+                      </p>
+                    </div>
+                    <button class="button">Try</button>
+                  </div>
+                  <div class="card-overlay">
+                    <button class="close-overlay" aria-label="Close overlay">
+                      &times;
+                    </button>
+                    <h2 class="overlay-title">Soccerio</h2>
+                    <iframe class="overlay-iframe" style="border: 1px solid rgba(0, 0, 0, 0.1);" width="800" height="450" src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Fproto%2FI81OhAtaJ558rOXhkwIazC%2FUser-checkout-flow%3Fnode-id%3D4-52%26t%3DnIRnShJCyuZohWiy-1%26scaling%3Dscale-down%26content-scaling%3Dfixed%26page-id%3D0%253A1%26starting-point-node-id%3D4%253A52" allowfullscreen></iframe>
+                  </div>
+                </div>
+
+                <div class="card swiper-slide">
+                  <div class="image-content">
+                    <span class="overlay"></span>
+
+                    <div class="card-image">
+                      <img
+                        src="public/images/projects/notezy.png"
+                        alt=""
+                        class="card-img"
+                      />
+                    </div>
+                  </div>
+
+                  <div class="card-content">
+                    <h2 class="name">Notezy</h2>
+                    <div class="card-content-section">
+                      <h4>Tech used:</h4>
+                      <p class="description">
+                        React, Netlify, Auth0, Airtable
+                      </p>
+                    </div>
+
+                    <div class="card-content-section">
+                      <h4>Key takeaways:</h4>
+                      <p class="description">
+                        Notezy is a CRUD application designed to provide users with a secure environment to create, store, and manage meaningful notes. It features private routes for accessing user profiles and archived notes, ensuring privacy and organization. 
+                      </p>
+                    </div>
+
+                    <button class="button">Try</button>
+                  </div>
+                  <div class="card-overlay">
+                    <button class="close-overlay" aria-label="Close overlay">
+                      &times;
+                    </button>
+                    <h2 class="overlay-title">Notezy</h2>
+                    <iframe
+                      class="overlay-iframe"
+                      src="https://notezyapp.netlify.app/"
+                      frameborder="0"
+                      allowfullscreen
+                    ></iframe>
+                  </div>
+                </div>
+
+                <div class="card swiper-slide">
+                  <div class="image-content">
+                    <span class="overlay"></span>
+
+                    <div class="card-image">
+                      <img
+                        src="public/images/projects/prediabetes.png"
+                        alt=""
+                        class="card-img"
+                      />
+                    </div>
+                  </div>
+
+                  <div class="card-content">
+                    <h2 class="name">Prediabetes Risk Test</h2>
+                    <div class="card-content-section">
+                      <h4>Tech used:</h4>
+                      <p class="description">
+                        Next.js, React, Netlify
+                      </p>
+                    </div>
+
+                    <div class="card-content-section">
+                      <h4>Key takeaways:</h4>
+                      <p class="description">
+                        Created a single-form experience to streamline the process compared to CDC's multi-form approach, aimed at saving time. The application provides help information based on the user's score and includes clickable table cells for height and weight selection. 
+                      </p>
+                    </div>
+
+                    <button class="button">Try</button>
+                  </div>
+                  <div class="card-overlay">
+                    <button class="close-overlay" aria-label="Close overlay">
+                      &times;
+                    </button>
+                    <h2 class="overlay-title">Prediabetes Risk Test</h2>
+                    <iframe
+                      class="overlay-iframe"
+                      src="https://prediabetes-risk-test.netlify.app/"
+                      frameborder="0"
+                      allowfullscreen
+                    ></iframe>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="swiper-button-next swiper-navBtn"></div>
+            <div class="swiper-button-prev swiper-navBtn"></div>
+          </div>
+          <div class="swiper-pagination"></div>
+          <div class="swiper-counter"></div>
+          <!-- <div class="swiper-counter"></div>  -->
+        </div>
+      </section>
+
+      <!-- tools -->
+      <section id="tools" class="section mt-35 section-to-navigate">
+        <h2 class="section-title holtwood-one-sc-regular fade-in-out">
+          Tools for success
+          <svg
+            class="section-title-icon"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24"
+          >
+            <path
+              d="M20 8v5a1 1 0 0 1-1 1H7.414l1.293 1.293a1 1 0 0 1-1.414 1.414l-3-3a1 1 0 0 1 0-1.416l3-3a1 1 0 0 1 1.414 1.414L7.414 12H18V8a1 1 0 0 1 2 0z"
+              style="fill: #000"
+            />
+          </svg>
+        </h2>
+
+        <div class="section-content tools-content">
+          <div class="mindset">
+            <h3 class="fade-in-out">Mindset</h3>
+            <p class="highlighter fade-in-out">
+              When I tackle a task or problem, I start by digging into the
+              details to really understand what needs to be done. I break it
+              down into smaller, manageable steps and set clear goals along the
+              way. I prioritize what's most important and feasible, using tools
+              like user research and design systems to guide me. Throughout the
+              process, I keep everyone in the loop and gather feedback to refine
+              my work. After implementing solutions, I thoroughly test
+              everything to make sure it works well. It's all about finding
+              creative solutions and improving as I go!
+            </p>
+          </div>
+          <ul class="toolsForSuccess ">
+            <h4 class="fade-in-out">Soft skills</h4>
+            <div class="pills-wrapper fw-300">
+              <li class="pill-item fade-in-out">
+                Clearly explaining technical concept to a non-technical
+                stakeholder.
+              </li>
+              <li class="pill-item fade-in-out">
+                Identifying a bug in code or user pain points then isolating the
+                issue, and implementing a fix that improves performance without
+                causing new issues.
+              </li>
+              <li class="pill-item fade-in-out">
+                Collaborating effectively with designers, developers, and
+                project managers.
+              </li>
+              <li class="pill-item fade-in-out">
+                Providing responsive and supportive customer service to resolve
+                technical issues, ensuring a positive experience and building
+                user trust.
+              </li>
+
+              <li class="pill-item fade-in-out">
+                Overcoming setbacks during a complex integration project,
+                persisting through challenges to successfully launch the product
+                on time and within budget.
+              </li>
+              <li class="pill-item fade-in-out">
+                Learning a new programming language or framework to meet the
+                evolving needs of a project, like switching from React to
+                Angular or Adobe XD to Figma based on project requirements.
+              </li>
+              <li class="pill-item fade-in-out">
+                Taking initiative to mentor junior developers, sharing best
+                practices and guiding them through a challenging project to
+                foster their professional growth.
+              </li>
+            </div>
+          </ul>
+          <ul class="toolsForSuccess">
+            <h4 class="fade-in-out">Research skills</h4>
+            <div class="skills-list fw-300">
+            <li class="pill-item fade-in-out">Interviewing</li>
+            <li class="pill-item fade-in-out">qualitative Research</li>
+            <li class="pill-item fade-in-out">quantitative Research</li>
+            <li class="pill-item fade-in-out">Contextual Inquiry</li>
+            <li class="pill-item fade-in-out">Interviewing</li>
+            <li class="pill-item fade-in-out">User Case Studies</li>
+            <li class="pill-item fade-in-out">FullStory</li>
+            <li class="pill-item fade-in-out">UserTesting.com</li>
+          </div>
+          </ul>
+
+          <ul class="toolsForSuccess ">
+            <h4 class="fade-in-out">Design skills</h4>
+            <div class="skills-list fw-300">
+            <li class="pill-item fade-in-out">coloristic</li>
+            <li class="pill-item fade-in-out">Human Center Interaction</li>
+            <li class="pill-item fade-in-out">Figma</li>
+            <li class="pill-item fade-in-out">Design Tokens</li>
+            <li class="pill-item fade-in-out">Design Systems</li>
+            <li class="pill-item fade-in-out">Accessibility best practices</li>
+            <li class="pill-item fade-in-out">Wireframing and Prototyping</li>
+            <li class="pill-item fade-in-out">
+              Ability to structure and organize content within an interface
+            </li>
+          </div>
+          </ul>
+          <ul class="toolsForSuccess skills-list">
+            <h4 class="">Coding skills</h4>
+            <div class="skills-list fw-300">
+            <li class="pill-item fade-in-out">Component Driven Design</li>
+            <li class="pill-item fade-in-out">TDD</li>
+            <li class="pill-item fade-in-out">HTML5</li>
+            <li class="pill-item fade-in-out">CSS3</li>
+            <li class="pill-item fade-in-out">JavaScript</li>
+            <li class="pill-item fade-in-out">React</li>
+            <li class="pill-item fade-in-out">Next.js</li>
+            <li class="pill-item fade-in-out">Angular</li>
+            <li class="pill-item fade-in-out">Storybook</li>
+            <li class="pill-item fade-in-out">Cypress</li>
+            <li class="pill-item fade-in-out">Jest</li>
+            <li class="pill-item fade-in-out">Jasmine</li>
+            <li class="pill-item fade-in-out">Git and Github</li>
+            <li class="pill-item fade-in-out">Jira</li>
+            <li class="pill-item fade-in-out">RESTFUL APIS</li>
+            <li class="pill-item fade-in-out">Tailwind CSS</li>
+            <li class="pill-item fade-in-out">node</li>
+            <li class="pill-item fade-in-out">LIGHTHOUSE</li>
+            <li class="pill-item fade-in-out">AXE DEQUE</li>
+            <li class="pill-item fade-in-out">NPM PACKAGE REGISTRY</li>
+            <li class="pill-item fade-in-out">figma dev plugin</li>
+            <li class="pill-item fade-in-out">VSCode</li>
+          </div>
+          </ul>
+        </div>
+      </section>
+
+      <!-- bottom header -->
+      <footer class="header bottom-header">
+        <div class="copyright-container">
+          <h6 class="copyright fade-in-out">
+            ©<span class="copyright-year"></span> Powered by Coriano Harris.
+          </h6>
+          <h6>All rights reserved.</h6>
+        </div>
+      </footer>
+    </main>
+
+    <!-- Swiper JS -->
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+    <script src="main.js"></script>
+  </body>
 </html>
