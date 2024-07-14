@@ -159,4 +159,38 @@ document.addEventListener("DOMContentLoaded", function () {
 
   const copyrightYear = document.querySelector(".copyright-year");
   copyrightYear.innerHTML = new Date().getFullYear();
+
+
+  // fade in and out effect
+
+  function setupTextFade(selector, options = {}) {
+    const elements = document.querySelectorAll(selector);
+    const defaultOptions = {
+      threshold: 0.1,
+      fadeInDuration: '0.5s',
+      fadeOutDuration: '0.5s'
+    };
+    const config = { ...defaultOptions, ...options };
+  
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.style.transition = `opacity ${config.fadeInDuration} ease-in`;
+          entry.target.style.opacity = 1;
+        } else {
+          entry.target.style.transition = `opacity ${config.fadeOutDuration} ease-out`;
+          entry.target.style.opacity = 0;
+        }
+      });
+    }, { threshold: config.threshold });
+  
+    elements.forEach(element => {
+      element.style.opacity = 0;
+      observer.observe(element);
+    });
+  }
+  
+  // Usage example:
+  setupTextFade('.fade-in-out');
+
 });
