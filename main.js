@@ -21,7 +21,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
     slidesPerView: 1,
     spaceBetween: 25,
     direction: "horizontal",
-    slides: 4,
+    slides: 3,
     // loop: true,
     centerSlide: "true",
     fade: "true",
@@ -62,18 +62,6 @@ document.addEventListener("DOMContentLoaded", (event) => {
     },
   });
 
-  // Update counter
-function updateCounter() {
-  const currentSlide = swiper.realIndex + 1;
-  const totalSlides = 2;
-  document.querySelector('.swiper-counter').textContent = `${currentSlide} / ${totalSlides}`;
-}
-
-// Initial counter update
-updateCounter();
-
-// Update counter on slide change
-swiper.on('slideChange', updateCounter);
 
   // nav toggle
 
