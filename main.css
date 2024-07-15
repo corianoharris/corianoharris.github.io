@@ -817,19 +817,27 @@ letter-spacing: 2px;}
   line-height: 1.5;
 }
 
+/* Ensure the <ol> starts from 1 */
+.communityEvents ol,
+.whatICanDoForYou ol {
+  list-style-type: decimal; /* Adjust as needed */
+}
+
 .communityEvents,
 .whatICanDoForYou {
-  counter-reset: list-item;
+  /* counter-reset: list-item; */
   font-size: calc(16px + 3 * (100vw - 400px) / (800 - 400));
 }
 
 .communityEvents li,
 .whatICanDoForYou li {
   counter-increment: list-item;
+ 
 }
 
 .communityEvents li::before,
 .whatICanDoForYou li::before {
+
   content: counter(list-item);
   font-weight: 700;
   font-size: 4.5em;
@@ -839,11 +847,7 @@ letter-spacing: 2px;}
   margin: 0 -0.15em -0.15em -0.1em;
 }
 
-/* Ensure the <ol> starts from 1 */
-.communityEvents ol,
-.whatICanDoForYou ol {
-  list-style-type: decimal; /* Adjust as needed */
-}
+
 
 .whatICanDoForYou li span,
 .communityEvents li span,
