@@ -817,17 +817,6 @@ letter-spacing: 2px;}
   line-height: 1.5;
 }
 
-.whatICanDoForYou li::before {
-  counter-increment: list-item + 1;
-  content: counter(list-item);
-  font-weight: 700;
-  font-size: 4.5em;
-  letter-spacing: -0.125em;
-  line-height: 1;
-  color: turquoise;
-  margin: 0 -0.15em -0.15em -0.1em;
-}
-
 .communityEvents,
 .whatICanDoForYou {
   counter-reset: list-item;
@@ -848,6 +837,12 @@ letter-spacing: 2px;}
   line-height: 1;
   color: turquoise;
   margin: 0 -0.15em -0.15em -0.1em;
+}
+
+/* Ensure the <ol> starts from 1 */
+.communityEvents ol,
+.whatICanDoForYou ol {
+  list-style-type: decimal; /* Adjust as needed */
 }
 
 .whatICanDoForYou li span,
