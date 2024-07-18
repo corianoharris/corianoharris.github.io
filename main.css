@@ -80,6 +80,26 @@ table {
   border-spacing: 0;
 }
 
+button {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  border: none;
+  background-color: transparent;
+  padding: 0;
+  margin: 0;
+}
+
+button:focus {
+  background: transparent;
+  outline: 2px dashed grey;
+}
+
+button:active {
+  background: green;
+  border: none;
+}
+
 /* Typography */
 .ff-major-mono-display {
   font-family: "Major Mono Display", monospace;
@@ -359,6 +379,7 @@ a {
   border-radius: 25px;
   padding: 10px;
   margin-bottom: 30px;
+  max-height: 700px;
 }
 
 .card {
@@ -575,6 +596,13 @@ a {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+}
+
+.iframeDescription {
+  color: #fff;
+  font-size: 13px;
+  width: 80%;
+  margin-bottom: 15px;
 }
 
 .close-overlay {
