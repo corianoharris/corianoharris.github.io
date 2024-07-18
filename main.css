@@ -236,6 +236,21 @@ a {
   border: none;
 }
 
+.nav .navOpenBtn:active,
+.nav .navCloseBtn:active {
+  background: transparent;
+  -webkit-tap-highlight-color: transparent;
+  outline: none;
+  border: none;
+}
+
+.nav .navOpenBtn:focus,
+.nav .navCloseBtn:focus {
+  background: transparent;
+  -webkit-tap-highlight-color: transparent;
+  outline: 1px dashed grey;
+}
+
 .dropdown-menu {
   display: none;
   list-style-type: none;
@@ -857,6 +872,10 @@ a {
 
 .fs-italic {
   font-style: italic;
+}
+
+.notezy-link:active, notezy-link:focus {
+  outline: 1px dashed grey;
 }
 
 /* Media Queries */
