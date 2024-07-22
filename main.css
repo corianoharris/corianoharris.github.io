@@ -188,7 +188,7 @@ header {
 .first-name, .last-name {
   letter-spacing: 2px;
   text-transform: lowercase;
-  font-size: calc(24px + 6 * (100vw - 400px) / (800 - 400));
+  font-size: calc(32px + 6 * (100vw - 400px) / (800 - 400));
 }
 
 .logo-link {
@@ -846,11 +846,7 @@ header {
 }
 
 .mt-section-two {
-  margin-top: 50px;
-}
-
-.mt-section-four {
-  margin-top: 80px;
+  margin-top: 145px;
 }
 
 .highlighter {
