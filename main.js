@@ -1,6 +1,7 @@
 document.addEventListener("DOMContentLoaded", () => {
   initializeNavigation();
-  initializeSwiper();
+  initializeSwiperDesign();
+  initializeSwiperDev();
   initializeDropdown();
   initializeCards();
   updateCopyrightYear();
@@ -21,8 +22,8 @@ function initializeNavigation() {
   });
 }
 
-function initializeSwiper() {
-  new Swiper(".slide-content", {
+function initializeSwiperDesign() {
+  new Swiper(".slide-content-design", {
     slidesPerView: 1,
     spaceBetween: 25,
     direction: "horizontal",
@@ -31,13 +32,45 @@ function initializeSwiper() {
     fade: true,
     grabCursor: true,
     pagination: {
-      el: ".swiper-pagination",
+      el: "#swiper-pagination-design",
       clickable: true,
       dynamicBullets: true,
     },
     navigation: {
-      nextEl: ".swiper-button-next",
-      prevEl: ".swiper-button-prev",
+      nextEl: ".swiper-button-next-design",
+      prevEl: ".swiper-button-prev-design",
+    },
+    breakpoints: {
+      0: { slidesPerView: 1 },
+      520: { slidesPerView: 2 },
+      950: { slidesPerView: 3 },
+    },
+    on: {
+      init: function () {
+        this.navigation.nextEl.innerHTML = '<i class="fas fa-arrow-right"></i>';
+        this.navigation.prevEl.innerHTML = '<i class="fas fa-arrow-left"></i>';
+      },
+    },
+  });
+}
+
+function initializeSwiperDev() {
+  new Swiper(".slide-content-dev", {
+    slidesPerView: 1,
+    spaceBetween: 25,
+    direction: "horizontal",
+    slides: 3,
+    centerSlide: true,
+    fade: true,
+    grabCursor: true,
+    pagination: {
+      el: "#swiper-pagination-dev",
+      clickable: true,
+      dynamicBullets: true,
+    },
+    navigation: {
+      nextEl: ".swiper-button-next-dev",
+      prevEl: ".swiper-button-prev-dev",
     },
     breakpoints: {
       0: { slidesPerView: 1 },
