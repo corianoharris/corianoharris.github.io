@@ -1,498 +1,635 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script
-      async
-      src="https://www.googletagmanager.com/gtag/js?id=UA-180416572-1"
-    ></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag() {
-        dataLayer.push(arguments);
-      }
-      gtag("js", new Date());
 
-      gtag("config", "UA-180416572-1");
-    </script>
-    <!-- Google Tag Manager -->
-    <script>
-      (function (w, d, s, l, i) {
-        w[l] = w[l] || [];
-        w[l].push({
-          "gtm.start": new Date().getTime(),
-          event: "gtm.js",
-        });
-        var f = d.getElementsByTagName(s)[0],
-          j = d.createElement(s),
-          dl = l != "dataLayer" ? "&l=" + l : "";
-        j.async = true;
-        j.src = "https://www.googletagmanager.com/gtm.js?id=" + i + dl;
-        f.parentNode.insertBefore(j, f);
-      })(window, document, "script", "dataLayer", "GTM-MBMJ8L7");
-    </script>
-    <!-- End Google Tag Manager -->
+<head>
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-180416572-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag()
+    {
+      dataLayer.push(arguments);
+    }
+    gtag("js", new Date());
 
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="title" content="Coriano Harris" />
-    <meta name="description" content="Coriano Harris website." />
-    <title>Coriano Harris</title>
-    <!-- Favicon -->
-    <link
-      rel="icon"
-      href="public/images/wave-hand.svg"
-      sizes="any"
-      type="image/x-icon"
-    />
+    gtag("config", "UA-180416572-1");
+  </script>
+  <!-- Google Tag Manager -->
+  <script>
+    (function (w, d, s, l, i)
+    {
+      w[l] = w[l] || [];
+      w[l].push({
+        "gtm.start": new Date().getTime(),
+        event: "gtm.js",
+      });
+      var f = d.getElementsByTagName(s)[0],
+        j = d.createElement(s),
+        dl = l != "dataLayer" ? "&l=" + l : "";
+      j.async = true;
+      j.src = "https://www.googletagmanager.com/gtm.js?id=" + i + dl;
+      f.parentNode.insertBefore(j, f);
+    })(window, document, "script", "dataLayer", "GTM-MBMJ8L7");
+  </script>
+  <!-- End Google Tag Manager -->
 
-    <!-- Swiper CSS -->
-    <link
-      rel="stylesheet"
-      href="https://unpkg.com/swiper/swiper-bundle.min.css"
-    />
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="title" content="Coriano Harris" />
+  <meta name="description" content="Coriano Harris website." />
+  <title>Coriano Harris</title>
+  <!-- Favicon -->
+  <link rel="icon" href="public/images/wave-hand.svg" sizes="any" type="image/x-icon" />
 
-    <!-- Font Awesome -->
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
-    />
+  <!-- Swiper CSS -->
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
 
-    <!-- Google Fonts -->
-    <link
-      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,700;1,400;1,700&family=Roboto:wght@400;700&display=swap"
-      rel="stylesheet"
-    />
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
 
-    <!-- Your Custom CSS -->
-    <link rel="stylesheet" href="main.css" />
-  </head>
+  <!-- Google Fonts -->
+  <link
+    href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,700;1,400;1,700&family=Roboto:wght@400;700&display=swap"
+    rel="stylesheet" />
 
-  <body>
-    <!-- Google Tag Manager (noscript) -->
-    <noscript>
-      <iframe
-        src="https://www.googletagmanager.com/ns.html?id=GTM-MBMJ8L7"
-        height="0"
-        width="0"
-        style="display: none; visibility: hidden"
-      ></iframe>
-    </noscript>
-    <!-- End Google Tag Manager (noscript) -->
-    <main class="parent-container" role="main">
+  <!-- Your Custom CSS -->
+  <link rel="stylesheet" href="main.css" />
+</head>
 
-      <!-- top header -->
-      <header>
-        <nav class="nav" aria-label="Main navigation">
+<body>
+  <!-- Google Tag Manager (noscript) -->
+  <noscript>
+    <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MBMJ8L7" height="0" width="0"
+      style="display: none; visibility: hidden"></iframe>
+  </noscript>
+  <!-- End Google Tag Manager (noscript) -->
+  <main class="parent-container" role="main">
 
-          <button class="navOpenBtn" aria-label="Open navigation menu">
-      <i class="fa-solid fa-bars" aria-hidden="true"></i>
-    </button>
-          <div class="logo ff-mynerve-regular">
-            <a href="#" class="logo-link" aria-label="Home">
-              <h2 class="first-name">coriano</h2>
-              <h2 class="last-name">harris</h2>
-            </a>
-          </div>
+    <!-- top header -->
+    <header>
+      <nav class="nav" aria-label="Main navigation">
 
-          <ul class="nav-links">
-            <button class="navCloseBtn" aria-label="Close navigation menu">
-              <i class="fa-solid fa-xmark fa-lg" aria-hidden="true"></i>
+        <button class="navOpenBtn" aria-label="Open navigation menu">
+          <i class="fa-solid fa-bars" aria-hidden="true"></i>
+        </button>
+        <div class="logo ff-mynerve-regular">
+          <a href="#" class="logo-link" aria-label="Home">
+            <h2 class="first-name">coriano</h2>
+            <h2 class="last-name">harris</h2>
+          </a>
+        </div>
+
+        <ul class="nav-links">
+          <button class="navCloseBtn" aria-label="Close navigation menu">
+            <i class="fa-solid fa-xmark fa-lg" aria-hidden="true"></i>
+          </button>
+          <li><a href="#services">What I can do for you</a></li>
+          <li><a href="https://www.linkedin.com/in/corianoharris/" target="_blank" rel="noopener noreferrer"
+              aria-label="LinkedIn profile (opens in a new tab)">Linkedin</a></li>
+          <li><a href="mailto:corianoharrispro@gmail.com" target="_blank" rel="noopener noreferrer"
+              aria-label="Send email (opens in a new tab)">Email</a></li>
+          <li class="dropdown">
+            <button aria-expanded="false" aria-controls="resources-dropdown">
+              Resources <i class="fas fa-chevron-down dropdown-icon" aria-hidden="true"></i>
             </button>
-            <li><a href="#services">What I can do for you</a></li>
-            <li><a href="https://www.linkedin.com/in/corianoharris/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn profile (opens in a new tab)">Linkedin</a></li>
-            <li><a href="mailto:corianoharrispro@gmail.com" target="_blank" rel="noopener noreferrer" aria-label="Send email (opens in a new tab)">Email</a></li>
-            <li class="dropdown">
-              <button aria-expanded="false" aria-controls="resources-dropdown">
-                Resources <i class="fas fa-chevron-down dropdown-icon" aria-hidden="true"></i>
-              </button>
-              <ul id="resources-dropdown" class="dropdown-menu" aria-label="Resources submenu">
-                <li><a href="public/documents/resume/basic.pdf" target="_blank" rel="noopener noreferrer" aria-label="Resume (opens PDF in a new tab)">Resume</a></li>
-                <li><a href="https://github.com/corianoharris" target="_blank" rel="noopener noreferrer" aria-label="GitHub profile (opens in a new tab)">Github</a></li>
-              </ul>
-            </li>
-            <li><a href="#community">Community</a></li>
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="#tools">Tools For Success</a></li>
-            <li>
-              <a href="#teaser" class="top-link" aria-label="Scroll to top">
-                <i class="fas fa-arrow-up fa-xl" aria-hidden="true"></i>
-                <p>Top</p>
-              </a>
-            </li>
-          </ul>
-        </nav>
-      </header>
+            <ul id="resources-dropdown" class="dropdown-menu" aria-label="Resources submenu">
+              <li><a href="public/documents/resume/basic.pdf" target="_blank" rel="noopener noreferrer"
+                  aria-label="Resume (opens PDF in a new tab)">Resume</a></li>
+              <li><a href="https://github.com/corianoharris" target="_blank" rel="noopener noreferrer"
+                  aria-label="GitHub profile (opens in a new tab)">Github</a></li>
+            </ul>
+          </li>
+          <li><a href="#community">Community</a></li>
+          <li><a href="#projects">Products</a></li>
+          <li><a href="#tools">Tools For Success</a></li>
+          <li>
+            <a href="#teaser" class="top-link" aria-label="Scroll to top">
+              <i class="fas fa-arrow-up fa-xl" aria-hidden="true"></i>
+              <p>Top</p>
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </header>
 
-      <!-- hero section -->
+    <!-- hero section -->
 
-      <section id="teaser" class="section hero-section" aria-labelledby="hero-quote">
-        <div class="hero-content">
-          <div class="hero-img">
-            <img
-              src="./public/images/profile/mentoring-pic.jpeg"
-              alt="whiteboarding a problem with coworkers"
-              aria-hidden="true"
-            />
-          </div>
-          <div class="overlay-text holtwood-one-sc-regular" role="blockquote">
-            " addressing <span class="cta-word ff-mynerve-regular">pain points,</span> simplifying workflows, and coding
-            high-performant user interfaces to <span class="cta-word ff-mynerve-regular">drive revenue </span>"
-          </div>
+    <section id="teaser" class="section hero-section" aria-labelledby="hero-quote">
+      <div class="hero-content">
+        <div class="hero-img">
+          <img src="./public/images/profile/mentoring-pic.jpeg" alt="whiteboarding a problem with coworkers"
+            aria-hidden="true" />
         </div>
-      </section>
-
-      <!--  what i can do for you  -->
-
-      <section id="services" class="section mt-section-two section-to-navigate" aria-labelledby="services-title">
-        <h2 class="section-title holtwood-one-sc-regular fade-in-out">
-          What I can do for you?
-          <svg
-            class="section-title-icon"
-            xmlns="http://www.w3.org/2000/svg"
-            viewBox="0 0 24 24"
-            aria-hidden="true"
-          >
-            <path
-              d="M20 8v5a1 1 0 0 1-1 1H7.414l1.293 1.293a1 1 0 0 1-1.414 1.414l-3-3a1 1 0 0 1 0-1.416l3-3a1 1 0 0 1 1.414 1.414L7.414 12H18V8a1 1 0 0 1 2 0z"
-              style="fill: #000"
-            />
-          </svg>
-        </h2>
-        <div class="section-content ">
-          <ol class="whatICanDoForYou">
-            <li class="fade-in-out">
-              <span
-                >Operating on a tight budget but need to understand your users,
-                captivate their attention visually, and swiftly bring your
-                product to market?
-                <p class="highlighter fs-italic">
-                  Let's collaborate to achieve all three goals efficiently and
-                  effectively.
-                </p></span
-              >
-            </li>
-            <li class="fade-in-out">
-              <span
-                >Facing challenges in building responsive websites or web apps
-                that meet both aesthetic and functional requirements?
-                <p class="highlighter fs-italic">
-                  Explore how my proficiency in UI frameworks, CSS, and UI libraries can simplify and enhance your development workflow.
-                </p></span
-              >
-            </li>
-            <li class="fade-in-out">
-              <span
-                >Interested in developing a UI Components Library or Design
-                System that not only saves time but also ensures consistency
-                across your projects?
-                <p class="highlighter fs-italic">
-                  I can guide you through creating reusable accessible
-                  components with Figma or Storybook that build confidence and
-                  save designers and developers time.
-                </p></span
-              >
-            </li>
-            <li class="fade-in-out">
-              <span
-                >Do you have an idea and need quick mockups and interactive
-                MVPs?
-                <p class="highlighter fs-italic">
-                  Let me help you swiftly bring it to your users or
-                  stakeholders.
-                </p></span
-              >
-            </li>
-            <li class="fade-in-out">
-              <span
-                >Need to bridge the gap between stakeholders, researchers,
-                designers, and developers to ensure transparent collaboration
-                and unified project vision?
-                <p class="highlighter fs-italic">
-                  Let's discuss how my expertise can facilitate seamless
-                  communication and alignment across all project phases.
-                </p></span
-              >
-            </li>
-            <li class="fade-in-out">
-              <span
-                >Finding it challenging to create delightful user experiences
-                that resonate with your clients' audiences?
-                <p class="highlighter fs-italic">
-                  Let's discuss how my UX/UI design expertise can help you craft
-                  interfaces that users love.
-                </p></span
-              >
-            </li>
-          </ol>
+        <div class="overlay-text holtwood-one-sc-regular" role="blockquote">
+          " addressing <span class="cta-word ff-mynerve-regular">pain points,</span> simplifying workflows, and coding
+          high-performant user interfaces to <span class="cta-word ff-mynerve-regular">drive revenue </span>"
         </div>
-      </section>
+      </div>
+    </section>
 
-      <section id="community" class="section section-to-navigate">
-        <h2 class="section-title holtwood-one-sc-regular fade-in-out">
-          Community
-          <svg
-            class="section-title-icon"
-            xmlns="http://www.w3.org/2000/svg"
-            viewBox="0 0 24 24"
-            aria-hidden="true"
-          >
-            <path
-              d="M20 8v5a1 1 0 0 1-1 1H7.414l1.293 1.293a1 1 0 0 1-1.414 1.414l-3-3a1 1 0 0 1 0-1.416l3-3a1 1 0 0 1 1.414 1.414L7.414 12H18V8a1 1 0 0 1 2 0z"
-              style="fill: #000"
-             
-            />
-          </svg>
-        </h2>
-        <div class="section-content">
-          <ol class="communityEvents" aria-labelledby="upcoming-events">
-            <h3 id="upcoming-events" class="fade-in-out" aria-labelledby="upcoming-events">Events:</h3>
-            <li class="event-list-item fade-in-out">
-              <div class="event">
-                <div class="event-content event-type-content">
-                  <h5 class="event-type">Talk:</h5>
-                  <h4 class="event-title">
-                    Why Developers Get Cold Feet When Approaching Accessibility
-                  </h4>
-                </div>
-                <div class="event-content event-org-content">
-                  <h5 class="event-org">Organization:</h5>
-                  <h4 class="event-org-name">
-                    San Diego Accessibility And Inclusive Design
-                  </h4>
-                </div>
-                <a class="event-org-link"  target="_blank" href="https://www.meetup.com/a11ysd/events/301454628/" aria-label="Learn more about or get involved with San Diego Accessibility And Inclusive Design"
-                  >learn more or get involved</a
-                >
+    <!--  what i can do for you  -->
+
+    <section id="services" class="section mt-section-two section-to-navigate" aria-labelledby="services-title">
+      <h2 class="section-title holtwood-one-sc-regular fade-in-out">
+        What I can do for you?
+        <svg class="section-title-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true">
+          <path
+            d="M20 8v5a1 1 0 0 1-1 1H7.414l1.293 1.293a1 1 0 0 1-1.414 1.414l-3-3a1 1 0 0 1 0-1.416l3-3a1 1 0 0 1 1.414 1.414L7.414 12H18V8a1 1 0 0 1 2 0z"
+            style="fill: #000" />
+        </svg>
+      </h2>
+      <div class="section-content ">
+        <ol class="whatICanDoForYou">
+          <li class="fade-in-out">
+            <span>Operating on a tight budget but need to understand your users,
+              captivate their attention visually, and swiftly bring your
+              product to market?
+              <p class="highlighter fs-italic">
+                Let's collaborate to achieve all three goals efficiently and
+                effectively.
+              </p>
+            </span>
+          </li>
+          <li class="fade-in-out">
+            <span>Facing challenges in building responsive websites or web apps
+              that meet both aesthetic and functional requirements?
+              <p class="highlighter fs-italic">
+                Explore how my proficiency in UI frameworks, CSS, and UI libraries can simplify and enhance your
+                development workflow.
+              </p>
+            </span>
+          </li>
+          <li class="fade-in-out">
+            <span>Interested in developing a UI Components Library or Design
+              System that not only saves time but also ensures consistency
+              across your projects?
+              <p class="highlighter fs-italic">
+                I can guide you through creating reusable accessible
+                components with Figma or Storybook that build confidence and
+                save designers and developers time.
+              </p>
+            </span>
+          </li>
+          <li class="fade-in-out">
+            <span>Do you have an idea and need quick mockups and interactive
+              MVPs?
+              <p class="highlighter fs-italic">
+                Let me help you swiftly bring it to your users or
+                stakeholders.
+              </p>
+            </span>
+          </li>
+          <li class="fade-in-out">
+            <span>Need to bridge the gap between stakeholders, researchers,
+              designers, and developers to ensure transparent collaboration
+              and unified project vision?
+              <p class="highlighter fs-italic">
+                Let's discuss how my expertise can facilitate seamless
+                communication and alignment across all project phases.
+              </p>
+            </span>
+          </li>
+          <li class="fade-in-out">
+            <span>Finding it challenging to create delightful user experiences
+              that resonate with your clients' audiences?
+              <p class="highlighter fs-italic">
+                Let's discuss how my UX/UI design expertise can help you craft
+                interfaces that users love.
+              </p>
+            </span>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <section id="community" class="section section-to-navigate">
+      <h2 class="section-title holtwood-one-sc-regular fade-in-out">
+        Community
+        <svg class="section-title-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true">
+          <path
+            d="M20 8v5a1 1 0 0 1-1 1H7.414l1.293 1.293a1 1 0 0 1-1.414 1.414l-3-3a1 1 0 0 1 0-1.416l3-3a1 1 0 0 1 1.414 1.414L7.414 12H18V8a1 1 0 0 1 2 0z"
+            style="fill: #000" />
+        </svg>
+      </h2>
+      <div class="section-content">
+        <ol class="communityEvents" aria-labelledby="upcoming-events">
+          <h3 id="upcoming-events" class="fade-in-out" aria-labelledby="upcoming-events">Events:</h3>
+          <li class="event-list-item fade-in-out">
+            <div class="event">
+              <div class="event-content event-type-content">
+                <h5 class="event-type">Talk:</h5>
+                <h4 class="event-title">
+                  Why Developers Get Cold Feet When Approaching Accessibility
+                </h4>
               </div>
-            </li>
-            <li class="event-list-item fade-in-out">
-              <div class="event">
-                <div class="event-content event-type-content">
-                  <h5 class="event-type">Monthly Meetup:</h5>
-                  <h4 class="event-title">UX/UI Bytes</h4>
-                </div>
-                <div class="event-content event-org-content">
-                  <h5 class="event-org">Organization:</h5>
-                  <h4 class="event-org-name">Code Connector</h4>
-                </div>
-                <a class="event-org-link" target="_blank" href="https://codeconnector.io/" aria-label="Learn more about or get involved with Code Connector"
-                  >learn more or get involved</a
-                >
+              <div class="event-content event-org-content">
+                <h5 class="event-org">Organization:</h5>
+                <h4 class="event-org-name">
+                  San Diego Accessibility And Inclusive Design
+                </h4>
               </div>
-            </li>
-          </ol>
-        </div>
-      </section>
+              <a class="event-org-link" target="_blank" href="https://www.meetup.com/a11ysd/events/301454628/"
+                aria-label="Learn more about or get involved with San Diego Accessibility And Inclusive Design">learn
+                more or get involved</a>
+            </div>
+          </li>
+          <li class="event-list-item fade-in-out">
+            <div class="event">
+              <div class="event-content event-type-content">
+                <h5 class="event-type">Monthly Meetup:</h5>
+                <h4 class="event-title">UX/UI Bytes</h4>
+              </div>
+              <div class="event-content event-org-content">
+                <h5 class="event-org">Organization:</h5>
+                <h4 class="event-org-name">Code Connector</h4>
+              </div>
+              <a class="event-org-link" target="_blank" href="https://codeconnector.io/"
+                aria-label="Learn more about or get involved with Code Connector">learn more or get involved</a>
+            </div>
+          </li>
+        </ol>
+      </div>
+    </section>
 
-      <!-- projects -->
-      <section id="projects" class="section section-to-navigate" aria-labelledby="projects-title">
-        <h2 id="projects-title" class="section-title holtwood-one-sc-regular fade-in-out">
-          Projects
-          <svg
-            class="section-title-icon"
-            xmlns="http://www.w3.org/2000/svg"
-            viewBox="0 0 24 24"
-            aria-hidden="true"
-          >
-            <path
-              d="M20 8v5a1 1 0 0 1-1 1H7.414l1.293 1.293a1 1 0 0 1-1.414 1.414l-3-3a1 1 0 0 1 0-1.416l3-3a1 1 0 0 1 1.414 1.414L7.414 12H18V8a1 1 0 0 1 2 0z"
-              style="fill: #000"
-            />
-          </svg>
-        </h2>
-        <div class="section-content">
-         
-          <div class="slide-container swiper fade-in-out" aria-roledescription="carousel" aria-label="Projects showcase">
-           
-            <div class="slide-content">
-              <div class="card-wrapper swiper-wrapper">
+    <!-- projects -->
+    <section id="projects" class="section section-to-navigate" aria-labelledby="projects-title">
+      <h2 id="projects-title" class="section-title holtwood-one-sc-regular fade-in-out">
+        Products
+        <svg class="section-title-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true">
+          <path
+            d="M20 8v5a1 1 0 0 1-1 1H7.414l1.293 1.293a1 1 0 0 1-1.414 1.414l-3-3a1 1 0 0 1 0-1.416l3-3a1 1 0 0 1 1.414 1.414L7.414 12H18V8a1 1 0 0 1 2 0z"
+            style="fill: #000" />
+        </svg>
+      </h2>
+      <div class="section-content">
 
-                <div class="card swiper-slide" role="group" aria-roledescription="slide">
-                  <div class="image-content">
-                    <span class="overlay" aria-hidden="true"></span>
+        <div class="slide-container swiper fade-in-out" aria-roledescription="carousel" aria-label="Projects showcase">
 
-                    <div class="card-image">
-                      <img
-                        src="public/images/projects/soccer-shoe.png"
-                        alt="image of a soccer shoe"
-                        class="card-img"
-                      />
-                    </div>
-                  </div>
+          <h3 class="products-categories ff-mynerve-regular">Design</h3>
 
-                  <div class="card-content">
-                    <h2 class="name">Soccerio: Interactive Prototype</h2>
-                    <div class="card-content-section">
-                      <h4>Tech used:</h4>
-                      <p class="description">
-                        Figma
-                      </p>
-                    </div>
+          <div class="slide-content-design">
+            <div class="card-wrapper swiper-wrapper">
 
-                    <div class="card-content-section">
-                      <h4>Key takeaways:</h4>
-                      <p class="description">
-                        Implemented a mobile user checkout flow featuring an animated processing experience that activates upon payment submission. 
-                      </p>
-                    </div>
-                    <button class="button" aria-label="Try Soccerio">Try</button>
-                  </div>
-                  <div class="card-overlay" role="dialog" aria-labelledby="overlay-title-1">
-                    <button class="close-overlay" aria-label="Close overlay">
-                      &times;
-                    </button>
-                    <h2 id="overlay-title-1" class="overlay-title">Soccerio</h2>
-                    <p class="iframeDescription">This iframe contains the Soccerio checkout workflow.</p>
-                    <iframe class="overlay-iframe" title="Soccerio demo" style="border: 1px solid rgba(0, 0, 0, 0.1);" width="800" height="450" src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Fproto%2FI81OhAtaJ558rOXhkwIazC%2FUser-checkout-flow%3Fnode-id%3D4-52%26t%3DnIRnShJCyuZohWiy-1%26scaling%3Dscale-down%26content-scaling%3Dfixed%26page-id%3D0%253A1%26starting-point-node-id%3D4%253A52" 
-                    aria-describedby="This iframe contains the Soccerio checkout workflow."
-                    allowfullscreen></iframe>
+              <div class="card swiper-slide" role="group" aria-roledescription="slide">
+                <div class="image-content">
+                  <span class="overlay" aria-hidden="true"></span>
+
+                  <div class="card-image">
+                    <img src="public/images/projects/design_system.png" alt="image of a figma design system" class="card-img" />
                   </div>
                 </div>
 
-                <div class="card swiper-slide" role="group" aria-roledescription="slide">
-                  <div class="image-content">
-                    <span class="overlay" aria-hidden="true"></span>
-
-                    <div class="card-image">
-                      <img
-                        src="public/images/projects/notezy.png"
-                        alt="image of Notezy application"
-                        class="card-img"
-                      />
-                    </div>
+                <div class="card-content">
+                  <h2 class="name">Figma Design System</h2>
+                  <div class="card-content-section">
+                    <h4>Tech used:</h4>
+                    <p class="description">
+                      Figma
+                    </p>
                   </div>
 
-                  <div class="card-content">
-                    <h2 class="name">Notezy</h2>
-                    <div class="card-content-section">
-                      <h4>Tech used:</h4>
-                      <p class="description">
-                        React, Netlify, Auth0, Airtable
-                      </p>
-                    </div>
+                  <div class="card-content-section">
+                    <h4>Key takeaways:</h4>
+                    <p class="description">
+                      Implemented a figma design system with an interactive header component for desktop and mobile versions
+                    </p>
+                  </div>
+                  <button class="button" aria-label="Try Design System">Try</button>
+                </div>
+                <div class="card-overlay" role="dialog" aria-labelledby="overlay-title-1">
+                  <button class="close-overlay" aria-label="Close overlay">
+                    &times;
+                  </button>
+                  <h2 id="overlay-title-1" class="overlay-title">Design System</h2>
+                  <p class="iframeDescription">This iframe contains a figma Design System</p>
+                  <iframe class="overlay-iframe" style="border: 1px solid rgba(0, 0, 0, 0.1);" width="800" height="450" src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Fdesign%2FICFYVeduQKn5sqREYzvgpc%2FDesign-System%3Fnode-id%3D7809-18809%26t%3DEsNjxX2eRCgWj1jS-1" aria-describedby="This iframe contains a Design System." allowfullscreen></iframe>
+                </div>
+              </div>
 
-                    <div class="card-content-section">
-                      <h4>Key takeaways:</h4>
-                      <p class="description">
-                        Notezy is a CRUD application designed to provide users with a secure environment to create, store, and manage meaningful notes. It features private routes for accessing user profiles and archived notes, ensuring privacy and organization. 
-                      </p>
-                    </div>
+              <div class="card swiper-slide" role="group" aria-roledescription="slide">
+                <div class="image-content">
+                  <span class="overlay" aria-hidden="true"></span>
 
-                    <a class="button notezy-link" href="https://notezyapp.netlify.app/"  aria-label="Redirect to Notezy application" target="_blank">Try</a>
+                  <div class="card-image">
+                    <img src="public/images/projects/soccer-shoe.png" alt="image of a soccer shoe" class="card-img" />
                   </div>
                 </div>
 
-                <div class="card swiper-slide" role="group" aria-roledescription="slide">
-                  <div class="image-content">
-                    <span class="overlay" aria-hidden="true"></span>
-
-                    <div class="card-image">
-                      <img
-                        src="public/images/projects/prediabetes.png"
-                        alt="image of Prediabetes Risk Test application"
-                        class="card-img"
-                      />
-                    </div>
+                <div class="card-content">
+                  <h2 class="name">Soccerio: Mobile Prototype</h2>
+                  <div class="card-content-section">
+                    <h4>Tech used:</h4>
+                    <p class="description">
+                      Figma
+                    </p>
                   </div>
 
-                  <div class="card-content">
-                    <h2 class="name">Prediabetes Risk Test</h2>
-                    <div class="card-content-section">
-                      <h4>Tech used:</h4>
-                      <p class="description">
-                        Next.js, React, Netlify
-                      </p>
-                    </div>
-
-                    <div class="card-content-section">
-                      <h4>Key takeaways:</h4>
-                      <p class="description">
-                        Created a single-form experience to streamline the process compared to CDC's multi-form approach, aimed at saving time. The application provides helpful information based on the user's score and includes clickable table cells for height and weight selection. 
-                      </p>
-                    </div>
-
-                    <a class="button notezy-link" href="https://prediabetes-risk-test.netlify.app/"  aria-label="Redirect to Prediabetes Risk Test application" target="_blank">Try</a>
+                  <div class="card-content-section">
+                    <h4>Key takeaways:</h4>
+                    <p class="description">
+                      Implemented a mobile user checkout flow featuring an animated processing experience that
+                      activates upon payment submission.
+                    </p>
                   </div>
+                  <button class="button" aria-label="Try Soccerio Prototype">Try</button>
+                </div>
+                <div class="card-overlay" role="dialog" aria-labelledby="overlay-title-2">
+                  <button class="close-overlay" aria-label="Close overlay">
+                    &times;
+                  </button>
+                  <h2 id="overlay-title-2" class="overlay-title">Soccerio</h2>
+                  <p class="iframeDescription">This iframe contains the Soccerio checkout workflow.</p>
+                  <iframe class="overlay-iframe" title="Soccerio demo" style="border: 1px solid rgba(0, 0, 0, 0.1);"
+                    width="800" height="450"
+                    src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Fproto%2FI81OhAtaJ558rOXhkwIazC%2FUser-checkout-flow%3Fnode-id%3D4-52%26t%3DnIRnShJCyuZohWiy-1%26scaling%3Dscale-down%26content-scaling%3Dfixed%26page-id%3D0%253A1%26starting-point-node-id%3D4%253A52"
+                    aria-describedby="This iframe contains the Soccerio checkout workflow." allowfullscreen></iframe>
+                </div>
+              </div>
+
+              <div class="card swiper-slide" role="group" aria-roledescription="slide">
+                <div class="image-content">
+                  <span class="overlay" aria-hidden="true"></span>
+
+                  <div class="card-image">
+                    <img src="public/images/projects/ProPlay.png" alt="image of a ProPlay for desktop" class="card-img" />
+                  </div>
+                </div>
+
+                <div class="card-content">
+                  <h2 class="name">ProPlay: Desktop Prototype</h2>
+                  <div class="card-content-section">
+                    <h4>Tech used:</h4>
+                    <p class="description">
+                      Figma
+                    </p>
+                  </div>
+
+                  <div class="card-content-section">
+                    <h4>Key takeaways:</h4>
+                    <p class="description">
+                      Implemented a desktop version of ProPlay application
+                    </p>
+                  </div>
+                  <button class="button" aria-label="Try ProPlay Prototype">Try</button>
+                </div>
+                <div class="card-overlay" role="dialog" aria-labelledby="overlay-title-3">
+                  <button class="close-overlay" aria-label="Close overlay">
+                    &times;
+                  </button>
+                  <h2 id="overlay-title-3" class="overlay-title">ProPlay Desktop</h2>
+                  <p class="iframeDescription">This iframe contains the ProPlay desktop workflow</p>
+                  <iframe class="overlay-iframe" style="border: 1px solid rgba(0, 0, 0, 0.1);" width="800" height="450" src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Fproto%2FNzlLrLDrODCRZU2vbRyged%2FProPlay-Coaching%3Fnode-id%3D7-161%26starting-point-node-id%3D7%253A161%26t%3DnheCDK94r4yp4fXQ-1" aria-describedby="This iframe contains the ProPlay desktop workflow." allowfullscreen></iframe>
+                </div>
+              </div>
+
+              <div class="card swiper-slide" role="group" aria-roledescription="slide">
+                <div class="image-content">
+                  <span class="overlay" aria-hidden="true"></span>
+
+                  <div class="card-image">
+                    <img src="public/images/projects/ProPlay.png" alt="image of a ProPlay for mobile" class="card-img" />
+                  </div>
+                </div>
+
+                <div class="card-content">
+                  <h2 class="name">ProPlay: Mobile Prototype</h2>
+                  <div class="card-content-section">
+                    <h4>Tech used:</h4>
+                    <p class="description">
+                      Figma
+                    </p>
+                  </div>
+
+                  <div class="card-content-section">
+                    <h4>Key takeaways:</h4>
+                    <p class="description">
+                      Implemented a mobile version of ProPlay application
+                    </p>
+                  </div>
+                  <button class="button" aria-label="Try ProPlay Prototype">Try</button>
+                </div>
+                <div class="card-overlay" role="dialog" aria-labelledby="overlay-title-4">
+                  <button class="close-overlay" aria-label="Close overlay">
+                    &times;
+                  </button>
+                  <h2 id="overlay-title-4" class="overlay-title">ProPlay Mobile</h2>
+                  <p class="iframeDescription">This iframe contains the ProPlay mobile workflow</p>
+                  <iframe class="overlay-iframe" style="border: 1px solid rgba(0, 0, 0, 0.1);" width="800" height="450" src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Fproto%2FNzlLrLDrODCRZU2vbRyged%2FProPlay-Coaching%3Fkind%3Dproto%26node-id%3D39-2366%26starting-point-node-id%3D39%253A1408%26t%3DWR8Hk9wV4fpseyi9-1%26scaling%3Dscale-down%26content-scaling%3Dfixed" aria-describedby="This iframe contains the ProPlay mobile workflow." allowfullscreen></iframe>
                 </div>
               </div>
             </div>
-
-            <div class="swiper-button-next swiper-navBtn" aria-label="Next slide"></div>
-            <div class="swiper-button-prev swiper-navBtn" aria-label="Previous slide"></div>
           </div>
-          <div class="swiper-pagination" aria-label="Slide pagination"></div>
+          <div class="swiper-pagination-container">
+          <div class="swiper-button-next swiper-button-next-design swiper-navBtn" aria-label="Next slide"></div>
+          <div class="swiper-button-prev swiper-button-prev-design swiper-navBtn" aria-label="Previous slide"></div>
+          </div>
         </div>
-      </section>
+  
+        <div class="slide-container slide-container-dev swiper fade-in-out" aria-roledescription="carousel"
+          aria-label="Projects showcase">
 
-      <!-- tools -->
-      <section id="tools" class="section section-to-navigate" aria-labelledby="tools-title">
-        <h2 id="tools-title" class="section-title holtwood-one-sc-regular fade-in-out">
-          Tools for success
-          <svg
-            class="section-title-icon"
-            xmlns="http://www.w3.org/2000/svg"
-            viewBox="0 0 24 24"
-            aria-hidden="true"
-          >
-            <path
-              d="M20 8v5a1 1 0 0 1-1 1H7.414l1.293 1.293a1 1 0 0 1-1.414 1.414l-3-3a1 1 0 0 1 0-1.416l3-3a1 1 0 0 1 1.414 1.414L7.414 12H18V8a1 1 0 0 1 2 0z"
-              style="fill: #000"
-            />
-          </svg>
-        </h2>
+          <h3 class="products-categories ff-mynerve-regular">Web</h3>
 
-        <div class="section-content tools-content">
-          <div class="mindset">
-            <h3 class="fade-in-out">Mindset</h3>
-            <p class="highlighter fade-in-out">
-              When I tackle a task or problem, I start by digging into the
-              details to really understand what needs to be done. I break it
-              down into smaller, manageable steps and set clear goals along the
-              way. I prioritize what's most important and feasible, using tools
-              like user research and design systems to guide me. Throughout the
-              process, I keep everyone in the loop and gather feedback to refine
-              my work. After implementing solutions, I thoroughly test
-              everything to make sure it works well. It's all about finding
-              creative solutions and improving as I go!
-            </p>
-          </div>
-          <ul class="toolsForSuccess" role="region" aria-labelledby="soft-skills-title">
-            <h4 id="soft-skills-title" class="fade-in-out">Soft skills</h4>
-            <div class="pills-wrapper fw-300">
-              <li class="pill-item fade-in-out">
-                Clearly explaining technical concept to a non-technical
-                stakeholder.
-              </li>
-              <li class="pill-item fade-in-out">
-                Identifying bugs in code or user pain points then isolating them, and implementing a fix that improves performance without
-                causing new issues.
-              </li>
-              <li class="pill-item fade-in-out">
-                Collaborating effectively with designers, developers, and
-                project managers.
-              </li>
-              <li class="pill-item fade-in-out">
-                Providing responsive and supportive service to resolve
-                technical issues, ensuring a positive experience and building
-                external and internal trust.
-              </li>
-              <li class="pill-item fade-in-out">
-                Learning a new programming language or framework to meet the
-                evolving needs of a project, like switching from React to
-                Angular or Adobe XD to Figma based on project requirements.
-              </li>
-              <li class="pill-item fade-in-out">
-                Taking initiative to mentor junior developers, sharing best
-                practices and guiding them through a challenging project to
-                foster their professional growth.
-              </li>
+          <div class="slide-content-dev">
+            <div class="card-wrapper swiper-wrapper">
+
+              <div class="card swiper-slide" role="group" aria-roledescription="slide">
+                <div class="image-content">
+                  <span class="overlay" aria-hidden="true"></span>
+
+                  <div class="card-image">
+                    <img src="public/images/projects/ui-lib.png" alt="image of Angular UI Components Library application" class="card-img" />
+                  </div>
+                </div>
+
+                <div class="card-content">
+                  <h2 class="name">Angular UI Components</h2>
+                  <div class="card-content-section">
+                    <h4>Tech used:</h4>
+                    <p class="description">
+                      Storybook, Angular, SASS
+                    </p>
+                  </div>
+
+                  <div class="card-content-section">
+                    <h4>Key takeaways:</h4>
+                    <p class="description">
+                      An Angular UI Components Library with a flexible button, icon, and tooltip components.
+                    </p>
+                  </div>
+
+                  <a class="button ui-lib-link" href="https://coriano-angular-ui-libray.netlify.app/?path=/docs/introduction--docs"
+                    aria-label="Redirect to UI Components Library application" target="_blank">Try</a>
+                </div>
+              </div>
+
+              <div class="card swiper-slide" role="group" aria-roledescription="slide">
+                <div class="image-content">
+                  <span class="overlay" aria-hidden="true"></span>
+
+                  <div class="card-image">
+                    <img src="public/images/projects/cancer-donation.png" alt="image of Donation Cancer MVP application" class="card-img" />
+                  </div>
+                </div>
+
+                <div class="card-content">
+                  <h2 class="name">Cancer Donation</h2>
+                  <div class="card-content-section">
+                    <h4>Tech used:</h4>
+                    <p class="description">
+                      Next.js, React, Jest, React-Toastify, Tailwind CSS
+                    </p>
+                  </div>
+
+                  <div class="card-content-section">
+                    <h4>Key takeaways:</h4>
+                    <p class="description">
+                      A minimal viable product (MVP) cancer donation app that enables users to select and send monetary donations to a cancer center, while also providing a view of their donation transaction history.
+                    </p>
+                  </div>
+
+                  <a class="button cancer-donation-link" href="https://cancer-donation-mlp.netlify.app/"
+                    aria-label="Redirect to Cancer Donation MVP application" target="_blank">Try</a>
+                </div>
+              </div>
+
+              <div class="card swiper-slide" role="group" aria-roledescription="slide">
+                <div class="image-content">
+                  <span class="overlay" aria-hidden="true"></span>
+
+                  <div class="card-image">
+                    <img src="public/images/projects/notezy.png" alt="image of Notezy application" class="card-img" />
+                  </div>
+                </div>
+
+                <div class="card-content">
+                  <h2 class="name">Notezy</h2>
+                  <div class="card-content-section">
+                    <h4>Tech used:</h4>
+                    <p class="description">
+                      React, Netlify, Auth0, Airtable
+                    </p>
+                  </div>
+
+                  <div class="card-content-section">
+                    <h4>Key takeaways:</h4>
+                    <p class="description">
+                      Notezy is a CRUD application designed to provide users with a secure environment to create,
+                      store, and manage meaningful notes. It features private routes for accessing user profiles and
+                      archived notes, ensuring privacy and organization.
+                    </p>
+                  </div>
+
+                  <a class="button notezy-link" href="https://notezyapp.netlify.app/"
+                    aria-label="Redirect to Notezy application" target="_blank">Try</a>
+                </div>
+              </div>
+
+              <div class="card swiper-slide" role="group" aria-roledescription="slide">
+                <div class="image-content">
+                  <span class="overlay" aria-hidden="true"></span>
+
+                  <div class="card-image">
+                    <img src="public/images/projects/prediabetes.png" alt="image of Prediabetes Risk Test application"
+                      class="card-img" />
+                  </div>
+                </div>
+
+                <div class="card-content">
+                  <h2 class="name">Prediabetes Risk Test</h2>
+                  <div class="card-content-section">
+                    <h4>Tech used:</h4>
+                    <p class="description">
+                      Next.js, React, Netlify
+                    </p>
+                  </div>
+
+                  <div class="card-content-section">
+                    <h4>Key takeaways:</h4>
+                    <p class="description">
+                      Created a single-form experience to streamline the process compared to CDC's multi-form
+                      approach, aimed at saving time. The application provides helpful information based on the user's
+                      score and includes clickable table cells for height and weight selection.
+                    </p>
+                  </div>
+
+                  <a class="button notezy-link" href="https://prediabetes-risk-test.netlify.app/"
+                    aria-label="Redirect to Prediabetes Risk Test application" target="_blank">Try</a>
+                </div>
+              </div>
             </div>
-          </ul>
-          <ul class="toolsForSuccess" role="region" aria-labelledby="research-skills-title">
-            <h4 id="research-skills-title" class="fade-in-out">Research skills</h4>
-            <div class="skills-list fw-300">
+          </div>
+          <div class="swiper-pagination-container">
+          <div class=" swiper-button-next swiper-button-next-dev swiper-navBtn" aria-label="Next slide"></div>
+          <div class="swiper-button-prev swiper-button-prev-dev swiper-navBtn" aria-label="Previous slide"></div>
+        </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- tools -->
+    <section id="tools" class="section section-to-navigate" aria-labelledby="tools-title">
+      <h2 id="tools-title" class="section-title holtwood-one-sc-regular fade-in-out">
+        Tools for success
+        <svg class="section-title-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true">
+          <path
+            d="M20 8v5a1 1 0 0 1-1 1H7.414l1.293 1.293a1 1 0 0 1-1.414 1.414l-3-3a1 1 0 0 1 0-1.416l3-3a1 1 0 0 1 1.414 1.414L7.414 12H18V8a1 1 0 0 1 2 0z"
+            style="fill: #000" />
+        </svg>
+      </h2>
+
+      <div class="section-content tools-content">
+        <div class="mindset">
+          <h3 class="fade-in-out">Mindset</h3>
+          <p class="highlighter fade-in-out">
+            When I tackle a task or problem, I start by digging into the
+            details to really understand what needs to be done. I break it
+            down into smaller, manageable steps and set clear goals along the
+            way. I prioritize what's most important and feasible, using tools
+            like user research and design systems to guide me. Throughout the
+            process, I keep everyone in the loop and gather feedback to refine
+            my work. After implementing solutions, I thoroughly test
+            everything to make sure it works well. It's all about finding
+            creative solutions and improving as I go!
+          </p>
+        </div>
+        <ul class="toolsForSuccess" role="region" aria-labelledby="soft-skills-title">
+          <h4 id="soft-skills-title" class="fade-in-out">Soft skills</h4>
+          <div class="pills-wrapper fw-300">
+            <li class="pill-item fade-in-out">
+              Clearly explaining technical concept to a non-technical
+              stakeholder.
+            </li>
+            <li class="pill-item fade-in-out">
+              Identifying bugs in code or user pain points then isolating them, and implementing a fix that improves
+              performance without
+              causing new issues.
+            </li>
+            <li class="pill-item fade-in-out">
+              Collaborating effectively with designers, developers, and
+              project managers.
+            </li>
+            <li class="pill-item fade-in-out">
+              Providing responsive and supportive service to resolve
+              technical issues, ensuring a positive experience and building
+              external and internal trust.
+            </li>
+            <li class="pill-item fade-in-out">
+              Learning a new programming language or framework to meet the
+              evolving needs of a project, like switching from React to
+              Angular or Adobe XD to Figma based on project requirements.
+            </li>
+            <li class="pill-item fade-in-out">
+              Taking initiative to mentor junior developers, sharing best
+              practices and guiding them through a challenging project to
+              foster their professional growth.
+            </li>
+          </div>
+        </ul>
+        <ul class="toolsForSuccess" role="region" aria-labelledby="research-skills-title">
+          <h4 id="research-skills-title" class="fade-in-out">Research skills</h4>
+          <div class="skills-list fw-300">
             <li class="pill-item fade-in-out">Interviewing</li>
             <li class="pill-item fade-in-out">qualitative Research</li>
             <li class="pill-item fade-in-out">quantitative Research</li>
@@ -502,11 +639,11 @@
             <li class="pill-item fade-in-out">FullStory</li>
             <li class="pill-item fade-in-out">UserTesting.com</li>
           </div>
-          </ul>
+        </ul>
 
-          <ul class="toolsForSuccess" role="region" aria-labelledby="design-skills-title">
-            <h4 id="design-skills-title" class="fade-in-out">Design skills</h4>
-            <div class="skills-list fw-300">
+        <ul class="toolsForSuccess" role="region" aria-labelledby="design-skills-title">
+          <h4 id="design-skills-title" class="fade-in-out">Design skills</h4>
+          <div class="skills-list fw-300">
             <li class="pill-item fade-in-out">Coloristic</li>
             <li class="pill-item fade-in-out">Human Center Interaction</li>
             <li class="pill-item fade-in-out">Figma</li>
@@ -519,10 +656,10 @@
               Ability to structure and organize content within an interface
             </li>
           </div>
-          </ul>
-          <ul class="toolsForSuccess" role="region" aria-labelledby="coding-skills-title">
-            <h4 id="coding-skills-title" class="fade-in-out">Coding skills</h4>
-            <div class="skills-list fw-300">
+        </ul>
+        <ul class="toolsForSuccess" role="region" aria-labelledby="coding-skills-title">
+          <h4 id="coding-skills-title" class="fade-in-out">Coding skills</h4>
+          <div class="skills-list fw-300">
             <li class="pill-item fade-in-out">Component Driven Design</li>
             <li class="pill-item fade-in-out">HTML5</li>
             <li class="pill-item fade-in-out">CSS3</li>
@@ -549,24 +686,25 @@
             <li class="pill-item fade-in-out">figma dev plugin</li>
             <li class="pill-item fade-in-out">VSCode</li>
           </div>
-          </ul>
-        </div>
-      </section>
+        </ul>
+      </div>
+    </section>
 
-      <!-- bottom header -->
-      <footer class="header bottom-header" role="contentinfo" aria-label="Site footer">
-        <div class="copyright-container">
-          <p class="copyright fade-in-out">
-            ©<span class="copyright-year"></span> Powered by Coriano Harris
-          </p>
-          <p>All rights reserved.</p>
-        </div>
-      </footer>
-    </main>
+    <!-- bottom header -->
+    <footer class="header bottom-header" role="contentinfo" aria-label="Site footer">
+      <div class="copyright-container">
+        <p class="copyright fade-in-out">
+          ©<span class="copyright-year"></span> Powered by Coriano Harris
+        </p>
+        <p>All rights reserved.</p>
+      </div>
+    </footer>
+  </main>
 
-    <!-- Swiper JS -->
-    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+  <!-- Swiper JS -->
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 
-    <script src="main.js"></script>
-  </body>
+  <script src="main.js"></script>
+</body>
+
 </html>
