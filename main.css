@@ -357,7 +357,7 @@ header {
 
 .section-content {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   position: relative;
@@ -498,6 +498,29 @@ header {
   color: var(--color-regular-turquoise);
 }
 
+.products-categories {
+  margin: 20px 0;
+  text-align: center;
+  letter-spacing: 3px;
+  font-size: 28px;
+  padding: 10px;
+  border-radius: 5px;
+  background-color: var(--color-medium-purple);
+  color: var(--color-light-grey);
+}
+
+.slide-container {
+  margin: 20px 0;
+}
+
+/* .slide-container-dev {
+  margin-top: 100px;
+} */
+
+.swiper-pagination-container {
+  margin: 60px 0;
+}
+
 .swiper-navBtn {
   display: flex;
   justify-content: center;
@@ -509,6 +532,7 @@ header {
   border-radius: 50%;
   transition: all 0.3s ease;
   font-size: 30px;
+  margin: 30px 0;
 }
 
 .swiper-button-next::after,
@@ -554,7 +578,7 @@ header {
 
 .swiper-pagination {
   width: auto;
-  margin-bottom: -25px;
+  /* margin-bottom: -25px; */
   padding: 3px;
   display: flex !important;
   justify-content: center !important;
