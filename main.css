@@ -185,16 +185,11 @@ header {
   -webkit-text-fill-color: transparent;
 }
 
-.first-name, .last-name {
-  letter-spacing: 2px;
-  text-transform: lowercase;
-  font-size: calc(32px + 6 * (100vw - 400px) / (800 - 400));
-}
 
 .logo-link {
   display: flex;
   gap: 5px;
-  font-size: calc(18px + 6 * (100vw - 400px) / (800 - 400));
+  font-size: calc(28px + 1 * (100vw - 400px) / (800 - 400));
   font-weight: 500;
 }
 
@@ -323,7 +318,7 @@ header {
   max-width: 900px;
   width: 100%;
   color: var(--color-medium-purple);
-  font-size: calc(24px + (24 - 16) * (100vw - 200px) / (800 - 200));
+  font-size: calc(24px + 6 * (100vw - 200px) / (800 - 200));
   letter-spacing: 2px;
 }
 
@@ -338,7 +333,7 @@ header {
 
 .section-title {
   position: relative;
-  font-size: calc(28px + (24 - 16) * (100vw - 400px) / (800 - 400));
+  font-size: calc(24px + 2 * (100vw - 400px) / (800 - 400));
   color: var(--color-light-purple);
   background-image: -webkit-radial-gradient(circle, var(--color-light-purple) 10%, var(--color-regular-purple) 90%);
   background-clip: text;
@@ -502,12 +497,14 @@ header {
 .products-categories {
   margin: 20px 0;
   text-align: center;
-  letter-spacing: 3px;
-  font-size: 28px;
+  letter-spacing: 10px;
+  font-size: 20px;
+  font-weight: 700;
   padding: 10px;
   border-radius: 5px;
   background-color: var(--color-medium-purple);
-  color: var(--color-light-grey);
+  color: var(--color-main-background);
+  text-transform: uppercase;
 }
 
 .slide-container {
@@ -692,7 +689,7 @@ header {
   gap: 0 0.5em;
   break-inside: avoid;
   page-break-inside: avoid;
-  color: var(--color-black);
+  color: var(--color-dark-purple);
   border-radius: 1rem;
   overflow: hidden;
   margin: 20px 0;
@@ -707,7 +704,7 @@ header {
 
 .communityEvents,
 .whatICanDoForYou {
-  font-size: calc(16px + 3 * (100vw - 400px) / (800 - 400));
+  font-size: calc(17px + 1 * (100vw - 400px) / (800 - 400));
 }
 
 .communityEvents li,
@@ -719,7 +716,8 @@ header {
 .whatICanDoForYou li::before {
   content: counter(list-item);
   font-weight: 700;
-  font-size: 4.5em;
+  font-size: 3rem;
+  font-style: italic;
   letter-spacing: -0.125em;
   line-height: 1;
   color: var(--color-regular-turquoise);
@@ -745,7 +743,7 @@ header {
   margin-right: 10px;
   white-space: nowrap;
   padding-bottom: 10px;
-  font-size: calc(16px + 3 * (100vw - 400px) / (800 - 400));
+  font-size: calc(18px + 1 * (100vw - 400px) / (800 - 400));
   width: max-content;
   color: var(--color-dark-grey);
 }
@@ -763,17 +761,17 @@ header {
 
 .mindset {
   margin-bottom: 25px;
-  font-size: calc(16px + 3 * (100vw - 400px) / (800 - 400));
+  font-size: calc(17px + 1 * (100vw - 400px) / (800 - 400));
+  color: var(--color-dark-purple);
 }
 
 .mindset h3 {
-  padding-bottom: 5px;
   margin-bottom: 10px;
-  border-bottom: 1px solid var(--color-light-grey);
-  font-size: calc(16px + 3 * (100vw - 400px) / (800 - 400));
+  font-size: calc(18px + 2 * (100vw - 400px) / (800 - 400));
   font-style: italic;
-  color: #545454;
-  opacity: 0.8;
+  border-bottom: 2px solid var(--color-regular-turquoise);
+  padding-bottom: 10px;
+  max-width: max-content;
 }
 
 /* Pills */
@@ -786,7 +784,7 @@ header {
   color: var(--color-regular-purple);
   letter-spacing: 2px;
   line-height: 1.3;
-  font-size: calc(16px + 3 * (100vw - 400px) / (800 - 400));
+  font-size: calc(15px + 1 * (100vw - 400px) / (800 - 400));
   max-width: max-content;
   border-radius: 0;
   margin: 10px 0;
@@ -820,6 +818,9 @@ header {
 /* Events List */
 .communityEvents h3 {
   font-style: italic;
+  border-bottom: 2px solid var(--color-regular-turquoise);
+  padding-bottom: 10px;
+  max-width: max-content;
 }
 
 .event-list-item {
@@ -835,8 +836,7 @@ header {
 .event-org,
 .event-type {
   font-style: italic;
-  color: var(--color-dark-grey);
-  opacity: 0.8;
+  color: var(--color-black);
 }
 
 .event-type-content {
@@ -845,15 +845,25 @@ header {
   margin-bottom: 20px;
 }
 
-.event-org-link {
+.event-title {
   color: var(--color-medium-purple);
+}
+
+
+.event-org-link {
+  color: var(--color-light-purple);
   padding-bottom: 5px;
-  border-bottom: 1px solid var(--color-medium-purple);
+  border-bottom: 1px solid var(--color-light-purple);
 }
 
 .event-org-link:hover {
-  color: var(--color-light-primary);
-  border-bottom: none;
+  color: var(--color-light-grey);
+  border-bottom: 1px solid var(--color-light-grey);
+}
+
+.event-org-name {
+  color: var(--color-dark-grey);
+  opacity: .5;
 }
 
 /* Footer */
@@ -904,6 +914,11 @@ header {
 }
 
 @media only screen and (min-width: 800px) {
+
+  main {
+    width: 75%;
+  }
+
   .hero-content {
     position: relative;
     display: flex;
