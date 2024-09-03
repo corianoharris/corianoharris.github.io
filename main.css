@@ -1,6 +1,6 @@
 /* Imports */
 /* Imports */
-@import url("https://fonts.googleapis.com/css2?family=Anton+SC&family=Holtwood+One+SC&family=Major+Mono+Display&family=Mynerve&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Anton+SC&family=Holtwood+One+SC&family=Major+Mono+Display&family=Mynerve&display&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap");
 
 /* CSS Variables */
 :root {
@@ -126,6 +126,13 @@ a:focus, a:active {
   font-weight: 400;
   font-style: normal;
   letter-spacing: 2px;
+}
+
+.poppins-font {
+  font-family: "Poppins", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: bolder;
+  font-style: normal;
 }
 
 /* Layout */
@@ -315,9 +322,8 @@ header {
   line-height: 1;
   background-color: rgba(64,224,208, 0.5);
   padding: 10px;
-  max-width: 900px;
+  max-width: 600px;
   width: 100%;
-  color: var(--color-medium-purple);
   font-size: calc(24px + 6 * (100vw - 200px) / (800 - 200));
   letter-spacing: 2px;
 }
@@ -680,6 +686,7 @@ header {
   border-radius: 0.5rem;
   word-wrap: break-word;
   width: 100%;
+  justify-content: start;
 }
 
 .whatICanDoForYou li,
@@ -697,39 +704,18 @@ header {
   line-height: 1.5;
 }
 
-.communityEvents ol,
-.whatICanDoForYou ol {
-  list-style-type: decimal;
-}
 
 .communityEvents,
 .whatICanDoForYou {
   font-size: calc(17px + 1 * (100vw - 400px) / (800 - 400));
 }
 
-.communityEvents li,
-.whatICanDoForYou li {
-  counter-increment: list-item;
-}
-
-.communityEvents li::before,
-.whatICanDoForYou li::before {
-  content: counter(list-item);
-  font-weight: 700;
-  font-size: 3rem;
-  font-style: italic;
-  letter-spacing: -0.125em;
-  line-height: 1;
-  color: var(--color-regular-turquoise);
-  margin: 0 -0.15em -0.15em -0.1em;
-}
-
-.whatICanDoForYou li span,
+/* .whatICanDoForYou li span,
 .communityEvents li span,
 .toolsForSuccess li span {
   margin-left: 25px;
   padding: 6px;
-}
+} */
 
 .tools-content {
   display: flex;
@@ -759,6 +745,12 @@ header {
   margin: 15px 0;
 }
 
+.tools-header {
+
+  color: var(--color-medium-purple);
+  font-weight: 300;
+}
+
 .mindset {
   margin-bottom: 25px;
   font-size: calc(17px + 1 * (100vw - 400px) / (800 - 400));
@@ -772,6 +764,26 @@ header {
   border-bottom: 2px solid var(--color-regular-turquoise);
   padding-bottom: 10px;
   max-width: max-content;
+}
+
+.tools-list{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  width: 100%;
+  margin-top: 20px;
+}
+
+.tools-list li {
+
+  background-color: var(--color-light-purple);
+  padding: 5px;
+  color: var(--color-white);
+}
+
+.products-text {
+  font-size: 20px;
+  font-weight: bolder;
 }
 
 /* Pills */
