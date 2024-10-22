@@ -916,6 +916,10 @@ header {
   outline: 1px dashed var(--color-grey);
 }
 
+.responsive-mockup {
+  transform: scale(1);
+}
+
 /* Media Queries */
 
 
