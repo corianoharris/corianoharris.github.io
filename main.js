@@ -1,9 +1,9 @@
 document.addEventListener("DOMContentLoaded", () => {
   initializeNavigation();
-  initializeSwiperDesign();
-  initializeSwiperDev();
-  initializeDropdown();
-  initializeCards();
+  // initializeSwiperDesign();
+  // initializeSwiperDev();
+  // initializeDropdown();
+  // initializeCards();
   updateCopyrightYear();
   setupTextFade('.fade-in-out');
 });
@@ -286,4 +286,27 @@ window.addEventListener('mousemove', (e) => {
             }
         });
     }
+});
+
+document.querySelectorAll('.card').forEach(card => {
+  const expandIcon = card.querySelector('.expand-icon');
+  const collapseIcon = card.querySelector('.collapse-icon');
+
+  expandIcon.addEventListener('click', () => {
+    card.classList.add('expanded');
+    document.body.classList.add('card-expanded');
+  });
+
+  collapseIcon.addEventListener('click', () => {
+    card.classList.remove('expanded');
+    document.body.classList.remove('card-expanded');
+  });
+
+  // Close card on escape key
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && card.classList.contains('expanded')) {
+      card.classList.remove('expanded');
+      document.body.classList.remove('card-expanded');
+    }
+  });
 });
