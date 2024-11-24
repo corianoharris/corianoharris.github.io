@@ -1158,7 +1158,7 @@ body.card-expanded {
 
 .social-container {
   position: fixed;
-  right: 20px;
+  right: 12px;
   bottom: 30%;
   z-index: 10;
   display: flex;
@@ -1212,6 +1212,12 @@ body.card-expanded {
 .social-text {
   font-family: Arial, sans-serif;
   font-size: 14px;
+}
+
+@media screen and (max-width: 768px) {
+  .social-item:hover {
+    width: 100px;
+  }
 }
 
 /* Trusted container */
