@@ -1158,7 +1158,7 @@ body.card-expanded {
 
 .social-container {
   position: fixed;
-  right: 10px;
+  right: 20px;
   bottom: 30%;
   z-index: 10;
   display: flex;
@@ -1195,7 +1195,7 @@ body.card-expanded {
 
 .social-item i {
   font-size: 20px;
-  min-width: 25px;
+  width: auto;
   text-align: center;
 }
 
