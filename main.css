@@ -1169,8 +1169,7 @@ body.card-expanded {
 
 .social-item {
   display: flex;
-  justify-content: space-evenly;
-  align-items: center;
+  justify-content: space-around;
   gap: 10px;
   background-color: rgba(0, 0, 0, 0.7);
   border-radius: 25px;
@@ -1186,6 +1185,11 @@ body.card-expanded {
   background-color: rgba(95, 34, 217, .8);
 }
 
+.social-item span {
+  display: none;
+}
+
+
 .social-item:hover {
   color: white;
   width: 150px;
@@ -1193,10 +1197,16 @@ body.card-expanded {
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2); 
 }
 
+.social-item:hover span {
+  display: block;
+}
+
 .social-item i {
   font-size: 20px;
-  width: auto;
-  text-align: center;
+  width: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .social-text {
