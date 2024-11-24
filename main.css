@@ -1214,6 +1214,12 @@ body.card-expanded {
   font-size: 14px;
 }
 
+@media screen and (max-width: 768px) {
+  .social-item:hover {
+    width: 100px;
+  }
+}
+
 /* Trusted container */
 .trusted-container {
   text-align: center;
