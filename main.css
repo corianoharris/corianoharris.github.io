@@ -1193,8 +1193,9 @@ body.card-expanded {
 .social-item:hover {
   color: white;
   width: 150px;
+  border-radius: 25px;
   background-color: rgba(95, 34, 217, .8);
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2); 
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5); 
 }
 
 .social-item:hover span {
