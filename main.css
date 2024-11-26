@@ -63,7 +63,7 @@ html {
 body {
   line-height: 1.5;
   font-family: sans-serif;
-  background-color: var(--color-main-background);
+  background-color:#e6e6e6;
 }
 
 ol, ul {
@@ -172,6 +172,7 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  opacity: 0.97;
 }
 
 .nav .nav-links {
@@ -834,11 +835,11 @@ body.card-expanded {
 }
 
 .tools-list li {
-  color: white; 
-  background: var(--color-purple-variant-one) ;
+  color: var(--color-purple-variant-one) ; 
+  background: var(--color-darker-white);
+  /* border: 1px solid var(--color-purple-variant-one); */
   padding: 5px 10px;
   border-radius: 25px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 .products-text {
@@ -1173,7 +1174,6 @@ body.card-expanded {
   display: flex;
   justify-content: space-around;
   gap: 10px;
-  background-color: rgba(0, 0, 0, 0.7);
   border-radius: 25px;
   cursor: pointer;
   transition: all 0.3s ease;
@@ -1185,6 +1185,7 @@ body.card-expanded {
   white-space: nowrap;
   color: white;
   background-color: rgba(95, 34, 217, .8);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
 }
 
 .social-item span {
@@ -1197,7 +1198,7 @@ body.card-expanded {
   width: 150px;
   border-radius: 25px;
   background-color: rgba(95, 34, 217, .8);
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5); 
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3); 
 }
 
 .social-item:hover span {
