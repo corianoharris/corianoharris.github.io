@@ -134,12 +134,14 @@ html {
   overflow-x: hidden;
   -webkit-overflow-scrolling: touch;
   width: 100vw;
+  touch-action: manipulation; /* Prevent double-tap zoom on mobile (useful for inputs or buttons) */
 }
 
 body {
   line-height: 1.5;
   font-family: sans-serif;
   background-color: #e6e6e6;
+  touch-action: manipulation;
 }
 
 ol,
@@ -716,14 +718,14 @@ header {
 .expand-icon:focus,
 .collapse-icon:focus {
   outline: none;
-  background: transparent;
-  border: none;
+  background: transparent !important;
+  border: none !important;
 }
 
 .expand-icon:active,
 .collapse-icon:active{
-  background: transparent;
-  border: none;
+  background: transparent !important;
+  border: none !important;
 }
 
 .collapse-icon {
