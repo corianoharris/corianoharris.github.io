@@ -175,11 +175,11 @@ button {
   margin: 0;
 }
 
-button:focus,
+/* button:focus,
 button:active {
   background: transparent;
   outline: 2px dashed var(--color-grey);
-}
+} */
 
 a {
   color: var(--color-darker-white);
@@ -711,8 +711,7 @@ header {
 }
 
 .expand-icon:focus,
-.collapse-icon:focus{
-  all: unset;
+.collapse-icon:focus {
   outline: none;
   background: transparent;
   border: none;
