@@ -233,7 +233,7 @@ main {
   padding: 10px;
   width: 90%;
   height: 100%;
-  text-align: center;
+
 }
 
 /* Navigation */
@@ -288,6 +288,15 @@ header {
   gap: 5px;
   font-size: calc(28px + 1 * (100vw - 400px) / (800 - 400));
   font-weight: 500;
+  letter-spacing: 2px;
+}
+
+.first-name {
+  font-weight: 900;
+}
+
+.last-name {
+  font-weight: 100;
 }
 
 .nav .nav-links a {
@@ -401,6 +410,7 @@ header {
 
 .hero-img {
   max-height: 100%;
+  max-width: 800px;
   opacity: .85;
 }
 
@@ -414,9 +424,12 @@ header {
 .hero-content {
   position: relative;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   height: max-content;
+  max-width: 100%;
+  
 }
 
 .testimonial-card {
@@ -436,33 +449,33 @@ header {
 
 .profile-img-container {
   display: flex;
-  width: 100%;
-  margin: 0 0 20px 0;
-  justify-content: center;
+  width: 80px;
+  height: 80px;
+  box-shadow: 0 3px 10px rgb(0 0 0 / 0.3);
+  border-radius: 100%;
 }
 
 .profile-img {
-  width: 100px;
-  height: 100px;
-  border-radius: 50%;
+  width: 100%;
+  height: 100%;
+  border-radius: 100%;
   object-fit: cover;
-  box-shadow: 0 3px 10px rgb(0 0 0 / 0.3);
 }
 
 
-blockquote {
+.blockquote {
   margin: 20px 0 25px 20px;
   font-size: 16px;
   color: var(--color-medium-purple);
   font-style: italic;
   position: relative;
   justify-content: right;
-  text-align: center;
+  text-align: left; 
   font-weight: lighter;
   font-size: calc(20px + 1 * (100vw - 400px) / (800 - 400));
 }
 
-blockquote::before {
+.blockquote::before {
   content: '“';
   font-size: 150px;
   color: var(--color-purple-variant-one);
@@ -471,7 +484,7 @@ blockquote::before {
   top: -120px;
 }
 
-blockquote::after{
+.blockquote::after{
   content: '“';
   font-size: 60px;
   position: absolute;
@@ -481,9 +494,14 @@ blockquote::after{
   color: var(--color-purple-variant-one);
 }
 
-.author {
-  text-align: right;
+.author-container {
+  display: flex;
+  justify-content: right;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
 }
+
 
 .author h3 {
   margin: 0;
@@ -500,34 +518,12 @@ blockquote::after{
   color: #000;
   font-weight: lighter;
 }
-
-/* .blockquote-container {
-  margin-top: 40px;
-  text-align: left;
-  font-style: italic;
-  text-shadow: #5f22d9;
-  font-weight: 900;
-  max-width: 800px;
-  margin: auto auto;
-  height: max-content;
-  color: #5f22d9;
-  background-color: rgba(255, 255, 255, 0.8);
-}
-
-.blockquote {
-  line-height: 1.75rem;
-  padding: 10px;
-  width: 100%;
-  font-size: calc(16px + 2 * (100vw - 200px) / (800 - 200));
-  letter-spacing: 2px;
-  text-align: left;
-}
-
+  
 .blockquote-author {
   padding-top: 25px;
   font-size: 1rem !important;
   text-align: right;
-} */
+} 
 
 /* Sections */
 .section {
@@ -621,7 +617,7 @@ blockquote::after{
   display: flex;
   align-items: center;
   margin-bottom: 10px;
-  gap: 10px;
+  gap: 20px;
 }
 
 
@@ -643,7 +639,7 @@ blockquote::after{
 /* Ensure cards don't get too wide on larger screens */
 @media (min-width: 1200px) {
   .card {
-    flex: 0 1 auto;
+    flex: 0 1 360px;
   }
 }
 
@@ -988,6 +984,7 @@ body.card-expanded {
   justify-content: center;
   color: var(--color-medium-purple);
   margin-top: 30px;
+  text-align: center;
 }
 
 /* Utilities */
@@ -1037,12 +1034,6 @@ body.card-expanded {
 
   main {
     width: 75%;
-  }
-
-  .hero-content {
-    position: relative;
-    display: flex;
-    height: 500px;
   }
 
   .hero-img {
@@ -1266,6 +1257,11 @@ body.card-expanded {
   .trusted-logo {
     width: 100px;
     height: auto;
+  }
+
+  .profile-img-container {
+    width: 60px;
+    height: 60px;
   }
 
 }
