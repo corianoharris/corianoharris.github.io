@@ -480,8 +480,10 @@ header {
   font-size: 150px;
   color: var(--color-purple-variant-one);
   position: absolute;
-  left: -30px;
-  top: -120px;
+  left: -70px;
+  top: -180px;
+  -webkit-transform: scaleY(-1);
+  transform: scaleY(-1);
 }
 
 .blockquote::after{
@@ -509,7 +511,6 @@ header {
   color: var(--color-purple-variant-one);
   text-transform: uppercase;
   font-weight: bolder;
-  
 }
 
 .author p {
@@ -712,6 +713,8 @@ header {
 .expand-icon:focus,
 .collapse-icon:active {
   outline: none;
+  background: transparent;
+  border: none;
 }
 
 .collapse-icon {
