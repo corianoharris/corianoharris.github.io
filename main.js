@@ -182,3 +182,15 @@ document.querySelectorAll('.card').forEach(card => {
     }
   });
 });
+
+document.addEventListener('touchstart', (e) => {
+  e.preventDefault();
+}, { passive: false });
+
+document.addEventListener('touchmove', (e) => {
+  e.preventDefault();
+}, { passive: false });
+
+document.addEventListener('touchend', (e) => {
+  e.preventDefault();
+}, { passive: false });
