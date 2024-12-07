@@ -183,14 +183,10 @@ document.querySelectorAll('.card').forEach(card => {
   });
 });
 
-document.addEventListener('touchstart', (e) => {
-  e.preventDefault();
-}, { passive: false });
-
-document.addEventListener('touchmove', (e) => {
-  e.preventDefault();
-}, { passive: false });
-
-document.addEventListener('touchend', (e) => {
-  e.preventDefault();
-}, { passive: false });
+// // Add event listener for card click
+// document.querySelectorAll('.card').forEach(card => {
+//   card.addEventListener('click', () => {
+//     card.classList.toggle('expanded');
+//     document.body.classList.toggle('card-expanded');
+//   });
+// });
