@@ -711,8 +711,12 @@ header {
 }
 
 .expand-icon:focus,
-.collapse-icon:active {
+.collapse-icon:focus{
   outline: none;
+}
+
+.expand-icon:active,
+.collapse-icon:active{
   background: transparent;
   border: none;
 }
