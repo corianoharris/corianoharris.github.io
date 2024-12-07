@@ -691,7 +691,7 @@ header {
   position: absolute;
   right: 10px;
   top: 5px;
-  background: none;
+  background: transparent;
   border: none;
   font-size: 30px;
   width: 20px;
@@ -703,6 +703,9 @@ header {
   transition: all 0.2s ease;
   color: var(--color-purple-variant-one);
   outline: none;
+  -webkit-appearance: none;  /* Disables default button appearance in Safari */
+  appearance: none;          /* Disables default button appearance */
+  touch-action: manipulation;
 }
 
 .expand-icon:hover,
