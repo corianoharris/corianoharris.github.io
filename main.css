@@ -687,6 +687,17 @@ header {
   line-height: 1.5;
 }
 
+.toggle-desc-btn, .toggle-mindset-desc-btn {
+  color: var(--color-purple-variant-one);
+  cursor: pointer;
+  font-size: clamp(0.875rem, 2vw, 1rem);
+  text-decoration: none;
+  transition: color 0.3s ease;
+  display: inline-block;
+  position: relative;
+  padding-right: 20px;
+  /* Space for the expand icon */}
+
 .expand-icon,
 .collapse-icon {
   cursor: pointer;
