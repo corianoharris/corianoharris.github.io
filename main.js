@@ -183,10 +183,63 @@ document.querySelectorAll('.card').forEach(card => {
   });
 });
 
-// // Add event listener for card click
-// document.querySelectorAll('.card').forEach(card => {
-//   card.addEventListener('click', () => {
-//     card.classList.toggle('expanded');
-//     document.body.classList.toggle('card-expanded');
-//   });
-// });
+
+document.querySelectorAll(".card").forEach((card) => {
+  // const desc = card.querySelector(".card-desc");
+  const shortDesc = card.querySelector(".short-desc");
+  const toggleButton = card.querySelector(".toggle-desc-btn");
+
+  if (shortDesc.textContent.length > 100) {
+    const fullText = shortDesc.textContent;
+    const truncatedText = fullText.slice(0, 100);
+
+    shortDesc.textContent = truncatedText;
+
+    toggleButton.addEventListener("click", () => {
+      const isExpanded = toggleButton.getAttribute("aria-expanded") === "true";
+
+      if (isExpanded) {
+        shortDesc.textContent = truncatedText;
+        toggleButton.textContent = "...more";
+      } else {
+        shortDesc.textContent = fullText;
+        toggleButton.textContent = "...less";
+      }
+
+      toggleButton.setAttribute("aria-expanded", !isExpanded);
+    });
+  } else {
+    toggleButton.style.display = "none"; // Hide toggle button if text is short
+  }
+});
+
+document.querySelectorAll(".mindset-text").forEach((text) => {
+  // const desc = card.querySelector(".card-desc");
+  const shortMindsetDesc = text.querySelector(".short-mindset-desc");
+  const toggleMindsetButton = text.querySelector(".toggle-mindset-desc-btn");
+
+  if (shortMindsetDesc.textContent.length > 500) {
+    const fullText = shortMindsetDesc.textContent;
+    const truncatedText = fullText.slice(0, 500);
+
+    shortMindsetDesc.textContent = truncatedText;
+
+    toggleMindsetButton.addEventListener("click", () => {
+      const isExpanded = toggleMindsetButton.getAttribute("aria-expanded") === "true";
+
+      if (isExpanded) {
+        shortMindsetDesc.textContent = truncatedText;
+        toggleMindsetButton.textContent = "...more";
+      } else {
+        shortMindsetDesc.textContent = fullText;
+        toggleMindsetButton.textContent = "...less";
+      }
+
+      toggleMindsetButton.setAttribute("aria-expanded", !isExpanded);
+    });
+  } else {
+    toggleMindsetButton.style.display = "none"; // Hide toggle button if text is short
+  }
+});
+
+
