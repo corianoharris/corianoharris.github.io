@@ -317,7 +317,6 @@ links.forEach(link => {
   });
 });
 
-
   function sortEventCards() {
 
   // Select the container and all event cards
