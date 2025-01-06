@@ -604,7 +604,7 @@ header {
       white-space: nowrap;
       flex-shrink: 0;
       scroll-snap-type: mandatory;
-      scroll-snap-align: start; 
+      scroll-snap-align: center; 
       scrollbar-width: none;    
 }
 
