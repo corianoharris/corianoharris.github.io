@@ -131,7 +131,7 @@ section {
 
 html {
   overflow-y: scroll;
-  overflow-x: hidden;
+  overflow-x: scroll;
   -webkit-overflow-scrolling: touch;
   width: 100vw;
   touch-action: manipulation; /* Prevent double-tap zoom on mobile (useful for inputs or buttons) */
@@ -604,6 +604,13 @@ header {
       white-space: nowrap;
       flex-shrink: 0;
       scroll-snap-type: mandatory;
+      scroll-snap-stop: always;
+      -ms-overflow-style: none;
+      scrollbar-width: none;
+}
+
+.container::-webkit-scrollbar, .events-container::-webkit-scrollbar {
+  display: none;
 }
 
 
