@@ -601,8 +601,8 @@ header {
 .container, .events-container {
   display: flex;
   gap: 20px;
-  justify-content: space-evenly;
-  align-items: center; 
+  justify-content: space-between;
+  align-items: baseline; 
   overflow-x: auto; 
   padding: 10px 20px; 
   scroll-behavior: smooth;
@@ -1056,6 +1056,7 @@ body.card-expanded {
   color: #fff;
   padding: 5px 15px;
   margin-bottom: -10px;
+  border-radius: 10px;
   box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
 }
 
@@ -1231,6 +1232,10 @@ event-details p span {
     right: 20px;
     color: var(--color-darker-white);
     cursor: pointer;
+  }
+
+  .container, .events-container {
+    justify-content: flex-start;
   }
 }
 
