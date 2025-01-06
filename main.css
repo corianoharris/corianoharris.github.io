@@ -130,12 +130,23 @@ section {
 }
 
 html, body {
-  overflow-y: auto;
-  overflow-x: auto;
-  -webkit-overflow-scrolling: touch;
-  width: 100vw;
-  touch-action: manipulation; /* Prevent double-tap zoom on mobile (useful for inputs or buttons) */
+  width: 100%;  /* Use 100% width to avoid issues with 100vw on mobile */
+  height: 100%; /* Ensure full height of the viewport */
+  
+  overflow-y: auto; /* Enable vertical scrolling when necessary */
+  overflow-x: auto; /* Enable horizontal scrolling when necessary */
+  -webkit-overflow-scrolling: touch; /* Smooth scrolling for iOS */
+  
+  scrollbar-width: none; /* Hide scrollbar in Firefox */
+  -ms-overflow-style: none; /* Hide scrollbar in IE/Edge */
+  
+  touch-action: manipulation; /* Prevent double-tap zoom */
 }
+
+html::-webkit-scrollbar, body::-webkit-scrollbar {
+  display: none; /* Hide scrollbar in Webkit browsers (Chrome, Safari, Edge) */
+}
+
 
 body {
   line-height: 1.5;
@@ -591,27 +602,31 @@ header {
 /* Cards */
 .container, .events-container {
   display: flex;
-      gap: 20px;
-      justify-content: space-evenly;
-      /* align-items: center; */
-      overflow-x: scroll;
-      padding: 10px 0;
-      scroll-behavior: smooth;
-      width: 100%;
-      padding: 10px;
-      max-height: max-content;
-      white-space: nowrap;
-      flex-shrink: 0;
-      scroll-snap-type: mandatory;
-      scroll-snap-stop: always;
-      -ms-overflow-style: none;
-      scrollbar-width: none;
+  gap: 20px;
+  justify-content: flex-start; /* Use flex-start to align items at the start, or you can use space-evenly based on your design */
+  align-items: center; /* Optional: If you want to align items vertically in the center */
+  overflow-x: auto; /* Allow scrolling only when necessary */
+  padding: 10px 20px; /* Keep padding consistent */
+  scroll-behavior: smooth;
+  width: 100%;
+  max-height: max-content;
+  white-space: nowrap; /* Prevent wrapping, keeping everything in one line */
+  flex-shrink: 0; /* Prevent flex items from shrinking */
+  scroll-snap-type: x mandatory; /* Ensure horizontal snap */
+  -ms-overflow-style: none; /* Hide scrollbars in IE */
+  scrollbar-width: none; /* Hide scrollbar in Firefox */
 }
 
 .container::-webkit-scrollbar, .events-container::-webkit-scrollbar {
   display: none;
 }
-
+.container > div {
+  display: inline-block;
+  width: 100%; /* Adjust as needed */
+  max-width: max-content; /* Ensures it doesn't overflow */
+  padding-left: 15px;
+  padding-right: 15px;
+}
 
 .card {
   color: var(--color-purple-variant-one);
@@ -1284,12 +1299,6 @@ event-details p span {
   font-family: Arial, sans-serif;
   font-size: 14px;
 }
-
-@media (max-width: 768px) {
-  html, body {
-    width: calc(100vw - 0px); /* Adjust width for mobile */
-  }
-
 
 @media screen and (max-width: 800px) {
 
