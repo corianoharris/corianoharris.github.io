@@ -460,8 +460,8 @@ header {
 
 .profile-img-container {
   display: flex;
-  width: 80px;
-  height: 80px;
+  width: 48px;
+  height: 48px;
   box-shadow: 0 3px 10px rgb(0 0 0 / 0.3);
   border-radius: 100%;
 }
@@ -497,15 +497,7 @@ header {
   transform: scaleY(-1);
 }
 
-.blockquote::after{
-  content: '“';
-  font-size: 60px;
-  position: absolute;
-  right: -20px;
-  bottom: -30px;
-  transform: rotate(180deg);
-  color: var(--color-purple-variant-one);
-}
+
 
 .author-container {
   display: flex;
@@ -1129,7 +1121,11 @@ event-details p span {
   margin-top: 145px;
 }
 
-.highlighter,  .short-mindset-desc span{
+.short-mindset-desc { /* Example: Change the text color */
+  font-style: italic;  /* Example: Make text italic */
+}
+
+.highlighter {
   background-image: linear-gradient(to bottom,
       transparent 0%,
       transparent 50%,
@@ -1385,11 +1381,6 @@ event-details p span {
   .trusted-logo {
     width: 100px;
     height: auto;
-  }
-
-  .profile-img-container {
-    width: 60px;
-    height: 60px;
   }
 
 }
