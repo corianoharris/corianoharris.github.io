@@ -2,6 +2,8 @@ document.addEventListener("DOMContentLoaded", () => {
   initializeNavigation();
   updateCopyrightYear();
   setupTextFade('.fade-in-out');
+  updateCounters();
+  sortEventCards();
 });
 
 function initializeNavigation() {
@@ -136,6 +138,35 @@ function windowResized() {
     background(10);
 }
 
+  // Calculate and update counters
+  function updateCounters() {
+    const cards = document.querySelectorAll('.card');
+    // const eventCards = document.querySelectorAll('.event-card');
+    const webCards = document.querySelectorAll('.card[data-category="web"]');
+    const uxCards = document.querySelectorAll('.card[data-category="ux"]');
+    // const talkCards = document.querySelectorAll('.event-card[data-category="talk"]');
+    // const hostCards = document.querySelectorAll('.event-card[data-category="host"]');
+    
+    document.querySelector('input[value="all-products"]')
+      .parentElement.querySelector('.count').textContent = cards.length;
+
+      // document.querySelector('input[value="all-events"]')
+      // .parentElement.querySelector('.count-events').textContent = eventCards.length;
+    
+    document.querySelector('input[value="web"]')
+      .parentElement.querySelector('.count').textContent = webCards.length;
+    
+    document.querySelector('input[value="ux"]')
+      .parentElement.querySelector('.count').textContent = uxCards.length;
+
+    // document.querySelector('input[value="talk"]')
+    //   .parentElement.querySelector('.count-events').textContent = talkCards.length;
+
+    // document.querySelector('input[value="host"]')
+    //   .parentElement.querySelector('.count-events').textContent = hostCards.length;
+  }
+
+
 // Add interactive elements on scroll
 window.addEventListener('scroll', () => {
     const scrolled = window.scrollY;
@@ -189,9 +220,9 @@ document.querySelectorAll(".card").forEach((card) => {
   const shortDesc = card.querySelector(".short-desc");
   const toggleButton = card.querySelector(".toggle-desc-btn");
 
-  if (shortDesc.textContent.length > 100) {
+  if (shortDesc.textContent.length > 30) {
     const fullText = shortDesc.textContent;
-    const truncatedText = fullText.slice(0, 100);
+    const truncatedText = fullText.slice(0, 30);
 
     shortDesc.textContent = truncatedText;
 
@@ -241,5 +272,54 @@ document.querySelectorAll(".mindset-text").forEach((text) => {
     toggleMindsetButton.style.display = "none"; // Hide toggle button if text is short
   }
 });
+
+  // Handle filtering
+  document.querySelectorAll('input[name="filter"]').forEach(radio => {
+    radio.addEventListener('change', (e) => {
+      const filter = e.target.value;
+      const cards = document.querySelectorAll('.card');
+      
+      cards.forEach(card => {
+        if (filter === 'all-products' || card.dataset.category === filter) {
+          card.style.display = 'block';
+        } else {
+          card.style.display = 'none';
+        }
+      });
+    });
+  });
+
+  document.querySelectorAll('input[name="filter-events"]').forEach(radio => {
+    radio.addEventListener('change', (e) => {
+      const filter = e.target.value;
+      const cards = document.querySelectorAll('.event-card');
+      
+      cards.forEach(card => {
+        if (filter === 'all-events' || card.dataset.category === filter) {
+          card.style.display = 'block';
+        } else {
+          card.style.display = 'none';
+        }
+      });
+    });
+  });
+
+  function sortEventCards() {
+
+  // Select the container and all event cards
+const eventContainer = document.querySelector("#events");
+const eventCards = [...document.querySelectorAll(".event-card")];
+
+// Sort event cards by their data-date attribute
+eventCards.sort((a, b) => {
+  const dateA = new Date(a.getAttribute("data-date"));
+  const dateB = new Date(b.getAttribute("data-date"));
+  return dateB - dateA; // Most recent first
+});
+
+// Append sorted event cards back to the container
+eventCards.forEach((card) => eventContainer.appendChild(card));
+
+}
 
 
