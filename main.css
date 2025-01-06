@@ -200,7 +200,6 @@ a {
 
 a:focus,
 a:active {
-  background: transparent;
   outline: 2px dashed var(--color-grey);
 }
 
@@ -311,6 +310,7 @@ header {
   font-weight: 100;
 }
 
+/* Basic link styling */
 .nav .nav-links a {
   transition: all 0.2s linear;
   padding: 5px;
@@ -318,6 +318,7 @@ header {
   color: var(--color-darker-white);
 }
 
+/* Hover effect */
 .nav .nav-links a:hover {
   padding: 5px;
   border-radius: 10px;
@@ -325,9 +326,14 @@ header {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
-.nav .nav-links a:active {
+/* Active state styling */
+.nav .nav-links a.active {
   font-size: 19px;
+  border: 1px solid var(--color-darker-white);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  background-color: rgba(255, 255, 255, 0.1);  /* Optional background */
 }
+
 
 .top-link {
   text-align: center;
@@ -595,10 +601,10 @@ header {
 .container, .events-container {
   display: flex;
   gap: 20px;
-  justify-content: flex-start; /* Use flex-start to align items at the start, or you can use space-evenly based on your design */
-  align-items: center; /* Optional: If you want to align items vertically in the center */
-  overflow-x: auto; /* Allow scrolling only when necessary */
-  padding: 10px 20px; /* Keep padding consistent */
+  justify-content: space-evenly;
+  align-items: center; 
+  overflow-x: auto; 
+  padding: 10px 20px; 
   scroll-behavior: smooth;
   width: 100%;
   max-height: max-content;
@@ -614,7 +620,7 @@ header {
 }
 .container > div {
   display: inline-block;
-  width: 100%; /* Adjust as needed */
+  width: 100%; 
   max-width: max-content; /* Ensures it doesn't overflow */
   padding-left: 15px;
   padding-right: 15px;
@@ -966,15 +972,16 @@ body.card-expanded {
   gap: 10px;
   width: 100%;
   margin-top: 20px;
-  font-size: calc(14px + 2 * (100vw - 400px) / (800 - 200));
+  font-size: calc(14px + 2 * (100vw - 400px) / (800 - 100));
 }
 
 .tools-list li {
-  font-family: Montserrat, Arial, sans-serif;
+  /* font-family: Montserrat, Arial, sans-serif; */
   color: var(--color-purple-variant-one);
   padding: 5px 10px;
   border-radius: 25px;
-  text-transform: uppercase;
+  text-transform: lowercase;
+  font-weight: bolder;
   letter-spacing: 1px;
 }
 
