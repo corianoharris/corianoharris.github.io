@@ -601,7 +601,7 @@ header {
 .container, .events-container {
   display: flex;
   gap: 20px;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: baseline; 
   overflow-x: auto; 
   padding: 10px 20px; 
@@ -621,7 +621,7 @@ header {
 .container > div {
   display: inline-block;
   width: 100%; 
-  max-width: max-content; /* Ensures it doesn't overflow */
+  max-width: 350px; /* Ensures it doesn't overflow */
   padding-left: 15px;
   padding-right: 15px;
 }
@@ -1234,6 +1234,9 @@ event-details p span {
     cursor: pointer;
   }
 
+}
+
+@media screen and (max-width: 1040px) {
   .container, .events-container {
     justify-content: flex-start;
   }
