@@ -618,13 +618,13 @@ header {
 .container::-webkit-scrollbar, .events-container::-webkit-scrollbar {
   display: none;
 }
-.container > div {
+/* .container > div {
   display: inline-block;
   width: 100%; 
-  max-width: 350px; /* Ensures it doesn't overflow */
+  max-width: 350px;  Ensures it doesn't overflow 
   padding-left: 15px;
   padding-right: 15px;
-}
+} */
 
 .card {
   color: var(--color-purple-variant-one);
