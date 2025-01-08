@@ -1251,10 +1251,9 @@ event-details p span {
 }
 
 @media screen and (max-width: 1040px) {
-  /* .container, .events-container {
+  .container, .events-container {
     justify-content: flex-start;
-    display: none;
-  }  */
+  } 
   #products, #products-link {
     display: none;
   }
