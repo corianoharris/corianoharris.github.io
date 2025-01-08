@@ -807,15 +807,14 @@ input[type="radio"]:checked {
   display: none;
   width: 100%;
   height: 0;
-  padding-bottom: 56.25%;
-  /* 16:9 aspect ratio */
+  padding-bottom: 56.25%; /* 16:9 aspect ratio */
   position: relative;
   margin-top: 20px;
 }
 
 .card.expanded .iframe-container {
   display: block;
-  height: calc(100vh - 120px);
+  height: calc(100dvh - 120px); /* Use viewport height to fill the screen minus some margin */
   padding-bottom: 0;
   border-top: 1px solid lightgrey;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
@@ -832,8 +831,23 @@ input[type="radio"]:checked {
   transform-origin: center;
   margin: 0 auto;
   display: block;
-
 }
+
+/* Ensure responsiveness for mobile */
+@media screen and (max-width: 767px) {
+  .iframe-container {
+    padding-bottom: 56.25%; /* 16:9 aspect ratio for smaller screens */
+  }
+
+  .card.expanded .iframe-container {
+    height: calc(100vh - 120px); /* Adjust for mobile viewport height */
+  }
+  
+  .iframe-container iframe {
+    border-radius: 8px; /* Ensure the iframe also has rounded corners */
+  }
+}
+
 
 .keywords {
   display: flex;
@@ -1236,11 +1250,15 @@ event-details p span {
 
 }
 
-@media screen and (max-width: 1040px) {
+/* @media screen and (max-width: 1040px) {
   .container, .events-container {
-    justify-content: flex-start;
+    height: 100dvh;
+  } 
+
+  .card {
+    width: 100%;
   }
-}
+} */
 
 
 /* Text styles */
