@@ -1239,7 +1239,6 @@ event-details p span {
 @media screen and (max-width: 1040px) {
   .container, .events-container {
     justify-content: flex-start;
-    width: 100%;
   }
 }
 
