@@ -1246,6 +1246,10 @@ event-details p span {
     justify-content: flex-start;
     width: 100%;
   }
+  .container {
+    max-height: 100dvh;
+  }
+  
 }
 
 
