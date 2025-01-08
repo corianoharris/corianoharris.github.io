@@ -488,7 +488,7 @@ header {
   position: relative;
   justify-content: right;
   text-align: left; 
-  font-weight: lighter;
+  font-weight: bold;
   font-size: calc(14px + 1 * (100vw - 400px) / (800 - 400));
 }
 
@@ -1250,15 +1250,17 @@ event-details p span {
 
 }
 
-/* @media screen and (max-width: 1040px) {
-  .container, .events-container {
-    height: 100dvh;
-  } 
-
-  .card {
-    width: 100%;
+@media screen and (max-width: 1040px) {
+  /* .container, .events-container {
+    justify-content: flex-start;
+    display: none;
+  }  */
+  #products, #products-link {
+    display: none;
   }
-} */
+
+
+}
 
 
 /* Text styles */
