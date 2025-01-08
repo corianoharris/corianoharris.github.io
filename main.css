@@ -604,10 +604,10 @@ header {
   justify-content: space-around;
   align-items: baseline; 
   overflow-x: auto; 
-  padding: 10px 20px; 
+  padding: 10px; 
   scroll-behavior: smooth;
   width: 100%;
-  max-height: max-content;
+  /* max-height: max-content; */
   white-space: nowrap; /* Prevent wrapping, keeping everything in one line */
   flex-shrink: 0; /* Prevent flex items from shrinking */
   scroll-snap-type: x mandatory; /* Ensure horizontal snap */
@@ -701,9 +701,8 @@ input[type="radio"]:checked {
   position: fixed;
   top: 0;
   left: 0;
-  width: 100%;
+  width: 100vw;
   height: 100vh;
-  max-width: none;
   z-index: 10000;
   border-radius: 0;
   overflow-y: auto;
@@ -814,11 +813,11 @@ input[type="radio"]:checked {
 
 .card.expanded .iframe-container {
   display: block;
-  height: calc(100dvh - 120px); /* Use viewport height to fill the screen minus some margin */
+   height: calc(100dvh - 120px); /* Use viewport height to fill the screen minus some margin  */
   padding-bottom: 0;
   border-top: 1px solid lightgrey;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-}
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
+} 
 
 .iframe-container iframe {
   position: absolute;
@@ -1253,10 +1252,11 @@ event-details p span {
 @media screen and (max-width: 1040px) {
   .container, .events-container {
     justify-content: flex-start;
+    width: 90%;
   } 
-  #products, #products-link {
+  /* #products, #products-link {
     display: none;
-  }
+  } */
 
 
 }
