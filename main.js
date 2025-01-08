@@ -198,11 +198,13 @@ document.querySelectorAll('.card').forEach(card => {
   expandIcon.addEventListener('click', () => {
     card.classList.add('expanded');
     document.body.classList.add('card-expanded');
+    document.querySelector('.container').classList.add('expanded-mode');
   });
 
   collapseIcon.addEventListener('click', () => {
     card.classList.remove('expanded');
     document.body.classList.remove('card-expanded');
+    document.querySelector('.container').classList.remove('expanded-mode');
   });
 
   // Close card on escape key
