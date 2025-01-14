@@ -955,6 +955,10 @@ margin-bottom: 8px;
 
 /* projects */
 
+#products, #products-link {
+ display: none;
+}
+
 .three-projects-container {
   display: flex;
   flex-direction: column;
