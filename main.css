@@ -427,6 +427,7 @@ header {
 
 /* Blockquote header */
 .blockquote h2 {
+   position: relative;
    color: var(--color-black);
    font-weight: bolder;
    position: relative; /* for pseudos */
@@ -438,6 +439,25 @@ header {
    z-index: 1;
    text-transform: uppercase;
    font-weight: 700;
+}
+
+#blockquote-content:first-child:first-letter {
+  position: absolute;
+  top: 0;
+  left: 100px;
+  color: var(--color-black);
+  font-size: 200px;
+  line-height: 0.7;
+}
+
+.tools-list li:first-letter {
+  left: 0;
+  top: -100px;
+  font: 36px var(--font-primary);
+  font-weight: 900;
+  line-height: 1;
+  font-style: italic; /* 1 */
+  color: var(--color-purple-variant-one); 
 }
 
 /* Blockquote right double quotes */
@@ -934,9 +954,9 @@ margin-bottom: 8px;
 
 /* projects */
 
-#products, #products-link {
+/* #products, #products-link {
  display: none;
-}
+} */
 
 .three-projects-container {
   display: flex;
@@ -1258,6 +1278,10 @@ margin:350px 10px 0 88px;
 
   .testimonial-card {
     width: 100%;
+  }
+
+  .marquee-container {
+   overflow: scroll;
   }
 }
 
