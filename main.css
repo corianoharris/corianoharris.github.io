@@ -954,9 +954,9 @@ margin-bottom: 8px;
 
 /* projects */
 
-/* #products, #products-link {
+#products, #products-link {
  display: none;
-} */
+}
 
 .three-projects-container {
   display: flex;
@@ -969,7 +969,7 @@ margin-bottom: 8px;
 
 #project-type {
   width: max-content;
-  font-size: 28px;
+  font-size: calc(14px + 1 * (100vw - 400px) / (800 - 400));
   font-weight: 300;
   color: var(--color-regular-purple); 
 }
