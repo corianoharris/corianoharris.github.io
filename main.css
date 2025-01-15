@@ -954,9 +954,9 @@ margin-bottom: 8px;
 
 /* projects */
 
-#products, #products-link {
+/* #products, #products-link {
  display: none;
-}
+} */
 
 .three-projects-container {
   display: flex;
@@ -1278,6 +1278,10 @@ margin:350px 10px 0 88px;
 
   .testimonial-card {
     width: 100%;
+  }
+
+  .marquee-container {
+   overflow: scroll;
   }
 }
 
