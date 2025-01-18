@@ -32,10 +32,7 @@ Media queries */
   --color-dark-purple: #301934;
   --color-purple-variant-one: rgba(95, 34, 217, 1);
   
-  /* Turquoise */
-  --color-regular-turquoise: #40e0d0;
-  --color-light-turquoise: #cefaeb;
-  
+
   /* Gradients */
   --gradient-nav: linear-gradient(to right, var(--color-purple-variant-one), #9b59b6);
   
@@ -375,12 +372,11 @@ header {
 }
 
 .hero-img {
-  max-height: 100%;
-  width: 100vw;
+  height: 250px;
+  width: 100%;
   opacity: .85;
   transform: rotateX(25deg) rotateY(-20deg);
   perspective: 800px;
-
 }
 
 .hero-img img {
@@ -388,6 +384,7 @@ header {
   height: 100%;
   box-shadow: var(--shadow-lg);
   border-radius: 10px;
+  object-fit: contain;
 }
 
 .hero-content {
@@ -421,7 +418,7 @@ header {
    align-self: center;
    height: 100%;
    overflow: hidden;
-   padding: 70px 0;
+   padding: 70px 0 20px 0;
 }
 
 /* Blockquote header */
