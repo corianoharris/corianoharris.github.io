@@ -4,7 +4,6 @@ document.addEventListener("DOMContentLoaded", () =>
   updateCopyrightYear();
   setupTextFade('.fade-in-out');
   sortEventCards();
-  projectCardTitle();
   activeEventCard();
 });
 
@@ -274,39 +273,6 @@ function sortEventCards() {
   eventContainer.innerHTML = ""; // Remove existing cards
   eventCards.forEach((card) => eventContainer.appendChild(card));
 }
-
-
-
-
-
-const projectCardTitle = () =>
-{
-  // Select all radio buttons with the same name
-  const radios = document.querySelectorAll('input[name="three-d"]');
-
-  // Add a 'change' event listener to each radio button
-  radios.forEach(radio =>
-  {
-    radio.addEventListener('change', event =>
-    {
-      if (event.target.checked)
-      {
-        const selectedType = event.target.getAttribute('data-type');
-        console.log(selectedType);
-        if (selectedType === 'Web')
-        {
-          document.getElementById("project-type").textContent = `You selected a: ${selectedType} project`;
-        } else if (selectedType === 'UX')
-        {
-          document.getElementById("project-type").textContent = `You selected a: ${selectedType} project`;
-        } else
-        {
-          document.getElementById("project-type").textContent = null;
-        }
-      }
-    });
-  });
-};
 
 
 
