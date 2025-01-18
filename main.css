@@ -426,7 +426,7 @@ header {
    color: var(--color-black);
    font-weight: bolder;
    position: relative; /* for pseudos */
-   font-size: 28px;
+   font-size: calc(20px + 1 * (100vw - 400px) / (800 - 400));
    font-weight: normal;
    font-style: italic;
    line-height: 1.5;
@@ -1342,6 +1342,10 @@ margin:350px 10px 0 88px;
 
   .blockquote h2 {
     font-size: 20px;
+  }
+
+  .blockquote h2:after {  
+    font-size: 45rem;
   }
 }
 
