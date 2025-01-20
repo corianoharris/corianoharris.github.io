@@ -1050,12 +1050,12 @@ object-fit: cover;
 }
 
 .three-d-item .tags p {
-  background-color: var(--color-purple-variant-one);
+  border: 1px solid var(--color-purple-variant-one);
   padding: 5px 10px;
   border-radius: 20px;
-  color: var(--color-white);
-  box-shadow: var(--shadow-md);
+  color: var(--color-purple-variant-one);
   font-size: 12px;
+  font-weight: 600;
 }
 
 .empty-card {
