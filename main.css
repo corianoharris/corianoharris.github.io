@@ -608,7 +608,7 @@ header {
   overflow: hidden;
   margin: 20px 0;
   padding: 0 0.5rem;
-  line-height: 1.5;
+  line-height: 2rem;
 }
 
 .whatICanDoForYou, .short-mindset-desc {
@@ -728,7 +728,7 @@ header {
 
 .short-mindset-desc { 
   color: var(--color-black);
-  line-height: 1.5;
+  line-height: 2rem;
 }
 
 .toggle-mindset-desc-btn {
@@ -764,8 +764,9 @@ h2 {
 .slider {
   display: flex;
   overflow-x: auto;
+  overflow-y: hidden;
+  justify-content: flex-start;
   scroll-snap-type: x mandatory;
-  gap: 30px;
   padding: 20px 10px;
   scroll-behavior: smooth;
   flex-shrink: 0;
