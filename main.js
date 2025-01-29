@@ -5,7 +5,8 @@ document.addEventListener("DOMContentLoaded", () =>
   setupTextFade('.fade-in-out');
   sortEventCards();
   activeEventCard();
-  projectCardFocusManagement.init();
+  setupMindsetText();
+  projectCardFocusManagement();
 });
 
 function initializeNavigation()
@@ -277,7 +278,7 @@ function sortEventCards() {
 
 
 
-const activeEventCard = () =>
+function activeEventCard() 
 {
 
   const slider = document.querySelector(".slider");
@@ -324,24 +325,25 @@ const activeEventCard = () =>
 // project card user tab experience
 
 function projectCardFocusManagement() {
-  // Focus management for radio buttons and card content
-  function handleTabNavigation(event) {
+  // Handle both tab navigation and radio button changes in one function
+  function handleNavigationAndChange(event) {
+    // If tab is pressed without shift (forward tab)
     if (event.key === "Tab" && !event.shiftKey) {
       const activeElement = document.activeElement;
       const radioButtons = document.querySelectorAll('.three-d-bullet');
       const radioButtonsArray = Array.from(radioButtons);
-      
+
       // Get the currently active card
       const activeCard = document.querySelector('.three-d-item[style*="display: block"]');
-      
+
       // If we're on any tag in the active card's tags section
       if (activeElement.closest('.tags') && 
           activeElement.closest('.three-d-item') === activeCard) {
-        
+
         // Get all tags in the current card
         const currentCardTags = Array.from(activeCard.querySelectorAll('.tags p'));
         const lastTagInCard = currentCardTags[currentCardTags.length - 1];
-        
+
         // If we're on the last tag
         if (activeElement === lastTagInCard) {
           event.preventDefault();
@@ -352,55 +354,87 @@ function projectCardFocusManagement() {
           
           // Calculate next radio index, wrapping around to the start if necessary
           const nextIndex = (currentIndex + 1) % radioButtonsArray.length;
-          
+
           // Focus and check the next radio button
           radioButtonsArray[nextIndex].focus();
           radioButtonsArray[nextIndex].checked = true;
-          
+
           // Trigger change event to update card display
           const changeEvent = new Event('change');
           radioButtonsArray[nextIndex].dispatchEvent(changeEvent);
         }
       }
     }
-  }
 
-  // Handle radio button changes to show/hide cards
-  function handleRadioChange(radio) {
-    const type = radio.getAttribute('data-type');
-    
-    // Hide all cards first
-    document.querySelectorAll('.three-d-item:not(.empty-card)').forEach(card => {
-      card.style.display = 'none';
-    });
-    
-    // Show the selected card
-    const selectedCard = document.querySelector(`.three-d-item[data-type="${type}"]:not(.empty-card)`);
-    if (selectedCard) {
-      selectedCard.style.display = 'block';
+    // If it's a change on any radio button (this covers the change in selection)
+    if (event.type === "change" && event.target.classList.contains('three-d-bullet')) {
+      const radio = event.target;
+      const type = radio.getAttribute('data-type');
+      
+      // Hide all cards first
+      document.querySelectorAll('.three-d-item:not(.empty-card)').forEach(card => {
+        card.style.display = 'none';
+      });
+
+      // Show the selected card
+      const selectedCard = document.querySelector(`.three-d-item[data-type="${type}"]:not(.empty-card)`);
+      if (selectedCard) {
+        selectedCard.style.display = 'block';
+      }
     }
   }
 
-  // Initialize display and event listeners
+  // Initialize event listeners
   function init() {
-    // Add keydown event listener
-    document.addEventListener("keydown", handleTabNavigation);
-    
-    // Add change event listeners to radio buttons
+    // Add keydown event listener for Tab navigation and change listener for radio buttons
+    document.addEventListener("keydown", handleNavigationAndChange);
     document.querySelectorAll('.three-d-bullet').forEach(radio => {
-      radio.addEventListener('change', () => handleRadioChange(radio));
+      radio.addEventListener('change', handleNavigationAndChange);
     });
-    
-    // Initialize initial display
+
+    // Initialize initial display based on the checked radio button
     const checkedRadio = document.querySelector('.three-d-bullet:checked');
     if (checkedRadio) {
-      handleRadioChange(checkedRadio);
+      handleNavigationAndChange({ type: 'change', target: checkedRadio });
     }
   }
 
-  // Run initialization
+  // Initialize everything
   init();
 }
+
+
+
+function setupMindsetText() {
+  document.querySelectorAll(".mindset-text").forEach((text) => {
+    const shortMindsetDesc = text.querySelector(".short-mindset-desc");
+    const toggleMindsetButton = text.querySelector(".toggle-mindset-desc-btn");
+
+    if (shortMindsetDesc && toggleMindsetButton) {
+      if (shortMindsetDesc.textContent.length > 500) {
+        const fullText = shortMindsetDesc.textContent;
+        const truncatedText = fullText.slice(0, 500);
+
+        shortMindsetDesc.textContent = truncatedText;
+
+        toggleMindsetButton.addEventListener("click", () => {
+          const isExpanded = toggleMindsetButton.getAttribute("aria-expanded") === "true";
+
+          if (isExpanded) {
+            shortMindsetDesc.textContent = truncatedText;
+            toggleMindsetButton.textContent = "...more";
+          } else {
+            shortMindsetDesc.textContent = fullText;
+            toggleMindsetButton.textContent = "...less";
+          }
+          toggleMindsetButton.setAttribute("aria-expanded", !isExpanded);
+        });
+      }
+    }
+  });
+}
+
+
 
 
 

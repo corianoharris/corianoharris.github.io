@@ -746,7 +746,7 @@ header {
 }
 
 .toggle-mindset-desc-btn:focus, .toggle-mindset-desc-btn:focus-visible {
-  outline: 1px dashed var(--color-light-grey);
+  outline: 2px dashed var(--color-light-grey);
 }
 
 /* Skills List */
