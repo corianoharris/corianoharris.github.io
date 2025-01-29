@@ -137,6 +137,10 @@ button {
   touch-action: manipulation;
 }
 
+/* button:focus {
+  outline: 1px dashed var(--color-light-grey);
+} */
+
 /*
   9. Create a root stacking context
 */
@@ -734,6 +738,15 @@ header {
 .toggle-mindset-desc-btn {
   color: var(--color-medium-purple);
   font-weight: bolder;
+}
+
+.toggle-mindset-desc-btn:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.toggle-mindset-desc-btn:focus, .toggle-mindset-desc-btn:focus-visible {
+  outline: 1px dashed var(--color-light-grey);
 }
 
 /* Skills List */

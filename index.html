@@ -36,15 +36,15 @@
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="title" content="Coriano Harris | Full-Stack Creative Technologist" />
+  <meta name="title" content="Coriano Harris → Full-Stack Creative Technologist" />
   <meta name="description"
-    content="Coriano Harris website. Web CX Des/Dev Architect. UX/UI Designer. Front End Developer. Web Strategist." />
-  <title>Coriano Harris | Full-Stack Creative Technologist</title>
+    content="Coriano Harris → Experienced Web CX Designer & Developer Architect | UX/UI Designer | Front-End Developer | Web Strategist – Crafting seamless digital experiences with a user-focused approach." />
+  <title>Coriano Harris → Full-Stack Creative Technologist</title>
   <!-- Favicon -->
   <link rel="icon" href="public/images/profile/favicon.svg" sizes="any" type="image/x-icon" />
 
   <!-- Font Awesome -->
-  <link rel="stylesheet" preload href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link rel="stylesheet" preload href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"  />
 
   <!-- Google Fonts -->
   <link rel="prefetch"
@@ -54,9 +54,9 @@
   <!-- Your Custom CSS -->
   <link rel="stylesheet" href="main.css" />
 
-  <link rel="prefetch" href="./public/images/profile/sd_a11y.jpg" />
+  <link rel="preload" href="./public/images/profile/sd_a11y.jpg" as="image"/>
 
-  <link rel="prefetch" href="./public/images/sandy-lewis.png" />
+  <link rel="preload" href="./public/images/sandy-lewis.png" as="image"/>
 
   <!-- p5 animation -->
   <script defer src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/p5.js"></script>
@@ -71,29 +71,29 @@
   <!-- End Google Tag Manager (noscript) -->
 
   <main role="main">
-    <div id="canvas-container"></div>
+    <div id="canvas-container" tabindex="-1"></div>
 
     <div class="social-container">
       <a href="https://www.linkedin.com/in/corianoharris/" class="social-item" id="social-linkedin-link" target="_blank"
-        rel="noopener noreferrer" aria-label="LinkedIn profile (opens in a new tab)">
-        <i class="fab fa-linkedin"></i>
+        rel="noopener noreferrer" aria-label="LinkedIn profile (opens in a new tab)" tabindex="10" title="LinkedIn">
+        <i class="fab fa-linkedin" aria-hidden="true"></i>
         <span class="social-text">LinkedIn</span>
       </a>
 
       <a href="https://github.com/corianoharris" class="social-item" id="social-github-link" target="_blank"
-        rel="noopener noreferrer" aria-label="GitHub profile (opens in a new tab)">
-        <i class="fab fa-github"></i>
+        rel="noopener noreferrer" aria-label="GitHub profile (opens in a new tab)" tabindex="11" title="GitHub">
+        <i class="fab fa-github" aria-hidden="true"></i>
         <span class="social-text">GitHub</span>
       </a>
 
       <a href="mailto:corianoharrispro@gmail.com" class="social-item" id="social-email-link" target="_blank"
-        rel="noopener noreferrer" aria-label="Send email (opens in a new tab)">
-        <i class="fas fa-envelope"></i>
+        rel="noopener noreferrer" aria-label="Send email (opens in a new tab)" tabindex="12" title="Send email">
+        <i class="fas fa-envelope" aria-hidden="true"></i>
         <span class="social-text">Email</span>
       </a>
 
-      <a href="#teaser" class="social-item" id="goToTopBtn" aria-label="Go to top" title="Go to top">
-        <i class="fas fa-arrow-up"></i>
+      <a href="#teaser" class="social-item" id="goToTopBtn" aria-label="Go to top" title="Go to top" tabindex="13">
+        <i class="fas fa-arrow-up" aria-hidden="true"></i>
         <span class="social-text">Scroll Top</span>
       </a>
     </div>
@@ -105,29 +105,29 @@
 
         <div class="logo">
           <img classname="logo-image" src="public/images/profile/logo.svg"
-            alt="Logo of Coriano Harris coding and designing" width="40px" height="40px" />
+            alt="Logo of Coriano Harris coding and designing" width="40px" height="40px" aria-hidden="true" />
           <h5>
-            <h2 class="first-name">coriano</h2>
-            <h2 class="last-name">harris</h2>
+            <h2 class="first-name" aria-label="Coriano" tabindex="1">coriano</h2>
+            <h2 class="last-name" aria-label="Harris" tabindex="1">harris</h2>
           </h5>
         </div>
 
         <ul class="nav-links">
           <button class="navCloseBtn" aria-label="Close navigation menu">
-            <i class="fa-solid fa-xmark fa-lg" aria-hidden="true"></i>
+            <i class="fa-solid fa-xmark fa-lg" title="Close navigation menu" tabindex="2"></i>
           </button>
-          <a class="nav-link" href="#services">What I can do for you</a>
-          <a class="nav-link" href="#community">Community</a>
-          <a class="nav-link" href="#tools">Tools For Success</a>
-          <a class="nav-link" href="#projects">Projects</a>
+          <a class="nav-link" href="#services" aria-label="What I can do for you" tabindex="2">What I can do for you</a>
+          <a class="nav-link" href="#community" aria-label="Community" tabindex="4">Community</a>
+          <a class="nav-link" href="#tools" aria-label="Tools For Success" tabindex="5">Tools For Success</a>
+          <a class="nav-link" href="#projects" aria-label="Projects" tabindex="6">Projects</a>
           <a class="nav-link" href="mailto:corianoharrispro@gmail.com" id="email-link" target="_blank"
-            rel="noopener noreferrer" aria-label="Send email (opens in a new tab)">Email</a>
+            rel="noopener noreferrer" aria-label="Send email (opens in a new tab)" tabindex="7">Email</a>
           <a class="nav-link" href="https://www.linkedin.com/in/corianoharris/" id="linkedin-link" target="_blank"
-            rel="noopener noreferrer" aria-label="Linkedin (opens in a new tab)">Linkedin</a>
+            rel="noopener noreferrer" aria-label="Linkedin (opens in a new tab)" tabindex="8">Linkedin</a>
           <a class="nav-link" href="https://github.com/corianoharris" id="GitHub-link" target="_blank"
-            rel="noopener noreferrer" aria-label="GitHub (opens in a new tab)">Github</a>
+            rel="noopener noreferrer" aria-label="GitHub (opens in a new tab)" tabindex="9">Github</a>
         </ul>
-        <button class="navOpenBtn" aria-label="Open navigation menu">
+        <button class="navOpenBtn" aria-label="Open navigation menu" tabindex="3" title="Open navigation menu">
           <i class="fa-solid fa-bars" aria-hidden="true"></i>
         </button>
       </nav>
@@ -138,19 +138,19 @@
     <section id="teaser" class="section hero-section" aria-labelledby="hero-quote">
       <div class="hero-content">
         <div class="hero-img">
-          <img src="./public/images/profile/sd_a11y.jpg" prefetch="true" alt="Coriano Harris speaking at SD A11y event"
+          <img src="./public/images/profile/sd_a11y.jpg" alt="Coriano Harris speaking at SD A11y event"
             title="Coriano Harris speaking at SD A11y event" aria-hidden="true" />
         </div>
 
         <div class="blockquote-wrapper">
           <div class="blockquote">
-            <h2 id="blockquote-content">
+            <h2 id="blockquote-content" aria-label="Quote from Michael St. John review" tabindex="14">
               I can't say enough good things about working with Coriano Harris. He took our ideas and turned them
               into a stunning design that’s both beautiful and super user-friendly. It's rare to find a person that
               combines creativity and technical skill so seamlessly—highly recommend!
             </h2>
             <div class="quote">
-              <img class="quote-img" src="./public/images/sandy-lewis.png" alt="Image of Sandy Lewis smiling"
+              <img class="quote-img" src="./public/images/sandy-lewis.png" alt="Image of Michael St. John smiling"
                 title="Image of Sandy Lewis smiling" aria-hidden="true">
               <hr class="quote-divider">
               <div class="title">Michael<small>St. John</small></div>
@@ -165,34 +165,45 @@
 
     <section id="services" class="section section-to-navigate" aria-labelledby="services-title">
       <h2 class="section-title text-header fade-in-out">
-        <span>What I can do for you...</span>
+        <span aria-label="What I can do for you" tabindex="15">What I can do for you...</span>
       </h2>
       <div class="section-content ">
         <ol class="whatICanDoForYou">
           <li class="fade-in-out">
-            <span>Operating on a tight budget but need to understand your users,
+            <span aria-label="Operating on a tight budget but need to understand your users,
+            captivate their attention visually, and swiftly bring your
+            product to market?" tabindex="16">Operating on a tight budget but need to understand your users,
               captivate their attention visually, and swiftly bring your
               product to market?
-              <p class="highlighter fs-italic">
+              <p class="highlighter fs-italic"
+                aria-label="Let's collaborate to achieve all three goals efficiently and effectively." tabindex="17">
                 Let's collaborate to achieve all three goals efficiently and
                 effectively.
               </p>
             </span>
           </li>
           <li class="fade-in-out">
-            <span>Facing challenges in building responsive websites or web apps
+            <span aria-label="Facing challenges in building responsive websites or web apps
+            that meet both aesthetic and functional requirements?" tabindex="18">Facing challenges in building
+              responsive websites or web apps
               that meet both aesthetic and functional requirements?
-              <p class="highlighter fs-italic">
+              <p class="highlighter fs-italic"
+                aria-label="Explore how my proficiency in UI frameworks, CSS, and UI libraries can simplify and enhance your development workflow."
+                tabindex="19">
                 Explore how my proficiency in UI frameworks, CSS, and UI libraries can simplify and enhance your
                 development workflow.
               </p>
             </span>
           </li>
           <li class="fade-in-out">
-            <span>Interested in developing a UI Components Library or Design
+            <span
+              aria-label="Interested in developing a UI Components Library or Design System that not only saves time but also ensures consistency across your projects?"
+              tabindex="20">Interested in developing a UI Components Library or Design
               System that not only saves time but also ensures consistency
               across your projects?
-              <p class="highlighter fs-italic">
+              <p class="highlighter fs-italic"
+                aria-label="I can guide you through creating reusable accessible components with Figma or Storybook that build confidence and save designers and developers time."
+                tabindex="21">
                 I can guide you through creating reusable accessible
                 components with Figma or Storybook that build confidence and
                 save designers and developers time.
@@ -200,28 +211,38 @@
             </span>
           </li>
           <li class="fade-in-out">
-            <span>Do you have an idea and need quick mockups and interactive
+            <span aria-label="Do you have an idea and need quick mockups and interactive
+            MVPs?" tabindex="22">Do you have an idea and need quick mockups and interactive
               MVPs?
-              <p class="highlighter fs-italic">
+              <p class="highlighter fs-italic"
+                aria-label="Let me help you swiftly bring it to your users or stakeholders." tabindex="23">
                 Let me help you swiftly bring it to your users or
                 stakeholders.
               </p>
             </span>
           </li>
-          <li class="fade-in-out">
+          <li class="fade-in-out"
+            aria-label="Need to bridge the gap between stakeholders, researchers, designers, and developers to ensure transparent collaboration and unified project vision?"
+            tabindex="24">
             <span>Need to bridge the gap between stakeholders, researchers,
               designers, and developers to ensure transparent collaboration
               and unified project vision?
-              <p class="highlighter fs-italic">
+              <p class="highlighter fs-italic"
+                aria-label="Let's discuss how my expertise can facilitate seamless communication and alignment across all project phases."
+                tabindex="25">
                 Let's discuss how my expertise can facilitate seamless
                 communication and alignment across all project phases.
               </p>
             </span>
           </li>
           <li class="fade-in-out">
-            <span>Finding it challenging to create delightful user experiences
+            <span
+              aria-label="Finding it challenging to create delightful user experiences that resonate with your clients' audiences?"
+              tabindex="26">Finding it challenging to create delightful user experiences
               that resonate with your clients' audiences?
-              <p class="highlighter fs-italic">
+              <p class="highlighter fs-italic"
+                aria-label="Let's discuss how my UX/UI design expertise can help you craft interfaces that users love."
+                tabindex="27">
                 Let's discuss how my UX/UI design expertise can help you craft
                 interfaces that users love.
               </p>
@@ -232,32 +253,32 @@
     </section>
 
     <section id="trusted-partners" class="section section-to-navigate">
-      <h2 class="section-title text-header fade-in-out"><span>
+      <h2 class="section-title text-header fade-in-out" aria-label="Trusted Partners..." tabindex="28"><span>
           Trusted Partners...</span>
       </h2>
-      <div class="marquee-container">
+      <div class="marquee-container" role="region" aria-label="Trusted Partners Marquee">
         <div class="marquee">
           <div class="icon-item">
             <img src="./public/images/trusted/code-connector-logo.webp" alt="Code Connector" aria-hidden="true"
               title="Code Connector">
-            <p>Code Connector</p>
+            <p aria-label="Code Connector" tabindex="29">Code Connector</p>
           </div>
           <div class="icon-item">
             <img src="./public/images/trusted/MTF-logo.png" alt="MemTech" aria-hidden="true" title="MemTech">
-            <p>MemTech</p>
+            <p aria-label="MemTech" tabindex="30">MemTech</p>
           </div>
           <div class="icon-item">
             <img src="./public/images/trusted/code-crew.webp" alt="Code Crew" aria-hidden="true" title="Code Crew">
-            <p>Code Crew</p>
+            <p aria-label="Code Crew" tabindex="31">Code Crew</p>
           </div>
           <div class="icon-item">
             <img src="./public/images/trusted/tech-901-logo.png" alt="Tech 901" aria-hidden="true" title="Tech 901">
-            <p>Tech 901</p>
+            <p aria-label="Tech 901" tabindex="32">Tech 901</p>
           </div>
           <div class="icon-item">
             <img src="./public/images/trusted/FoF-Logo.svg" alt="Friends of Figma SD" aria-hidden="true"
               title="Friends of Figma San Diego">
-            <p>Friends of Figma San Diego</p>
+            <p aria-label="Friends of Figma San Diego" tabindex="33">Friends of Figma San Diego</p>
           </div>
         </div>
       </div>
@@ -267,103 +288,103 @@
 
 
     <section id="community" class="section section-to-navigate">
-      <h2 class="section-title text-header fade-in-out"><span>
+      <h2 class="section-title text-header fade-in-out" aria-label="How I give back..." tabindex="34"><span>
           How I give back...</span>
       </h2>
       <div class="section-content">
         <div class="slider-container">
           <div id="events" class="slider" role="list">
 
-            <div id="event-2" class="card event-card" data-date="2024-12-18" data-category="talk" role="listitem"
-              aria-labelledby="event-2">
-              <p class="type">talk</p>
-              <h5>User Actions With CSS</h5>
+            <div id="event-2" class="card event-card active" data-date="2024-12-18" data-category="talk" role="listitem"
+              aria-labelledby="event-2" tabindex="35">
+              <p class="type" tabindex="36">talk</p>
+              <h5 tabindex="37">User Actions With CSS</h5>
               <div class="card-content">
-                <div class="event-org">
+                <div class="event-org" tabindex="38">
                   <p>organization:</p> <a href="https://www.meetup.com/memphis-technology-user-groups/events/304941326/"
                     class="event-org-link" referrerpolicy="no-referrer noopener" target="_blank">Web Workers</a>
                 </div>
-                <p>location: <span>University of Memphis</span></p>
-                <p>date: <span>December 18, 2024</span></p>
+                <p tabindex="39">location: <span>University of Memphis</span></p>
+                <p tabindex="40">date: <span>December 18, 2024</span></p>
               </div>
             </div>
 
             <div id="event-1" class="card event-card active" data-date="2025-01-25" data-category="host" role="listitem"
-              aria-labelledby="event-1">
-              <p class="type">host</p>
-              <h5>UX/UI Bytes</h5>
+              aria-labelledby="event-1" tabindex="41">
+              <p class="type" tabindex="42">host</p>
+              <h5 tabindex="43">UX/UI Bytes</h5>
               <div class="card-content">
-                <div class="event-org">
+                <div class="event-org" tabindex="44">
                   <p>organization:</p> <a class="event-org-link" href="https://codeconnector.io/" target="_blank">Code
                     Connector</a>
                 </div>
-                <p>location: <span>Virtual</span></p>
-                <p>date: <span>January 24, 2025</span></p>
+                <p tabindex="45">location: <span>Virtual</span></p>
+                <p tabindex="46">date: <span>January 24, 2025</span></p>
               </div>
             </div>
 
-
-
             <div id="event-3" class="card event-card" data-date="2024-11-15" data-category="workshop" role="listitem"
-              aria-labelledby="event-3">
-              <p class="type">contributor + mentor</p>
-              <h5>Memphis Hackathon</h5>
+              aria-labelledby="event-3" tabindex="47">
+              <p class="type" tabindex="48">contributor + mentor</p>
+              <h5 tabindex="49">Memphis Hackathon</h5>
               <div class="card-content">
-                <div class="event-org">
+                <div class="event-org" tabindex="50">
                   <p>organization:</p> <a class="event-org-link" href="https://hackmemphis.com/" target="_blank">Hack
                     Memphis</a>
                 </div>
-                <p>location: <span>University of Memphis</span></p>
-                <p>date: <span>November 15, 2024</span></p>
+                <p tabindex="51">location: <span>University of Memphis</span></p>
+                <p tabindex="52">date: <span>November 15, 2024</span></p>
               </div>
             </div>
 
             <div id="event-4" class="card event-card" aria-labelledby="event-4" data-date="2024-09-25" role="listitem"
-              data-category="talk">
-              <p class="type">contributor + mentor</p>
-              <h5>SD Design Trek: UX/UI Leadership Workshop</h5>
+              data-category="talk" tabindex="53">
+              <p class="type" tabindex="54">contributor + mentor</p>
+              <h5 tabindex="55">SD Design Trek: UX/UI Leadership Workshop</h5>
               <div class="card-content">
-                <div class="event-org">
+                <div class="event-org" tabindex="56">
                   <p>organization:</p><a href="https://www.linkedin.com/company/fof-sandiego/posts/?feedView=all"
                     referrerpolicy="no-referrer noopener" class="event-org-link" target="_blank">Friends of Figma SD</a>
                 </div>
-                <p>location: <span>San Diego, Intuit HQ + Slalom HQ</span></p>
-                <p>date: <span>September 25, 2024</span></p>
+                <p tabindex="57">location: <span>San Diego, Intuit HQ + Slalom HQ</span></p>
+                <p tabindex="58">date: <span>September 25, 2024</span></p>
               </div>
             </div>
 
             <div id="event-5" class="card event-card" data-date="2024-07-11" data-category="talk" role="listitem"
-              aria-labelledby="event-5">
-              <p class="type">talk</p>
-              <h5>A11y for Devs</h5>
+              aria-labelledby="event-5" tabindex="59">
+              <p class="type" tabindex="60">talk</p>
+              <h5 tabindex="61">A11y for Devs</h5>
               <div class="card-content">
-                <div class="event-org">
+                <div class="event-org" tabindex="62">
                   <p>organization:</p><a href="https://www.linkedin.com/company/fof-sandiego/posts/?feedView=all"
                     referrerpolicy="no-referrer noopener" class="event-org-link" target="_blank">SD A11y & inclusive
                     Design</a>
                 </div>
-                <p>location: <span>San Diego</span></p>
-                <p>date: <span>July 11, 2024</span></p>
+                <p tabindex="63">location: <span>San Diego</span></p>
+                <p tabindex="64">date: <span>July 11, 2024</span></p>
               </div>
             </div>
 
           </div>
         </div>
       </div>
+
     </section>
 
 
     <!-- tools -->
     <section id="tools" class="section section-to-navigate" aria-labelledby="tools-title">
-      <h2 id="tools-title" class="section-title text-header fade-in-out"><span>
+      <h2 id="tools-title" class="section-title text-header fade-in-out"
+        aria-label="How I integrate principles and tools" tabindex="65"><span>
           How I integrate principles and tools...</span>
       </h2>
 
       <div class="section-content tools-content">
         <div class="mindset">
-          <h3 class="tools-header fade-in-out">What I apply to everything I do.</h3>
-          <p class="mindset-text fade-in-out">
-            <span class="short-mindset-desc">
+          <h3 class="tools-header fade-in-out" aria-label="Mindset" tabindex="66">What I apply to everything I do.</h3>
+          <p class="mindset-text fade-in-out" >
+            <span class="short-mindset-desc" aria-label="Short mindset description" tabindex="67">
               I focus on keeping code clean and maintainable using the SOLID principles (like Single Responsibility and
               Dependency Inversion) and the DRY principle (Don’t Repeat Yourself). I also stick to
               simple, effective tools through the Rule of Least Power. In design, I prioritize visual hierarchy to guide
@@ -380,41 +401,41 @@
               collaboration, clear communication, and creative
               problem-solving to find the best answers.
             </span>
-            <button class="toggle-mindset-desc-btn" aria-expanded="false">...more</button>
-
           </p>
+          <button class="toggle-mindset-desc-btn" aria-controls="full-mindset-desc"
+          tabindex="68" aria-label="Show full mindset description">...more</button>
         </div>
 
         <div class=" mindset tools">
-          <h3 class=" tools-header fade-in-out">Tools that help me.</h3>
+          <h3 class=" tools-header fade-in-out" aria-label="Tools" tabindex="69">Tools that help me.</h3>
           <ul class="fade-in-out tools-list">
-            <li>Fullstory</li>
-            <li>UserTesting</li>
-            <li>Google Analytics</li>
-            <li>Google Tag Manager</li>
-            <li>Figma</li>
-            <li>Design Systems</li>
-            <li>React</li>
-            <li>Next</li>
-            <li>Angular</li>
-            <li>Node</li>
-            <li>Ember</li>
-            <li>Storybook</li>
-            <li>Tailwind</li>
-            <li>Redux</li>
-            <li>Jest</li>
-            <li>Cypress</li>
-            <li>Prisma</li>
-            <li>SQL</li>
-            <li>IndexedDB</li>
-            <li>Hugging Face</li>
-            <li>Gemini AI</li>
-            <li>Axe Deque</li>
-            <li>Lighthouse</li>
-            <li>Github</li>
-            <li>Github Actions</li>
-            <li>Jira</li>
-            <li>Bitbucket</li>
+            <li tabindex="70">Fullstory</li>
+            <li tabindex="71">UserTesting</li>
+            <li tabindex="72">Google Analytics</li>
+            <li tabindex="73">Google Tag Manager</li>
+            <li tabindex="74">Figma</li>
+            <li tabindex="75">Design Systems</li>
+            <li tabindex="76">React</li>
+            <li tabindex="77">Next</li>
+            <li tabindex="78">Angular</li>
+            <li tabindex="79">Node</li>
+            <li tabindex="80">Ember</li>
+            <li tabindex="81">Storybook</li>
+            <li tabindex="82">Tailwind</li>
+            <li tabindex="83">Redux</li>
+            <li tabindex="84">Jest</li>
+            <li tabindex="85">Cypress</li>
+            <li tabindex="86">Prisma</li>
+            <li tabindex="87">SQL</li>
+            <li tabindex="88">IndexedDB</li>
+            <li tabindex="89">Hugging Face</li>
+            <li tabindex="90">Gemini AI</li>
+            <li tabindex="91">Axe Deque</li>
+            <li tabindex="92">Lighthouse</li>
+            <li tabindex="93">Github</li>
+            <li tabindex="94">Github Actions</li>
+            <li tabindex="95">Jira</li>
+            <li tabindex="96">Bitbucket</li>
           </ul>
         </div>
 
@@ -423,97 +444,99 @@
 
     <!-- products -->
     <section id="projects" class="section section-to-navigate" aria-labelledby="projects-title">
-      <h2 id="projects-title" class=" section-title text-header fade-in-out"><span>
+      <h2 id="projects-title" class=" section-title text-header fade-in-out" aria-label="Checkout my projects"
+        tabindex="97"><span>
           Checkout my projects...</span>
       </h2>
       <div class="section-content ">
-        <p>Click on the radio buttons below to learn about my projects</p>
+        <p aria-label="Click on the radio buttons below to learn about my projects" tabindex="98">Click on the radio
+          buttons below to learn about my projects</p>
         <div class="three-projects-container">
           <section class="three-d-container">
+            <!-- radio buttons for the 3D cube -->
             <input type="radio" checked data-type="CSS" class="three-d-bullet a" name="three-d"
-              title="CSS Utilities Project" aria-label="CSS Utilities Project">
-
+              title="CSS Utilities Project" aria-label="CSS Utilities Project" tabindex="99">
+          
             <input type="radio" data-type="Web" class="three-d-bullet b" name="three-d"
-              title="Prediabetes Risk Test Project" aria-label="Prediabetes Risk Test Project">
+              title="Prediabetes Risk Test Project" aria-label="Prediabetes Risk Test Project" tabindex="100">
+          
             <input type="radio" data-type="UX" class="three-d-bullet c" name="three-d"
-              title="Donation to Gracie Profile Project" aria-label="Donation to Gracie Profile Project">
+              title="Donation to Gracie Profile Project" aria-label="Donation to Gracie Profile Project" tabindex="101">
+          
             <input type="radio" data-type="UX" class="three-d-bullet d" name="three-d"
-              title="A+ Automotive Website Project" aria-label="A+ Automotive Website Project">
-            <!-- <input type="radio" data-type="Web" class="three-d-bullet e" name="three-d">
-
-            <input type="radio" id="radio2" class="three-d-bullet f" name="three-d"> -->
-
-
-
+              title="A+ Automotive Website Project" aria-label="A+ Automotive Website Project" tabindex="102">
+          
             <div class="three-d-cube">
+              <!-- Remove tabindex from card elements to prevent skipping -->
               <card class="three-d-item" data-type="CSS">
-                <h4>Custom CSS Typography Rules</h4>
-                <p>A guide to understand and implement my custom CSS typography rules.</p>
+                <h4 tabindex="103">Custom CSS Typography Rules</h4>
+                <p tabindex="104">A guide to understand and implement my custom CSS typography rules.</p>
                 <a href="https://www.linkedin.com/pulse/unlock-power-custom-css-typography-game-changer-me-design-harris-bqxec/?trackingId=iYycpj1zpWIPNI3r9oXnvQ%3D%3D"
-                  class="project-link" target="_blank" rel="noopener noreferrer"
-                  title="explore more about Custom CSS Typography Rules">
+                  class="project-link" target="_blank" rel="noopener noreferrer" title="explore more about Custom CSS Typography Rules" tabindex="105">
                   explore more
                   <i><i class="fas fa-external-link-alt"></i></i>
                 </a>
                 <div class="tags">
-                  <p>CSS3</p>
-                  <p>Clamp</p>
+                  <p tabindex="106">CSS3</p>
+                  <p class="last-item" tabindex="107">Clamp</p>
                 </div>
               </card>
+          
               <card class="three-d-item" data-type="Web">
-                <h4>Prediabetes Risk Test</h4>
-                <p>An A/B Website test to compare the CDC Prediabetes Risk Test website and my version.</p>
+                <h4 tabindex="108">Prediabetes Risk Test</h4>
+                <p tabindex="109">An A/B Website test to compare the CDC Prediabetes Risk Test website and my version.
+                </p>
                 <a href="https://www.linkedin.com/pulse/ab-testing-my-version-enhancing-prediabetes-risk-test-coriano-harris-0ozoc/?trackingId=Yg6iIT7JSmYzZ6b3n3GOLQ%3D%3D"
-                  class="project-link" target="_blank" rel="noopener noreferrer"
-                  title="explore more about Prediabetes Risk Test A/B test">
+                  class="project-link" target="_blank" rel="noopener noreferrer" title="explore more about Prediabetes Risk Test A/B test" tabindex="110">
                   explore more
                   <i><i class="fas fa-external-link-alt"></i></i>
                 </a>
                 <div class="tags">
-                  <p>Nextjs</p>
-                  <p>Context API</p>
-                  <p>Tailwind</p>
+                  <p tabindex="111">Nextjs</p>
+                  <p tabindex="112">Context API</p>
+                  <p tabindex="113">Tailwind</p>
                 </div>
               </card>
+          
               <card class="three-d-item" data-type="UX">
-                <h4>"Donate to Gracie" Mobile Profile Screen</h4>
-                <p>A UX/UI walkthrough of my design thinking process in creating the Gracie profile screen.</p>
+                <h4 tabindex="114">"Donate to Gracie" Mobile Profile Screen</h4>
+                <p tabindex="115">A UX/UI walkthrough of my design thinking process in creating the Gracie profile screen.</p>
                 <a href="https://www.linkedin.com/pulse/designing-impact-patterns-principles-behind-donate-gracie-harris-bywoc/?trackingId=x1XJdvybT%2BcKZczeUV3C0Q%3D%3D"
-                  class="project-link" target="_blank" rel="noopener noreferrer"
-                  title="explore more about Donate to Gracie Profile Screen">
+                  class="project-link" target="_blank" rel="noopener noreferrer" title="explore more about Donate to Gracie Profile Screen" tabindex="116">
                   explore more
                   <i><i class="fas fa-external-link-alt"></i></i>
                 </a>
                 <div class="tags">
-                  <p>Design patterns</p>
-                  <p>Figma</p>
-                  <p>Annotations</p>
+                  <p tabindex="117">Design patterns</p>
+                  <p tabindex="118">Figma</p>
+                  <p tabindex="119">Annotations</p>
                 </div>
               </card>
+          
               <card class="three-d-item" data-type="UX">
-                <h4> A+ Automotive's Website Designs</h4>
-                <p>A walkthrough my approach to creating the mockups for A+ Automotive's website design, including the
-                  rationale behind my design decisions.</p>
+                <h4 tabindex="120">A+ Automotive's Website Designs</h4>
+                <p tabindex="121">A walkthrough my approach to creating the mockups for A+ Automotive's website design,
+                  including the rationale behind my design decisions.</p>
                 <a href="https://www.linkedin.com/pulse/case-study-automotives-website-initial-mockup-designs-coriano-harris-0jzvc/?trackingId=QeL96WYOQAmdDGHMi9cioA%3D%3D"
-                  class="project-link" target="_blank" rel="noopener noreferrer"
-                  title="explore more about the A+ Automotive's Website Mockup Designs">
+                  class="project-link" target="_blank" rel="noopener noreferrer" title="explore more about the A+ Automotive's Website Mockup Designs" tabindex="122">
                   explore more
                   <i><i class="fas fa-external-link-alt"></i></i>
                 </a>
                 <div class="tags">
-                  <p>Figma</p>
-                  <p>Auto Layout</p>
-                  <p>Patterns</p>
+                  <p tabindex="123">Figma</p>
+                  <p tabindex="124">Auto Layout</p>
+                  <p tabindex="125">Patterns</p>
                 </div>
               </card>
-              <card class="three-d-item empty-card" data-type="Web">
-              </card>
-              <card class="three-d-item empty-card" data-type="Web">
-              </card>
-              <card class="three-d-item empty-card" data-type="Web">
-              </card>
+          
+              <!-- Keep the empty cards at the end of the tab order -->
+              <card class="three-d-item empty-card" data-type="Web"></card>
+              <card class="three-d-item empty-card" data-type="Web"></card>
+              <card class="three-d-item empty-card" data-type="Web"></card>
             </div>
           </section>
+          
+
         </div>
       </div>
     </section>
@@ -522,7 +545,7 @@
     <!-- bottom header -->
     <footer class="header bottom-header" role="contentinfo" aria-label="Site footer">
       <div class="copyright-container">
-        <p class="copyright fade-in-out">
+        <p class="copyright fade-in-out" aria-label="Powered by Coriano Harris" tabindex="126">
           ©<span class="copyright-year"></span> Powered by Coriano Harris
         </p>
         <p>All rights reserved.</p>
@@ -530,7 +553,7 @@
     </footer>
   </main>
 
-  <script src="main.min.js"></script>
+<script src="main.js"></script>
 </body>
 
 </html>

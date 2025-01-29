@@ -5,6 +5,7 @@ document.addEventListener("DOMContentLoaded", () =>
   setupTextFade('.fade-in-out');
   sortEventCards();
   activeEventCard();
+  projectCardFocusManagement.init();
 });
 
 function initializeNavigation()
@@ -316,6 +317,88 @@ const activeEventCard = () =>
   });
 
 };
+
+
+// project card tab experience
+
+function projectCardFocusManagement() {
+  // Focus management for radio buttons and card content
+  function handleTabNavigation(event) {
+    if (event.key === "Tab" && !event.shiftKey) {
+      const activeElement = document.activeElement;
+      const radioButtons = document.querySelectorAll('.three-d-bullet');
+      const radioButtonsArray = Array.from(radioButtons);
+      
+      // Get the currently active card
+      const activeCard = document.querySelector('.three-d-item[style*="display: block"]');
+      
+      // If we're on any tag in the active card's tags section
+      if (activeElement.closest('.tags') && 
+          activeElement.closest('.three-d-item') === activeCard) {
+        
+        // Get all tags in the current card
+        const currentCardTags = Array.from(activeCard.querySelectorAll('.tags p'));
+        const lastTagInCard = currentCardTags[currentCardTags.length - 1];
+        
+        // If we're on the last tag
+        if (activeElement === lastTagInCard) {
+          event.preventDefault();
+          
+          // Find the current radio button
+          const currentRadio = document.querySelector('.three-d-bullet:checked');
+          const currentIndex = radioButtonsArray.indexOf(currentRadio);
+          
+          // Calculate next radio index, wrapping around to the start if necessary
+          const nextIndex = (currentIndex + 1) % radioButtonsArray.length;
+          
+          // Focus and check the next radio button
+          radioButtonsArray[nextIndex].focus();
+          radioButtonsArray[nextIndex].checked = true;
+          
+          // Trigger change event to update card display
+          const changeEvent = new Event('change');
+          radioButtonsArray[nextIndex].dispatchEvent(changeEvent);
+        }
+      }
+    }
+  }
+
+  // Handle radio button changes to show/hide cards
+  function handleRadioChange(radio) {
+    const type = radio.getAttribute('data-type');
+    
+    // Hide all cards first
+    document.querySelectorAll('.three-d-item:not(.empty-card)').forEach(card => {
+      card.style.display = 'none';
+    });
+    
+    // Show the selected card
+    const selectedCard = document.querySelector(`.three-d-item[data-type="${type}"]:not(.empty-card)`);
+    if (selectedCard) {
+      selectedCard.style.display = 'block';
+    }
+  }
+
+  // Initialize display and event listeners
+  function init() {
+    // Add keydown event listener
+    document.addEventListener("keydown", handleTabNavigation);
+    
+    // Add change event listeners to radio buttons
+    document.querySelectorAll('.three-d-bullet').forEach(radio => {
+      radio.addEventListener('change', () => handleRadioChange(radio));
+    });
+    
+    // Initialize initial display
+    const checkedRadio = document.querySelector('.three-d-bullet:checked');
+    if (checkedRadio) {
+      handleRadioChange(checkedRadio);
+    }
+  }
+
+  // Run initialization
+  init();
+}
 
 
 
