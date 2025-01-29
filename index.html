@@ -52,7 +52,7 @@
     rel="stylesheet" type="text/css" />
 
   <!-- Your Custom CSS -->
-  <link rel="stylesheet" href="main.css" />
+  <link rel="stylesheet" href="main.min.css" />
 
   <link rel="preload" href="./public/images/profile/sd_a11y.jpg" as="image"/>
 
@@ -295,7 +295,7 @@
         <div class="slider-container">
           <div id="events" class="slider" role="list">
 
-            <div id="event-2" class="card event-card active" data-date="2024-12-18" data-category="talk" role="listitem"
+            <div id="event-2" class="card event-card" data-date="2024-12-18" data-category="talk" role="listitem"
               aria-labelledby="event-2" tabindex="35">
               <p class="type" tabindex="36">talk</p>
               <h5 tabindex="37">User Actions With CSS</h5>
@@ -465,10 +465,16 @@
           
             <input type="radio" data-type="UX" class="three-d-bullet d" name="three-d"
               title="A+ Automotive Website Project" aria-label="A+ Automotive Website Project" tabindex="102">
+
+            <!-- <input type="radio" data-type="UX" class="three-d-bullet e" name="three-d"
+              title="A+ Automotive Website Project" aria-label="A+ Automotive Website Project" tabindex="102">
+              
+            <input type="radio" data-type="UX" class="three-d-bullet f" name="three-d"
+              title="A+ Automotive Website Project" aria-label="A+ Automotive Website Project" tabindex="102"> -->
           
             <div class="three-d-cube">
               <!-- Remove tabindex from card elements to prevent skipping -->
-              <card class="three-d-item" data-type="CSS">
+              <card class="three-d-item active" data-type="CSS">
                 <h4 tabindex="103">Custom CSS Typography Rules</h4>
                 <p tabindex="104">A guide to understand and implement my custom CSS typography rules.</p>
                 <a href="https://www.linkedin.com/pulse/unlock-power-custom-css-typography-game-changer-me-design-harris-bqxec/?trackingId=iYycpj1zpWIPNI3r9oXnvQ%3D%3D"
@@ -532,7 +538,6 @@
               <!-- Keep the empty cards at the end of the tab order -->
               <card class="three-d-item empty-card" data-type="Web"></card>
               <card class="three-d-item empty-card" data-type="Web"></card>
-              <card class="three-d-item empty-card" data-type="Web"></card>
             </div>
           </section>
           
@@ -553,7 +558,7 @@
     </footer>
   </main>
 
-<script src="main.js"></script>
+<script src="main.min.js"></script>
 </body>
 
 </html>

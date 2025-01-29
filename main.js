@@ -333,8 +333,8 @@ function projectCardFocusManagement() {
       const radioButtons = document.querySelectorAll('.three-d-bullet');
       const radioButtonsArray = Array.from(radioButtons);
 
-      // Get the currently active card
-      const activeCard = document.querySelector('.three-d-item[style*="display: block"]');
+      // Get the currently active card based on the active class
+      const activeCard = document.querySelector('.three-d-item.active');
 
       // If we're on any tag in the active card's tags section
       if (activeElement.closest('.tags') && 
@@ -372,14 +372,14 @@ function projectCardFocusManagement() {
       const type = radio.getAttribute('data-type');
       
       // Hide all cards first
-      document.querySelectorAll('.three-d-item:not(.empty-card)').forEach(card => {
-        card.style.display = 'none';
+      document.querySelectorAll('.three-d-item').forEach(card => {
+        card.classList.remove('active'); // Remove active class (hide card)
       });
 
-      // Show the selected card
-      const selectedCard = document.querySelector(`.three-d-item[data-type="${type}"]:not(.empty-card)`);
+      // Show the selected card by adding 'active' class
+      const selectedCard = document.querySelector(`.three-d-item[data-type="${type}"]`);
       if (selectedCard) {
-        selectedCard.style.display = 'block';
+        selectedCard.classList.add('active'); // Show the selected card
       }
     }
   }
@@ -402,6 +402,8 @@ function projectCardFocusManagement() {
   // Initialize everything
   init();
 }
+
+
 
 
 
