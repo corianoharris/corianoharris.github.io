@@ -123,7 +123,7 @@ ul, ol {
   padding: 0;
 }
 
-a:focus, a:focus-visible {
+a:focus-visible {
   text-decoration: none;
   border: 1px dashed var(--color-light-grey);
 }
@@ -306,8 +306,8 @@ header {
   border: none;
 }
 
-.nav .navOpenBtn:focus,
-.nav .navCloseBtn:focus {
+.nav .navOpenBtn:focus-visible,
+.nav .navCloseBtn:focus-visible {
   background: transparent;
   -webkit-tap-highlight-color: transparent;
   outline: 1px dashed var(--color-grey);
@@ -745,7 +745,7 @@ header {
   cursor: pointer;
 }
 
-.toggle-mindset-desc-btn:focus, .toggle-mindset-desc-btn:focus-visible {
+.toggle-mindset-desc-btn:focus-visible {
   outline: 2px dashed var(--color-light-grey);
 }
 
@@ -1193,8 +1193,59 @@ cursor: pointer;
 transform: scale(1.2);
 }
 
-.three-d-bullet:hover::after {
-  content: attr(title);
+.three-d-bullet.a:hover::after {
+  content: "CSS Utilities Project";
+  position: absolute;
+  top: -35px;
+  left: 50%;
+  transform: translateX(-50%);
+  border: 1px dashed var(--color-purple-variant-one);
+  color: var(--color-purple-variant-one);
+  padding: 5px;
+  border-radius: 5px;
+  font-size: 12px;
+  white-space: nowrap;
+  box-shadow: var(--shadow-md);
+  background-color: var(--color-darker-white);
+  font-weight: 500;
+}
+
+.three-d-bullet.b:hover::after {
+  content: "Prediabetes Risk Test Project";
+  position: absolute;
+  top: -35px;
+  left: 50%;
+  transform: translateX(-50%);
+  border: 1px dashed var(--color-purple-variant-one);
+  color: var(--color-purple-variant-one);
+  padding: 5px;
+  border-radius: 5px;
+  font-size: 12px;
+  white-space: nowrap;
+  box-shadow: var(--shadow-md);
+  background-color: var(--color-darker-white);
+  font-weight: 500;
+}
+
+.three-d-bullet.c:hover::after {
+  content: "Donation to Gracie Profile Project";
+  position: absolute;
+  top: -35px;
+  left: 50%;
+  transform: translateX(-50%);
+  border: 1px dashed var(--color-purple-variant-one);
+  color: var(--color-purple-variant-one);
+  padding: 5px;
+  border-radius: 5px;
+  font-size: 12px;
+  white-space: nowrap;
+  box-shadow: var(--shadow-md);
+  background-color: var(--color-darker-white);
+  font-weight: 500;
+}
+
+.three-d-bullet.d:hover::after {
+  content: "A+ Automotive Website Project";
   position: absolute;
   top: -35px;
   left: 50%;
@@ -1235,7 +1286,7 @@ margin:350px 10px 0 88px;
   font-size: 1rem;
 }
 
-.project-link:visited, .project-link:link, .project-link:focus {
+.project-link:visited, .project-link:link, .project-link:focus-visible {
   color: var(--color-light-purple);
 }
 
@@ -1277,7 +1328,7 @@ margin:350px 10px 0 88px;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
 }
 
-.social-item:active, .social-item:visited, .social-item:link, .social-item:focus {
+.social-item:active, .social-item:visited, .social-item:link, .social-item:focus-visible {
   background-color: rgba(95, 34, 217, .9);
 }
 
