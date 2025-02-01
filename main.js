@@ -424,10 +424,10 @@ function setupMindsetText() {
 
           if (isExpanded) {
             shortMindsetDesc.textContent = truncatedText;
-            toggleMindsetButton.textContent = "...more";
+            toggleMindsetButton.textContent = "...read more ->";
           } else {
             shortMindsetDesc.textContent = fullText;
-            toggleMindsetButton.textContent = "...less";
+            toggleMindsetButton.textContent = "<-...read less";
           }
           toggleMindsetButton.setAttribute("aria-expanded", !isExpanded);
         });
